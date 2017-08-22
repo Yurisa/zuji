@@ -1,0 +1,544 @@
+.container{
+    background-color: #f3f3f1;
+}
+
+#nav-personal{
+    width: 90px;
+    height: auto;
+    position: absolute;
+    top:55px;
+    right: 50px;
+}
+
+#nav-personal ul{
+    width: 90px;
+    height: 188px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#nav-personal ul li{
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-bottom: 1px solid #e6e1e1;
+    padding-right: 0px;
+    margin-top: 0px;
+}
+
+#nav-personal ul li:nth-child(2){
+    border-right: 0px;
+}
+
+#nav-personal ul li:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+
+#nav-personal ul li a:hover{
+    color: #FFFFFF;
+}
+
+#main{
+    width: 70%;
+    height: auto;
+    margin: 0px auto;
+}
+
+.personal-page{
+    width: 100%;
+    height: 560px;
+    background-color: #FFFFFF;
+}
+
+.pageImage img{
+    width: 100%;
+    height: 460px;
+}
+
+.pageImage p{
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 350px;
+    left: 1100px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.nav-my{
+    width: 100%;
+    height: 100px;
+}
+
+.my-head-picture img{
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    float: left;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    z-index: 100;
+    border: 5px solid #FFFFFF;
+}
+
+.my-name{
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+    left: 21%;
+    top: 10%;
+    font-size: 20px;
+}
+
+.my-part{
+    width: 500px;
+    height: 38px;
+    position: relative;
+    left: 20%;
+    top:20%;
+}
+
+.my-part ul li{
+    width: 60px;
+    height: 38px;
+    line-height: 38px;
+    /*border-bottom: 5px solid #FFFFFF;*/
+    border-bottom: 0px;
+    color: #000000;
+    text-align: center;
+}
+
+.my-follow,.my-fans{
+    width: 55px;
+    height: 60px;
+    position: absolute;
+    float: left;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.my-follow{
+    top:66%;
+    left: 70%;
+}
+
+.my-fans{
+    top:66%;
+    left: 75%;
+}
+
+.my-follow div,.my-fans div{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+.personal-show{
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    float: left;
+}
+
+.my-part-name,.note-part,.notePart{
+    /*width:100%;*/
+    width: 85%;
+    height: 100px;
+    /*float: left;*/
+    margin: 0px auto;
+}
+
+.my-part-name div:nth-child(1),.note-part div:nth-child(1),.notePart div:nth-child(1){
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+    /*margin-left: 90px;*/
+    margin-bottom: 20px;
+}
+
+.my-part-name div:nth-child(n+2){
+    float: left;
+}
+
+#my-wannaGo,#my-footprint,.my-note,.my-draft,.my-collection,#my-message,#my-devote-supply,#my-data,#my-password,#my-head,#my-follow,#my-fans{
+    width: 85%;
+    /*width: 100%;*/
+    height: auto;
+    /*float: left;*/
+    margin: 0px auto;
+}
+
+#my-wannaGo ul li{
+    width: 46%;
+    height: 220px;
+    box-shadow: 2px 2px 5px #000000;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#my-wannaGo ul li:nth-child(odd){
+    margin-right: 60px;
+}
+
+#my-wannaGo ul li a{
+    width: 25%;
+    height: 220px;
+    line-height: 110px;
+    float: left;
+    writing-mode: tb-rl;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#my-wannaGo ul li img{
+    width: 75%;
+    height: 220px;
+    float: left;
+}
+
+#my-wannaGo ul li i{
+    position: relative;
+    top: -97%;
+    left: 49%;
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer
+}
+
+#my-footprint ul li{
+    width: 30%;
+    height: 330px;
+    box-shadow: 2px 2px 5px #000000;
+    float: left;
+
+    margin-bottom: 20px;
+}
+
+#my-footprint ul li:nth-child(3n+1){
+    margin-right: 40px;
+}
+
+#my-footprint ul li:nth-child(3n+2){
+    margin-right: 40px;
+}
+
+#my-footprint ul li img{
+    width: 100%;
+    height: 230px;
+    float: left;
+}
+
+#my-footprint ul li a{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    float: left;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.footprint-score{
+    width: 100%;
+    height: 65px;
+    float: left;
+    color: #000000;
+}
+
+#my-footprint .footprint-score img{
+    width: 24px;
+    height: 24px;
+}
+
+.hint{
+    width: 50px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.note-part div:nth-child(n+2),.notePart div:nth-child(n+2){
+    float: left;
+    color: #3366FF;
+    margin-right: 10px;
+}
+
+#writeNote{
+    background-color: #3366FF;
+    color: #FFFFFF;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    float: right;
+    margin-right: 0px;
+}
+
+.my-note ul li,.my-draft ul li,#my-message ul li{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px #000000;
+    float: left;
+}
+
+.my-note ul li img,.my-draft ul li img{
+    width: 80%;
+    height: 200px;
+    float: left;
+}
+
+.my-note ul li a,.my-draft ul li a{
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFFFFF;
+    position: relative;
+    top: 20px;
+    left: -700px;
+    line-height: 40px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.my-note ul li span,.my-draft ul li span{
+    position: relative;
+    top:-7%;
+    left: 72%;
+    font-size: 16px;
+    opacity: 0.5;
+    color: #FFFFFF;
+    width: 250px;
+    text-align: center;
+    background-color: #999999;
+    display: inline-block;
+    float: left;
+}
+
+.my-note ul li input,.my-draft ul li input{
+    float: left;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #ffffff;
+    border: 0px;
+    position: relative;
+    left: 54%;
+    top: -55%;
+    color: #3366FF;
+}
+
+
+.my-collection ul li{
+    width: 80%;
+    height: 400px;
+    box-shadow: 2px 2px 5px #000000;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.my-collection ul li:nth-child(odd){
+    margin-right: 60px;
+}
+
+.my-collection ul li img:nth-of-type(1){
+    width:100%;
+    height: 280px;
+}
+
+.my-collection ul li img:nth-of-type(2){
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    float: left;
+    position:relative;
+    left: 20px;
+    top: -30px;
+    z-index: 100;
+    border: 5px solid #FFFFFF;
+}
+
+.my-collection ul li a:nth-of-type(1){
+    height: 30px;
+    line-height: 30px;
+    color: #000000;
+    position:relative;
+    left: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.my-collection ul li a:nth-of-type(2){
+    height: 30px;
+    line-height: 30px;
+    color: #000000;
+    position:relative;
+    left: 10px;
+    top:25px;
+    font-size: 16px;
+}
+
+.my-collection ul li p{
+    height: 30px;
+    line-height: 30px;
+    color: #000000;
+    position:relative;
+    top: 20px;
+}
+
+.my-collection ul li i{
+    position: relative;
+    top: -330px;
+    left: 42%;
+    font-size: 25px;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer
+}
+
+
+#my-message ul li img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    float: left;
+    position:relative;
+    top:40px;
+    left: 20px;
+}
+
+#my-message ul li p,#my-message ul li a{
+    color: #000000;
+    float: left;
+}
+
+#my-message ul li p:nth-of-type(1){
+    position:relative;
+    top:140px;
+    left: -46px;
+    font-weight: bold;
+}
+
+#my-message ul li p:nth-of-type(2){
+    position:relative;
+    top:15px;
+}
+
+#my-message ul li p:nth-of-type(3){
+    position:relative;
+    top:50px;
+    left: -240px;
+}
+
+#my-message ul li a{
+    position:relative;
+    top:13px;
+    left: 50px;
+    font-weight: bold;
+}
+
+#my-message ul li input{
+    background-color: #FFFFFF;
+    color: #3366FF;
+    float: left;
+    position: relative;
+    top: 150px;
+    left: 400px;
+    margin-left: 10px;
+}
+
+#my-devote-supply .layui-table{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#my-data .layui-form-label,#my-password .layui-form-label{
+    text-align: left;
+}
+
+#my-data .layui-input{
+    width: 300px;
+}
+
+#my-data .layui-textarea{
+    width: 600px;
+}
+
+#my-head img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    position: relative;
+    left: 40%;
+    margin-bottom: 20px;
+}
+
+#my-head button{
+    position: relative;
+    left: 45%;
+}
+
+#my-follow ul li,#my-fans ul li{
+    width: 22%;
+    height: 250px;
+    box-shadow: 2px 2px 5px #000000;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#my-follow ul li:nth-child(4n+1),#my-fans ul li:nth-child(4n+1){
+    margin-right: 40px;
+}
+
+#my-follow ul li:nth-child(4n+2),#my-fans ul li:nth-child(4n+2){
+    margin-right: 40px;
+}
+
+#my-follow ul li:nth-child(4n+3),#my-fans ul li:nth-child(4n+3){
+    margin-right: 40px;
+}
+
+
+
+#my-follow ul li img:nth-of-type(1),#my-fans ul li img:nth-of-type(1){
+    width:100%;
+    height: 180px;
+}
+
+#my-follow ul li img:nth-of-type(2),#my-fans ul li img:nth-of-type(2){
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    float: left;
+    position:relative;
+    left: 20px;
+    top: -25px;
+    z-index: 100;
+    border: 6px solid #FFFFFF;
+}
+
+#my-follow ul li a,#my-fans a{
+    height: 30px;
+    line-height: 30px;
+    color: #000000;
+    position:relative;
+    left: 20%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.number{
+    font-weight: bold;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+    color: #000000;
+}

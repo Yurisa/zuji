@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Document</title>
+ </head>
+ <body>
+ 	
+ </body>
+ <script type="text/javascript" src='jquery-3.1.1.min.js'></script>
+ <script type="text/javascript">
+ 	$(function(){
+ 	 $.ajax({
+                type: "POST",
+                url: "http://127.0.0.1/zuji/index.php?c=main&a=addarticle",
+                data:{
+                "a_title":"一路向北，追寻探索者的未知路",
+                "a_content":"这里有世界上最偏远的土地，和最古老的文明之一。这里的主人不是人类而是袋鼠、野骆驼和野狗，这里贫瘠的红土地上，有盐湖、火山遗迹和绝美星空。这里是世界上最伟大的驾驶之路——探索者之路。照惯例，先来一小段视频，非常短，几乎是我第一次的视频作品，所以不要拍砖。",
+                "u_id":1,
+                "t_id":1},
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+
+                }
+            });
+ 	})
+ </script>
+ </html>

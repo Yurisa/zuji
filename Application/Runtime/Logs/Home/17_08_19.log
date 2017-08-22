@@ -1,0 +1,299 @@
+[ 2017-08-19T14:47:27+08:00 ] ::1 /zuji/index.php?c=main&a=addarticle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.018392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012531s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0107s ]
+ERR: 1452:Cannot add or update a child row: a foreign key constraint fails (`zuji`.`article`, CONSTRAINT `u_id1` FOREIGN KEY (`u_id`) REFERENCES `user` (`u_id`) ON DELETE CASCADE)
+ [ SQL语句 ] : INSERT INTO `article` (`a_title`,`a_content`,`a_zan`,`browse_num`,`timestamp`,`u_id`,`t_id`) VALUES ('','','0','0','1503125247','0','0')
+ERR: 1452:Cannot add or update a child row: a foreign key constraint fails (`zuji`.`article`, CONSTRAINT `u_id1` FOREIGN KEY (`u_id`) REFERENCES `user` (`u_id`) ON DELETE CASCADE)
+ [ SQL语句 ] : INSERT INTO `article` (`a_title`,`a_content`,`a_zan`,`browse_num`,`timestamp`,`u_id`,`t_id`) VALUES ('','','0','0','1503125247','0','0')
+
+[ 2017-08-19T14:47:51+08:00 ] ::1 /zuji/index.php?c=main&a=addmenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000851s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001077s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0074s ]
+SQL: INSERT INTO `menu` (`menu_type`,`menu_content`,`menu_title`,`menu_imgurl`,`t_id`) VALUES ('diet','苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。','酸湯魚','./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg','1') [ RunTime:0.1038s ]
+
+[ 2017-08-19T14:53:51+08:00 ] ::1 /zuji/index.php?c=main&a=addmenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000837s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001448s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0061s ]
+SQL: INSERT INTO `menu` (`menu_type`,`menu_content`,`menu_title`,`menu_imgurl`,`t_id`) VALUES ('diet','苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。','酸湯魚','./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg','1') [ RunTime:0.0727s ]
+SQL: INSERT INTO `menu` (`menu_type`,`menu_content`,`menu_title`,`menu_imgurl`,`t_id`) VALUES ('diet','苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。','酸湯魚','./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg','1') [ RunTime:0.0731s ]
+
+[ 2017-08-19T15:04:38+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=getmenubymenuid&menu_id=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `menu` WHERE ( menu_id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-08-19T15:05:05+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=getmenubymenuid&menu_id=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `menu` WHERE ( menu_id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-08-19T15:21:07+08:00 ] ::1 /zuji/index.php?c=main&a=addmenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 14 行.
+
+[ 2017-08-19T15:21:59+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001119s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001306s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0085s ]
+SQL: UPDATE `menu` SET `menu_title`='大米',`menu_content`='苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。',`menu_imgurl`='./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg' WHERE ( menu_id=10 ) [ RunTime:0.0738s ]
+
+[ 2017-08-19T15:50:32+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=addarticlezan&a_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000804s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0084s ]
+SQL: UPDATE `article` SET `a_zan`=a_zan+1 WHERE ( a_id=1 ) [ RunTime:0.0609s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009961s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010280s ]
+
+[ 2017-08-19T15:50:36+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=addarticlezan&a_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0047s ]
+SQL: UPDATE `article` SET `a_zan`=a_zan+1 WHERE ( a_id=1 ) [ RunTime:0.0619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001571s ]
+
+[ 2017-08-19T15:50:37+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=addarticlezan&a_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0085s ]
+SQL: UPDATE `article` SET `a_zan`=a_zan+1 WHERE ( a_id=1 ) [ RunTime:0.0221s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000908s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001089s ]
+
+[ 2017-08-19T15:50:38+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=addarticlezan&a_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0073s ]
+SQL: UPDATE `article` SET `a_zan`=a_zan+1 WHERE ( a_id=1 ) [ RunTime:0.0336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000823s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000997s ]
+
+[ 2017-08-19T15:54:19+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=addarticlezan&a_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0110s ]
+SQL: UPDATE `article` SET `a_zan`=a_zan+1 WHERE ( a_id=1 ) [ RunTime:0.0677s ]
+SQL: SELECT `a_zan` FROM `article` WHERE ( a_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-08-19T15:55:44+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=addarticlezan&a_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000872s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0082s ]
+SQL: UPDATE `article` SET `a_zan`=a_zan+1 WHERE ( a_id=1 ) [ RunTime:0.0414s ]
+SQL: SELECT `a_zan` FROM `article` WHERE ( a_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-08-19T16:01:59+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=cancelarticlezan&a_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0062s ]
+SQL: UPDATE `article` SET `a_zan`=a_zan-1 WHERE ( a_id=1 ) [ RunTime:0.0535s ]
+SQL: SELECT `a_zan` FROM `article` WHERE ( a_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-08-19T16:02:33+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0077s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=1 ) [ RunTime:0.0827s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+
+[ 2017-08-19T17:00:54+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000836s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001324s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0080s ]
+SQL: UPDATE `menu` SET `menu_title`='大米',`menu_content`='苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。',`menu_imgurl`='./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg' WHERE ( menu_id=10 ) [ RunTime:0.0737s ]
+
+[ 2017-08-19T17:01:47+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0169s ]
+SQL: UPDATE `menu` SET `menu_title`='大米',`menu_content`='苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。',`menu_imgurl`='./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg' WHERE ( menu_id=10 ) [ RunTime:0.0269s ]
+
+[ 2017-08-19T17:02:46+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0068s ]
+SQL: UPDATE `menu` SET `menu_title`='大米',`menu_content`='苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。',`menu_imgurl`='./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg' WHERE ( menu_id=10 ) [ RunTime:0.0613s ]
+
+[ 2017-08-19T17:10:52+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000885s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0063s ]
+SQL: UPDATE `menu` SET `menu_title`='大米',`menu_content`='苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。',`menu_imgurl`='./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg' WHERE ( menu_id=10 ) [ RunTime:0.0314s ]
+
+[ 2017-08-19T17:19:10+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0082s ]
+SQL: UPDATE `menu` SET `menu_title`='大米',`menu_content`='苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。',`menu_imgurl`='./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg' WHERE ( menu_id=10 ) [ RunTime:0.0683s ]
+
+[ 2017-08-19T17:19:56+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001320s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0082s ]
+SQL: UPDATE `menu` SET `menu_title`='大米',`menu_content`='苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。',`menu_imgurl`='./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg' WHERE ( menu_id=10 ) [ RunTime:0.0519s ]
+
+[ 2017-08-19T17:20:49+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0084s ]
+SQL: UPDATE `menu` SET `menu_title`='大米',`menu_content`='苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。',`menu_imgurl`='./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg' WHERE ( menu_id=10 ) [ RunTime:0.0618s ]
+
+[ 2017-08-19T17:21:15+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000864s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001041s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0070s ]
+SQL: UPDATE `menu` SET `menu_title`='大米',`menu_content`='苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。',`menu_imgurl`='./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg' WHERE ( menu_id=10 ) [ RunTime:0.0258s ]
+
+[ 2017-08-19T17:21:37+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0070s ]
+SQL: UPDATE `menu` SET `menu_title`='大米',`menu_content`='苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。',`menu_imgurl`='./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg' WHERE ( menu_id=10 ) [ RunTime:0.0612s ]
+
+[ 2017-08-19T17:26:57+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000875s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000998s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001194s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0054s ]
+SQL: UPDATE `menu` SET `menu_title`='大米',`menu_content`='苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。',`menu_imgurl`='./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg' WHERE ( menu_id=10 ) [ RunTime:0.0693s ]
+
+[ 2017-08-19T17:29:35+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000886s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001194s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0060s ]
+SQL: UPDATE `menu` SET `menu_title`='大米',`menu_content`='苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。',`menu_imgurl`='./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg' WHERE ( menu_id=10 ) [ RunTime:0.0631s ]
+
+[ 2017-08-19T17:30:27+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000858s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0083s ]
+SQL: UPDATE `menu` SET `menu_title`='大米',`menu_content`='苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。',`menu_imgurl`='./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg' WHERE ( menu_id=10 ) [ RunTime:0.0647s ]
+
+[ 2017-08-19T17:41:05+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0076s ]
+SQL: UPDATE `menu` SET `menu_title`='大米',`menu_content`='苗族的食俗，亦称之为苗族的食俗文化。大部分地区的苗族一日三餐，均以大米为主食。油炸食品以油炸粑粑最为常见。肉食多来自家畜、家禽饲养。以辣椒为主要调味品，有的地区甚至有“无辣不成菜”之说。各地苗族普遍喜食酸味菜肴，酸汤家家必备。食物保存，普遍采用腌制法。典型食品主要有：血灌汤、辣椒骨、苗乡龟凤汤、绵菜粑、虫茶、万花茶、捣鱼、酸汤鱼等。苗族人普遍喜欢喝酒，“无酒不成礼”已是他们遵守的礼仪，酒是待客议事、婚丧嫁娶、起房建屋、逢年过节的必备品。',`menu_imgurl`='./Uploads/img/201708/17/88a8156d08c93490e4b824d49aec3613Wx800.jpg' WHERE ( menu_id=10 ) [ RunTime:0.0694s ]
+

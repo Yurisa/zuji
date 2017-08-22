@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Document</title>
+ </head>
+ <body>
+ 	111111
+    <div class="aaaa">
+        <div class="bbbb">
+            <div class="cccc">1111</div>
+        </div>
+    </div>
+    <div class="aaaa">
+        <div class="bbbb">
+            <div class="cccc">22222</div>
+        </div>
+    </div>
+    <div class="aaaa">
+        <div class="bbbb">
+            <div class="cccc">3333</div>
+        </div>
+    </div>
+    <a href="http://piao.ctrip.com/dest/u-_ce_f7_bd_ad_c7_a7_bb_a7_c3_e7_d5_af/s-tickets/">test</a>
+ </body>
+ <script type="text/javascript" src='jquery-3.1.1.min.js'></script>
+ <script type="text/javascript">
+ 	$(function(){
+        var a = $('.aaaa');
+        console.log(a)
+        console.log(a.find(".bbbb"));
+
+ 	 $.ajax({
+                type: "POST",
+                url: "index.php?c=main&a=adddraft",
+                data:{
+                       "d_title":"",
+                       "d_content":"这里有世界上最偏远的土地，和最古老的文明之一。这里的主人不是人类而是袋鼠、野骆驼和野狗，这里贫瘠的红土地上，有盐湖、火山遗迹和绝美星空。这里是世界上最伟大的驾驶之路——探索者之路。照惯例，先来一小段视频，非常短，几乎是我第一次的视频作品，所以不要拍砖。",
+                       "d_cover":"images/pic1.jpg" ,
+                       "t_id":2,
+                },
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    alert(data.result);
+
+                }
+            });
+ 	})
+ </script>
+ </html>

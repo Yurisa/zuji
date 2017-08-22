@@ -1,0 +1,215 @@
+body {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	font-size: 14px;
+	line-height: 1em;
+}
+ul li {
+	list-style-type: none;
+	float: left;
+	color: #fff;
+}
+img {
+	max-width: 100%;
+}
+nav a,button {
+	min-height: 48px;
+	min-width: 48px;
+	padding: 1.5em;
+	
+}
+input {
+	border: none;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+a {
+	text-decoration: none;
+	color: #fff;
+}
+.container {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.box {
+	display: flex;
+	display: -webkit-flex;
+}
+.box-top {
+	width: 100%;
+	flex-direction: row;
+	align-items: center;
+}
+.top-style1 {
+	height: 90px;
+	background-color: rgba(0, 0, 0, 0.2);
+	position: fixed;
+}
+.top-style2 {
+	height: 50px;
+	background-color: #F2F2F2;
+}
+.logo-w {
+	height: 70px;
+	width: auto;
+	margin-left: 30px;
+}
+.logo-b {
+	height: 40px;
+	margin-left: 20px;
+}
+.nav-search {
+	width: 160px;
+	position: absolute;
+	right: 170px;
+	padding-top: 3px;
+}
+.nav-search input {
+	font-size: 12px;
+}
+.search-content {
+	width: 100px;
+	height: 20px;
+	border: none;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	float: left;
+	padding: 0px;
+	padding-left: 10px;
+}
+.search-btn {
+	width: 40px;
+	height: 20px;
+	background-color: #0E6EB8;
+	color: #fff;
+	border: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.nav-items {
+	position: absolute;
+	right: 30px;
+}
+.nav-items ul {
+	margin: 0;
+}
+.nav-items ul li {
+	margin-right: 10px;
+	padding-right: 10px;
+	margin-top: 5px;
+}
+.nav-items ul li:nth-child(2) {
+	border-right: 2px solid #fff;
+}
+.search-icon {
+	width: 15px;
+	height: 15px;
+}
+.state {
+	width: 120px;
+	height: auto;
+	color: #999999;
+	position: absolute;
+	right: 200px;
+	font-size: 12px;
+}
+.saveBtn {
+	width: 100px;
+	height: auto;
+	position: absolute;
+	right: 100px;
+}
+.uploadBtn {
+	width: 100px;
+	height: auto;
+	position: absolute;
+	right: 0;
+}
+.saveBtn input {
+	height: 50px;
+	width: 100px;
+	background-color: transparent;
+}
+.uploadBtn input {
+	height: 50px;
+	width: 100px;
+	background-color: #0E6EB8;
+	color: #fff;
+}
+
+
+
+.footer {
+	width: 100%;
+	height: auto;
+	background-color: #333333;
+	color: #fff;
+	flex-flow: column;
+}
+.bottomLine {
+	width: 100%;
+	height: 3px;
+	background-color: #0E6EB8;
+}
+.footer-txt {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 5px;
+
+}
+.footer-txt a {
+	color: #fff;
+}
+.footer-title {
+	width: 100%;
+	font-size: 16px;
+	padding-top: 30px;
+}
+.footer-icon {
+	width: 100%;
+	flex-flow: row;
+	justify-content: center;
+}
+.icon {
+	border: 1.5px solid #fff;
+	width: 74px;
+	height: 74px;
+	flex-flow: row;
+	flex-wrap: wrap;
+	background-color: transparent;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.icon-wechat ul {
+	width: 2000px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	transition: left 1s;
+}
+.icon-wechat ul li {
+	float: left;
+	padding-right: 2px;
+}
+.icon img {
+	width: 72px;
+	height: 72px;
+	background-color: #fff;
+	opacity: 0.5;
+}
+#wechat2 {
+	opacity: 1;
+}
+.footer-service {
+	padding-top: 0;
+}
+.footer-msg {
+	font-size: 12px;
+}
