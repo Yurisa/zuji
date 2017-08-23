@@ -31,7 +31,6 @@ class MainController extends CommonController {
       $nation = M('nation')->select();
       $res = array();
       foreach ($nation as $key => $value) {
-        // unset($data);
         $data['nation_id'] = $value['n_id'];
         $data['nation_name'] = $value['n_name'];
         $data['touristarealist'] = M('touristarea')->where('n_id='.$value['n_id'])->select();
