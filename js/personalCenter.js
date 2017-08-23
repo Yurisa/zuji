@@ -121,10 +121,12 @@ $(document).ready(function () {
         $(".note-part").nextAll().hide();
         $("#my-fans").show();
     });
+
     /**
      * 展示用户个人信息
      * 
      */
+
     function showuserdata(){
     $.get("index.php?c=main&a=getuser",res=>{
         console.log(res)
@@ -136,6 +138,7 @@ $(document).ready(function () {
         $('.my-head-picture img').attr("src",user.u_avatar);
     },"json");
     }
+
     /**
      * 
      * 列出用户想去

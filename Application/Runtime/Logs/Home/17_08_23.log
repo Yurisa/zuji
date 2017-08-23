@@ -1,0 +1,971 @@
+[ 2017-08-23T14:09:49+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.019923s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012631s ]
+SQL: select nation.*,touristarea.* from nation,touristarea group by nation.n_id,touristarea.t_id having nation.n_id = touristarea.n_id; [ RunTime:0.0011s ]
+NOTIC: [8] Array to string conversion E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 33 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012151s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012361s ]
+
+[ 2017-08-23T14:10:01+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+
+[ 2017-08-23T14:10:25+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: select nation.*,touristarea.* from nation,touristarea group by nation.n_id,touristarea.t_id having nation.n_id = touristarea.n_id; [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000792s ]
+
+[ 2017-08-23T14:14:59+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000862s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+
+[ 2017-08-23T14:15:23+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000864s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002171s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000987s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001167s ]
+
+[ 2017-08-23T14:23:00+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001335s ]
+
+[ 2017-08-23T14:23:24+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0152s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001268s ]
+
+[ 2017-08-23T14:23:56+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000927s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000854s ]
+
+[ 2017-08-23T14:26:48+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000907s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001676s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001212s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001396s ]
+
+[ 2017-08-23T14:26:49+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000875s ]
+
+[ 2017-08-23T14:29:44+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001202s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, integer given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 42 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 42 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 42 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001259s ]
+
+[ 2017-08-23T14:29:45+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, integer given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 42 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 42 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 42 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000916s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001122s ]
+
+[ 2017-08-23T14:30:19+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000964s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, integer given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 42 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0002s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 42 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0002s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 42 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000736s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000869s ]
+
+[ 2017-08-23T14:31:01+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000801s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001122s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0147s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, integer given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 42 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0005s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 42 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 42 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000922s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001118s ]
+
+[ 2017-08-23T14:32:19+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001003s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000975s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001119s ]
+
+[ 2017-08-23T14:55:36+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000794s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001118s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0003s ]
+
+[ 2017-08-23T14:57:50+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0141s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0116s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000947s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001120s ]
+
+[ 2017-08-23T14:58:47+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0131s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0122s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0005s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0005s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0005s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0008s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0007s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0007s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0008s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0006s ]
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000986s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001193s ]
+
+[ 2017-08-23T14:58:52+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000916s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0100s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0006s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0005s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0005s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0005s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0005s ]
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 46 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000589s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000689s ]
+
+[ 2017-08-23T14:59:30+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0147s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0005s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0002s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0002s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0002s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 49 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000682s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000783s ]
+
+[ 2017-08-23T15:00:45+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000869s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0131s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0127s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 47 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001124s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001330s ]
+
+[ 2017-08-23T15:01:25+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0114s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0006s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0006s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0007s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000779s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000903s ]
+
+[ 2017-08-23T15:02:00+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001027s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0151s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0007s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0009s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001684s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001916s ]
+
+[ 2017-08-23T15:02:46+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0109s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0006s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000934s ]
+
+[ 2017-08-23T15:03:55+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0159s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0111s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0004s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: scorelist E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 50 行.
+NOTIC: [8] Undefined variable: scorelist E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: scorelist E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0003s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 48 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001132s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001373s ]
+
+[ 2017-08-23T15:04:16+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001094s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0135s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0149s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0007s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0008s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0003s ]
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000766s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000954s ]
+
+[ 2017-08-23T15:05:17+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001106s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0139s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0143s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0106s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0002s ]
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000822s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000957s ]
+
+[ 2017-08-23T15:09:50+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000842s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000889s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001075s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0185s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0168s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0232s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0006s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0008s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0011s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0008s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0008s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0006s ]
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0006s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000978s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001243s ]
+
+[ 2017-08-23T15:11:56+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0135s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0191s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0006s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0004s ]
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000928s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001110s ]
+
+[ 2017-08-23T15:12:41+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001243s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0109s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0004s ]
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001456s ]
+
+[ 2017-08-23T15:12:42+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0135s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0127s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0006s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0006s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0006s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0008s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0010s ]
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001107s ]
+
+[ 2017-08-23T15:18:30+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001557s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0104s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0002s ]
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001499s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001675s ]
+
+[ 2017-08-23T15:18:35+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0116s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0002s ]
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000705s ]
+
+[ 2017-08-23T15:20:05+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000836s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001167s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0132s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0135s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0160s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0003s ]
+NOTIC: [2] Division by zero E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 51 行.
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000808s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000992s ]
+
+[ 2017-08-23T15:25:30+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0118s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0005s ]
+
+[ 2017-08-23T15:25:46+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001223s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0107s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001106s ]
+
+[ 2017-08-23T15:27:05+08:00 ] 127.0.0.1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000669s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0118s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0006s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0003s ]
+

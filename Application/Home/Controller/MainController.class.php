@@ -21,6 +21,42 @@ class MainController extends CommonController {
        $this->json(1,'ok',$user);
      }
      
+    /*
+     *
+     *得到每个民族和对应风景区及评分
+     *
+     */
+
+     public function gettouristandnation(){
+      $nation = M('nation')->select();
+      $res = array();
+      foreach ($nation as $key => $value) {
+        // unset($data);
+        $data['nation_id'] = $value['n_id'];
+        $data['nation_name'] = $value['n_name'];
+        $data['touristarealist'] = M('touristarea')->where('n_id='.$value['n_id'])->select();
+        foreach($data['touristarealist'] as &$tour){
+            $scorelist = array();
+            $scorearray = M('h_go')->where('t_id='.$tour['t_id'])->field('score')->select();
+            // print_r($scorearray);
+            foreach($scorearray as $s){
+              array_push($scorelist,$s['score']);
+            }
+            if(empty($scorelist)){
+              $avgscore = 0.0;
+            }else{
+              $avgscore = sprintf("%.1f",array_sum($scorelist)/count($scorelist));
+            }
+            // echo $avgscore;
+            $tour['avgscore'] = $avgscore;
+            // print_r($tour);
+        }
+        // $data['touristarealist'] = $touristarealist;
+        array_push($res,$data); 
+      }
+      // print_r($res);
+      $this->json(1,'ok',$res);
+    }
   
     /*
      *
