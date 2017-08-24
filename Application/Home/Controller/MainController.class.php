@@ -63,7 +63,7 @@ class MainController extends CommonController {
      *
      */
     
-    public function addmenu(){
+    public function addmenulist(){
        $menulist = I('post.menulist');
        $id['menu_id'] = '';
        foreach ($menulist as $key => $value) {
@@ -79,6 +79,53 @@ class MainController extends CommonController {
        $this->json(1,'ok',$id);
     }
 
+    /*
+     *
+     *单条添加菜单
+     *
+     */
+ 
+    public function addmenu(){
+      $menu = I('post.menu');
+      $data = array(
+        'menu_type' => $menu['menu_type'],
+        'menu_content' => $menu['menu_content'],
+        'menu_title' => $menu['menu_title'],
+        'menu_imgurl' => $menu['menu_imgurl'],
+        't_id' => $menu['t_id'],
+     );
+     $id['menu_id'] = M('menu')->add($data);
+     $this->json(1,'ok');
+    }
+    
+    /*
+     *
+     *更新菜单
+     *
+     */
+
+     public function updatemenu(){
+       $menu = I('post.menu');
+       $data = array(
+        'menu_content' => $menu['menu_content'],
+        'menu_title' => $menu['menu_title'],
+        'menu_imgurl' => $menu['menu_imgurl'],
+       );
+       M('menu')->where('menu_id='.$menu['menu_id'])->save($data);
+       $this->json(1,'ok');
+     }
+    /*
+     *
+     *通过景区ID和菜单类型得到菜单信息
+     *
+     */
+     public function gettourmenu(){
+      $t_id = $_GET['t_id'];
+      $menu_type = $_GET['menu_type'];
+      $arr = M('menu')->where('t_id='.$t_id.' and menu_type='.$menu_type)->select();
+      $res['menu'] = $arr;
+      $this->json(1,'ok',$res);
+     }
     /*
      *
      *通过菜单ID得到菜单内容
