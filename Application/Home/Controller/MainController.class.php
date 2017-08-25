@@ -20,7 +20,21 @@ class MainController extends CommonController {
        $user['user'] = D('user')->getuserdatabyuid($u_id);
        $this->json(1,'ok',$user);
      }
-     
+
+    /*
+     *
+     *得到用户信息
+     *
+     */
+    
+     public function gettouristareabyid(){
+       $t_id = $_GET['t_id'];
+       $Model = new \Think\Model();
+       $arr = $Model->query("select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_jianzhu,touristarea.t_cardimg, nation.n_name, province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '{$t_id}'");
+       $res['toursitarea'] = $arr[0];
+       $this->json(1,'ok',$res);
+      }
+
     /*
      *
      *得到每个民族和对应风景区及评分
@@ -121,11 +135,25 @@ class MainController extends CommonController {
      */
      public function gettourmenu(){
       $t_id = $_GET['t_id'];
-      $menu_type = $_GET['menu_type'];
-      $arr = M('menu')->where('t_id='.$t_id.' and menu_type='.$menu_type)->select();
+      $menu_type = $_GET['type'];
+      $humanitiestype = ['custom','history','dress','artwork'];
+      $arr = array();
+      if($menu_type == 'humanities'){
+        foreach ($humanitiestype as $key => $value) {
+            $value = (string)$value;
+            $tmparr = array();
+            $tmparr =  M('menu')->where("t_id= %d and menu_type = '%s'",array($t_id,$value))->select();
+            // print_r($tmparr);
+            $arr = array_merge($arr,$tmparr);
+        }
+        // print_r($arr);
+      }else{
+            $arr = M('menu')->where("t_id= %d and menu_type = '%s'",array($t_id,$menu_type))->select();
+      }
       $res['menu'] = $arr;
       $this->json(1,'ok',$res);
      }
+
     /*
      *
      *通过菜单ID得到菜单内容
