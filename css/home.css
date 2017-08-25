@@ -1,0 +1,125 @@
+.theMainImg {
+	height: 815px;
+	background: url('../images/home-bg.jpg');
+	background-size: 100% 815px;
+}
+.theAdArea {
+	width: 100%;
+	height: 150px;
+	background-color: #f5f5f5;
+	border: 1px solid #ececec;
+}
+.theHotArea {
+	width: 100%;
+	height: 300px;
+	margin-top: 50px;
+}
+.topic {
+	width: 100%;
+	height: auto;
+	font-size: 30px;
+	text-align: center;
+	color: #666666;
+}
+.area {
+	height: 280px;
+	padding-top: 50px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.theRecommendArea {
+	width: 100%;
+	min-height: 500px;
+	margin-top: 50px;
+}
+.change {
+	padding-left: 100px;
+	padding-top: 40px;
+}
+.change span {
+	color: #666666;
+}
+.loop:before {
+	padding-right: 5px;
+}
+.theItems {
+	height: 400px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.theItems ul {
+	margin: 0;
+	padding: 0;
+}
+.theItems ul li {
+	width: calc((100% - 98px)/4);
+	margin-left: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.theItems ul li:nth-child(1) {
+	margin-left: 0;
+}
+.theItems ul li:nth-child(5) {
+	margin-left: 0;
+}
+.item {
+	max-height: 300px;
+	border: 1px solid #ececec;
+}
+.img {
+	width: 100%;
+	position: relative;
+}
+.img img {
+	max-width: 100%;
+	max-height: 200px;
+	height: auto;
+}
+.info {
+	width: 100%;
+	height: 80px;
+/*	border: 1px solid #ececec;*/
+}
+.subtitle p {
+	color: black;
+	padding-left: 20px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.tag {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 22px;
+	line-height: 22px;
+	border-radius: 50%;
+	padding: 6px 10px;
+	width: 40px;
+	height: 48px;
+	color: #fff;
+	background-color: rgba(0,0,0,.6);
+	margin-left: -30px;
+	margin-top: -30px;
+	text-align: center;
+}
+.tag span {
+	display: block;
+}
+.bt {
+	border-top: 1px solid hsla(0,0%,100%,.4);
+}
+.bottom span {
+	color: grey;
+	display: inline-block;
+	padding-left: 20px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+.h_position {
+	width: 45%;
+}
+.bottom .h_renking {	
+    color: #cecece;
+	font-size: 12px;
+}

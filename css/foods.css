@@ -1,0 +1,44 @@
+.secondLayer-f {
+	width: 50%;
+	line-height: 40px;
+	padding: 10px 20px; 
+	color: #fff;
+	margin-left: 10px;
+}
+.secondLayer-f p {
+	padding: 40px 60px;
+	text-indent: 2em;
+}
+.right-name {
+	width: 45%;
+	padding: 20px 20px;
+}
+.box-e {
+	flex-direction: row;
+	margin-bottom: 20px;
+}
+.foods-imgLine {
+	max-height: 240px;
+	overflow: hidden;
+}
+.foods-imgLine ul li{
+	width: 300px;
+	height: 240px;
+}
+.foods-imgLine ul li img {
+	width: 100%;
+	height: 205px;
+}
+.foods-name {
+	width: 300px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	color: black;
+}
+.foods-name1 {
+	background-color: #F2F2F2;
+}
+.foods-name2 {
+	background-color: #E4E4E4;
+}

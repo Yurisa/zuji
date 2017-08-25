@@ -1,0 +1,159 @@
+.bottomLayer {
+	width: 100%;
+	height: auto;
+	min-height: 200px;
+	padding: 20px 0; 
+	margin-bottom: 10px;
+	padding-bottom: 80px;
+	margin-top: 10px;
+	background-color: #333333;
+	position: relative;
+}
+.secondLayer {
+	width: 96%;
+	margin: 0 auto;
+	padding: 10px 20px; 
+	padding-right: 0;
+	background-color: rgba(255, 255, 255, 0.078);
+	flex-direction: row;
+}
+.left-img {
+	width: 25%;
+	height: auto;
+}
+.right-info {
+	width: 70%;
+	color: #fff;
+	margin: 0 auto;
+	line-height: 30px;
+	/*text-indent: 2em;*/
+}
+.right-info span {
+	display: block;
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.addLine {
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	font-size: smaller;
+	position: absolute;
+	left: 50%; 
+	bottom: 5%;
+	transform: translate(-50%);
+}
+#add {
+	text-decoration: underline;
+}
+.theAddArea {
+	width: 60%;
+	height: 500px;
+	padding: 10px 10px;
+	position: absolute;
+	z-index: 1;
+	left: 20%;
+	top: 10%;
+	background-color: #F2F2F2;
+	border: 5px solid #0E6EB8;
+}
+#close {
+	position: absolute;
+	right: 10px;
+}
+.addContent {
+	margin: 15px 10px;
+	flex-direction: row;
+}
+.add-num {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+	border-radius: 50%;
+	color: #999999;
+	background-color: #fff;
+	border: 5px solid #747272;
+}
+.add-right {
+	margin-left: 20px;
+	width: 85%;
+	padding: 10px 10px;
+	padding-bottom: 0;
+	background-color: rgba(215, 215, 215,1);
+}
+.add-right span {
+	display: block;
+	margin-bottom: 20px;
+}
+.add-right span input {
+	margin-left: 20px;
+	padding: 5px 5px;
+	border: 1px solid rgb(169, 169, 169);
+}
+/*.add-right form span:nth-child(2) {
+	display: table-cell;
+	display: block;
+	vertical-align: middle;
+}*/
+.minus {
+	
+	margin-left: 20px;
+
+	color: #fff;
+	color: red;
+	
+}
+.plus {
+	display: block;
+	color: #333333;
+	font-size: 28px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 23px;
+}
+#info-add {
+	resize: none;
+	width: 650px;
+	height: 100px;
+	margin-left: 20px;
+}
+.img-add {
+	background-color: #0E6EB8;
+	color: #fff;
+	margin-left: 20px;
+	padding: 5px 20px;
+	font-size: smaller;
+}
+.addBottom {
+	position: absolute;
+	bottom: 20px;
+	left: 45%;
+}
+.empty {
+	width: 300px;
+	height: 200px;
+	top: 50px;
+	text-align: center;
+	margin: 50px auto;
+}
+.empty span {
+	color: #cccccc;
+	margin-bottom: 40px;
+}
+.empty-icon {
+	display: inline-block;
+	font-size: 60px;
+	margin-right: 10px;
+	margin-top: 50px;
+}
+.empty div {
+	width: 250px;
+	line-height: 30px;
+	border-radius: 0;
+	align-content: center;
+	margin: 0 auto;
+}
