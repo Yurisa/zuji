@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<title>culture</title>
 	<meta name="viewport" content="width = device-width,initial-scale=1">
+	<link rel="stylesheet" href="layui/css/layui.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
@@ -152,33 +153,31 @@
 					<span id="close">X</span>
 				</div>
 				<div class="addContent box">
+					<div class="addarea">
+					<div class="oneadd">
 					<div class="add-num">1</div>
 					<div class="add-right">
-						<form>
 							<span>标题
 								<input type="text" id="title-add" name="title-add">
 							</span>
 							<span>介绍
 								<textarea id="info-add"></textarea>
 							</span>
-							<span>配图
-								<label class="img-add" for="img-add">上传图片</label>
-								<!-- <form> -->
-								<input type="file" id="img-add" style="position:absolute;clip:rect(0 0 0 0);" accept="image/png,image/jpeg,image/gif,image/jpg">
-								<!-- </form> -->
-								<!-- <input type="file" id="img-add" name="img-add"> -->
+						     <span>配图
+								<div id="uploadposition">
+									<button  style="width: 150px;height: 15px;margin: 0 10px 30px 50px;float:left" id="pickfiles" href="javascript:;">Select files</button>
+									<button  style="width: 150px;height: 15px;margin: 0 50px 30px;float:left" id="uploadfiles" href="javascript:;">Upload files</button>
+								</div>
 							</span>
-							<!-- <span>来源
-								<input type="text" id="from-add" name="from-add">
-							</span> -->
-						
+								<div class="preimage box box-top" style="width:100%;height:auto;margin-top:80px"></div>
+					</div>
+					</div>
 					</div>
 					<span class="icon-minus minus"></span>
 				</div>
 				<div class="addBottom">
 					<span class="icon-plus plus"></span>
 					<input type="submit" class="btn-primary add-btn" name="add-submit" value="确认">
-						</form>
 				</div>
 			</div>
 		</div>
@@ -217,5 +216,7 @@
 	</div>
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="js/culture.js"></script>
+	<script type="text/javascript" src="js/plup/plupload.full.min.js"></script>
+	<script type="text/javascript" src="layui/layui.js"></script>
 </body>
 </html>

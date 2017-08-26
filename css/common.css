@@ -12,6 +12,7 @@
 .secondLayer {
 	width: 96%;
 	margin: 0 auto;
+	margin-bottom: 10px;
 	padding: 10px 20px; 
 	padding-right: 0;
 	background-color: rgba(255, 255, 255, 0.078);
@@ -49,7 +50,7 @@
 }
 .theAddArea {
 	width: 60%;
-	height: 500px;
+	height: auto;
 	padding: 10px 10px;
 	position: absolute;
 	z-index: 1;
@@ -64,7 +65,7 @@
 }
 .addContent {
 	margin: 15px 10px;
-	flex-direction: row;
+	flex-direction: column;
 }
 .add-num {
 	width: 30px;
@@ -113,7 +114,6 @@
 	font-size: 28px;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	margin-left: 23px;
 }
 #info-add {
 	resize: none;
@@ -129,9 +129,10 @@
 	font-size: smaller;
 }
 .addBottom {
-	position: absolute;
+	/* position: absolute;
 	bottom: 20px;
-	left: 45%;
+	left: 45%; */
+	text-align: center;
 }
 .empty {
 	width: 300px;

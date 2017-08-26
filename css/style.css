@@ -65,6 +65,7 @@
 }
 .icon-gift:before {
   content: "\e99f";
+  /* color: red; */
 }
 .icon-spoon-knife:before {
   content: "\e9a3";

@@ -5,7 +5,7 @@ use Home\Controller\CommonController;
 use Org\Util\Upload;
 use Org\Util\Image;
 use Think\Controller;
-class IndexController extends Controller {
+class IndexController extends CommonController {
 
     public function index(){
     	
@@ -42,7 +42,7 @@ class IndexController extends Controller {
              // Image::water($file,"./ThinkPHP/zuji.png",null,50);
             $image = new \Think\Image(); 
             // 在图片左上角添加水印（水印文件位于./logo.png） 水印图片的透明度为50 并保存为water.jpg
-            $image->open($file)->water('./ThinkPHP/zuji.png',\Think\Image::IMAGE_WATER_NORTHWEST,50)->save($file); 
+            $image->open($file)->water('./ThinkPHP/zuji.png',\Think\Image::IMAGE_WATER_SOUTHEAST,40)->save($file); 
             if (is_file($file)) {
                 
                 $width = I('request.width', NULL);
@@ -52,7 +52,6 @@ class IndexController extends Controller {
                     $height = 999999999999;
                     $file = Image::thumb($file, $config['path'] . $pathinfo['filename'] . 'Wx' . $width . '.' . $pathinfo['extension'], strtolower($pathinfo['extension']), $width, $height);
                 }
-                $id = D('Img')->send($file);
                 $this->json(1, 'ok', array(
                     'id' => $id,
                     'file' => $file

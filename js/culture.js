@@ -5,9 +5,9 @@ var currentitemindex = 0;
 // console.log(t_id)
 // console.log(type);
 $.get('index.php?c=main&a=gettouristareabyid',{"t_id":t_id},res=>{
-    // console.log(res)
+     console.log(res)
     let tour = res.body.toursitarea;
-    console.log(tour.t_renwen)
+    console.log(tour.t_renwen);
     let province = tour.p_name;
     let nation = tour.n_name;
     let touristarea = tour.t_name;
@@ -73,6 +73,78 @@ $(".menu-2 ul li").click(function(){
 	$(".content").hide();
 	$(".content").eq(currentitemindex).show();
 });
+var itemnum = 1
+$('.plus').click(function(){
+    itemnum++;
+    console.log(itemnum)
+    $('.addarea').append($("<div class='oneadd'><div class='add-num' id="+'add-num'+itemnum+">"+itemnum+"</div><div class='add-right'><span>标题<input type='text' name='title-add'></span><span>介绍<textarea ></textarea></span><span>配图<div id="+'uploadposition'+itemnum+"><button style='width: 150px;height: 15px;margin: 0 10px 30px 50px;float:left' id='pickfiles' href='javascript:;'>Select files</button><button style='width: 150px;height: 15px;margin: 0 50px 30px;float:left' id='uploadfiles' href='javascript:;'>Upload files</button></div></span><div class='preimage box box-top' style='width:100%;height:auto;margin-top:80px'></div></div></div>"))
+})
+$('.minus').click(function(){
+    if(itemnum==1){
+        alert("已经是最后一条");
+    }else{
+        itemnum--;
+        console.log(itemnum);
+        console.log( $('.oneadd').eq(itemnum));
+        // debugger;
+        $('.oneadd').eq(itemnum).remove();
+    }
+
+    
+
+})
+var uploader = new plupload.Uploader({
+    runtimes : 'html5,flash,silverlight,html4',
+    browse_button : 'pickfiles', // you can pass an id...
+    container: document.getElementById('uploadposition'), // ... or DOM Element itself
+    url : 'index.php?c=index&a=uploadImg&width=800',
+    flash_swf_url : 'js/plup/Moxie.swf',
+    silverlight_xap_url : 'js/plup/Moxie.xap',
+
+
+    filters : {
+        max_file_size : '10mb',
+        mime_types: [
+            {title : "Image files", extensions : "jpg,gif,png"},
+            {title : "Zip files", extensions : "zip"}
+        ]
+    },
+
+    init: {
+        PostInit: function() {
+            document.getElementById('uploadfiles').onclick = function() {
+                uploader.start();
+                return false;
+            };
+        },
+
+        FilesAdded: function(up, files) {
+            plupload.each(files, function(file) {
+                $(".preimage").append($("<span class='filename' style='margin-left:44px;margin-right:30px;'>"+file.name+"</span><div class='layui-progress layui-progress-big' lay-showPercent='yes' style='display:inline-block;width:30%;margin-top:-18px'><div class='layui-progress-bar layui-bg-green progressbar' lay-percent='0%'></div></div><script>layui.use('element', function(){var element = layui.element;});</script>"));
+            });
+        },
+
+        UploadProgress: function(up, file) {
+            console.log("11111")
+            console.log(file.percent)
+            $('.progressbar').css("width",file.percent+'%');
+            $('.layui-progress-text').html(file.percent+'%');
+        },
+        FileUploaded: function(up, file, info) {
+            var data = strToJson(info.response);
+        //     $("#"+file.id+" img").attr("src",data.path);
+        //    console.log(typeof (info.response));
+        },
+        Error: function(up, err) {
+            document.getElementById('console').appendChild(document.createTextNode("\nError #" + err.code + ": " + err.message));
+        }
+    }
+});
+
+uploader.init();
+function strToJson(str){
+    return JSON.parse(str);
+}
 // $(".content").each(function(index,item){
 // 	console.log($(".content").eq(index).find(".secondLayer"));
 // 	if($(".content").eq(index).find(".secondLayer").length === 0){
