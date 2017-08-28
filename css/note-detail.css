@@ -97,7 +97,7 @@
 }
 .note-response {
 	width: 75%;
-	height: 200px;
+	/* height: 200px; */
 	/*margin: 0 auto;*/
 	margin-left: 30px;
 	padding-bottom: 10px;
@@ -170,10 +170,11 @@
 	right: 10px;
 }
 .myResponse {
-	position: relative;
+	/* position: relative; */
 	width: 78%;
 	height: 100px;
 	margin-bottom: 10px;
+	margin-top: 100px;
 }
 .myResponse .r-avatar {
 	margin-left: 30px;

@@ -30,7 +30,7 @@ class MainController extends CommonController {
      public function gettouristareabyid(){
        $t_id = $_GET['t_id'];
        $Model = new \Think\Model();
-       $arr = $Model->query("select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_jianzhu,touristarea.t_cardimg, nation.n_name, province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '{$t_id}'");
+       $arr = $Model->query("select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, nation.n_name, province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '{$t_id}'");
        $res['toursitarea'] = $arr[0];
        $this->json(1,'ok',$res);
       }
@@ -294,7 +294,38 @@ class MainController extends CommonController {
       $res['totalnum'] = intval(($articlenum+$pagesize-1)/$pagesize);
       $this->json(1,'ok',$res);
     }
+
+    /*
+     *
+     *通过ID得到游记
+     *
+     */
+
+     public function getarticlebyaid(){
+       $a_id = $_GET['a_id'];
+       $res['article'] = D('article')->getArticleByaid($a_id);
+       $res['article'][0]['collectnum'] = M('collect')->where('a_id='.$a_id)->count();
+       $this->json(1,'ok',$res);
+     }
+
+    /*
+     *
+     *通过ID得到游记
+     *
+     */
     
+     public function getcommentbyaid(){
+      $a_id = $_GET['a_id'];
+      $curr = intval($_GET['page']);
+      $pagesize = 4;
+      $currnum = ($curr-1)*$pagesize;
+      $arr = D('article')->getCommentByaid($a_id);
+      $commentnum = count($arr);
+      $res['comment']['commentlist'] = array_slice($arr,$currnum,$pagesize);
+      $res['comment']['commentnum']  = $commentnum;
+      $res['totalnum'] = intval(($commentnum+$pagesize-1)/$pagesize);
+      $this->json(1,'ok',$res);
+     }
     /*
      *
      *添加游记
@@ -556,4 +587,21 @@ class MainController extends CommonController {
        M('h_go')->where('t_id='.$t_id.' and u_id='.$u_id)->save($data);
        $this->json(1,'ok');
     }
+
+    /*
+     *
+     *添加评论
+     *
+     */
+
+     public function addcomment(){
+       $data = array(
+         "u_id" => 1,
+         "a_id" =>I ('post.a_id'),
+         "c_content" => I('post.c_content'),
+         "timestamp" => time(),
+       );
+       $res['c_id'] = M('comment')->add($data);
+       $this->json(1,'ok',$res);
+     }
 }
