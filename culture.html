@@ -60,36 +60,22 @@
 
 		<div class="menu-2">
 			<ul>
-				<li>习俗</li>
-				<li>历史</li>
-				<li>服饰</li>
-				<li>工艺品</li>
+				<li type="custom">习俗</li>
+				<li type="history">历史</li>
+				<li type="dress">服饰</li>
+				<li type="artwork">工艺品</li>
 			</ul>
 		</div>
 		<div class="bottomLayer">
 			<!--内容介绍-->
 			<!-- 习俗 -->
 		  <div class="content" id="custom">
-			  <!-- 一条 -->
-			<!-- <div class="box secondLayer" >			
-				<div class="left-img">
-					<a href="">
-						<img src="images/test.jpg">
-					</a>
-				</div>
-				<div class="right-info">
-					<span>吊脚楼</span>
-					<p>介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍</p>
-				</div>
-			</div> -->
-		
 			<div class="empty">
 				<span class="icon-baffled empty-icon"></span>
 				<span>哎呀，还没有资料</span>
 				<div class="btn-primary empty-btn">我来补充</div>
 			</div>
-			
-		   </div>
+		 </div>
 
 		  <!-- 历史 -->
 		  <div class="content" id="history" style="display:none;">
@@ -98,8 +84,7 @@
 					<span>哎呀，还没有资料</span>
 					<div class="btn-primary empty-btn">我来补充</div>
 				</div>
-				
-			   </div>
+		 </div>
 
 			   <!-- 服饰 -->
 			   <div class="content" id="dress" style="display:none;">
@@ -143,19 +128,19 @@
 				</div>
 				<div class="addContent box">
 					<div class="addarea">
-					<div class="oneadd">
+					<div class="oneadd" id="oneadd1">
 					<div class="add-num">1</div>
 					<div class="add-right">
 							<span>标题
-								<input type="text" id="title-add" name="title-add">
+								<input type="text" class="title-add" name="title-add">
 							</span>
 							<span>介绍
-								<textarea id="info-add"></textarea>
+								<textarea class="info-add"></textarea>
 							</span>
 						     <span>配图
-								<div id="uploadposition">
-									<button  style="width: 150px;height: 15px;margin: 0 10px 30px 50px;float:left" id="pickfiles" href="javascript:;">Select files</button>
-									<button  style="width: 150px;height: 15px;margin: 0 50px 30px;float:left" id="uploadfiles" href="javascript:;">Upload files</button>
+								<div id="uploadposition1">
+									<button  class="layui-btn layui-btn-big" style="width: 150px;height: 15px;margin: 0 10px 30px 50px;float:left" id="pickfiles1" href="javascript:;">选择图片</button>
+									<button  class="layui-btn layui-btn-big" style="width: 150px;height: 15px;margin: 0 50px 30px;float:left" id="uploadfiles1" href="javascript:;">开始上传</button>
 								</div>
 							</span>
 								<div class="preimage box box-top" style="width:100%;height:auto;margin-top:80px"></div>
@@ -166,7 +151,7 @@
 				</div>
 				<div class="addBottom">
 					<span class="icon-plus plus"></span>
-					<input type="submit" class="btn-primary add-btn" name="add-submit" value="确认">
+					<input type="button" class="btn-primary add-btn" id="addmenu" name="add-submit" value="确认">
 				</div>
 			</div>
 		</div>

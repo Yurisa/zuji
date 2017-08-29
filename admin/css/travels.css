@@ -1,0 +1,11 @@
+.list .layui-btn-group{
+    width:10%;
+}
+
+.list new div:nth-child(1),.list new div:nth-child(3),.list new div:nth-child(4){
+    cursor: pointer;
+}
+
+.list div:nth-child(1),.list div:nth-child(3),.list div:nth-child(4){
+    cursor: pointer;
+}

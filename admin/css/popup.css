@@ -1,0 +1,101 @@
+#imageUpload{
+    width: 80%;
+    height: auto;
+    background-color: rgba(0,0,0,0.6);
+    margin: 0px auto;
+    z-index: 100;
+    position: absolute;
+    left: 10%;
+    /*top:10%;*/
+}
+
+#imageUpload #imageList{
+    width: 100%;
+    float: none;
+    position: relative;
+    /*left: 10%;*/
+    /*top:15%;*/
+}
+
+#imageList .layui-form-item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#imageList.layui-form-item input{
+    float: left;
+}
+
+#imageList .layui-form-item label{
+    color: #ffffff;
+}
+
+#imageList .layui-input {
+    width: 80%;
+}
+
+/*#imageList .layui-textarea{*/
+/*width: 80%;*/
+/*}*/
+
+#imageList .layui-progress{
+    width: 250px;
+    position: relative;
+    top:10px;
+    left: 30%;
+}
+
+
+#detailMes{
+    width: 80%;
+    height: 400px;
+    background-color: rgba(0,0,0,0.6);
+    margin: 0px auto;
+    z-index: 100;
+    position:absolute;
+    top:25%;
+    left:10%;
+}
+
+#detailPart #detailMes #revise{
+    width: 100%;
+    float: none;
+    position: relative;
+    right:0%;
+    top:15%;
+}
+
+.close{
+    position: absolute;
+    right: 0px;
+    top:0px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#detailPart #detailMes #revise .layui-form-item{
+    margin-bottom: 20px;
+}
+
+#detailPart #detailMes #revise .layui-form-item input{
+    float: left;
+}
+
+#detailPart #detailMes #revise .layui-form-item label{
+    color: #ffffff;
+}
+
+#detailPart #detailMes #revise .layui-input {
+    width: 50%;
+}
+
+#detailPart #detailMes #revise .layui-textarea{
+    width: 80%;
+}
+
+#detailPart #detailMes #revise .layui-progress{
+    width: 250px;
+    position: relative;
+    top:10px;
+    left: 30%;
+}

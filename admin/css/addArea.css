@@ -1,0 +1,131 @@
+#sign{
+    width: 100%;
+    height: 80px;
+}
+
+#sign div{
+    cursor: pointer;
+}
+
+#sign div:nth-child(1){
+    border-top: 5px solid #3366FF;
+    height: 50px;
+    width: 250px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    float: left;
+}
+
+#sign div:nth-child(n+2){
+    border-top: 5px solid #3366FF;
+    height: 50px;
+    width: 100px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    float: left;
+    margin-left: 50px;
+}
+
+#sign div:nth-child(n+3){
+    border-top: 5px solid #FFFFFF;
+}
+
+#back{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#back i{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 65px;
+    cursor: pointer;
+    /*float: left;*/
+}
+
+#back div{
+    margin-left: 5%;
+    width: 30%;
+    font-weight: bold;
+}
+
+#content{
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+}
+
+#detailPart{
+    width: 90%;
+    height: auto;
+    background-color: #FFFFFF;
+    margin: 0px auto;
+}
+
+#input-part{
+    width: 30%;
+    height: 600px;
+    float: left;
+}
+
+#input-part form{
+    position: relative;
+    top:20%;
+}
+
+#map-part{
+    width: 70%;
+    height: 600px;
+    float: left;
+}
+
+.layui-colla-item button{
+    float: left;
+    position: relative;
+    top: -36px;
+    left: 95%;
+}
+
+.layui-colla-item .layui-btn-group button{
+    float: left;
+    position: relative;
+    left: 0%;
+    top:0%;
+}
+
+.layui-collapse{
+    /*margin-bottom: 50px;*/
+    width: 100%;
+    margin:0px auto;
+}
+
+/*.layui-colla-content button{*/
+     /*position: relative;*/
+     /*top: 40px;*/
+     /*left: 45%;*/
+/*}*/
+
+.layui-collapse .layui-colla-item .layui-input-block{
+    margin-left: 0px;
+}
+
+.layui-collapse .layui-colla-item .layui-input{
+    width: 95%;
+    height: 42px;
+    line-height: 42px;
+}
+
+/*.layui-colla-item .layui-table table tr td img{*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+/*}*/
+
+/*.layui-colla-item .layui-table table tr td .layui-btn{*/
+    /*margin-bottom: 5px;*/
+    /*margin-left: 0px;*/
+/*}*/

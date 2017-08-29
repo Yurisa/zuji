@@ -1,0 +1,88 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#title{
+    width: 100%;
+    height: 200px;
+}
+
+#user,#area,#travels,#nation{
+    width: 18%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    /*border: 2px solid #999999;*/
+    float: left;
+    margin-top: 50px;
+    margin-left: 80px;
+    box-shadow:  5px 5px 5px #999999;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#user div,#area div,#travels div,#nation div{
+    width: 50%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    float: left;
+}
+#user{
+    background-color: #FF5722;
+}
+
+#area{
+    background-color: #5FB878;
+}
+
+#travels{
+    background-color: #F7B824;
+}
+
+#nation{
+    background-color: #009688;
+}
+
+/*#pageView{*/
+    /*width: 50%;*/
+    /*min-height: 500px;*/
+    /*float: left;*/
+    /*margin-left: 80px;*/
+/*}*/
+
+#hotTopic div:nth-child(1){
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/*#weekView,#monthView,#yearView{*/
+    /*width: 100%;*/
+    /*height: 50px;*/
+    /*background-color: #666666;*/
+    /*text-align: center;*/
+    /*line-height: 50px;*/
+    /*float: left;*/
+    /*margin-top: 10px;*/
+    /*color: #FFFFFF;*/
+/*}*/
+
+#hotTopic{
+    width: 80%;
+    min-height: 300px;
+    margin: 0px auto;
+}
+
+/*#hotArea,#hotTravelNote{*/
+    /*width: 100%;*/
+    /*height: 50px;*/
+    /*background-color: #666666;*/
+    /*text-align: center;*/
+    /*line-height: 50px;*/
+    /*float: left;*/
+    /*margin-top: 10px;*/
+    /*color: #FFFFFF;*/
+/*}*/

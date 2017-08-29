@@ -8,6 +8,23 @@ use Think\Controller;
 
 class MainController extends CommonController {
 
+
+
+   public function getprovince(){
+     $res['province'] = M('province')->select();
+     $this->json(1,'ok',$res);
+   }
+
+   public function getnation(){
+    $res['nation'] = M('nation')->select();
+    $this->json(1,'ok',$res);
+  }
+
+  public function getnationbypid(){
+    $p_id = $_GET['p_id'];
+    $res['nation'] = M('nation')->where('p_id='.$p_id)->select();
+    $this->json(1,'ok',$res);
+  }
       
     /*
      *
@@ -23,18 +40,79 @@ class MainController extends CommonController {
 
     /*
      *
-     *得到用户信息
+     *得到景区通过ID
      *
      */
     
      public function gettouristareabyid(){
        $t_id = $_GET['t_id'];
        $Model = new \Think\Model();
-       $arr = $Model->query("select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, nation.n_name, province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '{$t_id}'");
-       $res['toursitarea'] = $arr[0];
+       $arr = $Model->query("select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '{$t_id}'");
+       $res['touristarea'] = $arr[0];
+       $res['custom'] = M('menu')->where("t_id = %d and menu_type = '%s'",array($t_id,"custom"))->select();
+       $res['history'] = M('menu')->where("t_id = %d and menu_type = '%s'",array($t_id,"history"))->select();
+       $res['dress'] = M('menu')->where("t_id = %d and menu_type = '%s'",array($t_id,"dress"))->select();
+       $res['artwork'] = M('menu')->where("t_id = %d and menu_type = '%s'",array($t_id,"artwork"))->select();
+       $res['building'] = M('menu')->where("t_id = %d and menu_type = '%s'",array($t_id,"building"))->select();
+       $res['diet'] = M('menu')->where("t_id = %d and menu_type = '%s'",array($t_id,"diet"))->select();
        $this->json(1,'ok',$res);
-      }
+     }
 
+    /*
+     *
+     *得到每个民族和和游记数量
+     *
+     */
+
+     public function getalltouristareabyarticlenum(){
+      $curr = intval($_GET['page']);
+      $pagesize = 4;
+      $currnum = ($curr-1)*$pagesize;
+      $Model = new \Think\Model();
+      $flag = array(); 
+      $arr = $Model->query("select touristarea.*,nation.n_name,province.p_name from touristarea,nation,province where province.p_id = nation.p_id and nation.n_id = touristarea.n_id");
+      // $arr  = M('touristarea')->order('timestamp desc')->select();
+      foreach($arr as $key => &$value){
+        //  $value['articlenum'] = M('article')->where('t_id='.$value['t_id'])->count();
+         $num = M('article')->where('t_id='.$value['t_id'])->count();
+         $value['articlenum'] = $num;
+      }
+       
+      
+      foreach($arr as $v){  
+        $flag[] = $v['articlenum'];  
+      }  
+     array_multisort($flag, SORT_DESC, $arr);  
+      //  print_r($arr);
+      $tournum = count($arr);
+      $res['touristarea'] = array_slice($arr,$currnum,$pagesize);
+      $res['totalnum']  = intval(($tournum+$pagesize-1)/$pagesize);
+      $this->json(1,'ok',$res);
+     }
+
+   /*
+     *
+     *得到每个民族和和游记数量
+     *
+     */
+     public function getalltouristarea(){
+      $curr = intval($_GET['page']);
+      $pagesize = 4;
+      $currnum = ($curr-1)*$pagesize;
+      $Model = new \Think\Model();
+      $arr = $Model->query("select touristarea.*,nation.n_name,province.p_name from touristarea,nation,province where province.p_id = nation.p_id and nation.n_id = touristarea.n_id order by touristarea.timestamp");
+      // $arr  = M('touristarea')->order('timestamp desc')->select();
+      foreach($arr as $key => &$value){
+        //  $value['articlenum'] = M('article')->where('t_id='.$value['t_id'])->count();
+         $num = M('article')->where('t_id='.$value['t_id'])->count();
+         $value['articlenum'] = $num;
+      }
+      // print_r($arr);
+      $tournum = count($arr);
+      $res['touristarea'] = array_slice($arr,$currnum,$pagesize);
+      $res['totalnum']  = intval(($tournum+$pagesize-1)/$pagesize);
+      $this->json(1,'ok',$res);
+     }
     /*
      *
      *得到每个民族和对应风景区及评分
@@ -95,6 +173,29 @@ class MainController extends CommonController {
 
     /*
      *
+     *用户批量增加菜单
+     *
+     */
+
+     public function useraddmenu(){
+       $menulist = I('post.menulist');
+       foreach ($menulist as $key => $value) {
+        $data = array(
+           'mj_type' => $value['menu_type'],
+           'mj_content' => $value['menu_content'],
+           'mj_title' => $value['menu_title'],
+           'mj_imgurl' => $value['menu_imgurl'],
+           'mj_ispass'=>'待审核',
+           't_id' => $value['t_id'],
+           'u_id' =>1,
+        );
+        $id['mj_id'] = $id['mj_id'].M('menu_judge')->add($data).',';
+     }
+        $this->json(1,'ok',$id);
+     }
+
+    /*
+     *
      *单条添加菜单
      *
      */
@@ -106,6 +207,7 @@ class MainController extends CommonController {
         'menu_content' => $menu['menu_content'],
         'menu_title' => $menu['menu_title'],
         'menu_imgurl' => $menu['menu_imgurl'],
+        "timestamp"=>time(),
         't_id' => $menu['t_id'],
      );
      $id['menu_id'] = M('menu')->add($data);

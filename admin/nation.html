@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>数据分析-少数民族</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/dataList.css">
+    <link rel="stylesheet" href="css/nation.css">
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <!-- 顶部区域-->
+        <div><img src="image/zuji（白色）.png"></div>
+        <div id="exit">退出</div>
+        <div id="administrators">管理员abc</div>
+        <!--<i class="layui-icon">&#xe614;</i>-->
+    </div>
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed"><a href="backstage.html">数据分析</a></li>
+                <li class="layui-nav-item"><a href="user.html">用户</a></li>
+                <li class="layui-nav-item"><a href="travels.html">游记</a></li>
+                <li class="layui-nav-item"><a href="area.html">特色地区</a></li>
+                <li class="layui-nav-item"><a href="nation.html">少数民族</a></li>
+                <li class="layui-nav-item"><a href="newSupplement.html">新补充</a></li>
+                <!--<li class="layui-nav-item"><a href="">反馈</a></li>-->
+                <!--<li class="layui-nav-item"><a href="">举报</a></li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div id="sign">
+            <div><a href="">少数民族</a></div>
+            <input type="search" name="" value="民族">
+            <i id="search" class="layui-icon">&#xe615;</i>
+        </div>
+        <div id="content">
+            <!--列表名-->
+            <div id="mark">
+                <div>民族</div>
+                <div>分布地区数量</div>
+                <div>最近更新时间</div>
+            </div>
+            <!--排序方式-->
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <!--<div class="layui-input-block">-->
+                    <input type="radio" name="sort" value="最近登陆时间" title="最近登陆时间" checked>
+                    <input type="radio" name="sort" value="游记数量" title="游记数量">
+                    <!--</div>-->
+                </div>
+            </form>
+            <!--民族信息-->
+            <div id="items">
+                <div class="list">
+                    <div>苗族</div>
+                    <div>1</div>
+                    <div>12:00  17-01-01</div>
+                    <div class="layui-btn-group">
+                        <button class="layui-btn">修改</button>
+                        <button class="layui-btn">删除</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page">
+            <div>共1页</div>
+            <div>首页</div>
+        </div>
+    </div>
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+    </div>
+</div>
+<script src="layui/layui.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script src="js/layuiUse.js"></script>
+<script src="js/skip.js"></script>
+</body>
+</html>

@@ -22,7 +22,7 @@ class IndexController extends CommonController {
             @mkdir($dir_1);
         if (! file_exists($dir_2))
             @mkdir($dir_2);
-        
+        // print_r($_FILES);
         if (isset($_FILES['file'])) {
             $config = array(
                 'size' => 1024 * 1024 * 10,
@@ -52,6 +52,7 @@ class IndexController extends CommonController {
                     $height = 999999999999;
                     $file = Image::thumb($file, $config['path'] . $pathinfo['filename'] . 'Wx' . $width . '.' . $pathinfo['extension'], strtolower($pathinfo['extension']), $width, $height);
                 }
+                $id = D('Img')->send($file);
                 $this->json(1, 'ok', array(
                     'id' => $id,
                     'file' => $file

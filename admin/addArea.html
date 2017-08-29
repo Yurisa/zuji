@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>特色地区-地区信息</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/addArea.css">
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <!-- 顶部区域-->
+        <div><img src="image/zuji（白色）.png"></div>
+        <div id="exit">退出</div>
+        <div id="administrators">管理员abc</div>
+        <!--<i class="layui-icon">&#xe614;</i>-->
+    </div>
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed"><a href="backstage.html">数据分析</a></li>
+                <li class="layui-nav-item"><a href="user.html">用户</a></li>
+                <li class="layui-nav-item"><a href="travels.html">游记</a></li>
+                <li class="layui-nav-item"><a href="area.html">特色地区</a></li>
+                <li class="layui-nav-item"><a href="nation.html">少数民族</a></li>
+                <li class="layui-nav-item"><a href="newSupplement.html">新补充</a></li>
+                <!--<li class="layui-nav-item"><a href="">反馈</a></li>-->
+                <!--<li class="layui-nav-item"><a href="">举报</a></li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div id="sign">
+            <!--标题栏-->
+            <div><a href="area.html">特色地区</a></div>
+            <div>地区信息</div>
+            <div>人文</div>
+            <div>饮食</div>
+            <div>建筑</div>
+        </div>
+        <div id="back">
+            <!--当前位置-->
+            <div id="name">当前：贵州-苗族-西江千户苗寨</div>
+        </div>
+        <div id="content">
+            <!--地区信息-->
+            <div id="input-part">
+                <!--地区信息-输入信息-表单-->
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">省份</label>
+                        <div class="layui-input-block">
+                            <select class="city" name="city" lay-verify="" lay-filter="province" lay-search>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">民族</label>
+                        <div class="layui-input-block">
+                            <select class="nation" name="city" lay-verify="" lay-search>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">地区名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入地区" autocomplete="off" class="layui-input area">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label " >经度</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入经度" autocomplete="off" class="layui-input longitude">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" >纬度</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入纬度" autocomplete="off" class="layui-input latitude">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">图片</label>
+                        <div class="layui-input-block">
+                            <button type="button" class="layui-btn add">
+                                <i class="layui-icon">&#xe608;</i> 添加
+                            </button>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="formDemo">确定</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--地区信息-地图-->
+            <div id="map-part"></div>
+            <!--地区信息-输入信息-图片添加（包括简介添加）-->
+            <div id="imageUpload" style="display: none">
+                <button type="reset" class="layui-btn layui-btn-small close">
+                    <i class="layui-icon " >&#x1006;</i>
+                </button>
+                <form id="imageList" class="layui-form" action="">
+                    <div class="layui-form-item">                         <!--地区名片式图-->
+                        <label class="layui-form-label">地区</label>
+                        <div class="layui-btn-group" style="float: left;">
+                            <button class="layui-btn">选择</button>
+                            <button class="layui-btn">上传</button>
+                        </div>
+                        <div class="layui-progress layui-progress-big" lay-showPercent="yes">
+                       <!--      <div class="layui-progress-bar layui-bg-green" lay-percent="50%"></div> -->
+                        </div>
+                    </div>
+                    <div class="layui-form-item">                          <!--人文图+简介-->
+                        <label class="layui-form-label">人文</label>
+                        <div class="layui-btn-group" style="float: left;">
+                            <button class="layui-btn">选择</button>
+                            <button class="layui-btn">上传</button>
+                        </div>
+                        <div class="layui-progress layui-progress-big" lay-showPercent="yes">
+                            <!--<div class="layui-progress-bar layui-bg-green" lay-percent="50%"></div>-->
+                        </div>
+                    </div>
+                    <div class="layui-form-item">                          <!--饮食图+简介-->
+                        <label class="layui-form-label">饮食</label>
+                        <div class="layui-btn-group" style="float: left;">
+                            <button class="layui-btn">选择</button>
+                            <button class="layui-btn">上传</button>
+                        </div>
+                        <div class="layui-progress layui-progress-big" lay-showPercent="yes">
+                            <!--<div class="layui-progress-bar layui-bg-green" lay-percent="50%"></div>-->
+                        </div>
+                    </div>
+                    <div class="layui-form-item">                          <!--建筑图+简介-->
+                        <label class="layui-form-label">建筑</label>
+                        <div class="layui-btn-group" style="float: left;">
+                            <button class="layui-btn">选择</button>
+                            <button class="layui-btn">上传</button>
+                        </div>
+                        <div class="layui-progress layui-progress-big" lay-showPercent="yes">
+                            <!--<div class="layui-progress-bar layui-bg-green" lay-percent="50%"></div>-->
+                        </div>
+                    </div>
+                    <div class="layui-form-item">                          <!--游记图+简介-->
+                        <label class="layui-form-label">游记</label>
+                        <div class="layui-btn-group" style="float: left;">
+                            <button class="layui-btn">选择</button>
+                            <button class="layui-btn">上传</button>
+                        </div>
+                        <div class="layui-progress layui-progress-big" lay-showPercent="yes">
+                            <!--<div class="layui-progress-bar layui-bg-green" lay-percent="50%"></div>-->
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="formDemo">确定</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--人文、饮食、建筑具体信息-->
+        <div id="detailPart" style="display: none">
+
+            <div class="layui-collapse" lay-accordion id="humanity">
+                <div class="layui-colla-item">                                  <!--习俗具体信息-->
+                    <h2 class="layui-colla-title">习俗</h2>
+                    <button class="layui-btn layui-btn-small madd" type="button" menutype="custom">
+                        <i class="layui-icon">&#xe654;</i>
+                    </button>
+                    <div class="layui-colla-content layui-show">
+                        <div class="layui-collapse">
+                            <div class="layui-colla-item">
+                                <table class="layui-table" lay-size="lg">      <!--习俗-内置表格-->
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="35%">
+                                        <col width="15%">
+                                        <col width="12%">
+                                        <col width="15%">
+                                        <col width="13%">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>标题</th>
+                                        <th>内容</th>
+                                        <th>配图</th>
+                                        <th>来源</th>
+                                        <th>更新时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="custom"> 
+                                    <tr>
+                                        <td>吃油茶</td>
+                                        <td>油茶是将油炸后的爆花米，掺水煮成的待客茶，客人喝了，主人高兴，不喝，则视为瞧不起主人。有的还要喝3杯，第一杯是油茶，第二杯是苦茶，第三杯是甜茶。</td>
+                                        <td>点击查看</td>
+                                        <td>管理员</td>
+                                        <td>13:00 2017-01-01</td>
+                                        <td>
+                                            <div class="layui-btn-group">
+                                                <button class="layui-btn layui-btn-small">
+                                                    <i class="layui-icon">&#xe642;</i>
+                                                </button>
+                                                <button class="layui-btn layui-btn-small">
+                                                    <i class="layui-icon">&#xe640;</i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-colla-item">                                  <!--历史具体信息-->
+                    <h2 class="layui-colla-title">历史</h2>
+                    <button class="layui-btn layui-btn-small madd" type="button" menutype="history">
+                        <i class="layui-icon">&#xe654;</i>
+                    </button>
+                    <div class="layui-colla-content layui-show">
+                        <div class="layui-collapse">
+                            <div class="layui-colla-item">
+                                <table class="layui-table" lay-size="lg">       <!--历史-内置表格-->
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="35%">
+                                        <col width="15%">
+                                        <col width="12%">
+                                        <col width="15%">
+                                        <col width="13%">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>标题</th>
+                                        <th>内容</th>
+                                        <th>配图</th>
+                                        <th>来源</th>
+                                        <th>更新时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="history">
+                                    <tr>
+                                        <td>吃油茶</td>
+                                        <td>油茶是将油炸后的爆花米，掺水煮成的待客茶，客人喝了，主人高兴，不喝，则视为瞧不起主人。有的还要喝3杯，第一杯是油茶，第二杯是苦茶，第三杯是甜茶。</td>
+                                        <td>点击查看</td>
+                                        <td>管理员</td>
+                                        <td>13:00 2017-01-01</td>
+                                        <td>
+                                            <div class="layui-btn-group">
+                                                <button class="layui-btn layui-btn-small">
+                                                    <i class="layui-icon">&#xe642;</i>
+                                                </button>
+                                                <button class="layui-btn layui-btn-small">
+                                                    <i class="layui-icon">&#xe640;</i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-colla-item">                              <!--服饰具体信息-->
+                    <h2 class="layui-colla-title">服饰</h2>
+                    <button class="layui-btn layui-btn-small madd" type="button" menutype="dress">
+                        <i class="layui-icon">&#xe654;</i>
+                    </button>
+                    <div class="layui-colla-content layui-show">
+                        <div class="layui-collapse">
+                            <div class="layui-colla-item">
+                                <table class="layui-table" lay-size="lg">   <!--服饰-内置表格-->
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="35%">
+                                        <col width="15%">
+                                        <col width="12%">
+                                        <col width="15%">
+                                        <col width="13%">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>标题</th>
+                                        <th>内容</th>
+                                        <th>配图</th>
+                                        <th>来源</th>
+                                        <th>更新时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="dress">
+                                    <tr>
+                                        <td>吃油茶</td>
+                                        <td>油茶是将油炸后的爆花米，掺水煮成的待客茶，客人喝了，主人高兴，不喝，则视为瞧不起主人。有的还要喝3杯，第一杯是油茶，第二杯是苦茶，第三杯是甜茶。</td>
+                                        <td>点击查看</td>
+                                        <td>管理员</td>
+                                        <td>13:00 2017-01-01</td>
+                                        <td>
+                                            <div class="layui-btn-group">
+                                                <button class="layui-btn layui-btn-small">
+                                                    <i class="layui-icon">&#xe642;</i>
+                                                </button>
+                                                <button class="layui-btn layui-btn-small">
+                                                    <i class="layui-icon">&#xe640;</i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-colla-item">                             <!--工艺品具体信息-->
+                    <h2 class="layui-colla-title">工艺品</h2>
+                    <button class="layui-btn layui-btn-small madd" type="button" menutype="artwork">
+                        <i class="layui-icon">&#xe654;</i>
+                    </button>
+                    <div class="layui-colla-content layui-show">
+                        <div class="layui-collapse">
+                            <div class="layui-colla-item">
+                                <table class="layui-table" lay-size="lg">  <!--工艺品-内置表格-->
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="35%">
+                                        <col width="15%">
+                                        <col width="12%">
+                                        <col width="15%">
+                                        <col width="13%">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>标题</th>
+                                        <th>内容</th>
+                                        <th>配图</th>
+                                        <th>来源</th>
+                                        <th>更新时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="artwork">
+                                    <tr>
+                                        <td>吃油茶</td>
+                                        <td>油茶是将油炸后的爆花米，掺水煮成的待客茶，客人喝了，主人高兴，不喝，则视为瞧不起主人。有的还要喝3杯，第一杯是油茶，第二杯是苦茶，第三杯是甜茶。</td>
+                                        <td>点击查看</td>
+                                        <td>管理员</td>
+                                        <td>13:00 2017-01-01</td>
+                                        <td>
+                                            <div class="layui-btn-group">
+                                                <button class="layui-btn layui-btn-small">
+                                                    <i class="layui-icon">&#xe642;</i>
+                                                </button>
+                                                <button class="layui-btn layui-btn-small">
+                                                    <i class="layui-icon">&#xe640;</i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-collapse" lay-accordion id="diet">             <!--饮食具体信息-->
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">特色菜品</h2>
+                    <button class="layui-btn layui-btn-small madd" type="button" menutype="diet">
+                        <i class="layui-icon">&#xe654;</i>
+                    </button>
+                    <div class="layui-colla-content layui-show">
+                        <div class="layui-collapse">
+                            <div class="layui-colla-item">
+                                <table class="layui-table" lay-size="lg">    <!--饮食-内置表格-->
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="35%">
+                                        <col width="15%">
+                                        <col width="12%">
+                                        <col width="15%">
+                                        <col width="13%">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>标题</th>
+                                        <th>内容</th>
+                                        <th>配图</th>
+                                        <th>来源</th>
+                                        <th>更新时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="diet">
+                                    <tr>
+                                        <td>吃油茶</td>
+                                        <td>油茶是将油炸后的爆花米，掺水煮成的待客茶，客人喝了，主人高兴，不喝，则视为瞧不起主人。有的还要喝3杯，第一杯是油茶，第二杯是苦茶，第三杯是甜茶。</td>
+                                        <td>点击查看</td>
+                                        <td>管理员</td>
+                                        <td>13:00 2017-01-01</td>
+                                        <td>
+                                            <div class="layui-btn-group">
+                                                <button class="layui-btn layui-btn-small">
+                                                    <i class="layui-icon">&#xe642;</i>
+                                                </button>
+                                                <button class="layui-btn layui-btn-small">
+                                                    <i class="layui-icon">&#xe640;</i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-collapse" lay-accordion id="build">            <!--建筑具体信息-->
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">特色建筑</h2>
+                    <button class="layui-btn layui-btn-small madd" type="button" menutype="building">
+                        <i class="layui-icon">&#xe654;</i>
+                    </button>
+                    <div class="layui-colla-content layui-show">
+                        <div class="layui-collapse">
+                            <div class="layui-colla-item">
+                                <table class="layui-table" lay-size="lg">    <!--建筑-内置表格-->
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="35%">
+                                        <col width="15%">
+                                        <col width="12%">
+                                        <col width="15%">
+                                        <col width="13%">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>标题</th>
+                                        <th>内容</th>
+                                        <th>配图</th>
+                                        <th>来源</th>
+                                        <th>更新时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="building">
+                                    <tr>
+                                        <td>吃油茶</td>
+                                        <td>油茶是将油炸后的爆花米，掺水煮成的待客茶，客人喝了，主人高兴，不喝，则视为瞧不起主人。有的还要喝3杯，第一杯是油茶，第二杯是苦茶，第三杯是甜茶。</td>
+                                        <td>点击查看</td>
+                                        <td>管理员</td>
+                                        <td>13:00 2017-01-01</td>
+                                        <td>
+                                            <div class="layui-btn-group">
+                                                <button class="layui-btn layui-btn-small">
+                                                    <i class="layui-icon">&#xe642;</i>
+                                                </button>
+                                                <button class="layui-btn layui-btn-small">
+                                                    <i class="layui-icon">&#xe640;</i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--点击编辑/添加 跳出弹窗-->
+            <div id="detailMes" style="display: none">
+                <button type="reset" class="layui-btn layui-btn-small close">
+                    <i class="layui-icon " >&#x1006;</i>
+                </button>
+                <form id="revise" class="layui-form" action="">
+                    <div class="layui-form-item ">
+                        <label class="layui-form-label">标题</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input menu_title">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">内容</label>
+                        <div class="layui-input-block">
+                            <textarea name="desc" placeholder="请输入内容" class="layui-textarea menu_content"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">配图</label>
+                        <div class="layui-btn-group" style="float: left;">
+                            <button type="button" class="layui-btn" id="pickfiles1">选择</button>
+                            <button type="button" class="layui-btn" id="uploadfiles1">上传</button>
+                        </div>
+                        <div class="layui-progress layui-progress-big progressbar1" lay-showPercent="yes">
+                            <div class="layui-progress-bar layui-bg-green" lay-percent="0%"></div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button type="button" class="layui-btn commit" >确定</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+    </div>
+</div>
+<script type="text/javascript" src='js/echarts.js'></script>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript" src='http://gallery.echartsjs.com/dep/echarts/map/js/china.js'></script>
+<script type="text/javascript" src='js/map.js'></script>
+<script type="text/javascript" src="layui/layui.js"></script>
+<script type="text/javascript" src="js/layuiUse.js"></script>
+<script type="text/javascript" src='js/addArea.js'></script>
+<script type="text/javascript" src="js/skip.js"></script>
+<script type="text/javascript" src="../js/plup/plupload.full.min.js"></script>
+</body>
+</html>

@@ -115,9 +115,9 @@
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-#info-add {
+.info-add {
 	resize: none;
-	width: 650px;
+	width: 85%;
 	height: 100px;
 	margin-left: 20px;
 }

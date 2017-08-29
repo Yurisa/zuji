@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>数据分析-用户</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css/dataList.css">
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <!-- 顶部区域-->
+        <div><img src="image/zuji（白色）.png"></div>
+        <div id="exit">退出</div>
+        <div id="administrators">管理员abc</div>
+        <!--<i class="layui-icon">&#xe614;</i>-->
+    </div>
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed"><a href="backstage.html">数据分析</a></li>
+                <li class="layui-nav-item"><a href="user.html">用户</a></li>
+                <li class="layui-nav-item"><a href="travels.html">游记</a></li>
+                <li class="layui-nav-item"><a href="area.html">特色地区</a></li>
+                <li class="layui-nav-item"><a href="nation.html">少数民族</a></li>
+                <li class="layui-nav-item"><a href="newSupplement.html">新补充</a></li>
+                <!--<li class="layui-nav-item"><a href="">反馈</a></li>-->
+                <!--<li class="layui-nav-item"><a href="">举报</a></li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div id="sign">
+            <div><a href="">用户</a></div>
+            <input type="search" name="" value="用户名">
+            <i id="search" class="layui-icon">&#xe615;</i>
+        </div>
+        <div id="content">
+            <!--列表名-->
+            <div id="mark">
+                <div>用户头像</div>
+                <div>用户名</div>
+                <div>最近登陆时间</div>
+                <div>游记数量</div>
+            </div>
+            <!--排序方式选择-->
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <!--<div class="layui-input-block">-->
+                    <input type="radio" name="sort" value="最近登陆时间" title="最近登陆时间" checked>
+                    <input type="radio" name="sort" value="游记数量" title="游记数量">
+                    <!--</div>-->
+                </div>
+            </form>
+            <!--用户信息-->
+            <div id="items">
+                <div class="list new">
+                    <!--新用户置顶 颜色不同-->
+                    <div><img src="image/pic.jpg"></div>
+                    <div>Abc123</div>
+                    <div>12:00  17-01-01</div>
+                    <div>10</div>
+                    <div class="layui-btn-group">
+                        <button class="layui-btn">发送消息</button>
+                        <button class="layui-btn">查看</button>
+                        <button class="layui-btn">限制</button>
+                    </div>
+                </div>
+                <div class="list">
+                    <div><img src="image/pic.jpg"></div>
+                    <div>Abc123</div>
+                    <div>12:00  17-01-01</div>
+                    <div>10</div>
+                    <div class="layui-btn-group">
+                        <button class="layui-btn">发送消息</button>
+                        <button class="layui-btn">查看</button>
+                        <button class="layui-btn">限制</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page">
+            <div>共1页</div>
+            <div>首页</div>
+        </div>
+    </div>
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+    </div>
+</div>
+<script src="layui/layui.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script src="js/layuiUse.js"></script>
+<script src="js/skip.js"></script>
+</body>
+</html>
