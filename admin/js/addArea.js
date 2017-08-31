@@ -33,15 +33,20 @@ $(document).ready(function () {
 
     $(".add").click(function () {
         $("#imageUpload").show();
+        for(let i=2;i<=6;i++){
+          createUploader(i);
+        }
         $(".close").click(function () {
             $("#imageList")[0].reset();
             $("#imageUpload").hide();
         });
     });
-
+    $(".commitimg").click(function(){
+        $("#imageUpload").hide();
+    });
     // 点击编辑 跳出弹窗
     $(document).on("click", ".updatearea", function () {
-        console.log(1);
+        // console.log(1);
         window.location.href = "addArea.html?t_id=" + $(this).parent().parent().attr("t_id");
     });
     $(document).on("click",".mup",function () {
@@ -81,19 +86,57 @@ $(document).ready(function () {
             "menu_imgurl":$(".progressbar1").attr("imgpath"),
             "t_id":t_id,
         }
-       $.post("http://localhost/zuji/index.php?c=main&a=addmenu",{"menu":data},res=>{
-            window.location.href="http://localhost/zuji/admin/addArea.html?t_id="+t_id;
+       $.post("../index.php?c=main&a=addmenu",{"menu":data},res=>{
+            window.location.href="../admin/addArea.html?t_id="+t_id;
        },"json");
     });
     var t_id = getQueryString("t_id");
     console.log(t_id);
     var tour = [];
+    var nationid = ""
+     
+
+     /**
+      * 提交地区信息
+      */
+    
+      layui.use('form', function(){  
+        layui.form.on('select(nation)', function(data){
+            // console.log(data.elem); //得到select原始DOM对象
+            // console.log(data.value); //得到被选中的值
+            // console.log(data.othis); //得到美化后的DOM对象
+            nationid = data.value;
+        });
+      });
+    $('.committour').click(function(){
+
+        console.log(nationid)
+        $data={
+            "n_id":nationid,
+            "t_name":$(".area").val(),
+            "longitude":$(".longitude").val(),
+            "latitude":$(".latitude").val(),
+            "t_cardimg":$(".progressbar2").attr("imgpath"),
+            "t_renwen":$(".progressbar3").attr("imgpath"),
+            "t_yinshi":$(".progressbar4").attr("imgpath"),
+            "t_jianzhu":$(".progressbar5").attr("imgpath"),
+            "t_youji":$(".progressbar6").attr("imgpath"),
+            "t_id":t_id,
+
+        }
+        $.post("../index.php?c=main&a=updatetouristarea",{"touristarea":$data},res=>{
+            if(res.code === 1){
+                alert('更新成功');
+                window.location.href = "ddArea.html?t_id="+t_id;
+            }
+        });
+    })
 
      /**
       * 生成景区所有信息
       */
 
-     $.get("http://localhost/zuji/index.php?c=main&a=gettouristareabyid",{"t_id":t_id},res=>{
+     $.get("../index.php?c=main&a=gettouristareabyid",{"t_id":t_id},res=>{
            
               tour = res.body.touristarea;
              console.log(tour)
@@ -166,7 +209,7 @@ $(document).ready(function () {
       * 得到所有省份 
       */
      function getprovince(tour){
-        $.get("http://localhost/zuji/index.php?c=main&a=getprovince",res=>{
+        $.get("../index.php?c=main&a=getprovince",res=>{
             let province = res.body.province;
              console.log(province)
             $(".city").html("");
@@ -203,7 +246,7 @@ $(document).ready(function () {
      * 得到省份下所有民族 
      */
     function getnation(p_id){
-        $.get("http://localhost/zuji/index.php?c=main&a=getnationbypid",{"p_id":p_id},res=>{
+        $.get("../index.php?c=main&a=getnationbypid",{"p_id":p_id},res=>{
             let nation = res.body.nation;
             console.log(nation)
             $(".nation").html("");
@@ -259,7 +302,7 @@ $(document).ready(function () {
             runtimes : 'html5,flash,silverlight,html4',
             browse_button : 'pickfiles'+itemnum, // you can pass an id...
             // container: document.getElementById('uploadposition'+itemnum), // ... or DOM Element itself
-            url : 'http://localhost/zuji/index.php?c=index&a=uploadImg&width=800',
+            url : '../index.php?c=index&a=uploadImg&width=800',
             flash_swf_url : 'js/plup/Moxie.swf',
             silverlight_xap_url : 'js/plup/Moxie.xap',
         
@@ -296,6 +339,9 @@ $(document).ready(function () {
                 FileUploaded: function(up, file, info) {
                     var data = strToJson(info.response);
                     console.log(data)
+                    if(data.code === 1){
+                        alert("上传成功");
+                    }
                     $(".progressbar"+itemnum).attr("imgpath",data.body.file);
                 },
                 Error: function(up, err) {

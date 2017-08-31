@@ -2,7 +2,7 @@ $(document).ready(function () {
     var t_id = getQueryString("t_id");
  $.get('index.php?c=main&a=gettouristareabyid',{"t_id":t_id},res=>{
         console.log(res)
-    let tour = res.body.toursitarea;
+    let tour = res.body.touristarea;
     console.log(tour.t_renwen);
     let province = tour.p_name;
     let nation = tour.n_name;

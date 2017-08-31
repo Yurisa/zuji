@@ -113,6 +113,45 @@ class MainController extends CommonController {
       $res['totalnum']  = intval(($tournum+$pagesize-1)/$pagesize);
       $this->json(1,'ok',$res);
      }
+
+    /*
+     *
+     *得到每个民族和对应风景区及评分
+     *
+     */
+
+     public function updatetouristarea(){
+      $tour = I('post.touristarea');
+      $t_id = $tour['t_id'];
+      $data = array(
+         "t_name" => $tour['t_name'],
+         "longitude" => $tour['longitude'],
+         "latitude" => $tour['latitude'],
+         "timestamp" => time(),
+         "t_id" => $tour['t_id'],
+      );
+      if(!empty($tour['n_id'])){
+        $data['n_id'] = $tour['n_id'];
+      }
+      if(isset($tour['t_renwen'])){
+        $data["t_renwen"] = $tour['t_renwen'];
+      }
+      if(isset($tour['t_yinshi'])){
+        $data["t_yinshi"] = $tour['t_yinshi'];
+      }
+      if(isset($tour['t_jianzhu'])){
+        $data["t_jianzhu"] = $tour['t_jianzhu'];
+      }
+      if(isset($tour['t_youji'])){
+        $data["t_youji"] = $tour['t_youji'];
+      }
+      if(isset($tour['t_cardimg'])){
+        $data["t_cardimg"] = $tour['t_cardimg'];
+      }
+       $code = M('touristarea')->where('t_id='.$t_id)->save($data);
+       $this->json(1,'ok');
+     }
+     
     /*
      *
      *得到每个民族和对应风景区及评分
@@ -186,8 +225,10 @@ class MainController extends CommonController {
            'mj_title' => $value['menu_title'],
            'mj_imgurl' => $value['menu_imgurl'],
            'mj_ispass'=>'待审核',
+           'position' => $value['position'],
            't_id' => $value['t_id'],
            'u_id' =>1,
+           'timestamp' => time(),
         );
         $id['mj_id'] = $id['mj_id'].M('menu_judge')->add($data).',';
      }
@@ -230,6 +271,7 @@ class MainController extends CommonController {
        M('menu')->where('menu_id='.$menu['menu_id'])->save($data);
        $this->json(1,'ok');
      }
+     
     /*
      *
      *通过景区ID和菜单类型得到菜单信息
@@ -706,4 +748,24 @@ class MainController extends CommonController {
        $res['c_id'] = M('comment')->add($data);
        $this->json(1,'ok',$res);
      }
+     
+    /*
+     *
+     *得到所有用户补充的菜单
+     *
+     */
+
+     public function getallmenujudge(){
+      $curr = intval($_GET['page']);
+      $pagesize = 4;
+      $currnum = ($curr-1)*$pagesize;
+      $Model = new \Think\Model();
+      $arr = $Model->query("select user.u_id,user.u_name,menu_judge.* from user,menu_judge where user.u_id = menu_judge.u_id and menu_judge.mj_ispass ='待审核'");
+      $mjnum = count($arr);
+      $res['menu_judge'] = array_slice($arr,$currnum,$pagesize);
+      $res['totalnum'] = intval(($mjnum+$pagesize-1)/$pagesize);
+      $this->json(1,'ok',$res);
+
+    } 
+     
 }

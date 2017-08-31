@@ -7,8 +7,8 @@ var currentitemindex = 0;
 // console.log(type);
 $.get('index.php?c=main&a=gettouristareabyid',{"t_id":t_id},res=>{
      console.log(res)
-    let tour = res.body.toursitarea;
-    console.log(tour.t_renwen);
+    let tour = res.body.touristarea;
+    console.log(tour);
     let province = tour.p_name;
     let nation = tour.n_name;
     let touristarea = tour.t_name;
@@ -103,23 +103,31 @@ createUploader(itemnum);
      }
     let menulist = $(".oneadd");
     for(let i = 0;i<menulist.length;i++){
-        let menu = { 
-            "menu_type":$("#menu-add").attr("type"),
-           "menu_title":menulist.eq(i).find(".title-add").val(),
-           "menu_content":menulist.eq(i).find(".info-add").val(),
-           "menu_imgurl":menulist.eq(i).attr("imgpath"),
-           "t_id":t_id,
-           };
-       data.menulist.push(menu);   
+        console.log(menulist.eq(i).find(".title-add").val());
+        console.log(menulist.eq(i).attr("imgpath"))
+        if(menulist.eq(i).find(".title-add").val().length == 0||menulist.eq(i).find(".info-add").val().length == 0||typeof(menulist.eq(i).attr("imgpath"))=='undefined'){
+            alert("请填写完整信息");
+        }else{
+            let menu = { 
+                "menu_type":$("#menu-add").attr("type"),
+               "menu_title":menulist.eq(i).find(".title-add").val(),
+               "menu_content":menulist.eq(i).find(".info-add").val(),
+               "menu_imgurl":menulist.eq(i).attr("imgpath"),
+               "position":$("#province-add").html()+"-"+$("#nation-add").html()+"-"+$("#positon-add").html()+"-"+$("#menu-add").html()+"-"+$("#menu2-add"),
+               "t_id":t_id,
+               };
+           data.menulist.push(menu);   
+           console.log(data);
+        $.post("index.php?c=main&a=useraddmenu",data,res=>{
+          console.log(res);
+          alert("添加成功");
+          $(".addarea").empty();
+          itemnum = 1;
+          $(".addarea").append($("<div class='oneadd' id='oneadd1'><div class='add-num'>1</div><div class='add-right'><span>标题<input type='text' class='title-add' name='title-add'></span><span>介绍<textarea class='info-add'></textarea></span><span>配图<div id='uploadposition1'><button  class='layui-btn layui-btn-big' style='width: 150px;height: 15px;margin: 0 10px 30px 50px;float:left' id='pickfiles1' href='javascript:;'>选择图片</button><button  class='layui-btn layui-btn-big' style='width: 150px;height: 15px;margin: 0 50px 30px;float:left' id='uploadfiles1' href='javascript:;'>开始上传</button></div></span><div class='preimage box box-top' style='width:100%;height:auto;margin-top:80px'></div></div></div>"));
+        },"json");
+        }
     }
-       console.log(data);
-    $.post("index.php?c=main&a=useraddmenu",data,res=>{
-      console.log(res);
-      alert("添加成功");
-      $(".addarea").empty();
-      itemnum = 1;
-      $(".addarea").append($("<div class='oneadd' id='oneadd1'><div class='add-num'>1</div><div class='add-right'><span>标题<input type='text' class='title-add' name='title-add'></span><span>介绍<textarea class='info-add'></textarea></span><span>配图<div id='uploadposition1'><button  class='layui-btn layui-btn-big' style='width: 150px;height: 15px;margin: 0 10px 30px 50px;float:left' id='pickfiles1' href='javascript:;'>选择图片</button><button  class='layui-btn layui-btn-big' style='width: 150px;height: 15px;margin: 0 50px 30px;float:left' id='uploadfiles1' href='javascript:;'>开始上传</button></div></span><div class='preimage box box-top' style='width:100%;height:auto;margin-top:80px'></div></div></div>"));
-    },"json");
+
  });
 
 /**

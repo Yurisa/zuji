@@ -43,23 +43,28 @@ class IndexController extends CommonController {
             $image = new \Think\Image(); 
             // 在图片左上角添加水印（水印文件位于./logo.png） 水印图片的透明度为50 并保存为water.jpg
             $image->open($file)->water('./ThinkPHP/zuji.png',\Think\Image::IMAGE_WATER_SOUTHEAST,40)->save($file); 
-            if (is_file($file)) {
+            $id = D('Img')->send($file);
+            $this->json(1, 'ok', array(
+                'id' => $id,
+                'file' => $file
+            ));
+            // if (is_file($file)) {
                 
-                $width = I('request.width', NULL);
-                if ($width !== NULL) {
-                    import('ORG.Util.Image');
-                    $pathinfo = pathinfo($file);
-                    $height = 999999999999;
-                    $file = Image::thumb($file, $config['path'] . $pathinfo['filename'] . 'Wx' . $width . '.' . $pathinfo['extension'], strtolower($pathinfo['extension']), $width, $height);
-                }
-                $id = D('Img')->send($file);
-                $this->json(1, 'ok', array(
-                    'id' => $id,
-                    'file' => $file
-                ));
-            } else {
-                $this->json(0, '文件上传失败', $file);
-            }
+            //     $width = I('request.width', NULL);
+            //     if ($width !== NULL) {
+            //         import('ORG.Util.Image');
+            //         $pathinfo = pathinfo($file);
+            //         $height = 999999999999;
+            //         $file = Image::thumb($file, $config['path'] . $pathinfo['filename'] . 'Wx' . $width . '.' . $pathinfo['extension'], strtolower($pathinfo['extension']), $width, $height);
+            //     }
+            //     $id = D('Img')->send($file);
+            //     $this->json(1, 'ok', array(
+            //         'id' => $id,
+            //         'file' => $file
+            //     ));
+            // } else {
+            //     $this->json(0, '文件上传失败', $file);
+            // }
         }
         $this->json(0, '请选择文件');
     }
