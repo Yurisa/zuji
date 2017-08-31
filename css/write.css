@@ -1,0 +1,40 @@
+#main{
+    width: 70%;
+    height:auto;
+    margin: 0px auto;
+}
+
+.logo-bb {
+    height: 50px;
+    width: auto;
+    margin-left: 20px;
+    margin-top: 1px;
+}
+
+.test{
+    min-height:500px;
+    width: 90%;
+    margin-left: 50px;
+}
+
+.layui-form{
+    margin-top: 20px;
+}
+
+.layui-form-label{
+    height: 40px;
+    line-height: 40px;
+    font-size:16px;
+    font-weight: bold;
+}
+
+.layui-btn{
+    background-color: #5eb95e;
+}
+
+.layui-progress{
+    width: 250px;
+    position: relative;
+    top:15px;
+    left: 30%;
+}

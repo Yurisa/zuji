@@ -8,7 +8,19 @@ use Think\Controller;
 
 class MainController extends CommonController {
 
+  /**
+   *
+   * 统计数目
+   *
+   */
 
+   public function countnum(){
+     $res['usernum'] = M('user')->count();
+     $res['nationnum'] = M('nation')->count();
+     $res['touristareanum'] = M('touristarea')->count();
+     $res['articlenum'] = M('article')->count();
+     $this->json(1,'ok',$res);
+   }
 
    public function getprovince(){
      $res['province'] = M('province')->select();
@@ -768,4 +780,41 @@ class MainController extends CommonController {
 
     } 
      
+         
+    /*
+     *
+     *通过审核
+     *
+     */
+
+     public function menupass(){
+       $mj_id = $_GET['mj_id'];
+       M('menu_judge')->where('mj_id='.$mj_id)->save(array('mj_ispass'=>'通过'));
+       $arr = M('menu_judge')->where('mj_id='.$mj_id)->field('mj_type,mj_title,mj_imgurl,mj_content,t_id')->find();
+       print_r($arr);
+       $data = array(
+         'menu_type' => $arr['mj_type'],
+         'menu_title' => $arr['mj_title'],
+         'menu_imgurl'=> $arr['mj_imgurl'],
+         'menu_content' => $arr['mj_content'],
+         't_id' => $arr['t_id'],
+         'timestamp' => time(),
+       );
+       M('menu')->add($data);
+       $this->json(1,'ok');
+      }
+
+      
+      /*
+       *
+       *审核失败
+       *
+       */
+
+       public function menufail(){
+         $mj_id= $_GET['mj_id'];
+         M('menu_judge')->where('mj_id='.$mj_id)->delete();
+         $this->json(1,'ok');
+       }
+
 }

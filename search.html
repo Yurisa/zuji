@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!-- -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <meta name="viewport" content="width = device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="box box-top top-style1">
+        <div class="logoImg">				<!-- logo图片 -->
+            <a href="">
+                <img class="logo-w" src="images/logo-w.png">
+            </a>
+        </div>
+        <div class="nav-search">			<!-- 搜索栏-->
+            <form action="" method="get">
+                <input type="text" class="search-content" name="searchContent">
+                <input type="submit" class="search-btn" name="searchBtn" value="搜索">
+            </form>
+        </div>
+        <div class="nav-items">				<!-- 登陆注册-->
+            <ul>
+                <li>
+                    <img class="search-icon" src="images/search-icon.png">
+                </li>
+                <li>
+                    <a href="">登陆</a>
+                </li>
+                <li>
+                    <a href="">注册</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box main">
+        <div class="search">
+            <input class="form-control search-input" placeholder="请输入你要搜索的内容">
+            <input class="searchButton" type="submit" value="搜索">
+        </div>
+        <div class="search-list" style="cursor: pointer">
+            <ul>
+                <li style="border-bottom:5px solid #3366FF;">地区</li>
+                <li>人文</li>
+                <li>饮食</li>
+                <li>建筑</li>
+                <li>游记</li>
+            </ul>
+        </div>
+        <div class="search-ways" style="cursor: pointer">
+            <ul>
+                <li style="background-color: #3366FF;color: #ffffff">按相关性</li>
+                <li>按时间</li>
+                <li>按点赞数</li>
+            </ul>
+        </div>
+        <div class="search-show">         <!-- 地区-->
+            <div id="area">
+                <ul>
+                    <li>
+                        <img src="images/pic2.jpg">
+                        <a href="">西江千户苗寨</a>
+                    </li>
+                    <li>
+                        <img src="images/pic2.jpg">
+                        <a href="">西江千户苗寨</a>
+                    </li>
+                    <li>
+                        <img src="images/pic2.jpg">
+                        <a href="">西江千户苗寨</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="search-show" style="display: none">         <!-- 人文-->
+            <div id="humanity">
+                <ul>
+                    <li>
+                        <img src="images/pic2.jpg">
+                        <a href="">贵州省-苗族-西江千户苗寨-人文-工艺品</a>
+                        <span>XXXXXXXXXXXX……</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="search-show" style="display: none">         <!-- 饮食-->
+            <div id="diet">
+                <ul>
+                    <li>
+                        <img src="images/pic2.jpg">
+                        <a href="">贵州省-苗族-西江千户苗寨-饮食</a>
+                        <span>XXXXXXXXXXXX……</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="search-show" style="display: none">         <!-- 建筑-->
+            <div id="building">
+                <ul>
+                    <li>
+                        <img src="images/pic2.jpg">
+                        <a href="">贵州省-苗族-西江千户苗寨-建筑</a>
+                        <span>XXXXXXXXXXXX……</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="search-show" style="display: none">         <!-- 游记-->
+            <div id="travels">
+                <ul>
+                    <li>
+                        <img src="images/pic2.jpg">
+                        <a href="">一路向北，追寻探索者的未知路</a>
+                        <a>Abc123</a>
+                        <span class="partial-content">XXXXXXXXXXXX……</span>
+                        <div class="note-bottom">
+                            <span class="icon-s icon-eye">100</span>		<!--点击量-->
+                            <span class="icon-s icon-clock">2017-01-01</span>	<!--发布时间-->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="box footer">				<!-- 底部-->
+        <div class="bottomLine"></div>
+        <nav>
+            <div class="footer-txt footer-title">联系我们</div>
+            <div class="box footer-icon">
+                <a href="www.weibo.com">
+                    <div class="icon box icon-weibo">
+                        <img src="images/weibo.png">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="icon icon-wechat">
+                        <ul>
+                            <li>
+                                <img id="wechat" src="images/wechat.png">
+                            </li>
+                            <li>
+                                <img id="wechat2" src="images/wechat2.png">
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+            <div class="footer-txt footer-service">
+                <a href="customerService.html">用户手册</a>
+            </div>
+            <div class="footer-txt footer-subscribe">
+                <a class="login" href="#">注册 / 登陆</a>
+            </div>
+            <div class="footer-txt footer-msg">Copyright © 2017 Pinch Design Ltd. All rights reserved. DoubleDogs is a registered trademark.</div>
+        </nav>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/search.js"></script>
+</body>
+</html>

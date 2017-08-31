@@ -17,7 +17,7 @@ nav a,button {
 	min-height: 48px;
 	min-width: 48px;
 	padding: 1.5em;
-	
+
 }
 input {
 	border: none;
@@ -233,7 +233,7 @@ ul {
 	background-color: #333333;
 	color: #fff;
 	flex-flow: column;
-	
+
 }
 .bottomLine {
 	width: 100%;

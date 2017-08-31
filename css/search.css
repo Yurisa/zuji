@@ -1,0 +1,203 @@
+.main{
+    width: 70%;
+    min-height:500px;
+    margin: 0px auto;
+    background-color: #FFFFFF;
+}
+
+.search{
+    width: 60%;
+    margin: 0px auto;
+    height: 200px;
+}
+
+.search-list{
+    width: 60%;
+    margin: 0px auto;
+    height: 100px;
+    line-height: 250px;
+}
+
+.search-list ul li{
+    width: 20%;
+    height: 38px;
+    line-height: 38px;
+    /*border-bottom: 5px solid #FFFFFF;*/
+    border-bottom: 0px;
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.search-ways{
+    width: 40%;
+    height: 50px;
+    line-height: 50px;
+    float: right;
+}
+
+.search-ways ul li{
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    /*border-bottom: 5px solid #FFFFFF;*/
+    border-bottom: 0px;
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    /*font-weight: bold;*/
+    /*background-color: #3366FF;*/
+    margin-right: 30px;
+}
+
+.search-input{
+    border:2px solid #dddddd;
+    height: 38px;
+    line-height: 38px;
+    width:400px;
+    font-size: large;
+    /*border-radius:6px;*/
+    margin-top: 100px;
+    margin-left: 80px;
+}
+
+.searchButton{
+    height:40px;
+    line-height: 40px;
+    width:100px;
+    background-color:#3366FF;
+    /*border-radius:6px;*/
+    color:#fee;
+    font-size:20px;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+.personal-show{
+    width: 85%;
+    height: auto;
+    background-color: #FFFFFF;
+    margin:0px auto;
+}
+
+#area,#humanity，#diet,#building，#travels{
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+}
+
+#area ul li{
+    width: 30%;
+    height: 330px;
+    box-shadow: 2px 2px 5px #000000;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#area ul li:nth-child(3n+1){
+    margin-right: 40px;
+}
+
+#area ul li:nth-child(3n+2){
+    margin-right: 40px;
+}
+
+#area ul li img{
+    width: 100%;
+    height: 230px;
+    float: left;
+}
+
+#area ul li a{
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    float: left;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#humanity ul li,#diet ul li,#building ul li,#travels ul li{
+    width: 100%;
+    height: 250px;
+    box-shadow: 2px 2px 5px #000000;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#humanity ul li img,#diet ul li img,#building ul li img,#travels ul li img{
+    width: 40%;
+    height: 250px;
+    float: left;
+}
+
+#humanity ul li a,#diet ul li a,#building ul li a{
+    width: 60%;
+    height: 100px;
+    line-height: 100px;
+    float: left;
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#humanity ul li span,#diet ul li span,#building ul li span{
+    width: 60%;
+    height: 150px;
+    line-height: 150px;
+    float: left;
+    color: #333333;
+    font-size: 16px;
+    text-align: left;
+}
+
+#travels ul li a:nth-of-type(1){
+    width: 50%;
+    height: 100px;
+    line-height: 100px;
+    float: left;
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#travels ul li a:nth-of-type(2){
+    width: 10%;
+    height: 100px;
+    line-height: 100px;
+    float: left;
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#travels .partial-content{
+    width: 60%;
+    height: 100px;
+    line-height: 100px;
+    float: left;
+    color: #333333;
+    font-size: 16px;
+    text-align: left;
+}
+
+.note-bottom{
+    width: 20%;
+    height: 50px;
+    line-height: 50px;
+    float: right;
+    color: #333333;
+    font-size: 16px;
+    text-align: left;
+}
+
+#travels ul li .note-bottom .icon-s{
+    float: left;
+    width: 100px;
+}

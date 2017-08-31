@@ -12,7 +12,7 @@ $(document).ready(function(){
              $(".mjbody").html("");
              for(let m of mjlist){
                  let date = getLocalTime(m.timestamp);
-                 $(".mjbody").append($("<tr mj_id="+m.mj_id+"><td>"+m.u_name+"</td><td>"+m.position+"</td><td>"+m.mj_title+"</td><td>"+m.mj_content+"</td><td><img src="+'../'+m.mj_imgurl+"></td></td><td>"+date+"</td><td><button class='layui-btn'>审核通过</button><button class='layui-btn'>审核失败</button></td><td></td></tr>"));
+                 $(".mjbody").append($("<tr mj_id="+m.mj_id+"><td>"+m.u_name+"</td><td>"+m.position+"</td><td>"+m.mj_title+"</td><td>"+m.mj_content+"</td><td><img src="+'../'+m.mj_imgurl+"></td></td><td>"+date+"</td><td class='operate'><button class='layui-btn pass'>审核通过</button><button class='layui-btn fail'>审核失败</button></td><td class='result'></td></tr>"));
              }
              laypage({
                  cont: 'page1', //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
@@ -28,6 +28,22 @@ $(document).ready(function(){
         },"json");
      }
      getmenujudge();
+     $(document).on("click",".pass",function () {
+       let mj_id = $(this).parent().parent().attr("mj_id");
+       $.get("../index.php?c=main&a=menupass",{"mj_id":mj_id},res=>{
+            $(this).parent().parent().find(".result").html("通过");
+            $(this).parent().html("已操作");
+       });
+    });
+
+    $(document).on("click",".fail",function () {
+        let mj_id = $(this).parent().parent().attr("mj_id");
+        $.get("../index.php?c=main&a=menufail",{"mj_id":mj_id},res=>{
+             $(this).parent().parent().find(".result").html("未通过");
+             $(this).parent().html("已操作");
+        });
+     });
+    
      
    /**
     * 

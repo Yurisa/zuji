@@ -1,0 +1,326 @@
+[ 2017-08-31T18:43:14+08:00 ] ::1 /zuji/index.php?c=main&a=getalltouristarea&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011345s ]
+SQL: select touristarea.*,nation.n_name,province.p_name from touristarea,nation,province where province.p_id = nation.p_id and nation.n_id = touristarea.n_id order by touristarea.timestamp [ RunTime:0.0894s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0713s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=16 ) LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=5 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=17 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=18 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=19 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=6 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=7 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=8 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=11 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=13 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=14 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=15 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=3 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=4 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( t_id=2 ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-08-31T18:43:15+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+SQL: select user.u_id,user.u_name,menu_judge.* from user,menu_judge where user.u_id = menu_judge.u_id and menu_judge.mj_ispass ='待审核' [ RunTime:0.1094s ]
+
+[ 2017-08-31T19:25:25+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+
+[ 2017-08-31T19:25:42+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000837s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001100s ]
+
+[ 2017-08-31T19:26:23+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+
+[ 2017-08-31T19:26:25+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+
+[ 2017-08-31T19:26:27+08:00 ] ::1 /zuji/index.php?c=main&a=getalltouristarea&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001054s ]
+
+[ 2017-08-31T19:26:30+08:00 ] ::1 /zuji/index.php?c=main&a=getalltouristarea&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+
+[ 2017-08-31T19:26:40+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000803s ]
+
+[ 2017-08-31T19:26:48+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001998s ]
+
+[ 2017-08-31T19:27:08+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001135s ]
+SQL: select user.u_id,user.u_name,menu_judge.* from user,menu_judge where user.u_id = menu_judge.u_id and menu_judge.mj_ispass ='待审核' [ RunTime:0.0009s ]
+
+[ 2017-08-31T19:27:12+08:00 ] ::1 /zuji/index.php?c=main&a=menufail&mj_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+SQL: SHOW COLUMNS FROM `menu_judge` [ RunTime:0.0075s ]
+SQL: DELETE FROM `menu_judge` WHERE ( mj_id=1 ) [ RunTime:0.0575s ]
+
+[ 2017-08-31T19:27:18+08:00 ] ::1 /zuji/index.php?c=main&a=menupass&mj_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001160s ]
+SQL: SHOW COLUMNS FROM `menu_judge` [ RunTime:0.0073s ]
+SQL: SELECT `mj_id`,`mj_title`,`mj_imgurl`,`mj_content`,`mj_ispass`,`t_id`,`u_id`,`position`,`timestamp` FROM `menu_judge` WHERE ( mj_id=2 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: mj_type E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 783 行.
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0044s ]
+
+[ 2017-08-31T19:27:23+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+SQL: select user.u_id,user.u_name,menu_judge.* from user,menu_judge where user.u_id = menu_judge.u_id and menu_judge.mj_ispass ='待审核' [ RunTime:0.0004s ]
+
+[ 2017-08-31T19:27:46+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000869s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001197s ]
+SQL: select user.u_id,user.u_name,menu_judge.* from user,menu_judge where user.u_id = menu_judge.u_id and menu_judge.mj_ispass ='待审核' [ RunTime:0.0005s ]
+
+[ 2017-08-31T19:27:54+08:00 ] ::1 /zuji/index.php?c=main&a=menufail&mj_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `menu_judge` [ RunTime:0.0072s ]
+SQL: DELETE FROM `menu_judge` WHERE ( mj_id=2 ) [ RunTime:0.1110s ]
+
+[ 2017-08-31T19:28:19+08:00 ] ::1 /zuji/index.php?c=main&a=menupass&mj_id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000736s ]
+SQL: SHOW COLUMNS FROM `menu_judge` [ RunTime:0.0061s ]
+SQL: SELECT `mj_id`,`mj_title`,`mj_imgurl`,`mj_content`,`mj_ispass`,`t_id`,`u_id`,`position`,`timestamp` FROM `menu_judge` WHERE ( mj_id=3 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: mj_type E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 783 行.
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0051s ]
+
+[ 2017-08-31T19:29:42+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000936s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000990s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001194s ]
+SQL: select user.u_id,user.u_name,menu_judge.* from user,menu_judge where user.u_id = menu_judge.u_id and menu_judge.mj_ispass ='待审核' [ RunTime:0.0006s ]
+
+[ 2017-08-31T19:29:44+08:00 ] ::1 /zuji/index.php?c=main&a=menupass&mj_id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+SQL: SHOW COLUMNS FROM `menu_judge` [ RunTime:0.0071s ]
+SQL: UPDATE `menu_judge` SET `mj_ispass`='通过' WHERE ( mj_id=3 ) [ RunTime:0.0366s ]
+SQL: SELECT `mj_id`,`mj_title`,`mj_imgurl`,`mj_content`,`mj_ispass`,`t_id`,`u_id`,`position`,`timestamp` FROM `menu_judge` WHERE ( mj_id=3 ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: mj_type E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 783 行.
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+
+[ 2017-08-31T19:30:31+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000823s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002889s ]
+SQL: select user.u_id,user.u_name,menu_judge.* from user,menu_judge where user.u_id = menu_judge.u_id and menu_judge.mj_ispass ='待审核' [ RunTime:0.0006s ]
+
+[ 2017-08-31T19:30:45+08:00 ] ::1 /zuji/index.php?c=main&a=menupass&mj_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `menu_judge` [ RunTime:0.0075s ]
+SQL: UPDATE `menu_judge` SET `mj_ispass`='通过' WHERE ( mj_id=4 ) [ RunTime:0.0420s ]
+SQL: SELECT `mj_id`,`mj_title`,`mj_imgurl`,`mj_content`,`mj_ispass`,`t_id`,`u_id`,`position`,`timestamp` FROM `menu_judge` WHERE ( mj_id=4 ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: mj_type E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 783 行.
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0095s ]
+ERR: 1048:Le champ 'menu_type' ne peut être vide (null)
+ [ SQL语句 ] : INSERT INTO `menu` (`menu_type`,`menu_title`,`menu_imgurl`,`menu_content`,`t_id`,`timestamp`) VALUES (NULL,'wdawd','./Uploads/img/201708/30/b29081defe869727077e2b221d25146f.png','wadawdaw','1','1504179045')
+ERR: 1048:Le champ 'menu_type' ne peut être vide (null)
+ [ SQL语句 ] : INSERT INTO `menu` (`menu_type`,`menu_title`,`menu_imgurl`,`menu_content`,`t_id`,`timestamp`) VALUES (NULL,'wdawd','./Uploads/img/201708/30/b29081defe869727077e2b221d25146f.png','wadawdaw','1','1504179045')
+
+[ 2017-08-31T19:32:41+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000835s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+SQL: select user.u_id,user.u_name,menu_judge.* from user,menu_judge where user.u_id = menu_judge.u_id and menu_judge.mj_ispass ='待审核' [ RunTime:0.0006s ]
+
+[ 2017-08-31T19:32:47+08:00 ] ::1 /zuji/index.php?c=main&a=menupass&mj_id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000839s ]
+SQL: SHOW COLUMNS FROM `menu_judge` [ RunTime:0.0095s ]
+SQL: UPDATE `menu_judge` SET `mj_ispass`='通过' WHERE ( mj_id=5 ) [ RunTime:0.0773s ]
+SQL: SELECT `mj_id`,`mj_title`,`mj_imgurl`,`mj_content`,`mj_ispass`,`t_id`,`u_id`,`position`,`timestamp` FROM `menu_judge` WHERE ( mj_id=5 ) LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: mj_type E:\Demo\zuji\Application\Home\Controller\MainController.class.php 第 784 行.
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0140s ]
+ERR: 1048:Le champ 'menu_type' ne peut être vide (null)
+ [ SQL语句 ] : INSERT INTO `menu` (`menu_type`,`menu_title`,`menu_imgurl`,`menu_content`,`t_id`,`timestamp`) VALUES (NULL,'dawdaw','./Uploads/img/201708/30/b29081defe869727077e2b221d25146f.png','dwadwad','1','1504179167')
+ERR: 1048:Le champ 'menu_type' ne peut être vide (null)
+ [ SQL语句 ] : INSERT INTO `menu` (`menu_type`,`menu_title`,`menu_imgurl`,`menu_content`,`t_id`,`timestamp`) VALUES (NULL,'dawdaw','./Uploads/img/201708/30/b29081defe869727077e2b221d25146f.png','dwadwad','1','1504179167')
+
+[ 2017-08-31T19:35:23+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000907s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001124s ]
+SQL: select user.u_id,user.u_name,menu_judge.* from user,menu_judge where user.u_id = menu_judge.u_id and menu_judge.mj_ispass ='待审核' [ RunTime:0.0006s ]
+
+[ 2017-08-31T19:35:26+08:00 ] ::1 /zuji/index.php?c=main&a=menupass&mj_id=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+SQL: SHOW COLUMNS FROM `menu_judge` [ RunTime:0.0081s ]
+SQL: UPDATE `menu_judge` SET `mj_ispass`='通过' WHERE ( mj_id=6 ) [ RunTime:0.0451s ]
+SQL: SELECT `mj_type`,`mj_title`,`mj_imgurl`,`mj_content`,`t_id` FROM `menu_judge` WHERE ( mj_id=6 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0074s ]
+SQL: INSERT INTO `menu` (`menu_type`,`menu_title`,`menu_imgurl`,`menu_content`,`t_id`,`timestamp`) VALUES ('custom','awdwa','./Uploads/img/201708/30/b29081defe869727077e2b221d25146f.png','awdwad','1','1504179326') [ RunTime:0.0161s ]
+
+[ 2017-08-31T19:35:47+08:00 ] ::1 /zuji/index.php?c=main&a=getallmenujudge&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000805s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001030s ]
+SQL: select user.u_id,user.u_name,menu_judge.* from user,menu_judge where user.u_id = menu_judge.u_id and menu_judge.mj_ispass ='待审核' [ RunTime:0.0005s ]
+
+[ 2017-08-31T19:44:53+08:00 ] ::1 /zuji/index.php?c=main&a=countnum
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001147s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0106s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0067s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nation` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0064s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `touristarea` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0093s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.0240s ]
+
+[ 2017-08-31T19:45:39+08:00 ] ::1 /zuji/index.php?c=main&a=countnum
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000851s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001677s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0094s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nation` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0069s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `touristarea` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0064s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-08-31T19:46:47+08:00 ] ::1 /zuji/index.php?c=main&a=countnum
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000922s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nation` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0061s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `touristarea` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0064s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.0004s ]
+

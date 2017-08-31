@@ -1,0 +1,61 @@
+
+
+.navigation{
+    position: absolute;
+    left:400px;
+    top:170px;
+}
+
+ul>li>.btn{
+    background-color: transparent;
+    border:none;
+    outline: none;
+}
+
+.quebec {
+    position: absolute;
+    top:30px;
+    left: 25px;
+    z-index: 3;
+    margin: 0;
+    border: 0;
+    width: 5px;
+    height: 2px;
+    padding: 0;
+    overflow: hidden;
+    background: #00b7ee;
+    display:none;
+
+    -webkit-transition-property: left, width;
+    -moz-transition-property: left, width;
+    -ms-transition-property: left, width;
+    -o-transition-property: left, width;
+    transition-property: left, width;
+
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -ms-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
+}
+
+.nav1 li{ line-height:22px; float:left; padding:0 30px; font-size:110%; width: 10px;}
+
+.nav1{width:510px;height:auto;margin-left:600px;}
+
+.btn1{background-color: #ffffff}
+
+img:hover{box-shadow:0px 0px 2px 3px #000;}
+
+.layoutRight{float:left;margin-left: 1350px;margin-top:0px;}
+
+.nav3>li>input{border:1px solid #000000;height:30px;width:90px;background-color: #ffffff;}
+
+#content{
+    position:absolute;
+    float:top;
+    width:800px;
+    height:400px;
+    left:-150px;
+    top:200px;
+}
