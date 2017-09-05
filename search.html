@@ -39,23 +39,16 @@
     </div>
     <div class="box main">
         <div class="search">
-            <input class="form-control search-input" placeholder="请输入你要搜索的内容">
+            <input class="form-control search-input keyword" placeholder="请输入你要搜索的内容">
             <input class="searchButton" type="submit" value="搜索">
         </div>
         <div class="search-list" style="cursor: pointer">
             <ul>
-                <li style="border-bottom:5px solid #3366FF;">地区</li>
-                <li>人文</li>
-                <li>饮食</li>
-                <li>建筑</li>
-                <li>游记</li>
-            </ul>
-        </div>
-        <div class="search-ways" style="cursor: pointer">
-            <ul>
-                <li style="background-color: #3366FF;color: #ffffff">按相关性</li>
-                <li>按时间</li>
-                <li>按点赞数</li>
+                <li style="border-bottom:5px solid #3366FF;" id="search-diqu">地区</li>
+                <li id="search-renwen" menutype="humanities">人文</li>
+                <li id="search-yinshi" menutype="diet">饮食</li>
+                <li id="search-jianzhu" menutype="building">建筑</li>
+                <li id="search-youji">游记</li>
             </ul>
         </div>
         <div class="search-show">         <!-- 地区-->
@@ -74,6 +67,7 @@
                         <a href="">西江千户苗寨</a>
                     </li>
                 </ul>
+                <div id="page1"></div>
             </div>
         </div>
         <div class="search-show" style="display: none">         <!-- 人文-->
@@ -85,6 +79,7 @@
                         <span>XXXXXXXXXXXX……</span>
                     </li>
                 </ul>
+                <div id="page2"></div>
             </div>
         </div>
         <div class="search-show" style="display: none">         <!-- 饮食-->
@@ -96,6 +91,7 @@
                         <span>XXXXXXXXXXXX……</span>
                     </li>
                 </ul>
+                <div id="page3"></div>
             </div>
         </div>
         <div class="search-show" style="display: none">         <!-- 建筑-->
@@ -107,6 +103,7 @@
                         <span>XXXXXXXXXXXX……</span>
                     </li>
                 </ul>
+                <div id="page4"></div>
             </div>
         </div>
         <div class="search-show" style="display: none">         <!-- 游记-->
@@ -123,6 +120,7 @@
                         </div>
                     </li>
                 </ul>
+                <div id="page5"></div>
             </div>
         </div>
     </div>
@@ -161,5 +159,6 @@
 </div>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/search.js"></script>
+<script type="text/javascript" src="js/laypage/laypage.js"></script>
 </body>
 </html>

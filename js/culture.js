@@ -13,6 +13,7 @@ $.get('index.php?c=main&a=gettouristareabyid',{"t_id":t_id},res=>{
     let nation = tour.n_name;
     let touristarea = tour.t_name;
     $("#renwenimg").css("background","url("+tour.t_renwen+")");
+    $("#renwenimg").css("background-size","100% 100%");
     $("#province").html(province);
     $("#nation").html(nation);
     $("#position").html(touristarea);
@@ -113,7 +114,7 @@ createUploader(itemnum);
                "menu_title":menulist.eq(i).find(".title-add").val(),
                "menu_content":menulist.eq(i).find(".info-add").val(),
                "menu_imgurl":menulist.eq(i).attr("imgpath"),
-               "position":$("#province-add").html()+"-"+$("#nation-add").html()+"-"+$("#positon-add").html()+"-"+$("#menu-add").html()+"-"+$("#menu2-add"),
+               "position":$("#province-add").html()+"-"+$("#nation-add").html()+"-"+$("#positon-add").html()+"-"+$("#menu-add").html()+"-"+$("#menu2-add").html(),
                "t_id":t_id,
                };
            data.menulist.push(menu);   
@@ -206,8 +207,7 @@ function getQueryString(name) {
     }
     return null;
 }
-
-
+// console.log($(".webfont").eq(0))
 
 });
 

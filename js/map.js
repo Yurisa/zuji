@@ -1,4 +1,63 @@
 $(function(){
+    var message = [];
+    var nationnamelist = [];
+    // var onearea = {};
+    $.get('index.php?c=main&a=gettouristandnation',res=>{
+       console.log(res);
+       let area = res.body;
+       for(let item of area){
+        var onenation = {
+            name: '',
+            type: 'scatter',
+            coordinateSystem: 'geo',
+            data:[],
+            symbolSize: 12,
+            label: {
+                normal: {
+                    show: false
+                },
+                emphasis: {
+                    show: false
+                }
+            },
+            itemStyle: {
+                normal:{
+                    color:item.color,
+                },
+                emphasis: {
+                    borderColor: '#fff',
+                    borderWidth: 1
+                }
+            }
+        };
+        nationnamelist.push(item.nation_name);
+        onenation.name = item.nation_name;
+        // onenation.itemstyle.normal.color = item.color;
+       let tourlist  = item.touristarealist;
+       for(let tour of tourlist){
+        let onearea = {
+            "name":tour.t_name,
+            "value":[tour.longitude,tour.latitude,tour.avgscore,tour.t_id],
+        }
+        onenation.data.push(onearea);
+       } 
+       message.push(onenation);
+       }
+      console.log(message);
+      myChart.setOption(option);
+      var ecConfig = echarts.config;
+      console.log(echarts)
+      console.log(ecConfig)
+      // function eConsole(params){
+      //    alert(option.series[0].data[param.dataIndex].name);
+      //    window.location.href="https://www.baidu.com/";
+      // }
+      // myChart.on("click", eConsole);  
+      myChart.on("click", function (param){ 
+     // alert(param.dataIndex+':'+option.series[0].data[param.dataIndex].name);
+     window.location.href="menu.html?t_id="+option.series[param.seriesIndex].data[param.dataIndex].value[3];
+     });
+    },"json");
     var myChart = echarts.init(document.getElementById("main"));
     var geoCoordMap = {
     "贵州省-苗族-西江千户苗寨":[108.17,26.49],
@@ -34,28 +93,28 @@ option = {
     tooltip: {               //触发类型
         trigger: 'item',
         formatter: function (params) {
-            return params.name ;
+            return params.name + ' : ' + params.value[2];
         }
     },
     legend: {                // 右下角
         orient: 'vertical',
         y: 'bottom',
         x:'right',
-        data:['少数民族特色地区'],
+        data:nationnamelist,
         textStyle: {
             color: '#fff'
         }
     },
-    visualMap: {             // 左下角
-        min: 0,
-        max: 200,
-        calculable: true,
-        show:false,
-        color: ['#d94e5d','#eac736','#50a3ba'],
-        textStyle: {
-            color: '#fff'
-        }
-    },
+    // visualMap: {             // 左下角
+    //     min: 0,
+    //     max: 200,
+    //     calculable: true,
+    //     show:false,
+    //     color: ['#d94e5d','#eac736','#50a3ba'],
+    //     textStyle: {
+    //         color: '#fff'
+    //     }
+    // },
     geo: {                   // 地图上的散点
         map: 'china',
         label: {             //散点上的文本标签
@@ -73,44 +132,7 @@ option = {
             }
         }
     },
-    series: [
-        {
-            name: '少数民族特色地区',
-            type: 'scatter',
-            coordinateSystem: 'geo',
-            data: convertData([
-                {name: "贵州省-苗族-西江千户苗寨",value:98}
-            ]),
-            symbolSize: 12,
-            label: {
-                normal: {
-                    show: false
-                },
-                emphasis: {
-                    show: false
-                }
-            },
-            itemStyle: {
-                emphasis: {
-                    borderColor: '#fff',
-                    borderWidth: 1
-                }
-            }
-        }
-    ]
+    series:message,
 }
 
- myChart.setOption(option);
- var ecConfig = echarts.config;
- console.log(echarts)
- console.log(ecConfig)
- // function eConsole(params){
- //    alert(option.series[0].data[param.dataIndex].name);
- //    window.location.href="https://www.baidu.com/";
- // }
- // myChart.on("click", eConsole);  
- myChart.on("click", function (param){ 
-// alert(param.dataIndex+':'+option.series[0].data[param.dataIndex].name);
-// window.location.href="https://localhost/zuji/index.php?c=main&a=showtouristarea&t_id="+option.series[0].data[param.dataIndex].value[2];
-});
 })

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>新补充</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/dataList.css">
+    <link rel="stylesheet" href="css/newSupplement.css">
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <!-- 顶部区域-->
+        <div><img src="image/zuji（白色）.png"></div>
+        <div id="exit">退出</div>
+        <div id="administrators">管理员abc</div>
+        <!--<i class="layui-icon">&#xe614;</i>-->
+    </div>
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed"><a href="backstage.html">景区管理</a></li>
+                <li class="layui-nav-item"><a href="addArea.html?t_id=1">地区信息</a></li>
+                <li class="layui-nav-item"><a href="newSupplement.html?t_id=1">新补充</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div id="sign">
+            <div><a href="">新补充</a></div>
+            <!--<input type="search" name="" value="用户名">-->
+            <!--<i id="search" class="layui-icon">&#xe615;</i>-->
+        </div>
+        <div id="content">
+            <!--新补充-->
+            <table class="layui-table" lay-size="lg">
+                <colgroup>
+                    <col width="9%">
+                    <col width="15%">
+                    <col width="15%">
+                    <col width="20%">
+                    <col width="10%">
+                    <col width="14%">
+                    <col width="8%">
+                    <col width="9%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>用户名</th>
+                    <th>位置</th>
+                    <th>标题</th>
+                    <th>内容</th>
+                    <th>配图</th>
+                    <th>提交时间</th>
+                    <th>操作</th>
+                    <th>操作结果</th>
+                </tr>
+                </thead>
+                <tbody class="mjbody">
+                <tr>
+                    <td>Abc123</td>
+                    <td>贵州-苗族-西江千户苗寨-人文-工艺品</td>
+                    <td>月亮姑娘刺绣银手链</td>
+                    <td>一个美丽之寨，有着古朴的银匠和俊美的绣娘，他们不受世俗的影响，追寻着自己的脚步，以精美的手饰体现出他们对生活的一种追求。简洁的款式，精致的做工，巧妙地把苗族刺绣元素融入在手链的设计中，浓郁的民族特色与现代设计的结合，时尚而古朴。</td>
+                    <td>点击查看</td>
+                    <td>13:00 2017-01-01</td>
+                    <td>
+                        <button class="layui-btn">审核通过</button>
+                        <button class="layui-btn">审核失败</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Abc123</td>
+                    <td>贵州-苗族-西江千户苗寨-人文-工艺品</td>
+                    <td>月亮姑娘刺绣银手链</td>
+                    <td>一个美丽之寨，有着古朴的银匠和俊美的绣娘，他们不受世俗的影响，追寻着自己的脚步，以精美的手饰体现出他们对生活的一种追求。简洁的款式，精致的做工，巧妙地把苗族刺绣元素融入在手链的设计中，浓郁的民族特色与现代设计的结合，时尚而古朴。</td>
+                    <td>点击查看</td>
+                    <td>13:00 2017-01-01</td>
+                    <td>已操作</td>
+                    <td>未通过</td>
+                </tr>
+                <tr>
+                    <td>Abc123</td>
+                    <td>贵州-苗族-西江千户苗寨-人文-工艺品</td>
+                    <td>月亮姑娘刺绣银手链</td>
+                    <td>一个美丽之寨，有着古朴的银匠和俊美的绣娘，他们不受世俗的影响，追寻着自己的脚步，以精美的手饰体现出他们对生活的一种追求。简洁的款式，精致的做工，巧妙地把苗族刺绣元素融入在手链的设计中，浓郁的民族特色与现代设计的结合，时尚而古朴。</td>
+                    <td>点击查看</td>
+                    <td>13:00 2017-01-01</td>
+                    <td>已操作</td>
+                    <td>通过</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="page1" style="margin-left: 40%;"></div>
+        <!-- <div id="page">
+            <div>共1页</div>
+            <div>首页</div>
+        </div> -->
+    </div>
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+    </div>
+</div>
+<script src="layui/layui.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script src="js/layuiUse.js"></script>
+<script src="../js/laypage/laypage.js"></script>
+<script src="js/skip.js"></script>
+<script src="js/newSupplement.js"></script>
+</body>
+</html>

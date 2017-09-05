@@ -1,0 +1,15 @@
+.map{
+    /* position: absolute;
+    left: 0px;
+    top: 20%; */
+    margin:10% 10% 5% 10%;
+    width: 90%;
+    height: 90%;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    padding: 0px;
+    /* margin: 0px; */
+    border-width: 0px;
+}
+
+/* #category */

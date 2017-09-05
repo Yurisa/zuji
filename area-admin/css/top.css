@@ -1,0 +1,37 @@
+.layui-header img{
+    width: 70px;
+    /*height: 40px;*/
+    position: absolute;
+    top:5px;
+    left: 60px;
+    float: left;
+    cursor: pointer;
+}
+
+#administrators,#exit{
+    float: right;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    background-color: #23262E;
+    width: 100px;
+    margin-top:10px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#administrators{
+    border-right: 1px solid #FFFFFF;
+    width: 200px;
+}
+
+.layui-header i{
+    float: right;
+    font-size: 25px;
+    margin-top: 10px;
+    color: #FFFFFF;
+    height: 40px;
+    line-height: 40px;
+    width: 50px;
+}

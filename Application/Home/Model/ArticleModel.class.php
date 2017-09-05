@@ -46,7 +46,7 @@ class ArticleModel extends Model
      function getArticleByaid($a_id){
         unset($data);
         $Model = new \Think\Model();
-        $data = $Model->query("select article.*,user.* from user,article where article.u_id = user.u_id and article.a_id = '{$a_id}'");
+        $data = $Model->query("select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '{$a_id}'");
      	return $data;
      }
 

@@ -42,12 +42,23 @@
 .icon-spinner5:before {
   content: "\e97e";
 }
+.icon-spinner5-h:before {
+  content: "\e97e";
+  color: #7FFFD4;
+}
 .icon-search:before {
   content: "\e986";
 }
 .icon-gift:before {
   content: "\e99f";
 }
+.icon-gift-h:before {
+  content: "\e99f";
+  color: #7FFFD4;
+}
+/* .icon-gift:before{
+  content: "\e99f";
+} */
 .icon-spoon-knife:before {
   content: "\e9a3";
 }

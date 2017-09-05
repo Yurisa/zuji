@@ -1,0 +1,137 @@
+#sign{
+    width: 100%;
+    height: 100px;
+}
+
+#sign div{
+    border-top: 5px solid #3366FF;
+    height: 50px;
+    width: 250px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    float: left;
+    cursor: pointer;
+}
+
+#sign input{
+    border: 2px solid #000000;
+    height: 50px;
+    width: 400px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    position: relative;
+    left: 20%;
+    margin-top: 10px;
+    color: #999999;
+}
+
+#sign #search{
+    position: relative;
+    top: 20%;
+    left: 21%;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#content{
+    width: 100%;
+    min-height: 600px;
+    background-color: #666666;
+}
+
+#mark{
+    width: 95%;
+    height: 70px;
+    color: #FFFFFF;
+    margin: 0px auto;
+}
+
+#mark div{
+    position: relative;
+    top: 20%;
+    width: 18%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    float: left;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#content form{
+    width: 150px;
+    float: right;
+    position: absolute;
+    color: #FFFFFF;
+    top: 14%;
+    right: 1%;
+}
+
+.layui-form-item{
+    margin-bottom: 0px;
+}
+
+.layui-form-item input{
+    float: left;
+}
+
+#items{
+    height: auto;
+    width: 95%;
+    margin: 0px auto;
+}
+.list{
+    height: 40px;
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 5px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.list div{
+    width: 18%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+    font-size: 0.9em;
+}
+
+.new{
+    background-color: #dddddd;
+}
+
+.list .layui-btn-group{
+    float: right;
+    width: 18%;
+}
+
+.list .layui-btn{
+    height: 30px;
+    line-height: 30px;
+}
+
+#page{
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+}
+
+#page div{
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #3366FF;
+    float: left;
+    margin-left: 30px;
+    position: relative;
+    left: 40%;
+    top:40%;
+}

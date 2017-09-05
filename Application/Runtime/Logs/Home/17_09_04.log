@@ -1,0 +1,291 @@
+[ 2017-09-04T17:29:07+08:00 ] ::1 /zuji/index.php?c=index&a=uploadImg&width=800
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034760s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010991s ]
+SQL: SHOW COLUMNS FROM `img` [ RunTime:0.0291s ]
+SQL: SHOW COLUMNS FROM `img` [ RunTime:0.0063s ]
+SQL: INSERT INTO `img` (`path`) VALUES ('./Uploads/img/201709/04/a6f914a030e09abc6a0a82b05e023872.jpg') [ RunTime:0.0460s ]
+
+[ 2017-09-04T17:30:36+08:00 ] ::1 /zuji/index.php?c=index&a=uploadImg&width=800
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+SQL: SHOW COLUMNS FROM `img` [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `img` [ RunTime:0.0037s ]
+SQL: INSERT INTO `img` (`path`) VALUES ('./Uploads/img/201709/04/a6f914a030e09abc6a0a82b05e023872.jpg') [ RunTime:0.0739s ]
+
+[ 2017-09-04T17:30:46+08:00 ] ::1 /zuji/index.php?c=main&a=addarticle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000750s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001560s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0937s ]
+SQL: INSERT INTO `article` (`a_title`,`a_content`,`a_cover`,`a_zan`,`browse_num`,`timestamp`,`u_id`,`t_id`) VALUES ('','','./Uploads/img/201709/04/a6f914a030e09abc6a0a82b05e023872.jpg','0','0','1504517446','1','1') [ RunTime:0.0619s ]
+
+[ 2017-09-04T17:30:46+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=55&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001195s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0075s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0067s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '55' order by comment.timestamp asc [ RunTime:0.0456s ]
+
+[ 2017-09-04T17:30:46+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=55
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000984s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001241s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0061s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '55' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0333s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=55 ) LIMIT 1   [ RunTime:0.0027s ]
+
+[ 2017-09-04T18:40:08+08:00 ] ::1 /zuji/index.php?c=main&a=getprovince
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000971s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001127s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0334s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0170s ]
+
+[ 2017-09-04T18:40:29+08:00 ] ::1 /zuji/index.php?c=main&a=getprovince
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0006s ]
+
+[ 2017-09-04T18:40:38+08:00 ] ::1 /zuji/index.php?c=main&a=getareabynid&n_id=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001309s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0602s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=0 )  [ RunTime:0.0008s ]
+
+[ 2017-09-04T18:41:14+08:00 ] ::1 /zuji/index.php?c=main&a=getareabynid&n_id=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001246s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=0 )  [ RunTime:0.0012s ]
+
+[ 2017-09-04T18:41:19+08:00 ] ::1 /zuji/index.php?c=main&a=getareabynid&n_id=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001003s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=0 )  [ RunTime:0.0004s ]
+
+[ 2017-09-04T18:43:16+08:00 ] ::1 /zuji/index.php?c=main&a=getprovince
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001290s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0004s ]
+
+[ 2017-09-04T18:43:19+08:00 ] ::1 /zuji/index.php?c=main&a=getnationbypid&p_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001562s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0700s ]
+SQL: SELECT * FROM `nation` WHERE ( p_id=2 )  [ RunTime:0.0021s ]
+
+[ 2017-09-04T18:43:21+08:00 ] ::1 /zuji/index.php?c=main&a=getareabynid&n_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000995s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001518s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0006s ]
+
+[ 2017-09-04T18:43:25+08:00 ] ::1 /zuji/index.php?c=main&a=getareabynid&n_id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001636s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0008s ]
+
+[ 2017-09-04T18:43:30+08:00 ] ::1 /zuji/index.php?c=main&a=getareabynid&n_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001194s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001536s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0005s ]
+
+[ 2017-09-04T18:46:19+08:00 ] ::1 /zuji/index.php?c=main&a=getprovince
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001134s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0003s ]
+
+[ 2017-09-04T18:46:22+08:00 ] ::1 /zuji/index.php?c=main&a=getnationbypid&p_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000899s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `nation` WHERE ( p_id=2 )  [ RunTime:0.0006s ]
+
+[ 2017-09-04T18:46:29+08:00 ] ::1 /zuji/index.php?c=main&a=getareabynid&n_id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+
+[ 2017-09-04T18:47:24+08:00 ] ::1 /zuji/index.php?c=main&a=getprovince
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0004s ]
+
+[ 2017-09-04T18:47:26+08:00 ] ::1 /zuji/index.php?c=main&a=getnationbypid&p_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000616s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `nation` WHERE ( p_id=2 )  [ RunTime:0.0004s ]
+
+[ 2017-09-04T18:47:29+08:00 ] ::1 /zuji/index.php?c=main&a=getareabynid&n_id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+
+[ 2017-09-04T18:48:03+08:00 ] ::1 /zuji/index.php?c=main&a=getprovince
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0004s ]
+
+[ 2017-09-04T18:48:23+08:00 ] ::1 /zuji/index.php?c=index&a=uploadImg&width=800
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+SQL: SHOW COLUMNS FROM `img` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `img` [ RunTime:0.0058s ]
+SQL: INSERT INTO `img` (`path`) VALUES ('./Uploads/img/201709/04/30a6d81cc065103a5d5fe5c6e56388be.jpg') [ RunTime:0.0632s ]
+
+[ 2017-09-04T18:48:25+08:00 ] ::1 /zuji/index.php?c=main&a=getnationbypid&p_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000950s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001845s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `nation` WHERE ( p_id=2 )  [ RunTime:0.0003s ]
+
+[ 2017-09-04T18:48:27+08:00 ] ::1 /zuji/index.php?c=main&a=getareabynid&n_id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+
+[ 2017-09-04T18:48:48+08:00 ] ::1 /zuji/index.php?c=main&a=addarticle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000864s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0151s ]
+SQL: INSERT INTO `article` (`a_title`,`a_content`,`a_cover`,`a_zan`,`browse_num`,`timestamp`,`u_id`,`t_id`) VALUES ('嘿嘿嘿','<p>啦啦啦啦啦啦啦<img src=\"/ueditor/php/upload/image/20170904/1504522124636483.png\" title=\"1504522124636483.png\" alt=\"logo-w.png\"/></p>','./Uploads/img/201709/04/30a6d81cc065103a5d5fe5c6e56388be.jpg','0','0','1504522127','1','3') [ RunTime:0.0378s ]
+
+[ 2017-09-04T18:48:48+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=56&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001147s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001329s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0069s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '56' order by comment.timestamp asc [ RunTime:0.0007s ]
+
+[ 2017-09-04T18:48:48+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=56
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000737s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001129s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0059s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '56' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0051s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=56 ) LIMIT 1   [ RunTime:0.0004s ]
+

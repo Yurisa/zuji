@@ -15,15 +15,21 @@
     min-height:500px;
     width: 90%;
     margin-left: 50px;
-}
-
-.layui-form{
     margin-top: 20px;
 }
 
+.layui-form{
+    /*margin-top: 20px;*/
+    width:90%;
+    margin: 0px auto;
+    position:relative;
+    top:20px;
+    z-index: 999;
+}
+
 .layui-form-label{
-    height: 40px;
-    line-height: 40px;
+    height: 30px;
+    line-height: 30px;
     font-size:16px;
     font-weight: bold;
 }
@@ -37,4 +43,38 @@
     position: relative;
     top:15px;
     left: 30%;
+}
+
+.title{
+    border-bottom: 1px solid #999999;
+    height: 40px;
+    width: 450px;
+    font-size: 20px;
+    color: #666666;
+}
+
+.layui-input-block{
+    width: 200px;
+}
+
+.select{
+    width: 30%;
+}
+
+.s-nation{
+    position: absolute;
+    top: 62px;
+    left: 320px;
+    float: left;
+}
+
+.s-area{
+    position: absolute;
+    top: 62px;
+    left: 640px;
+    float: left;
+}
+
+select{
+    z-index: 19999;
 }

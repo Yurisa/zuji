@@ -1,0 +1,11 @@
+#content{
+    background-color: #FFFFFF;
+}
+#content table tr td .layui-btn{
+    margin-bottom: 5px;
+    margin-left: 0px;
+}
+
+#content table tr td:nth-child(5){
+    cursor: pointer;
+}

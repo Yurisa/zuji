@@ -13,16 +13,28 @@ $(document).ready(function(){
      $(".info span").eq(3).html(date);
      $(".article_zan").html(article.a_zan);
      $('.article_collect').html(article.collectnum);
-     $('.maincontent').html(article.a_content);
+     $('.maincontent').append(article.a_content);
+     $('.theMainImg').css("background","url("+article.a_cover+")");
+     $(".theMainImg").css("background-size","100% 100%");
+     $(".edittime").html(getLocalTime(article.timestamp));
   },"json");
 
+
+  /**
+   * 增加浏览次数
+   */
+
+   $.get("index.php?c=main&a=addarticlebrowsenum",{"a_id":a_id},res=>{
+       console.log(res.body.browse_num)
+    $(".info span").eq(2).html(res.body.browse_num);
+   },"json");
   /**
    * 评论分页展示
    */
   
   function showcomment(curr){
     $.get('index.php?c=main&a=getcommentbyaid',{"a_id":a_id,"page":curr||1},res=>{
-        console.log(curr)
+        // console.log(curr)
         let comment = res.body.comment;
         let pagesize = 4;
         let currnum = 1;

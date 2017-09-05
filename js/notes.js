@@ -8,6 +8,7 @@ $(document).ready(function () {
     let nation = tour.n_name;
     let touristarea = tour.t_name;
     $("#youjiimg").css("background","url("+tour.t_youji+")");
+    $("#youjiimg").css("background-size","100% 100%");
     $("#province").html(province);
     $("#nation").html(nation);
     $("#position").html(touristarea);

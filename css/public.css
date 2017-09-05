@@ -10,9 +10,12 @@ ul li {
 	float: left;
 	color: #fff;
 }
-img {
-	max-width: 100%;
-}
+img{
+	width:auto;
+	height:auto;
+	max-width:100%;
+	max-height:100%;
+   }
 nav a,button {
 	min-height: 48px;
 	min-width: 48px;

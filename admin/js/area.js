@@ -20,7 +20,7 @@ $(document).ready(function () {
             $("#items").html("");
             for(let t of tourlist){
                 let date = getLocalTime(t.timestamp);
-                $("#items").append($("<div class='list' t_id="+t.t_id+"><div>"+t.t_name+"</div><div>"+t.p_name+"</div><div>"+t.n_name+"</div><div>"+t.articlenum+"</div><div>"+date+"</div><div class='layui-btn-group'><button class='layui-btn updatearea'>修改</button><button class='layui-btn'>删除</button></div></div>"));
+                $("#items").append("<div class='list' t_id="+t.t_id+"><div>"+t.t_name+"</div><div>"+t.p_name+"</div><div>"+t.n_name+"</div><div>"+t.articlenum+"</div><div>"+date+"</div><div class='layui-btn-group'><button class='layui-btn updatearea'>修改</button><button class='layui-btn'>删除</button></div></div>");
             }
             laypage({
                 cont: 'page1', //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>

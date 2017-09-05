@@ -42,7 +42,7 @@ class IndexController extends CommonController {
              // Image::water($file,"./ThinkPHP/zuji.png",null,50);
             $image = new \Think\Image(); 
             // 在图片左上角添加水印（水印文件位于./logo.png） 水印图片的透明度为50 并保存为water.jpg
-            $image->open($file)->water('./ThinkPHP/zuji.png',\Think\Image::IMAGE_WATER_SOUTHEAST,40)->save($file); 
+            $image->open($file)->water('./ThinkPHP/zuji.png',\Think\Image::IMAGE_WATER_SOUTHEAST,70)->save($file); 
             $id = D('Img')->send($file);
             $this->json(1, 'ok', array(
                 'id' => $id,

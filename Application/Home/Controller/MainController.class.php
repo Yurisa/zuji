@@ -37,7 +37,12 @@ class MainController extends CommonController {
     $res['nation'] = M('nation')->where('p_id='.$p_id)->select();
     $this->json(1,'ok',$res);
   }
-      
+  
+  public function getareabynid(){
+    $n_id = $_GET['n_id'];
+    $res['area'] = M('touristarea')->where('n_id='.$n_id)->select();
+    $this->json(1,'ok',$res);
+  }
     /*
      *
      *得到用户信息
@@ -48,6 +53,45 @@ class MainController extends CommonController {
        $u_id = 1;
        $user['user'] = D('user')->getuserdatabyuid($u_id);
        $this->json(1,'ok',$user);
+     }
+
+    /*
+     *
+     *得到用户列表
+     *
+     */
+
+     public function getuserlist(){
+      $curr = intval($_GET['page']);
+      $pagesize = 4;
+      $currnum = ($curr-1)*$pagesize;
+       $arr = M('user')->select();
+       foreach($arr as $key => &$value){
+         $value['articlenum'] = M('article')->where('u_id='.$value['u_id'])->count();
+       }
+       $usernum = count($arr);
+       $res['user'] = array_slice($arr,$currnum,$pagesize);
+       $res['totalnum']  = intval(($usernum+$pagesize-1)/$pagesize);
+       $this->json(1,'ok',$res);
+     }
+
+    /*
+     *
+     *得到用户列表
+     *
+     */
+
+     public function getarticlebylist(){
+      $curr = intval($_GET['page']);
+      $pagesize = 4;
+      $currnum = ($curr-1)*$pagesize;
+      $Model = new \Think\Model();
+      $arr = $Model->query("select article.*,user.u_name,touristarea.t_name,nation.n_name from article,user,touristarea,nation where article.u_id = user.u_id and article.t_id = touristarea.t_id and touristarea.n_id = nation.n_id ");
+      $articlenum = count($arr);
+      $res['article'] = array_slice($arr,$currnum,$pagesize);
+      $res['totalnum']  = intval(($articlenum+$pagesize-1)/$pagesize);
+      $this->json(1,'ok',$res);
+
      }
 
     /*
@@ -176,6 +220,7 @@ class MainController extends CommonController {
       foreach ($nation as $key => $value) {
         $data['nation_id'] = $value['n_id'];
         $data['nation_name'] = $value['n_name'];
+        $data['color'] = $value['color'];
         $data['touristarealist'] = M('touristarea')->where('n_id='.$value['n_id'])->select();
         foreach($data['touristarealist'] as &$tour){
             $scorelist = array();
@@ -249,7 +294,7 @@ class MainController extends CommonController {
 
     /*
      *
-     *单条添加菜单
+     *管理员单条添加菜单
      *
      */
  
@@ -332,9 +377,11 @@ class MainController extends CommonController {
       $menu = I('post.menu');
       $data = array(
         'menu_title' => $menu['menu_title'],
-        'menu_content' => $menu['menu_content'],
-        'menu_imgurl' => $menu['menu_imgurl'],   
+        'menu_content' => $menu['menu_content'], 
         );
+        if(isset($menu['menu_imgurl'])){
+          $data["menu_imgurl"] = $menu['menu_imgurl'];
+        }
       M('menu')->where('menu_id='.$menu['menu_id'])->save($data);
       $this->json(1,'ok');
     } 
@@ -362,7 +409,7 @@ class MainController extends CommonController {
        		// print_r($tmparr);
        		$arr = array_merge($arr,$tmparr);
        	}
-       	       		print_r($arr);
+       	       		// print_r($arr);
        	  
        }else{
        	   $arr = $Model->query("select * from menu where menu_type = '{$type}' and menu_content like '{$keyword}' order by menu_id asc");
@@ -407,8 +454,9 @@ class MainController extends CommonController {
 	    $pagesize = 4;
 	    $currnum = ($curr-1)*$pagesize;
 	    $Model = new \Think\Model();
-	    $arr = $Model->query(("select * from article where a_content like '{$keyword}'"));
-	    $articlenum = count($arr);
+	    $arr = $Model->query(("select article.*,user.u_name,user.u_id from article,user where article.u_id = user.u_id and article.a_content like '{$keyword}'"));
+      $articlenum = count($arr);
+      // echo $articlenum;
 	    $res['article'] = array_slice($arr,$currnum,$pagesize);
 	    $res['totalnum'] = intval(($articlenum+$pagesize-1)/$pagesize);
 	    $this->json(1,'ok',$res); 
@@ -460,6 +508,7 @@ class MainController extends CommonController {
      public function getarticlebyaid(){
        $a_id = $_GET['a_id'];
        $res['article'] = D('article')->getArticleByaid($a_id);
+      //  echo (strip_tags($res['article'][0]['a_content']));
        $res['article'][0]['collectnum'] = M('collect')->where('a_id='.$a_id)->count();
        $this->json(1,'ok',$res);
      }
@@ -482,6 +531,7 @@ class MainController extends CommonController {
       $res['totalnum'] = intval(($commentnum+$pagesize-1)/$pagesize);
       $this->json(1,'ok',$res);
      }
+
     /*
      *
      *添加游记
@@ -500,7 +550,7 @@ class MainController extends CommonController {
      // $this->json(1,'ok',$a_content);
      $data = array(
       'a_title' => I('post.a_title'),
-      'a_content' => I('post.a_content'),
+      'a_content' => html_entity_decode(I('post.a_content')),
       'a_cover' =>I('post.a_cover'),
       'a_zan' => 0,
       'browse_num' =>0,
@@ -779,6 +829,26 @@ class MainController extends CommonController {
       $this->json(1,'ok',$res);
 
     } 
+
+         
+    /*
+     *
+     *得到该景区所有用户补充的菜单
+     *
+     */
+
+     public function getallmenujudgebytid(){
+      $t_id = intval($_GET['t_id']);
+      $curr = intval($_GET['page']);
+      $pagesize = 4;
+      $currnum = ($curr-1)*$pagesize;
+      $Model = new \Think\Model();
+      $arr = $Model->query("select user.u_id,user.u_name,menu_judge.* from user,menu_judge where user.u_id = menu_judge.u_id and menu_judge.mj_ispass ='待审核' and t_id = '{$t_id}'");
+      $mjnum = count($arr);
+      $res['menu_judge'] = array_slice($arr,$currnum,$pagesize);
+      $res['totalnum'] = intval(($mjnum+$pagesize-1)/$pagesize);
+      $this->json(1,'ok',$res);
+     }
      
          
     /*
@@ -816,5 +886,58 @@ class MainController extends CommonController {
          M('menu_judge')->where('mj_id='.$mj_id)->delete();
          $this->json(1,'ok');
        }
+
+       
+      /*
+       *
+       *用户想去
+       *
+       */
+
+       public function addw_go(){
+         $t_id = $_GET['t_id'];
+         $u_id = 1;
+         M('w_go')->add(array('u_id'=>$u_id,'t_id'=>$t_id));
+         $this->json(1,'ok');
+       }
+       
+      /*
+       *
+       *用户去过
+       *
+       */
+
+       public function addh_go(){
+        $t_id = $_GET['t_id'];
+        $u_id = 1;
+        M('h_go')->add(array('u_id'=>$u_id,'t_id'=>$t_id));
+        $this->json(1,'ok');
+      }
+
+      /*
+       *
+       *得到用户想去景区ID
+       *
+       */
+
+       public function getw_gotid(){
+         $u_id = 1;
+         $res['t_idlist'] = M('w_go')->where('u_id='.$u_id)->select();
+         $this->json(1,'ok',$res);
+       }
+
+       
+      /*
+       *
+       *得到用户去过景区ID
+       *
+       */
+
+       public function geth_gotid(){
+        $u_id = 1;
+        $res['t_idlist'] = M('h_go')->where('u_id='.$u_id)->select();
+        $this->json(1,'ok',$res);
+      }
+
 
 }
