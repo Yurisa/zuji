@@ -34,15 +34,15 @@ option = {
             return params.name ;
         }
     },
-    legend: {                // 右下角
-        orient: 'vertical',
-        y: 'bottom',
-        x:'right',
-        data:['少数民族特色地区'],
-        textStyle: {
-            color: '#000'
-        }
-    },
+    // legend: {                // 右下角
+    //     orient: 'vertical',
+    //     y: 'bottom',
+    //     x:'right',
+    //     data:['少数民族特色地区'],
+    //     textStyle: {
+    //         color: '#000'
+    //     }
+    // },
     visualMap: {             // 左下角
         min: 0,
         max: 200,
@@ -73,10 +73,14 @@ option = {
     series: [
         {
             name: '少数民族特色地区',
-            type: 'scatter',
+            type: 'effectScatter',
             coordinateSystem: 'geo',
             data: geoCoordMap,
-            symbolSize: 12,
+            symbolSize: 18,
+            showEffectOn: 'render',
+            rippleEffect: {
+                brushType: 'stroke'
+            },
             label: {
                 normal: {
                     show: false
@@ -86,6 +90,11 @@ option = {
                 }
             },
             itemStyle: {
+                normal: {
+                    color: '#f4e925',
+                    shadowBlur: 10,
+                    shadowColor: '#333'
+                },
                 emphasis: {
                     borderColor: '#fff',
                     borderWidth: 1

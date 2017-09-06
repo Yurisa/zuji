@@ -8,10 +8,10 @@ $(function(){
        for(let item of area){
         var onenation = {
             name: '',
-            type: 'scatter',
+            type: 'effectScatter',
             coordinateSystem: 'geo',
             data:[],
-            symbolSize: 12,
+            symbolSize: 18,
             label: {
                 normal: {
                     show: false
@@ -20,9 +20,15 @@ $(function(){
                     show: false
                 }
             },
+            showEffectOn: 'render',
+            rippleEffect: {
+                brushType: 'stroke'
+            },
             itemStyle: {
                 normal:{
-                    color:item.color,
+                    color: item.color,
+                    shadowBlur: 10,
+                    shadowColor: '#333'
                 },
                 emphasis: {
                     borderColor: '#fff',

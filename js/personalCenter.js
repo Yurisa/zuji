@@ -352,7 +352,7 @@ $(document).ready(function () {
                 // console.log(1);
                 // window.location.href = "product-detail.html?f_id=" + $(this).attr("f_id");
                 let d_id = $(this).parent().attr("d_id");
-                console.log(a_id)
+                // console.log(a_id)
                 $.get("index.php?c=main&a=deletedraft",{"d_id":d_id},res=>{
                     //  console.log(res);
                     //  showarticle();
