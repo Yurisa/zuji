@@ -7081,3 +7081,563 @@ SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'artwork' )  [ RunTim
 SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'building' )  [ RunTime:0.0006s ]
 SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'diet' )  [ RunTime:0.0006s ]
 
+[ 2017-09-10T17:54:33+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001148s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0062s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=5 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=6 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=7 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=8 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=9 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=9 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=10 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=10 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=11 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=11 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=12 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=12 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=13 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=13 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=14 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=14 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=15 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=15 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=16 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=16 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=17 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=17 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=18 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=18 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=19 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=19 )  [ RunTime:0.0002s ]
+
+[ 2017-09-10T17:54:36+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0086s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0005s ]
+
+[ 2017-09-10T17:54:36+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:54:37+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000918s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001129s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001300s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0006s ]
+
+[ 2017-09-10T17:54:39+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0003s ]
+
+[ 2017-09-10T17:54:39+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001229s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:54:39+08:00 ] ::1 /zuji/index.php?c=main&a=gettourmenu&t_id=1&type=humanities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000965s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'custom' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'history' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'dress' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'artwork' )  [ RunTime:0.0003s ]
+
+[ 2017-09-10T17:54:39+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001254s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0005s ]
+
+[ 2017-09-10T17:55:11+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000998s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001167s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:55:12+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000757s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001354s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:55:12+08:00 ] ::1 /zuji/index.php?c=main&a=gettourmenu&t_id=1&type=humanities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001590s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'custom' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'history' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'dress' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'artwork' )  [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:55:12+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000790s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001561s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0003s ]
+
+[ 2017-09-10T17:55:43+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001244s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:55:43+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001540s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:55:43+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001306s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0007s ]
+
+[ 2017-09-10T17:55:43+08:00 ] ::1 /zuji/index.php?c=main&a=gettourmenu&t_id=1&type=humanities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000816s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001574s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'custom' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'history' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'dress' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'artwork' )  [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:56:11+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001230s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:56:11+08:00 ] ::1 /zuji/index.php?c=main&a=getprovince
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000820s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001316s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0003s ]
+
+[ 2017-09-10T17:56:12+08:00 ] ::1 /zuji/index.php?c=main&a=getnationbypid&p_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000757s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001404s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `nation` WHERE ( p_id=1 )  [ RunTime:0.0005s ]
+
+[ 2017-09-10T17:56:17+08:00 ] ::1 /zuji/index.php?c=main&a=getmenubymenuid&menu_id=12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002176s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `menu` WHERE ( menu_id=12 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:56:21+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001555s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0076s ]
+SQL: UPDATE `menu` SET `menu_title`='歌圩',`menu_content`='壮族人民能歌善唱，右江一带称为“欢”，左江一带称为“诗”，桂北一带称为“比”和“欢”，都是唱山歌的意思。有定期举行的唱山歌会，称为歌圩。歌圩日期各地不同。以农历三月初三为最隆重。大山歌圩有万人以上参加。内容有请歌、求歌、激歌、对歌、客气歌、推歌、盘歌、点更歌、离别歌、情歌、送歌等。歌圩期间，还举行男女间的抛绣球、“碰蛋”等娱乐活动。这期间，各家各户吃五色糯米饭。过去，壮族一年种一造（即一季）水稻，三月初三是备耕时间，歌圩是为春耕农忙做物质的和精神的准备。吃五色饭、五色蛋，是预祝五谷丰登的意思。' WHERE ( menu_id=12 ) [ RunTime:0.0499s ]
+
+[ 2017-09-10T17:56:24+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000796s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0057s ]
+SQL: UPDATE `menu` SET `menu_title`='歌圩',`menu_content`='壮族人民能歌善唱，右江一带称为“欢”，左江一带称为“诗”，桂北一带称为“比”和“欢”，都是唱山歌的意思。有定期举行的唱山歌会，称为歌圩。歌圩日期各地不同。以农历三月初三为最隆重。大山歌圩有万人以上参加。内容有请歌、求歌、激歌、对歌、客气歌、推歌、盘歌、点更歌、离别歌、情歌、送歌等。歌圩期间，还举行男女间的抛绣球、“碰蛋”等娱乐活动。这期间，各家各户吃五色糯米饭。过去，壮族一年种一造（即一季）水稻，三月初三是备耕时间，歌圩是为春耕农忙做物质的和精神的准备。吃五色饭、五色蛋，是预祝五谷丰登的意思。' WHERE ( menu_id=12 ) [ RunTime:0.0576s ]
+
+[ 2017-09-10T17:56:24+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001356s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0069s ]
+SQL: UPDATE `menu` SET `menu_title`='歌圩',`menu_content`='壮族人民能歌善唱，右江一带称为“欢”，左江一带称为“诗”，桂北一带称为“比”和“欢”，都是唱山歌的意思。有定期举行的唱山歌会，称为歌圩。歌圩日期各地不同。以农历三月初三为最隆重。大山歌圩有万人以上参加。内容有请歌、求歌、激歌、对歌、客气歌、推歌、盘歌、点更歌、离别歌、情歌、送歌等。歌圩期间，还举行男女间的抛绣球、“碰蛋”等娱乐活动。这期间，各家各户吃五色糯米饭。过去，壮族一年种一造（即一季）水稻，三月初三是备耕时间，歌圩是为春耕农忙做物质的和精神的准备。吃五色饭、五色蛋，是预祝五谷丰登的意思。' WHERE ( menu_id=12 ) [ RunTime:0.0284s ]
+
+[ 2017-09-10T17:56:24+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000742s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001098s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0063s ]
+SQL: UPDATE `menu` SET `menu_title`='歌圩',`menu_content`='壮族人民能歌善唱，右江一带称为“欢”，左江一带称为“诗”，桂北一带称为“比”和“欢”，都是唱山歌的意思。有定期举行的唱山歌会，称为歌圩。歌圩日期各地不同。以农历三月初三为最隆重。大山歌圩有万人以上参加。内容有请歌、求歌、激歌、对歌、客气歌、推歌、盘歌、点更歌、离别歌、情歌、送歌等。歌圩期间，还举行男女间的抛绣球、“碰蛋”等娱乐活动。这期间，各家各户吃五色糯米饭。过去，壮族一年种一造（即一季）水稻，三月初三是备耕时间，歌圩是为春耕农忙做物质的和精神的准备。吃五色饭、五色蛋，是预祝五谷丰登的意思。' WHERE ( menu_id=12 ) [ RunTime:0.0279s ]
+
+[ 2017-09-10T17:56:27+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000945s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000919s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001125s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0066s ]
+SQL: UPDATE `menu` SET `menu_title`='歌圩',`menu_content`='壮族人民能歌善唱，右江一带称为“欢”，左江一带称为“诗”，桂北一带称为“比”和“欢”，都是唱山歌的意思。有定期举行的唱山歌会，称为歌圩。歌圩日期各地不同。以农历三月初三为最隆重。大山歌圩有万人以上参加。内容有请歌、求歌、激歌、对歌、客气歌、推歌、盘歌、点更歌、离别歌、情歌、送歌等。歌圩期间，还举行男女间的抛绣球、“碰蛋”等娱乐活动。这期间，各家各户吃五色糯米饭。过去，壮族一年种一造（即一季）水稻，三月初三是备耕时间，歌圩是为春耕农忙做物质的和精神的准备。吃五色饭、五色蛋，是预祝五谷丰登的意思。' WHERE ( menu_id=12 ) [ RunTime:0.0587s ]
+
+[ 2017-09-10T17:56:27+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001188s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0074s ]
+SQL: UPDATE `menu` SET `menu_title`='歌圩',`menu_content`='壮族人民能歌善唱，右江一带称为“欢”，左江一带称为“诗”，桂北一带称为“比”和“欢”，都是唱山歌的意思。有定期举行的唱山歌会，称为歌圩。歌圩日期各地不同。以农历三月初三为最隆重。大山歌圩有万人以上参加。内容有请歌、求歌、激歌、对歌、客气歌、推歌、盘歌、点更歌、离别歌、情歌、送歌等。歌圩期间，还举行男女间的抛绣球、“碰蛋”等娱乐活动。这期间，各家各户吃五色糯米饭。过去，壮族一年种一造（即一季）水稻，三月初三是备耕时间，歌圩是为春耕农忙做物质的和精神的准备。吃五色饭、五色蛋，是预祝五谷丰登的意思。' WHERE ( menu_id=12 ) [ RunTime:0.0304s ]
+
+[ 2017-09-10T17:56:27+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001230s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0063s ]
+SQL: UPDATE `menu` SET `menu_title`='歌圩',`menu_content`='壮族人民能歌善唱，右江一带称为“欢”，左江一带称为“诗”，桂北一带称为“比”和“欢”，都是唱山歌的意思。有定期举行的唱山歌会，称为歌圩。歌圩日期各地不同。以农历三月初三为最隆重。大山歌圩有万人以上参加。内容有请歌、求歌、激歌、对歌、客气歌、推歌、盘歌、点更歌、离别歌、情歌、送歌等。歌圩期间，还举行男女间的抛绣球、“碰蛋”等娱乐活动。这期间，各家各户吃五色糯米饭。过去，壮族一年种一造（即一季）水稻，三月初三是备耕时间，歌圩是为春耕农忙做物质的和精神的准备。吃五色饭、五色蛋，是预祝五谷丰登的意思。' WHERE ( menu_id=12 ) [ RunTime:0.0255s ]
+
+[ 2017-09-10T17:56:27+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000923s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0080s ]
+SQL: UPDATE `menu` SET `menu_title`='歌圩',`menu_content`='壮族人民能歌善唱，右江一带称为“欢”，左江一带称为“诗”，桂北一带称为“比”和“欢”，都是唱山歌的意思。有定期举行的唱山歌会，称为歌圩。歌圩日期各地不同。以农历三月初三为最隆重。大山歌圩有万人以上参加。内容有请歌、求歌、激歌、对歌、客气歌、推歌、盘歌、点更歌、离别歌、情歌、送歌等。歌圩期间，还举行男女间的抛绣球、“碰蛋”等娱乐活动。这期间，各家各户吃五色糯米饭。过去，壮族一年种一造（即一季）水稻，三月初三是备耕时间，歌圩是为春耕农忙做物质的和精神的准备。吃五色饭、五色蛋，是预祝五谷丰登的意思。' WHERE ( menu_id=12 ) [ RunTime:0.0298s ]
+
+[ 2017-09-10T17:56:28+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000864s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001215s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0069s ]
+SQL: UPDATE `menu` SET `menu_title`='歌圩',`menu_content`='壮族人民能歌善唱，右江一带称为“欢”，左江一带称为“诗”，桂北一带称为“比”和“欢”，都是唱山歌的意思。有定期举行的唱山歌会，称为歌圩。歌圩日期各地不同。以农历三月初三为最隆重。大山歌圩有万人以上参加。内容有请歌、求歌、激歌、对歌、客气歌、推歌、盘歌、点更歌、离别歌、情歌、送歌等。歌圩期间，还举行男女间的抛绣球、“碰蛋”等娱乐活动。这期间，各家各户吃五色糯米饭。过去，壮族一年种一造（即一季）水稻，三月初三是备耕时间，歌圩是为春耕农忙做物质的和精神的准备。吃五色饭、五色蛋，是预祝五谷丰登的意思。' WHERE ( menu_id=12 ) [ RunTime:0.0508s ]
+
+[ 2017-09-10T17:56:28+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001322s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0067s ]
+SQL: UPDATE `menu` SET `menu_title`='歌圩',`menu_content`='壮族人民能歌善唱，右江一带称为“欢”，左江一带称为“诗”，桂北一带称为“比”和“欢”，都是唱山歌的意思。有定期举行的唱山歌会，称为歌圩。歌圩日期各地不同。以农历三月初三为最隆重。大山歌圩有万人以上参加。内容有请歌、求歌、激歌、对歌、客气歌、推歌、盘歌、点更歌、离别歌、情歌、送歌等。歌圩期间，还举行男女间的抛绣球、“碰蛋”等娱乐活动。这期间，各家各户吃五色糯米饭。过去，壮族一年种一造（即一季）水稻，三月初三是备耕时间，歌圩是为春耕农忙做物质的和精神的准备。吃五色饭、五色蛋，是预祝五谷丰登的意思。' WHERE ( menu_id=12 ) [ RunTime:0.0297s ]
+
+[ 2017-09-10T17:56:28+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0066s ]
+SQL: UPDATE `menu` SET `menu_title`='歌圩',`menu_content`='壮族人民能歌善唱，右江一带称为“欢”，左江一带称为“诗”，桂北一带称为“比”和“欢”，都是唱山歌的意思。有定期举行的唱山歌会，称为歌圩。歌圩日期各地不同。以农历三月初三为最隆重。大山歌圩有万人以上参加。内容有请歌、求歌、激歌、对歌、客气歌、推歌、盘歌、点更歌、离别歌、情歌、送歌等。歌圩期间，还举行男女间的抛绣球、“碰蛋”等娱乐活动。这期间，各家各户吃五色糯米饭。过去，壮族一年种一造（即一季）水稻，三月初三是备耕时间，歌圩是为春耕农忙做物质的和精神的准备。吃五色饭、五色蛋，是预祝五谷丰登的意思。' WHERE ( menu_id=12 ) [ RunTime:0.0314s ]
+
+[ 2017-09-10T17:56:38+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001103s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:56:38+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000917s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001264s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:56:38+08:00 ] ::1 /zuji/index.php?c=main&a=gettourmenu&t_id=1&type=humanities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'custom' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'history' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'dress' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 1 and menu_type = 'artwork' )  [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:56:38+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001086s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0003s ]
+
+[ 2017-09-10T17:56:49+08:00 ] ::1 /zuji/index.php?c=main&a=getmenubymenuid&menu_id=12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000739s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001282s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `menu` WHERE ( menu_id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-10T17:56:52+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000879s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001370s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0074s ]
+SQL: UPDATE `menu` SET `menu_title`='歌圩',`menu_content`='壮族人民能歌善唱，右江一带称为“欢”，左江一带称为“诗”，桂北一带称为“比”和“欢”，都是唱山歌的意思。有定期举行的唱山歌会，称为歌圩。歌圩日期各地不同。以农历三月初三为最隆重。大山歌圩有万人以上参加。内容有请歌、求歌、激歌、对歌、客气歌、推歌、盘歌、点更歌、离别歌、情歌、送歌等。歌圩期间，还举行男女间的抛绣球、“碰蛋”等娱乐活动。这期间，各家各户吃五色糯米饭。过去，壮族一年种一造（即一季）水稻，三月初三是备耕时间，歌圩是为春耕农忙做物质的和精神的准备。吃五色饭、五色蛋，是预祝五谷丰登的意思。' WHERE ( menu_id=12 ) [ RunTime:0.0691s ]
+
+[ 2017-09-10T17:59:07+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000805s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002344s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0005s ]
+
+[ 2017-09-10T17:59:07+08:00 ] ::1 /zuji/index.php?c=main&a=getprovince
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:59:08+08:00 ] ::1 /zuji/index.php?c=main&a=getnationbypid&p_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001605s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001364s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `nation` WHERE ( p_id=1 )  [ RunTime:0.0005s ]
+
+[ 2017-09-10T17:59:11+08:00 ] ::1 /zuji/index.php?c=main&a=getmenubymenuid&menu_id=12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000975s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001897s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `menu` WHERE ( menu_id=12 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:59:12+08:00 ] ::1 /zuji/index.php?c=main&a=adminupdatemenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001576s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0101s ]
+SQL: UPDATE `menu` SET `menu_title`='歌圩',`menu_content`='壮族人民能歌善唱，右江一带称为“欢”，左江一带称为“诗”，桂北一带称为“比”和“欢”，都是唱山歌的意思。有定期举行的唱山歌会，称为歌圩。歌圩日期各地不同。以农历三月初三为最隆重。大山歌圩有万人以上参加。内容有请歌、求歌、激歌、对歌、客气歌、推歌、盘歌、点更歌、离别歌、情歌、送歌等。歌圩期间，还举行男女间的抛绣球、“碰蛋”等娱乐活动。这期间，各家各户吃五色糯米饭。过去，壮族一年种一造（即一季）水稻，三月初三是备耕时间，歌圩是为春耕农忙做物质的和精神的准备。吃五色饭、五色蛋，是预祝五谷丰登的意思。' WHERE ( menu_id=12 ) [ RunTime:0.0628s ]
+
+[ 2017-09-10T17:59:17+08:00 ] ::1 /zuji/index.php?c=main&a=getmenubymenuid&menu_id=12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000918s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001158s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0083s ]
+SQL: SELECT * FROM `menu` WHERE ( menu_id=12 ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-09-10T17:59:34+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000904s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0083s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0005s ]
+
+[ 2017-09-10T17:59:34+08:00 ] ::1 /zuji/index.php?c=main&a=getprovince
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0004s ]
+
+[ 2017-09-10T17:59:34+08:00 ] ::1 /zuji/index.php?c=main&a=getnationbypid&p_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000933s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001391s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `nation` WHERE ( p_id=1 )  [ RunTime:0.0005s ]
+

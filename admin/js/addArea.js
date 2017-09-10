@@ -96,7 +96,8 @@ $(document).ready(function () {
             }
             $.post("../index.php?c=main&a=adminupdatemenu",{"menu":data},res=>{
                 // window.location.href="../admin/addArea.html?t_id="+t_id;
-
+                $("#revise")[0].reset();
+                $("#detailMes").hide();
             },"json");
         }else{
             console.log("2222")
