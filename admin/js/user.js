@@ -4,7 +4,7 @@ $(document).ready(function(){
         let userlist = res.body.user;
         $("#items").html("");
         for(let u of userlist){
-            $("#items").append("<div class='list' u_id="+u.u_id+"><div><img src="+'../'+u.u_avatar+"></div>"+u.u_name+"<div></div><div>12:00  17-08-26</div><div>"+u.articlenum+"</div><div class='layui-btn-group'><button class='layui-btn'>发送消息</button><button class='layui-btn'>查看</button><button class='layui-btn'>限制</button></div></div>");
+            $("#items").append("<div class='list' u_id="+u.u_id+"><div><img src="+'../'+u.u_avatar+"></div><div>"+u.u_name+"</div><div>12:00  17-08-26</div><div>"+u.articlenum+"</div><div class='layui-btn-group'><button class='layui-btn'>发送消息</button><button class='layui-btn'>查看</button><button class='layui-btn'>限制</button></div></div>");
         }
         laypage({
             cont: 'page1', //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>

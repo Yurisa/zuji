@@ -1,6 +1,6 @@
 .theMainImg {
 	height: 815px;
-	background: url('../images/home-bg.jpg');
+	/* background: url('../images/home-bg.jpg'); */
 	background-size: 100% 815px;
 }
 .theAdArea {

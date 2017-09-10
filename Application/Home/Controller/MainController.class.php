@@ -861,7 +861,7 @@ class MainController extends CommonController {
        $mj_id = $_GET['mj_id'];
        M('menu_judge')->where('mj_id='.$mj_id)->save(array('mj_ispass'=>'通过'));
        $arr = M('menu_judge')->where('mj_id='.$mj_id)->field('mj_type,mj_title,mj_imgurl,mj_content,t_id')->find();
-       print_r($arr);
+      //  print_r($arr);
        $data = array(
          'menu_type' => $arr['mj_type'],
          'menu_title' => $arr['mj_title'],
@@ -883,7 +883,7 @@ class MainController extends CommonController {
 
        public function menufail(){
          $mj_id= $_GET['mj_id'];
-         M('menu_judge')->where('mj_id='.$mj_id)->delete();
+         M('menu_judge')->where('mj_id='.$mj_id)->save(array('mj_ispass'=>'通过'));
          $this->json(1,'ok');
        }
 
@@ -939,5 +939,52 @@ class MainController extends CommonController {
         $this->json(1,'ok',$res);
       }
 
+      /*
+       *
+       *得到用户的贡献
+       *
+       */
 
+       public function getusercontribution(){
+         $u_id = 1;
+         $curr = intval($_GET['page']);
+         $pagesize = 4;
+         $currnum = ($curr-1)*$pagesize;
+         $arr = M('menu_judge')->where('u_id='.$u_id)->select();
+         $mjnum = count($arr);
+         $res['menu_judge'] = array_slice($arr,$currnum,$pagesize);
+         $res['totalnum'] = intval(($mjnum+$pagesize-1)/$pagesize);
+         $this->json(1,'ok',$res);
+       }
+
+      /*
+       *
+       *得到用户的消息
+       *
+       */
+
+       public function getusermessage(){
+         $u_id = 1;
+         $curr = intval($_GET['page']);
+         $pagesize = 4;
+         $currnum = ($curr-1)*$pagesize;
+         $Model = new \Think\Model();
+         $arr = $Model->query("select comment.*,user.*,article.* from comment,user,article where comment.u_id = user.u_id and article.a_id = comment.a_id and user.u_id='{$u_id}'");
+         $comnum = count($arr);
+         $res['commentlist'] = array_slice($arr,$currnum,$pagesize);
+         $res['totalnum'] = intval(($commentnum+$pagesize-1)/$pagesize);
+         $this->json(1,'ok',$res);
+       }
+      
+      /*
+       *
+       *得到用户的消息
+       *
+       */
+
+       public function deleteusercomment(){
+         $c_id = $_GET['c_id'];
+         M('comment')->where("c_id=".$c_id)->delete();
+         $this->json(1,'ok');
+       }
 }

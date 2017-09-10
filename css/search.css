@@ -156,7 +156,7 @@
 }
 
 #travels ul li a:nth-of-type(1){
-    width: 50%;
+    width: 40%;
     height: 100px;
     line-height: 100px;
     float: left;
@@ -164,6 +164,7 @@
     font-size: 18px;
     font-weight: bold;
     text-align: left;
+    margin-left:5%;
 }
 
 #travels ul li a:nth-of-type(2){

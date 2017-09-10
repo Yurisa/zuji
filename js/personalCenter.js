@@ -293,6 +293,7 @@ $(document).ready(function () {
     /**
      * 删除用户游记
      */
+    
     $(document).on("click", ".deletearticle", function () {
                 // console.log(1);
                 // window.location.href = "product-detail.html?f_id=" + $(this).attr("f_id");
@@ -361,6 +362,69 @@ $(document).ready(function () {
             });
 
     /**
+     * 列出用户消息
+     */
+
+     function showmessage(curr){
+         $.get("index.php?c=main&a=getusermessage",{"page":curr||1},res=>{
+            let comment = res.body.commentlist;
+            $("#my-message ul").html("");
+            for(let c of comment){
+               $("#my-message ul").append($("<li c_id="+c.c_id+"><img src="+c.u_avatar+"><p>"+c.u_name+"</p><p>发表评论</p><a href=''>"+c.a_title+"</a><p>"+c.c_content+"</p><input type='button' value='回复'><input type='button' class='deletecomment' value='删除'></li>"));
+            }
+            laypage({
+                cont: 'page7', //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
+                pages: res.body.totalnum, //通过后台拿到的总页数
+                curr: curr || 1, //当前页
+                skin: 'yahei', //加载内置皮肤，也可以直接赋值16进制颜色值，如:#c00
+                jump: function (obj, first) { //触发分页后的回调
+                    if (!first) { //点击跳页触发函数自身，并传递当前页：obj.curr
+                        showmessage(obj.curr);
+                    }
+                }
+            });
+         },"json");
+     }
+     
+     $(document).on("click", ".deletecomment", function () {
+       $.get("index.php?c=main&a=deleteusercomment",{"c_id":$(this).parent().attr("c_id")},res=>{
+          console.log(res);
+          $(this).parent().remove();
+       },"json");
+     });
+     showmessage();
+
+    /**
+     * 列出用户贡献
+     * 
+     */
+
+     function showcontribution(curr){
+        $.get("index.php?c=main&a=getusercontribution",{"page":curr||1},res=>{
+                var num = 1;
+                let  mjlist = res.body.menu_judge;
+                $("#contribution").html("");
+            for(let mj of mjlist){
+                let date =  getLocalTime(mj.timestamp);
+                $("#contribution").append($("<tr><td>"+num+"</td><td>"+mj.position+"</td><td></td><td>"+mj.mj_ispass+"</td><td>查看</td></tr>"));
+               num++;
+            }
+            laypage({
+                cont: 'page6', //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
+                pages: res.body.totalnum, //通过后台拿到的总页数
+                curr: curr || 1, //当前页
+                skin: 'yahei', //加载内置皮肤，也可以直接赋值16进制颜色值，如:#c00
+                jump: function (obj, first) { //触发分页后的回调
+                    if (!first) { //点击跳页触发函数自身，并传递当前页：obj.curr
+                        showcontribution(obj.curr);
+                    }
+                }
+            });
+        },"json");
+     }
+     showcontribution();
+     
+    /**
      * 
      * 列出用户收藏
      */
@@ -398,10 +462,12 @@ $(document).ready(function () {
         }
     });
     }
+
     /**
      * 删除用户收藏
      * 
      */
+
     $(document).on("click", ".deletecollect", function () {
                 // console.log(1);
                 // window.location.href = "product-detail.html?f_id=" + $(this).attr("f_id");
@@ -413,6 +479,7 @@ $(document).ready(function () {
                     $(this).parent().remove();
                  })
             });
+
 
    /**
     * 

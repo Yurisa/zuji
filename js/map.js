@@ -65,9 +65,9 @@ $(function(){
      });
     },"json");
     var myChart = echarts.init(document.getElementById("main"));
-    var geoCoordMap = {
-    "贵州省-苗族-西江千户苗寨":[108.17,26.49],
-};
+    // var Image=document.createElement('img');
+    // Image.src="images/home-bg.jpg";
+    // Image.style = "width:auto;height:auto;max-width:100%;max-height:100%;";
 
 var convertData = function (data) {
     var res = [];
@@ -85,12 +85,16 @@ var convertData = function (data) {
 };
 
 option = {
-    backgroundColor: '#404a59',
+    // backgroundColor: '#404a59',
+    // backgroundColor: {
+    //     image: Image,// 支持为 HTMLImageElement, HTMLCanvasElement，不支持路径字符串
+    //     repeat: 'repeat' ,// 是否平铺, 可以是 'repeat-x', 'repeat-y', 'no-repeat'
+        
+    // },
+    rgba:(0, 0, 0, 0.5),
     // rgba:(0, 0, 0, 0.5),
     title: {
         text: '全国主要少数民族特色地区',
-        // subtext: 'data from PM25.in',
-        // sublink: 'http://www.pm25.in',
         x:'center',
         textStyle: {
             color: '#fff',

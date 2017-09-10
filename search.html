@@ -39,8 +39,10 @@
     </div>
     <div class="box main">
         <div class="search">
-            <input class="form-control search-input keyword" placeholder="请输入你要搜索的内容">
-            <input class="searchButton" type="submit" value="搜索">
+            <form action="" method="get">
+            <input class="form-control search-input keyword"  name="searchContent" placeholder="请输入你要搜索的内容">
+            <input class="searchButton" type="submit" name="searchBtn"  value="搜索">
+            </form>
         </div>
         <div class="search-list" style="cursor: pointer">
             <ul>
@@ -54,18 +56,6 @@
         <div class="search-show">         <!-- 地区-->
             <div id="area">
                 <ul>
-                    <li>
-                        <img src="images/pic2.jpg">
-                        <a href="">西江千户苗寨</a>
-                    </li>
-                    <li>
-                        <img src="images/pic2.jpg">
-                        <a href="">西江千户苗寨</a>
-                    </li>
-                    <li>
-                        <img src="images/pic2.jpg">
-                        <a href="">西江千户苗寨</a>
-                    </li>
                 </ul>
                 <div id="page1"></div>
             </div>
@@ -73,11 +63,6 @@
         <div class="search-show" style="display: none">         <!-- 人文-->
             <div id="humanity">
                 <ul>
-                    <li>
-                        <img src="images/pic2.jpg">
-                        <a href="">贵州省-苗族-西江千户苗寨-人文-工艺品</a>
-                        <span>XXXXXXXXXXXX……</span>
-                    </li>
                 </ul>
                 <div id="page2"></div>
             </div>
@@ -85,11 +70,6 @@
         <div class="search-show" style="display: none">         <!-- 饮食-->
             <div id="diet">
                 <ul>
-                    <li>
-                        <img src="images/pic2.jpg">
-                        <a href="">贵州省-苗族-西江千户苗寨-饮食</a>
-                        <span>XXXXXXXXXXXX……</span>
-                    </li>
                 </ul>
                 <div id="page3"></div>
             </div>
@@ -97,11 +77,6 @@
         <div class="search-show" style="display: none">         <!-- 建筑-->
             <div id="building">
                 <ul>
-                    <li>
-                        <img src="images/pic2.jpg">
-                        <a href="">贵州省-苗族-西江千户苗寨-建筑</a>
-                        <span>XXXXXXXXXXXX……</span>
-                    </li>
                 </ul>
                 <div id="page4"></div>
             </div>
@@ -109,18 +84,8 @@
         <div class="search-show" style="display: none">         <!-- 游记-->
             <div id="travels">
                 <ul>
-                    <li>
-                        <img src="images/pic2.jpg">
-                        <a href="">一路向北，追寻探索者的未知路</a>
-                        <a>Abc123</a>
-                        <span class="partial-content">XXXXXXXXXXXX……</span>
-                        <div class="note-bottom">
-                            <span class="icon-s icon-eye">100</span>		<!--点击量-->
-                            <span class="icon-s icon-clock">2017-01-01</span>	<!--发布时间-->
-                        </div>
-                    </li>
                 </ul>
-                <div id="page5"></div>
+                <div id="page5" style="margin-left: 40%;"></div>
             </div>
         </div>
     </div>

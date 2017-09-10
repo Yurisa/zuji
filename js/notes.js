@@ -13,6 +13,7 @@ $(document).ready(function () {
     $("#nation").html(nation);
     $("#position").html(touristarea);
     },"json");
+    
 /**
  * 列出景区所有游记
  * @param {*} curr 
