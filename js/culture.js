@@ -83,7 +83,16 @@ $('.plus').click(function(){
 })
 $('.minus').click(function(){
     if(itemnum==1){
-        alert("已经是最后一条");
+        // alert("已经是最后一条");
+        layui.use('layer', function(){
+            var layer = layui.layer;
+            
+            layer.open({
+                title: '提示'
+                ,content: '已经是最后一条'
+              });     
+                
+          }); 
     }else{
         itemnum--;
         console.log(itemnum);
@@ -107,7 +116,16 @@ createUploader(itemnum);
         console.log(menulist.eq(i).find(".title-add").val());
         console.log(menulist.eq(i).attr("imgpath"))
         if(menulist.eq(i).find(".title-add").val().length == 0||menulist.eq(i).find(".info-add").val().length == 0||typeof(menulist.eq(i).attr("imgpath"))=='undefined'){
-            alert("请填写完整信息");
+            // alert("请填写完整信息");
+            layui.use('layer', function(){
+                var layer = layui.layer;
+                
+                layer.open({
+                    title: '提示'
+                    ,content: '请填写完整信息'
+                  });     
+                    
+              }); 
         }else{
             let menu = { 
                 "menu_type":$("#menu-add").attr("type"),
@@ -121,7 +139,16 @@ createUploader(itemnum);
            console.log(data);
         $.post("index.php?c=main&a=useraddmenu",data,res=>{
           console.log(res);
-          alert("添加成功");
+        //   alert("添加成功");
+        layui.use('layer', function(){
+            var layer = layui.layer;
+            
+            layer.open({
+                title: '提示'
+                ,content: '已提交审核'
+              });     
+                
+          }); 
           $(".addarea").empty();
           itemnum = 1;
           $(".addarea").append($("<div class='oneadd' id='oneadd1'><div class='add-num'>1</div><div class='add-right'><span>标题<input type='text' class='title-add' name='title-add'></span><span>介绍<textarea class='info-add'></textarea></span><span>配图<div id='uploadposition1'><button  class='layui-btn layui-btn-big' style='width: 150px;height: 15px;margin: 0 10px 30px 50px;float:left' id='pickfiles1' href='javascript:;'>选择图片</button><button  class='layui-btn layui-btn-big' style='width: 150px;height: 15px;margin: 0 50px 30px;float:left' id='uploadfiles1' href='javascript:;'>开始上传</button></div></span><div class='preimage box box-top' style='width:100%;height:auto;margin-top:80px'></div></div></div>"));
@@ -175,6 +202,11 @@ function createUploader(itemnum){
                 $("#oneadd"+itemnum+" .layui-progress-text").html(file.percent+'%');
             },
             FileUploaded: function(up, file, info) {
+                layui.use('layer', function(){
+                    var layer = layui.layer;
+                    
+                    layer.msg('上传成功');
+                  });  
                 var data = strToJson(info.response);
                 console.log(data)
                 $("#oneadd"+itemnum).attr("imgpath",data.body.file);

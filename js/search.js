@@ -9,7 +9,8 @@ $(document).ready(function () {
 //        bindData(decodeURI(getQueryString("searchContent")), _PageSize, 0, isPrice, lowPrice, highPrice, orderStr, atrType, level);
 //    }
 //    $(".keyword").val(keyword);
-   getarea($(".keyword").val());
+
+   
     var curritem = 0
     // 搜索样式显示
 
@@ -28,7 +29,9 @@ $(document).ready(function () {
         $(this).css("background-color","#3366FF");
         $(this).css("color","#FFFFFF");
     });
-
+    if(keyword){
+        getarea($(".keyword").val());
+     
     $("#search-diqu").click(function(){
        getarea($(".keyword").val());
     });
@@ -46,6 +49,7 @@ $(document).ready(function () {
      $("#search-youji").click(function(){
        getarticle($(".keyword").val());
      });
+    }
     function getarea(nationname,curr){
         $.get('index.php?c=main&a=searchtouristarea',{"nationname":nationname,"page":curr||1},res=>{
             let tour = res.body.touristarea;
@@ -129,8 +133,14 @@ $(document).ready(function () {
             let article = res.body.article;
             $("#travels ul").html("");
             for(let a of article){
+                var articlecontent = "";
+                let content = "<div>"+a.a_content+"</div>";
+                // console.log($(content).find("p").eq(0));
+                for(let i = 0;i<$(content).find("p").length;i++){
+                   articlecontent = articlecontent+$(content).find("p").eq(0).text()
+                }
                 let date = getLocalTime(a.timestamp);
-                $("#travels ul").append($("<li><img src="+a.a_cover+"><a href="+'note-detail.html?a_id='+a.a_id+">"+a.a_title+"</a><a u_id="+a.u_id+" style=''>"+a.u_name+"</a><span class='partial-content' style='width: 45%; float: left;color: #333333;font-size: 16px;text-align: left;margin-left: 50px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;'>"+a.a_content+"</span><div class='note-bottom'><span class='icon-s icon-eye'>"+a.browse_num+"</span><span class='icon-s icon-clock'>"+date+"</span></div></li>"));
+                $("#travels ul").append($("<li><img src="+a.a_cover+"><a href="+'note-detail.html?a_id='+a.a_id+">"+a.a_title+"</a><a u_id="+a.u_id+" style=''>"+a.u_name+"</a><span class='partial-content' style='width: 45%; float: left;color: #333333;font-size: 16px;text-align: left;margin-left: 50px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;'>"+articlecontent+"</span><div class='note-bottom'><span class='icon-s icon-eye'>"+a.browse_num+"</span><span class='icon-s icon-clock'>"+date+"</span></div></li>"));
                 laypage({
                     cont: 'page5', //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
                     pages: res.body.totalnum, //通过后台拿到的总页数
@@ -146,6 +156,17 @@ $(document).ready(function () {
         },"json");
     }
 
+    /**
+     * 解析游记内容
+     */
+    
+    //  function analyze(tag){
+    //     // var str ="<div id=result_box dir=ltr>you are so talented!</div>" ;
+    //     var pat= /<(\w+) .*>(.*)<\/\1>/gi;
+    //     var re = new RegExp("<("+tag+") .*>(.*)<\/\1>","gi");
+    //     var str2=str.replace(pat,"$2");
+    //     alert(str2);
+    //  }
 
     
     /**
