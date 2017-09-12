@@ -39,3 +39,34 @@ $(document).ready(function(){
 }
 
 })
+
+
+var index = 1;
+var windowWidth = $(window).width();
+$('.theMenuArea ul li').width(windowWidth);
+$('.theMenuArea ul').css('transition', 'none');
+$('.theMenuArea ul').css('left', -windowWidth);
+var timeImg = window.setInterval("set()", 4000);
+var a = document.getElementsByClassName('singleMenu')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+var singleColor = function(index) {
+  var singleMenu_ul_li = $('.singleMenu ul').children('li');
+  singleMenu_ul_li.css('background-color', '#e2e2e2');
+  if(index === 5 || index === 6) {
+    index = 1;
+  }
+  a[index-1].style.backgroundColor = 'grey'; 
+}
+singleColor(index);
+var set = function() {
+  var formattedWidth = 0;
+  $('.theMenuArea ul').css('transition', 'left 2s');
+  formattedWidth = -(++index) * windowWidth;
+  singleColor(index);
+  if (index === 6) {
+    formattedWidth = -windowWidth;
+    $('.theMenuArea ul').css('transition', 'none');
+    index = 1;
+  }
+  $('.theMenuArea ul').css('left', formattedWidth);
+
+}
