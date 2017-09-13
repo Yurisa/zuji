@@ -1,17 +1,27 @@
 .secondLayer-f {
-	width: 50%;
+	width: 45%;
 	line-height: 40px;
-	padding: 10px 20px; 
+	padding: 20px 20px;
 	color: #fff;
-	margin-left: 10px;
+	margin-left: 20px;
 }
 .secondLayer-f p {
 	padding: 40px 60px;
 	text-indent: 2em;
 }
-.right-name {
-	width: 45%;
-	padding: 20px 20px;
+.right-name{
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+.right-name div{
+	width: 200px;
+	height:50px;
+	line-height: 50px;
+	font-size: 20px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
 }
 .box-e {
 	flex-direction: row;
@@ -41,4 +51,46 @@
 }
 .foods-name2 {
 	background-color: #E4E4E4;
+}
+
+
+.show_div{
+	width: 100%;
+	height: 240px;
+	/*border: 3px red solid;*/
+	overflow: hidden;
+}
+.scroll_div{
+
+	height: 240px;
+
+}
+.scroll_div div{
+	position: relative;
+	width: 300px;
+	height: 240px;
+	float: left;
+	background-color: cyan;
+	/*border-right: 1px solid gray;*/
+
+
+}
+.scroll_div div img{
+	width: 300px;
+	height: 240px;
+
+
+}
+.scroll_div p{
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+	width: 300px;
+	height: 30px;
+	background-color: black;
+	text-align: center;
+	color: white;
+	opacity: 0.5;
+	font-size: 20px;
+	line-height: 30px;
 }
