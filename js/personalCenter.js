@@ -328,7 +328,7 @@ $(document).ready(function () {
                 console.log(obj.timestamp)
                 let date =  getLocalTime(obj.timestamp);
                 console.log(date);
-                $("#mydraft").append($("<li a_id="+obj.d_id+"><img src="+obj.d_cover+"><a href=''>"+obj.d_title+"</a><span>"+date+"</span><input type='button' value='修改' name=''><input class='deletedraft' type='button' value='删除' name=''></li>"));
+                $("#mydraft").append($("<li d_id="+obj.d_id+"><img src='images/pic1.jpg'><a href=''>"+obj.d_title+"</a><span>"+date+"</span><input type='button' class='updatedraft' value='修改' name=''><input class='deletedraft' type='button' value='删除' name=''></li>"));
             }
             laypage({
                 cont: 'page4', //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
@@ -344,6 +344,14 @@ $(document).ready(function () {
         }
     });
     }
+
+    /**
+     * 更新草稿
+     */
+
+    $(document).on("click", ".updatedraft", function () {
+        window.location.href="write.html?d_id="+$(this).parent().attr("d_id");  
+    });
 
     /**
      * 删除用户草稿

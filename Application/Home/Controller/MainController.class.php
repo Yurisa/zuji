@@ -593,6 +593,12 @@ class MainController extends CommonController {
        $this->json(1,'ok',$res);
      }
 
+     public function getonedraftbydid(){
+       $d_id = $_GET['d_id'];
+       $res['onedraft'] = M('draft')->where('d_id='.$d_id)->select();
+       $this->json(1,'ok',$res);
+     }
+
     /*
      *
      *添加草稿
@@ -602,13 +608,18 @@ class MainController extends CommonController {
     public function adddraft(){
       $data = array(
         'd_title' => I('post.d_title'),
-        'd_content' => I('post.d_content'),
+        'd_content' => html_entity_decode(I('post.d_content')),
         'd_cover' =>I('post.d_cover'),
         'timestamp' => time(),
         'u_id' => 1,
-        't_id' => intval(I('post.t_id')),
         );
+        if(intval(I('post.t_id')) == -1){
+          $data['t_id'] = 1;
+        }else{
+          $data['t_id'] = intval(I('post.t_id'));
+        }
         $id['d_id'] = M('draft')->add($data);
+        $id['time'] = $data['timestamp'];
         $this->json(1,'ok',$id);
     }
     
@@ -622,12 +633,17 @@ class MainController extends CommonController {
        $d_id = I('post.d_id');
        $data = array(
         'd_title' => I('post.d_title'),
-        'd_content' => I('post.d_content'),
+        'd_content' => html_entity_decode(I('post.d_content')),
         'd_cover' =>I('post.d_cover'),
         'timestamp' => time(),
        );
+       if(intval(I('post.t_id')) == -1){
+        $data['t_id'] = 1;
+      }else{
+        $data['t_id'] = intval(I('post.t_id'));
+      }
        M('draft')->where('d_id='.$d_id)->save($data);
-       $this->json(1,'ok');
+       $this->json(1,'ok',$data['timestamp']);
       }
 
     /*

@@ -153,11 +153,23 @@ $(document).ready(function () {
 
         }
         $.post("../index.php?c=main&a=updatetouristarea",{"touristarea":$data},res=>{
+            console.log(res);
             if(res.code === 1){
-                alert('更新成功');
-                window.location.href = "ddArea.html?t_id="+t_id;
+                //  alert('更新成功');
+                layui.use('layer', function(){
+                    var layer = layui.layer;
+                    layer.open({
+                        title: '提示'
+                        ,content: '修改成功'
+                      });
+                    // layer.msg('修改成功');
+                  setTimeout(function(){
+                    location.href = "addArea.html?t_id="+t_id;
+                  },1000);  
+                  });  
+                
             }
-        });
+        },"json");
     })
 
      /**
