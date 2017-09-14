@@ -9,7 +9,14 @@ $(document).ready(function () {
         $(".right-name").children().eq(i).css("margin-right", "50" * right);
     }
     //点击食物出现介绍
-
+    $(document).on("click", ".right-name div", function () {
+        $(".introduce").show();
+        $(".right-info").children("span").html($(this).html());
+        // window.location.href = "food.html?menu_content=" + $(".right-info").children("p").attr("menu_content");
+    });
+    $(".close").click(function () {
+        $(".introduce").hide();
+    });
     //图片轮播
 
     var scrollDiv=document.getElementsByClassName('scroll_div')[0];
@@ -20,7 +27,12 @@ $(document).ready(function () {
         {url:'images/mihuafan.jpg',title:'米花饭'},
         {url:'images/zheergen.jpeg',title:'折耳根炒腊肉'},
         {url:'images/midoufu.jpg',title:'米豆腐'},
-        {url:'images/suantangyu.jpg',title:'7'},];
+        {url:'images/suantangyu.jpg',title:'酸汤鱼'},
+        {url:'images/guzangrou.jpg',title:'鼓藏肉'},
+        {url:'images/miaowangyu.jpg',title:'苗王鱼'},
+        {url:'images/mihuafan.jpg',title:'米花饭'},
+        {url:'images/zheergen.jpeg',title:'折耳根炒腊肉'},
+        {url:'images/midoufu.jpg',title:'米豆腐'}];
     scrollDiv.style.width=300*(data.length+1)+"px";
 
     for(var i=0;i<data.length;i++){
@@ -50,7 +62,7 @@ $(document).ready(function () {
     //创建定时器 每个固定时间滚动一张图片
     setInterval(function(){
         //图片头接尾
-        if(left<=-300){
+        if(left<=-1800){
             left=0;
         }
         //每3秒调用滚动一张图片的函数
