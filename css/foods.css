@@ -94,3 +94,12 @@
 	font-size: 20px;
 	line-height: 30px;
 }
+
+.close{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	color: #ffffff;
+	cursor: pointer;
+	background-color:rgba(0,0,0,0.1);
+}
