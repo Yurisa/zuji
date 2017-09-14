@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>景区管理</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/dataList.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+    <!-- 顶部区域-->
+        <div><img src="image/zuji（白色）.png"></div>
+        <div id="exit">退出</div>
+        <div id="administrators">西江千户苗寨</div>
+        <!--<i class="layui-icon">&#xe614;</i>-->
+    </div>
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+        <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed"><a href="backstage.html">景区管理</a></li>
+                <li class="layui-nav-item"><a href="addArea.html?t_id=1">地区信息</a></li>
+                <li class="layui-nav-item"><a href="newSupplement.html?t_id=1">新补充</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div id="sign">
+            <div><a href="">景区管理</a></div>
+            <!--<input type="search" name="" value="用户名">-->
+            <!--<i id="search" class="layui-icon">&#xe615;</i>-->
+            
+        </div>
+        <!-- <div id="content1" style="width:100%;height:100%">
+            <div class="map" id="radarpic"></div>
+            <div class="map" id="category"></div>
+        </div> -->
+          <!-- 输入框 -->
+    <input class="inputId" type="text" name="title" required  lay-verify="required" placeholder="请输入身份证号码" autocomplete="off" style="width:40%;height:40px;margin-left:30%" >
+    <!-- 表格 -->
+    <div style="margin-left:12%">
+        <h1>今日游客</h1>
+        <table class="layui-table" lay-size="lg"> 
+            <colgroup>
+                <col width="10%">
+                <col width="15%">
+                <col width="15%">
+                <col width="15%">
+                <col width="12%">
+                <col width="15%">
+            </colgroup>
+            <thead>
+            <tr>
+                <th>身份证号</th>
+                <th>姓名</th>
+                <th>照片</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>入园时间</th>
+            </tr>
+            </thead>
+            <tbody class="personlist">
+            <tr>
+                <td>吃油茶</td>
+                <td>张三</td>
+                <td>点击查看</td>
+                <td>男</td>
+                <td>18</td>
+                <td>13:00 2017-01-01</td>
+            </tr>
+            </tbody>
+        </table>
+       <div id="page1"></div>
+    </div>
+        <!-- 历史游客 -->
+        <div style="margin-left:12%;margin-top: 100px;">
+            <h1>历史游客</h1>
+            <table class="layui-table" lay-size="lg">  
+                <colgroup>
+                    <col width="10%">
+                    <col width="15%">
+                    <col width="15%">
+                    <col width="15%">
+                    <col width="12%">
+                    <col width="15%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>身份证号</th>
+                    <th>姓名</th>
+                    <th>照片</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>入园时间</th>
+                    <th>出园时间</th>
+                </tr>
+                </thead>
+                <tbody class="h_personlist">
+                <tr>
+                    <td>吃油茶</td>
+                    <td>张三</td>
+                    <td>点击查看</td>
+                    <td>男</td>
+                    <td>18</td>
+                    <td>13:00 2017-01-01</td>
+                    <td>13:00 2017-01-01</td>
+                </tr>
+                </tbody>
+            </table>
+           <div id="page2"></div>
+        </div>
+        </div>
+    </div>
+    
+
+  
+
+    <div class="layui-footer">
+      <!-- 底部固定区域 -->
+    </div>
+</div>
+<script src="layui/layui.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script src="js/layuiUse.js"></script>
+<script src="../js/laypage/laypage.js"></script>
+<!-- <script src="js/home.js"></script> -->
+<!-- <script src="js/picture.js"></script> -->
+<!-- <script src="js/echarts.js"></script> -->
+<script src="js/skip.js"></script>
+<script src="js/checkin.js"></script>
+<script>
+    layui.use('table', function(){
+      var table = layui.table;
+    });
+    </script>
+</body>
+</html>
