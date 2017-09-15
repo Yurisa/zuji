@@ -28,6 +28,7 @@ $(document).ready(function(){
        console.log(res.body.browse_num)
     $(".info span").eq(2).html(res.body.browse_num);
    },"json");
+
   /**
    * 评论分页展示
    */
@@ -85,6 +86,67 @@ showcomment()
      },"json");
    })
 
+   /**
+    * 收藏
+    */
+
+   $(".article_collect").click(function(){
+	$(this).toggleClass('icon-heart');
+	$(this).toggleClass('icon-heart-h');
+	// console.log($(this).attr("class"))
+	if($(this).attr("class") === "article_collect icon-heart-h"){
+		// console.log("111")
+		$.get("index.php?c=main&a=addcollect",{"a_id":a_id},res=>{
+            $(".article_collect").html(parseInt($(".article_collect").html())+1);
+            console.log(res)
+		},"json");
+	}else{
+		$.get("index.php?c=main&a=deletecollect",{"a_id":a_id},res=>{
+            console.log(res);
+            $(".article_collect").html(parseInt($(".article_collect").html())-1);
+		},"json")
+	}
+    
+});
+
+  /**
+   * 得到用户收藏id
+   */
+
+  $.get("index.php?c=main&a=getallcollectid",res=>{
+	console.log(res)
+	let a_idlist = res.body.a_idlist;
+	for(let a of a_idlist){
+		if(a.a_id == a_id){
+			$(".article_collect").attr("class","article_collect icon-heart-h");
+			return;
+		}
+	} 
+   },"json");
+
+   /**
+    * 点赞
+    * 
+    */
+
+    $(".article_zan").click(function(){
+        $(this).toggleClass('icon-point-up');
+        $(this).toggleClass('icon-point-up-h');
+        // console.log($(this).attr("class"))
+        if($(this).attr("class") === "article_zan icon-point-up-h"){
+            // console.log("111")
+            $.get("index.php?c=main&a=addarticlezan",{"a_id":a_id},res=>{
+                $(".article_zan").html(res.body.a_zan);
+                console.log(res)
+            },"json");
+        }else{
+            $.get("index.php?c=main&a=cancelarticlezan",{"a_id":a_id},res=>{
+                console.log(res);
+                $(".article_zan").html(res.body.a_zan);
+            },"json")
+        }
+        
+    });
 
 
   function getQueryString(name) {

@@ -334,6 +334,7 @@ class MainController extends CommonController {
      *通过景区ID和菜单类型得到菜单信息
      *
      */
+
      public function gettourmenu(){
       $t_id = $_GET['t_id'];
       $menu_type = $_GET['type'];
@@ -676,7 +677,32 @@ class MainController extends CommonController {
        $res['totalnum'] = intval(($articlenum+$pagesize-1)/$pagesize);
        $this->json(1,'ok',$res);
      }
+     
+    /*
+     *
+     *列出用户收藏游记
+     *
+     */
 
+     public function getallcollectid(){
+       $u_id = 1;
+       $res['a_idlist'] = M('collect')->where('u_id='.$u_id)->field('a_id')->select();
+       $this->json(1,'ok',$res);
+     }
+
+    /*
+     *
+     *删除用户收藏游记
+     *
+     */
+
+     public function addcollect(){
+      $a_id = $_GET['a_id'];
+      $u_id = 1;
+      M('collect')->add(array('u_id'=>$u_id,'a_id'=>$a_id));
+      $this->json(1,'ok');
+     }
+     
     /*
      *
      *删除用户收藏游记
@@ -1002,5 +1028,96 @@ class MainController extends CommonController {
          $c_id = $_GET['c_id'];
          M('comment')->where("c_id=".$c_id)->delete();
          $this->json(1,'ok');
+       }
+
+      /*
+       *
+       *检票
+       *
+       */
+
+       public function checkinandout(){
+         $personid = I('post.personid');
+         $t_id = I('post.t_id');
+         $currtime = intval(time());
+         $beginToday = intval(mktime(0,0,0,date('m'),date('d'),date('Y')));
+         $endToday=intval(mktime(0,0,0,date('m'),date('d')+1,date('Y'))-1);
+         if($beginToday < $currtime && $currtime < $endToday){
+          $existid = M('todayperson')->where('person_id='.$personid)->select();
+          // print_r($existid);
+          // echo (count($existid));
+          if(count($existid) == 0){
+             $data = array(
+               "person_id"=>$personid,
+               "t_id"=>$t_id,
+               "timestamp"=>$currtime,
+             );
+             M('todayperson')->add($data);
+             $this->json(1,'checkin');
+          }else{
+            $data = array(
+              "person_id"=>$existid[0]['person_id'],
+              "t_id"=>1,
+              "starttime" => $existid[0]['timestamp'],
+              "endtime"=>$currtime,
+            );
+            M('historyperson')->add($data);
+            M('todayperson')->where('person_id='.$personid)->delete();
+            $this->json(1,'checkout');
+          }
+         }else{
+           $this->json(0,'当前不是检票时间');
+         } 
+       }
+
+      /*
+       *
+       *得到今日景区游客信息
+       *
+       */
+
+       public function gettodayperson(){
+        $t_id = $_GET['t_id'];
+        $curr = $_GET['page'];
+        $pagesize = 4;
+        $currnum = ($curr-1)*$pagesize;
+        $beginToday = intval(mktime(0,0,0,date('m'),date('d'),date('Y')));
+        $endToday=intval(mktime(0,0,0,date('m'),date('d')+1,date('Y'))-1);
+        $arr = M('todayperson')->join('people ON people.person_id = todayperson.person_id')->where('timestamp > %d and timestamp <%d and t_id = %d',array($beginToday,$endToday,$t_id))->select();
+        $personnum = count($arr);
+        $res['personlist'] = array_slice($arr,$currnum,$pagesize);
+        $res['totalnum'] = intval(($personnum+$pagesize-1)/$pagesize);
+        $this->json(1,'ok',$res);
+       }
+
+      /*
+       *
+       *得到历史景区游客信息
+       *
+       */
+
+       public function gethistoryperson(){
+        $t_id = $_GET['t_id'];
+        $curr = $_GET['page'];
+        $pagesize = 4;
+        $currnum = ($curr-1)*$pagesize;
+        $arr = M('historyperson')->join('people ON people.person_id = historyperson.person_id')->select();
+        $res['personlist'] = array_slice($arr,$currnum,$pagesize);
+        $res['totalnum'] = intval(($personnum+$pagesize-1)/$pagesize);
+        $this->json(1,'ok',$res);
+       }
+
+      /*
+       *
+       *得到实时游客人数
+       *
+       */
+   
+       public function getpersonnum(){
+         $t_id = $_GET['t_id'];
+         $beginToday = intval(mktime(0,0,0,date('m'),date('d'),date('Y')));
+         $endToday=intval(mktime(0,0,0,date('m'),date('d')+1,date('Y'))-1);
+         $res['totalnum'] = M('todayperson')->where('timestamp > %d and timestamp <%d and t_id = %d',array($beginToday,$endToday,$t_id))->count();
+         $this->json(1,'ok',$res);
        }
 }

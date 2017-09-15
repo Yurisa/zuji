@@ -12,3 +12,6 @@ layui.use('form', function(){
         return false;
     });
 });
+layui.use('table', function(){
+    var table = layui.table;
+  });

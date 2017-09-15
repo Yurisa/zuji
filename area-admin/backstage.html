@@ -15,14 +15,15 @@
     <!-- 顶部区域-->
         <div><img src="image/zuji（白色）.png"></div>
         <div id="exit">退出</div>
-        <div id="administrators">西江千户苗寨</div>
+        <div id="administrators">管理员</div>
         <!--<i class="layui-icon">&#xe614;</i>-->
     </div>
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree" lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed"><a href="backstage.html">景区管理</a></li>
+                <li class="layui-nav-item layui-nav-itemed"><a href="backstage.html?t_id=1">景区管理</a></li>
+                <li class="layui-nav-item"><a href="checkin.html?t_id=1">检票</a></li>
                 <li class="layui-nav-item"><a href="addArea.html?t_id=1">地区信息</a></li>
                 <li class="layui-nav-item"><a href="newSupplement.html?t_id=1">新补充</a></li>
             </ul>
@@ -39,7 +40,6 @@
         </div>
         <div id="content1" style="width:100%;height:100%">
             <div class="map" id="radarpic"></div>
-            <div class="map" id="category"></div>
         </div>
     </div>
 
@@ -51,8 +51,9 @@
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script src="js/layuiUse.js"></script>
 <script src="js/home.js"></script>
-<script src="js/picture.js"></script>
+<!-- <script src="js/picture.js"></script> -->
 <script src="js/echarts.js"></script>
 <script src="js/skip.js"></script>
+<script type="text/javascript" src='js/public.js'></script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 $(function(){
 var myChart = echarts.init(document.getElementById("category"));
+var totalnum = 0;
+var t_id = getQueryString("t_id");
 var app={};
 option = {
     title: {
@@ -64,7 +66,7 @@ option = {
             type: 'value',
             scale: true,
             name: '景区内人数',
-            max: 1000,
+            max: 10,
             min: 0,
             boundaryGap: [0.2, 0.2]
         },
@@ -99,7 +101,7 @@ option = {
                 var res = [];
                 var len = 0;
                 while (len < 10) {
-                    res.push(((Math.random()*10 + 5).toFixed(1) - 0)*30);
+                    res.push(0);
                     len++;
                 }
                 return res;
@@ -111,21 +113,41 @@ option = {
 app.count = 11;
 myChart.setOption(option)
 setInterval(function (){
-    axisData = (new Date()).toLocaleTimeString().replace(/^\D*/,'');
-
-    var data0 = option.series[0].data;
-    var data1 = option.series[1].data;
-    data0.shift();
-    data0.push(Math.round(Math.random() * 1000));
-    data1.shift();
-    data1.push(((Math.random()*10 + 5).toFixed(1) - 0)*30);
-
-    option.xAxis[0].data.shift();
-    option.xAxis[0].data.push(axisData);
-    option.xAxis[1].data.shift();
-    option.xAxis[1].data.push(app.count++);
-
-    myChart.setOption(option);
+     gettotalnum();
 }, 10000);
+function gettotalnum(){
+    $.get('../index.php?c=main&a=getpersonnum',{"t_id":t_id},res=>{
+        console.log(res);
+        let totalnum = res.body.totalnum;
+        axisData = (new Date()).toLocaleTimeString().replace(/^\D*/,'');
+        
+            var data0 = option.series[0].data;
+            var data1 = option.series[1].data;
+            data0.shift();
+            data0.push(Math.round(Math.random() * 1000));
+            data1.shift();
+            data1.push(totalnum);
+        
+            option.xAxis[0].data.shift();
+            option.xAxis[0].data.push(axisData);
+            option.xAxis[1].data.shift();
+            option.xAxis[1].data.push(app.count++);
+        
+            myChart.setOption(option);
+    },"json");
+}
+
+/**
+ * 得到url中的参数
+ */
+
+function getQueryString(name) {
+    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return unescape(r[2]);
+    }
+    return null;
+}
 
 })
