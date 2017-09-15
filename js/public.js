@@ -1,3 +1,17 @@
+//搜索框的淡入淡出
+$(document).ready(function () {
+    $(".icon-search").mouseover(function () {
+        $(".nav-search").fadeIn(800);
+    });
+    $(".search-icon").mouseover(function () {
+        $(".nav-search").fadeIn(800);
+    });
+    $(".top-style1").mouseleave(function () {
+        $(".nav-search").fadeOut(500);
+    });
+});
+
+
 var t_id = getQueryString("t_id");
 $.get("index.php?c=main&a=getw_gotid",res=>{
 	console.log(res)
@@ -66,3 +80,4 @@ function getQueryString(name) {
     return null;
 }
 console.log($(".webfont").eq(0))
+

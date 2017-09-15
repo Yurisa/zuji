@@ -101,8 +101,9 @@ a {
 .nav-search {
 	width: 160px;
 	position: absolute;
-	right: 170px;
+	right: 200px;
 	padding-top: 3px;
+	display: none;
 }
 .nav-search input {
 	font-size: 12px;
@@ -306,4 +307,5 @@ ul {
 	color: #fff;
 	border: none;
 	background-color: #0E6EB8;
+	cursor: pointer;
 }

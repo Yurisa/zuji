@@ -47,6 +47,7 @@
 }
 #add {
 	text-decoration: underline;
+	cursor: pointer;
 }
 .theAddArea {
 	width: 60%;

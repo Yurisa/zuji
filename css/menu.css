@@ -55,9 +55,9 @@ a {
 
 .typeTitle {
 	position: absolute;
-	top: 150px;
-	left: 80px;
-	font-size: 28px;
+	top: 40%;
+	left: 45%;
+	font-size: 34px;
 	font-weight: bold;
 }
 .sentence {
