@@ -66,7 +66,7 @@ option = {
             type: 'value',
             scale: true,
             name: '景区内人数',
-            max: 1000,
+            max: 10,
             min: 0,
             boundaryGap: [0.2, 0.2]
         },

@@ -1,0 +1,1174 @@
+[ 2017-09-15T16:48:47+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.018687s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011744s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.0303s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0072s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0319s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=5 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=6 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=7 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=8 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=9 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=9 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=10 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=10 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=11 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=11 )  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=12 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=12 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=13 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=13 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=14 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=14 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=15 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=15 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=16 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=16 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=17 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=17 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=18 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=18 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=19 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=19 )  [ RunTime:0.0003s ]
+
+[ 2017-09-15T16:48:52+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001075s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0462s ]
+
+[ 2017-09-15T16:48:52+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001343s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0013s ]
+
+[ 2017-09-15T16:48:52+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0202s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0139s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0004s ]
+
+[ 2017-09-15T16:48:59+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-15T16:49:00+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000841s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0005s ]
+
+[ 2017-09-15T16:49:02+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0005s ]
+
+[ 2017-09-15T16:49:02+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-15T16:49:02+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000896s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000958s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001142s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0005s ]
+
+[ 2017-09-15T16:49:15+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001096s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0002s ]
+
+[ 2017-09-15T16:49:15+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebytid&t_id=1&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001071s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0043s ]
+SQL: select article.*,user.* from user,article where article.u_id = user.u_id and article.t_id = '1' [ RunTime:0.0315s ]
+
+[ 2017-09-15T16:49:22+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001447s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0045s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '54' [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0376s ]
+
+[ 2017-09-15T16:49:22+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001177s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0062s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=54 ) [ RunTime:0.0459s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T16:49:22+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=54&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000901s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '54' order by comment.timestamp asc [ RunTime:0.0506s ]
+
+[ 2017-09-15T16:49:27+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlezan&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0045s ]
+SQL: UPDATE `article` SET `a_zan`=a_zan+1 WHERE ( a_id=54 ) [ RunTime:0.0437s ]
+SQL: SELECT `a_zan` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2017-09-15T16:49:57+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000881s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0056s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '54' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2017-09-15T16:49:57+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0062s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=54 ) [ RunTime:0.0410s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-15T16:49:58+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=54&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001082s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0095s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '54' order by comment.timestamp asc [ RunTime:0.0012s ]
+
+[ 2017-09-15T16:50:01+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlezan&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: UPDATE `article` SET `a_zan`=a_zan+1 WHERE ( a_id=54 ) [ RunTime:0.0356s ]
+SQL: SELECT `a_zan` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0009s ]
+
+[ 2017-09-15T16:50:07+08:00 ] ::1 /zuji/index.php?c=main&a=cancelarticlezan&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0062s ]
+SQL: UPDATE `article` SET `a_zan`=a_zan-1 WHERE ( a_id=54 ) [ RunTime:0.0371s ]
+SQL: SELECT `a_zan` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T16:50:41+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlezan&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0078s ]
+SQL: UPDATE `article` SET `a_zan`=a_zan+1 WHERE ( a_id=54 ) [ RunTime:0.0335s ]
+SQL: SELECT `a_zan` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T16:50:43+08:00 ] ::1 /zuji/index.php?c=main&a=cancelarticlezan&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0047s ]
+SQL: UPDATE `article` SET `a_zan`=a_zan-1 WHERE ( a_id=54 ) [ RunTime:0.0452s ]
+SQL: SELECT `a_zan` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0009s ]
+
+[ 2017-09-15T16:50:46+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=54&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000854s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '54' order by comment.timestamp asc [ RunTime:0.0005s ]
+
+[ 2017-09-15T16:50:46+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0053s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=54 ) [ RunTime:0.0364s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T16:50:46+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000886s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001148s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0091s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '54' [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-09-15T16:50:51+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlezan&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0052s ]
+SQL: UPDATE `article` SET `a_zan`=a_zan+1 WHERE ( a_id=54 ) [ RunTime:0.0321s ]
+SQL: SELECT `a_zan` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T16:50:53+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0083s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0051s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '54' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-09-15T16:50:53+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=54&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0071s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0067s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '54' order by comment.timestamp asc [ RunTime:0.0009s ]
+
+[ 2017-09-15T16:50:53+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001889s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0072s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=54 ) [ RunTime:0.0345s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-15T16:54:07+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000846s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001024s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0064s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '54' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-15T16:54:07+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0045s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=54 ) [ RunTime:0.0335s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-15T16:54:07+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=54&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001104s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0056s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '54' order by comment.timestamp asc [ RunTime:0.0005s ]
+
+[ 2017-09-15T16:54:11+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0043s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '5' [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=5 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T16:54:11+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000708s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0071s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=5 ) [ RunTime:0.0338s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=5 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-15T16:54:11+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=5&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '5' order by comment.timestamp asc [ RunTime:0.0131s ]
+
+[ 2017-09-15T17:23:09+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebytid&t_id=1&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001184s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0081s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0085s ]
+SQL: select article.*,user.* from user,article where article.u_id = user.u_id and article.t_id = '1' [ RunTime:0.0007s ]
+
+[ 2017-09-15T17:23:10+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001175s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0005s ]
+
+[ 2017-09-15T17:23:14+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=59
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000883s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0057s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '59' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=59 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:23:14+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=59
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0056s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=59 ) [ RunTime:0.0329s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=59 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:23:14+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=59&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001276s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '59' order by comment.timestamp asc [ RunTime:0.0005s ]
+
+[ 2017-09-15T17:23:19+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000824s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0015s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0006s ]
+
+[ 2017-09-15T17:23:19+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebytid&t_id=1&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001137s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0081s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0075s ]
+SQL: select article.*,user.* from user,article where article.u_id = user.u_id and article.t_id = '1' [ RunTime:0.0006s ]
+
+[ 2017-09-15T17:23:24+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000970s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0043s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '54' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:23:24+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001082s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0072s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=54 ) [ RunTime:0.0341s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:23:24+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=54&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000848s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001407s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0045s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '54' order by comment.timestamp asc [ RunTime:0.0004s ]
+
+[ 2017-09-15T17:23:28+08:00 ] ::1 /zuji/index.php?c=main&a=addcollect&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0056s ]
+SQL: INSERT INTO `collect` (`u_id`,`a_id`) VALUES ('1','54') [ RunTime:0.0713s ]
+
+[ 2017-09-15T17:24:02+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000872s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0071s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '54' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-09-15T17:24:03+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0062s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=54 ) [ RunTime:0.0417s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:24:03+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=54&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '54' order by comment.timestamp asc [ RunTime:0.0004s ]
+
+[ 2017-09-15T17:24:06+08:00 ] ::1 /zuji/index.php?c=main&a=addcollect&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000743s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0070s ]
+ERR: 1062:Duplicata du champ '1-54' pour la clef 'PRIMARY'
+ [ SQL语句 ] : INSERT INTO `collect` (`u_id`,`a_id`) VALUES ('1','54')
+ERR: 1062:Duplicata du champ '1-54' pour la clef 'PRIMARY'
+ [ SQL语句 ] : INSERT INTO `collect` (`u_id`,`a_id`) VALUES ('1','54')
+
+[ 2017-09-15T17:25:10+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0062s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '54' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0076s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:25:10+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0044s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=54 ) [ RunTime:0.0390s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-09-15T17:25:10+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=54&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0051s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '54' order by comment.timestamp asc [ RunTime:0.0006s ]
+
+[ 2017-09-15T17:25:13+08:00 ] ::1 /zuji/index.php?c=main&a=addcollect&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000733s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0073s ]
+SQL: INSERT INTO `collect` (`u_id`,`a_id`) VALUES ('1','54') [ RunTime:0.0375s ]
+
+[ 2017-09-15T17:26:02+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001026s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0047s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '54' [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0038s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:26:02+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000974s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001192s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0053s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=54 ) [ RunTime:0.0402s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-15T17:26:02+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=54&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001027s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0042s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '54' order by comment.timestamp asc [ RunTime:0.0004s ]
+
+[ 2017-09-15T17:26:13+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=54&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001084s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '54' order by comment.timestamp asc [ RunTime:0.0004s ]
+
+[ 2017-09-15T17:26:13+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000782s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001079s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0048s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '54' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0036s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:26:13+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001563s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=54 ) [ RunTime:0.0436s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-09-15T17:26:15+08:00 ] ::1 /zuji/index.php?c=main&a=addcollect&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000737s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0054s ]
+SQL: INSERT INTO `collect` (`u_id`,`a_id`) VALUES ('1','54') [ RunTime:0.0388s ]
+
+[ 2017-09-15T17:26:53+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0069s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=54 ) [ RunTime:0.0398s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:26:53+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '54' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-15T17:26:53+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=54&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001031s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0091s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0071s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '54' order by comment.timestamp asc [ RunTime:0.0015s ]
+
+[ 2017-09-15T17:27:26+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0063s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '54' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-15T17:27:26+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000791s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0062s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=54 ) [ RunTime:0.0406s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:27:26+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=54&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000925s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0087s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0058s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '54' order by comment.timestamp asc [ RunTime:0.0005s ]
+
+[ 2017-09-15T17:27:28+08:00 ] ::1 /zuji/index.php?c=main&a=addcollect&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000779s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0054s ]
+SQL: INSERT INTO `collect` (`u_id`,`a_id`) VALUES ('1','54') [ RunTime:0.0324s ]
+
+[ 2017-09-15T17:33:15+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000949s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0082s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0065s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '54' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0052s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-15T17:33:15+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000750s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000959s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0053s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=54 ) [ RunTime:0.0390s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-09-15T17:33:15+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=54&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0056s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '54' order by comment.timestamp asc [ RunTime:0.0007s ]
+
+[ 2017-09-15T17:33:15+08:00 ] ::1 /zuji/index.php?c=main&a=getallcollectid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000848s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0055s ]
+SQL: SELECT `a_id` FROM `collect` WHERE ( u_id=1 )  [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:35:53+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000923s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001095s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0086s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0057s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '54' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:35:53+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000932s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0052s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=54 ) [ RunTime:0.0670s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=54 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-15T17:35:53+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=54&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001034s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001067s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0081s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '54' order by comment.timestamp asc [ RunTime:0.0005s ]
+
+[ 2017-09-15T17:35:53+08:00 ] ::1 /zuji/index.php?c=main&a=getallcollectid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001047s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0064s ]
+SQL: SELECT `a_id` FROM `collect` WHERE ( u_id=1 )  [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:35:56+08:00 ] ::1 /zuji/index.php?c=main&a=deletecollect&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0055s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\Demo\zuji\ThinkPHP\Library\Think\Model.class.php 第 511 行.
+SQL: DELETE FROM `collect` WHERE ( a_id=54 and u_id=1 ) [ RunTime:0.0436s ]
+
+[ 2017-09-15T17:35:57+08:00 ] ::1 /zuji/index.php?c=main&a=addcollect&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0055s ]
+SQL: INSERT INTO `collect` (`u_id`,`a_id`) VALUES ('1','54') [ RunTime:0.0602s ]
+
+[ 2017-09-15T17:35:58+08:00 ] ::1 /zuji/index.php?c=main&a=deletecollect&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0056s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\Demo\zuji\ThinkPHP\Library\Think\Model.class.php 第 511 行.
+SQL: DELETE FROM `collect` WHERE ( a_id=54 and u_id=1 ) [ RunTime:0.0288s ]
+
+[ 2017-09-15T17:35:59+08:00 ] ::1 /zuji/index.php?c=main&a=addcollect&a_id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000737s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0056s ]
+SQL: INSERT INTO `collect` (`u_id`,`a_id`) VALUES ('1','54') [ RunTime:0.0695s ]
+
+[ 2017-09-15T17:36:08+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebytid&t_id=1&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000696s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0084s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0068s ]
+SQL: select article.*,user.* from user,article where article.u_id = user.u_id and article.t_id = '1' [ RunTime:0.0008s ]
+
+[ 2017-09-15T17:36:08+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001646s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0005s ]
+
+[ 2017-09-15T17:36:11+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0043s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '5' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0066s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=5 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:36:11+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000923s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0065s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=5 ) [ RunTime:0.0638s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=5 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-09-15T17:36:11+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=5&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '5' order by comment.timestamp asc [ RunTime:0.0005s ]
+
+[ 2017-09-15T17:36:11+08:00 ] ::1 /zuji/index.php?c=main&a=getallcollectid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0036s ]
+SQL: SELECT `a_id` FROM `collect` WHERE ( u_id=1 )  [ RunTime:0.0005s ]
+
+[ 2017-09-15T17:36:19+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000823s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000905s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001146s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '1' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'custom' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'history' )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'dress' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'artwork' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'building' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 1 and menu_type = 'diet' )  [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:36:19+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebytid&t_id=1&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000849s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001048s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0083s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0063s ]
+SQL: select article.*,user.* from user,article where article.u_id = user.u_id and article.t_id = '1' [ RunTime:0.0008s ]
+
+[ 2017-09-15T17:36:23+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=52&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '52' order by comment.timestamp asc [ RunTime:0.0004s ]
+
+[ 2017-09-15T17:36:23+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0041s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '52' [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0043s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=52 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:36:23+08:00 ] ::1 /zuji/index.php?c=main&a=getallcollectid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0046s ]
+SQL: SELECT `a_id` FROM `collect` WHERE ( u_id=1 )  [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:36:23+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000742s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0055s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=52 ) [ RunTime:0.0373s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=52 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-15T17:36:32+08:00 ] ::1 /zuji/index.php?c=main&a=addcomment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0060s ]
+SQL: INSERT INTO `comment` (`u_id`,`a_id`,`c_content`,`timestamp`) VALUES ('1','52','嘿嘿嘿','1505468192') [ RunTime:0.0769s ]
+
+[ 2017-09-15T17:36:32+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=52&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001694s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001405s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0079s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '52' order by comment.timestamp asc [ RunTime:0.0005s ]
+
+[ 2017-09-15T17:36:35+08:00 ] ::1 /zuji/index.php?c=main&a=addarticlebrowsenum&a_id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000869s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0090s ]
+SQL: UPDATE `article` SET `browse_num`=browse_num+1 WHERE ( a_id=52 ) [ RunTime:0.0383s ]
+SQL: SELECT `browse_num` FROM `article` WHERE ( a_id=52 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:36:35+08:00 ] ::1 /zuji/index.php?c=main&a=getcommentbyaid&a_id=52&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: select comment.*,user.* from user,comment where comment.u_id = user.u_id and comment.a_id = '52' order by comment.timestamp asc [ RunTime:0.0006s ]
+
+[ 2017-09-15T17:36:35+08:00 ] ::1 /zuji/index.php?c=main&a=getarticlebyaid&a_id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0042s ]
+SQL: select article.*,user.u_name,user.u_avatar,backimg,sign from user,article where article.u_id = user.u_id and article.a_id = '52' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect` WHERE ( a_id=52 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-15T17:36:35+08:00 ] ::1 /zuji/index.php?c=main&a=getallcollectid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000916s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0042s ]
+SQL: SELECT `a_id` FROM `collect` WHERE ( u_id=1 )  [ RunTime:0.0003s ]
+

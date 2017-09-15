@@ -12,7 +12,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: none;
+  /* speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -88,4 +88,24 @@
 }
 .icon-loop2:before {
   content: "\ea2e";
+}
+.icon-point-up:before {
+  content: "\ea03";
+}
+.icon-point-up-h:before {
+  content: "\ea03";
+  color: #7FFFD4;
+}
+.icon-heart:before {
+  content: "\e9da";
+}
+.icon-heart-h:before {
+  content: "\e9da";
+  color: #7FFFD4;
+}
+.icon-bubbles3:before {
+  content: "\e96f";
+}
+.icon-clock:before {
+  content: "\e94e";
 }

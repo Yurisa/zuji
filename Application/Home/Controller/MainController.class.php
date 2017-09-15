@@ -334,6 +334,7 @@ class MainController extends CommonController {
      *通过景区ID和菜单类型得到菜单信息
      *
      */
+
      public function gettourmenu(){
       $t_id = $_GET['t_id'];
       $menu_type = $_GET['type'];
@@ -676,7 +677,32 @@ class MainController extends CommonController {
        $res['totalnum'] = intval(($articlenum+$pagesize-1)/$pagesize);
        $this->json(1,'ok',$res);
      }
+     
+    /*
+     *
+     *列出用户收藏游记
+     *
+     */
 
+     public function getallcollectid(){
+       $u_id = 1;
+       $res['a_idlist'] = M('collect')->where('u_id='.$u_id)->field('a_id')->select();
+       $this->json(1,'ok',$res);
+     }
+
+    /*
+     *
+     *删除用户收藏游记
+     *
+     */
+
+     public function addcollect(){
+      $a_id = $_GET['a_id'];
+      $u_id = 1;
+      M('collect')->add(array('u_id'=>$u_id,'a_id'=>$a_id));
+      $this->json(1,'ok');
+     }
+     
     /*
      *
      *删除用户收藏游记
