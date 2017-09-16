@@ -11,7 +11,15 @@ $(document).ready(function () {
     });
 });
 
-
+function showuserdata(){
+    $.get("index.php?c=main&a=getuser",res=>{
+        console.log(res)
+        var user = res.body.user;
+        $('.top-name').html(user.u_name);
+        $('.login').html(user.u_name+" / 退出");
+    },"json");
+    }
+showuserdata();
 var t_id = getQueryString("t_id");
 $.get("index.php?c=main&a=getw_gotid",res=>{
 	console.log(res)

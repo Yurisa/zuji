@@ -23,9 +23,9 @@ $.get('index.php?c=main&a=gettouristareabyid',{"t_id":t_id},res=>{
     $("#menu-add").html("人文");
 },"json");
 $.get('index.php?c=main&a=gettourmenu',{"t_id":t_id,"type":type},res=>{
-   $menu = res.body.menu;
+   menu = res.body.menu;
    $(".content .secondLayer").html("");
-   for(item of $menu){
+   for(item of menu){
          if(item.menu_type == "custom"){
              $("#custom").append($("<div class='box secondLayer' menu_id="+item.menu_id+" ><div class='left-img'><a href=''><img src="+item.menu_imgurl+"></a></div><div class='right-info'><span>"+item.menu_title+"</span><p>"+item.menu_content+"</p></div>"))
          }else if(item.menu_type == "history"){

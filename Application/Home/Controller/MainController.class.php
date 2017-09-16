@@ -1102,6 +1102,7 @@ class MainController extends CommonController {
         $pagesize = 4;
         $currnum = ($curr-1)*$pagesize;
         $arr = M('historyperson')->join('people ON people.person_id = historyperson.person_id')->select();
+        $personnum = count($arr);
         $res['personlist'] = array_slice($arr,$currnum,$pagesize);
         $res['totalnum'] = intval(($personnum+$pagesize-1)/$pagesize);
         $this->json(1,'ok',$res);

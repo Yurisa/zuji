@@ -6,6 +6,7 @@ $('.inputId').keydown(function(e){
      $.post('../index.php?c=main&a=checkinandout',{"personid":$('.inputId').val(),"t_id":t_id},res=>{
         $('.inputId').val("");
         showtodayperson();
+        showhistoryperson();
      })
     }
     });
