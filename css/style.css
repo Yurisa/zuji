@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?k5ej3f');
-  src:  url('fonts/icomoon.eot?k5ej3f#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?k5ej3f') format('truetype'),
-    url('fonts/icomoon.woff?k5ej3f') format('woff'),
-    url('fonts/icomoon.svg?k5ej3f#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?umm0u0');
+  src:  url('fonts/icomoon.eot?umm0u0#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?umm0u0') format('truetype'),
+    url('fonts/icomoon.woff?umm0u0') format('woff'),
+    url('fonts/icomoon.svg?umm0u0#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -12,7 +12,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  /* speak: none; */
+  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -24,8 +24,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-home3:before {
+  content: "\e902";
+}
 .icon-office:before {
   content: "\e903";
+}
+.icon-camera:before {
+  content: "\e90f";
 }
 .icon-pacman:before {
   content: "\e916";
@@ -39,12 +45,23 @@
 .icon-pushpin:before {
   content: "\e946";
 }
+.icon-clock:before {
+  content: "\e94e";
+}
+.icon-clock2:before {
+  content: "\e94f";
+}
+.icon-bell:before {
+  content: "\e951";
+}
+.icon-bubbles3:before {
+  content: "\e96f";
+}
+.icon-spinner3:before {
+  content: "\e97c";
+}
 .icon-spinner5:before {
   content: "\e97e";
-}
-.icon-spinner5-h:before {
-  content: "\e97e";
-  color: #7FFFD4;
 }
 .icon-search:before {
   content: "\e986";
@@ -52,15 +69,11 @@
 .icon-gift:before {
   content: "\e99f";
 }
-.icon-gift-h:before {
-  content: "\e99f";
-  color: #7FFFD4;
-}
-/* .icon-gift:before{
-  content: "\e99f";
-} */
 .icon-spoon-knife:before {
   content: "\e9a3";
+}
+.icon-list:before {
+  content: "\e9ba";
 }
 .icon-eye:before {
   content: "\e9ce";
@@ -71,6 +84,9 @@
 .icon-star-full:before {
   content: "\e9d9";
 }
+.icon-heart:before {
+  content: "\e9da";
+}
 .icon-smile2:before {
   content: "\e9e2";
 }
@@ -80,32 +96,18 @@
 .icon-baffled:before {
   content: "\e9f3";
 }
+.icon-point-up:before {
+  content: "\ea03";
+}
 .icon-plus:before {
   content: "\ea0a";
 }
-.icon-minus:after {
+.icon-minus:before {
   content: "\ea0b";
 }
 .icon-loop2:before {
   content: "\ea2e";
 }
-.icon-point-up:before {
-  content: "\ea03";
-}
-.icon-point-up-h:before {
-  content: "\ea03";
-  color: #7FFFD4;
-}
-.icon-heart:before {
-  content: "\e9da";
-}
-.icon-heart-h:before {
-  content: "\e9da";
-  color: #7FFFD4;
-}
-.icon-bubbles3:before {
-  content: "\e96f";
-}
-.icon-clock:before {
-  content: "\e94e";
+.icon-arrow-up:before {
+  content: "\ea32";
 }
