@@ -36,6 +36,7 @@ a {
 	height: auto;
 	margin: 0 auto;
 	flex-direction: column;
+	position: absolute;
 }
 .box {
 	display: flex;
@@ -308,4 +309,81 @@ ul {
 	border: none;
 	background-color: #0E6EB8;
 	cursor: pointer;
+}
+.menu2 ul li a {
+			color: grey;
+		}
+		
+.menu2 {
+	width: auto;
+	height: auto;
+	position: absolute;
+	bottom: 200px;
+	right: 100px;
+}
+.center-i {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	border: none;
+	line-height: 50px;
+	text-align: center;
+	font-size: 45px;
+	color: grey;
+	position: relative;
+}
+.menu2 ul li {
+	position: absolute;
+	z-index: 1;
+	left: -60px;
+	top: -80px;
+	transform-origin: 100px 100px;
+	/*transform: scale(0);*/
+	transition: all 0.5s 0.1s;
+	display: none;
+}
+/*	.center-i:hover .menu2 ul li {
+	transform: scale(1);
+}*/
+.menu2 ul li a{
+	height: 45px;
+	width: 45px;
+	line-height: 45px;
+	border-radius: 50%;
+	font-size: 100%;
+	background-color: #CCCCCC;
+	border: none;
+	text-align: center;
+	position: absolute;
+	/*display: none;*/
+}
+.menu2 ul li:nth-child(1) {
+	transform: rotate(35deg);
+}
+.menu2 ul li:nth-child(1) a {
+	transform: rotate(325deg);
+}
+.menu2 ul li:nth-child(2) {
+	transform: rotate(-5deg);
+}
+.menu2 ul li:nth-child(2) a {
+	transform: rotate(365deg);
+}
+.menu2 ul li:nth-child(3) {
+	transform: rotate(-45deg);
+}
+.menu2 ul li:nth-child(3) a {
+	transform: rotate(405deg);
+}
+.menu2 ul li:nth-child(4) {
+	transform: rotate(-85deg);
+}
+.menu2 ul li:nth-child(4) a {
+	transform: rotate(445deg);
+}
+.menu2 ul li:nth-child(5) {
+	transform: rotate(-125deg);
+}
+.menu2 ul li:nth-child(5) a {
+	transform: rotate(485deg);
 }

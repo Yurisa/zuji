@@ -89,3 +89,30 @@ function getQueryString(name) {
 }
 console.log($(".webfont").eq(0))
 
+
+
+// 小菜单
+var changeContent = function(index) {
+	// var iconArray = new Array('icon-book','icon-spoon-knife','icon-office','icon-camera','icon-point-up');
+	var menuArray = new Array('人文','饮食','建筑','游记','顶部');
+	
+	$('.center-i span').removeClass();
+	$('.center-i').css('font-size','15px');
+	$('.center-i span').text(menuArray[index]);
+		
+	}
+	$('.center-i').mouseover(function(){
+	$('.menu2 ul li').toggle();
+	})
+
+	// changeContent(int);
+	$('.menu2 ul li').mouseover(function() {
+	var int = $(this).index();
+	// changeContent(int);
+	})
+	$('.menu2').mouseout(function() {
+	$('center-i span').detach();
+	// $('center-i').append('<span class="icon-smile2"></span>');
+	// $('.center-i span').addClass('icon-smile2');
+	$('.center-i').css('font-size','45px');
+})
