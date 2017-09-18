@@ -36,7 +36,7 @@ a {
 	height: auto;
 	margin: 0 auto;
 	flex-direction: column;
-	position: absolute;
+	/* position: absolute; */
 }
 .box {
 	display: flex;
@@ -317,9 +317,15 @@ ul {
 .menu2 {
 	width: auto;
 	height: auto;
-	position: absolute;
+	/* position: absolute;
 	bottom: 200px;
-	right: 100px;
+	right: 100px; */
+	position: fixed;
+	bottom: 131px;
+	right: 25px;
+	/* font-size: 0;
+	line-height: 0; */
+	z-index: 100;
 }
 .center-i {
 	height: 50px;

@@ -845,7 +845,7 @@ class MainController extends CommonController {
      public function addcomment(){
        $data = array(
          "u_id" => 1,
-         "a_id" =>I ('post.a_id'),
+         "a_id" =>I('post.a_id'),
          "c_content" => I('post.c_content'),
          "timestamp" => time(),
        );
@@ -1057,7 +1057,7 @@ class MainController extends CommonController {
           }else{
             $data = array(
               "person_id"=>$existid[0]['person_id'],
-              "t_id"=>1,
+              "t_id" => $t_id,
               "starttime" => $existid[0]['timestamp'],
               "endtime"=>$currtime,
             );
@@ -1084,6 +1084,7 @@ class MainController extends CommonController {
         $beginToday = intval(mktime(0,0,0,date('m'),date('d'),date('Y')));
         $endToday=intval(mktime(0,0,0,date('m'),date('d')+1,date('Y'))-1);
         $arr = M('todayperson')->join('people ON people.person_id = todayperson.person_id')->where('timestamp > %d and timestamp <%d and t_id = %d',array($beginToday,$endToday,$t_id))->select();
+        // echo M('todayperson')->getLastSql();
         $personnum = count($arr);
         $res['personlist'] = array_slice($arr,$currnum,$pagesize);
         $res['totalnum'] = intval(($personnum+$pagesize-1)/$pagesize);
@@ -1101,7 +1102,7 @@ class MainController extends CommonController {
         $curr = $_GET['page'];
         $pagesize = 4;
         $currnum = ($curr-1)*$pagesize;
-        $arr = M('historyperson')->join('people ON people.person_id = historyperson.person_id')->select();
+        $arr = M('historyperson')->join('people ON people.person_id = historyperson.person_id')->where("t_id=".$t_id)->select();
         $personnum = count($arr);
         $res['personlist'] = array_slice($arr,$currnum,$pagesize);
         $res['totalnum'] = intval(($personnum+$pagesize-1)/$pagesize);
@@ -1118,7 +1119,47 @@ class MainController extends CommonController {
          $t_id = $_GET['t_id'];
          $beginToday = intval(mktime(0,0,0,date('m'),date('d'),date('Y')));
          $endToday=intval(mktime(0,0,0,date('m'),date('d')+1,date('Y'))-1);
-         $res['totalnum'] = M('todayperson')->where('timestamp > %d and timestamp <%d and t_id = %d',array($beginToday,$endToday,$t_id))->count();
-         $this->json(1,'ok',$res);
+         $totalnum = M('todayperson')->where('timestamp > %d and timestamp <%d and t_id = %d',array($beginToday,$endToday,$t_id))->count();
+         if($totalnum >= 8){
+            $res['totalnum'] = $totalnum; 
+            $this->json(1,'当前人数已到达8,已达最大容量',$res);
+         }else{
+           $res['totalnum'] = $totalnum; 
+           $this->json(1,'ok',$res);
+         }
+         
        }
+
+      /*
+       *
+       *得到当前月的游客总数
+       *
+       */
+
+       public function getthismonthpersonnum(){
+        $Model = new \Think\Model();
+        $beginThismonth=mktime(0,0,0,date('m'),1,date('Y'));
+        $endThismonth=mktime(23,59,59,date('m'),date('t'),date('Y'));
+        $res['thismonth'] = intval(date('m'));
+        $res['touristarea'] = $Model->query("select touristarea.t_id,touristarea.t_name,count(*) as personnum from touristarea,historyperson where touristarea.t_id = historyperson.t_id and historyperson.starttime > {$beginThismonth} and historyperson.starttime < {$endThismonth} group by touristarea.t_id order by touristarea.t_id ") ;
+        $this->json(1,'ok',$res);
+      }
+
+      
+      /*
+       *
+       *得到前一月的游客总数
+       *
+       */
+
+       public function getlastmonthpersonnum(){
+        $Model = new \Think\Model();
+        $beginThismonth=mktime(0,0,0,date('m')-1,1,date('Y'));
+        $endThismonth=mktime(23,59,59,date('m')-1,date('t'),date('Y'));
+        $res['thismonth'] = date('m')-1;
+        $res['touristarea'] = $Model->query("select touristarea.t_id,touristarea.t_name,count(*) as personnum from touristarea,historyperson where touristarea.t_id = historyperson.t_id and historyperson.starttime > {$beginThismonth} and historyperson.starttime < {$endThismonth} group by touristarea.t_id order by touristarea.t_id ") ;
+        $this->json(1,'ok',$res);
+       }
+
+      
 }

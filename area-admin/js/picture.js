@@ -119,6 +119,13 @@ function gettotalnum(){
     $.get('../index.php?c=main&a=getpersonnum',{"t_id":t_id},res=>{
         console.log(res);
         let totalnum = res.body.totalnum;
+        if(res.result !== 'ok'){
+            layui.use('layer', function(){
+                var layer = layui.layer;
+                
+                layer.msg(res.result);
+              });  
+        }
         axisData = (new Date()).toLocaleTimeString().replace(/^\D*/,'');
         
             var data0 = option.series[0].data;

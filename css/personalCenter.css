@@ -320,7 +320,7 @@
     text-align: center;
     background-color: #999999;
     display: inline-block;
-    float: left;
+    /* float: left; */
 }
 
 .my-note ul li input,.my-draft ul li input{

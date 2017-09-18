@@ -37,8 +37,15 @@ $(document).ready(function(){
     }
     return null;
 }
-
-})
+$.get("index.php?c=main&a=gettouristareabyid",{"t_id":t_id},res=>{
+    console.log(res);
+    let tour = res.body.touristarea;
+    $(".culture").find("img").attr("src",tour.t_renwen);
+    $(".food").find("img").attr("src",tour.t_yinshi);
+    $(".building").find("img").attr("src",tour.t_jianzhu);
+    $(".notes").find("img").attr("src",tour.t_youji);
+},"json");
+});
 
 
 var index = 1;

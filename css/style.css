@@ -12,7 +12,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: none;
+  /* speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -63,11 +63,19 @@
 .icon-spinner5:before {
   content: "\e97e";
 }
+.icon-spinner5-h:before {
+  content: "\e97e";
+  color: red;
+}
 .icon-search:before {
   content: "\e986";
 }
 .icon-gift:before {
   content: "\e99f";
+}
+.icon-gift-h:before {
+  content: "\e99f";
+  color: red;
 }
 .icon-spoon-knife:before {
   content: "\e9a3";
@@ -87,6 +95,10 @@
 .icon-heart:before {
   content: "\e9da";
 }
+.icon-heart-h:before {
+  content: "\e9da";
+  color: red;
+}
 .icon-smile2:before {
   content: "\e9e2";
 }
@@ -98,6 +110,10 @@
 }
 .icon-point-up:before {
   content: "\ea03";
+}
+.icon-point-up-h:before {
+  content: "\ea03";
+  color: red;
 }
 .icon-plus:before {
   content: "\ea0a";

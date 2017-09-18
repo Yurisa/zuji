@@ -1,4 +1,55 @@
 var myChart = echarts.init(document.getElementById("numsort"));
+var t_idlist = [];
+var touristarea = [];
+var month = [];
+var data = [];
+var thismonthsum = 0;
+var lastmonthsum = 0;
+var lastmothpersonnum = [];
+$.get("../index.php?c=main&a=getthismonthpersonnum",res=>{
+    month.push(res.body.thismonth+"月");
+    let tour = res.body.touristarea;
+    var personnum = [];
+    for(let t of tour){
+        personnum.push(t.personnum);
+        thismonthsum += parseInt(t.personnum);
+        touristarea.push(t.t_name);
+    }
+    for(let a of touristarea){
+        lastmothpersonnum.push(0);
+    }
+    touristarea.push("总游客数");
+    personnum.push(thismonthsum);
+    console.log(personnum)
+    let tmp = {
+        name:res.body.thismonth+"月",
+        type: 'bar',
+        data:personnum,
+    }
+    data.push(tmp);
+    
+},"json").then(()=>{
+   $.get("../index.php?c=main&a=getlastmonthpersonnum",res=>{
+        month.push(res.body.thismonth+"月");
+        let tour = res.body.touristarea;
+        for(let t of tour){
+            for(let i = 0; i< touristarea.length; i++){
+                if(t.t_name === touristarea[i]){
+                    lastmothpersonnum[i] = t.personnum;
+                    lastmonthsum += parseInt(t.personnum);
+                }
+            }
+        }
+        lastmothpersonnum.push(lastmonthsum);
+        let tmp = {
+            name:res.body.thismonth+"月",
+            type: 'bar',
+            data:lastmothpersonnum,
+        }
+        data.push(tmp);
+        myChart.setOption(option);
+    },"json");
+});
 
 option = {
     title: {
@@ -12,7 +63,7 @@ option = {
         }
     },
     legend: {
-        data: ['七月', '八月']
+        data: month,
     },
     grid: {
         left: '3%',
@@ -26,19 +77,18 @@ option = {
     },
     yAxis: {
         type: 'category',
-        data: ['古敢水族乡','西江千户苗寨','玉岗村','高定村','隆安县','总游客数']
+        data:touristarea,
     },
-    series: [
-        {
-            name: '七月',
-            type: 'bar',
-            data: [18203, 23489, 29034, 104970, 131744, 630230]
-        },
-        {
-            name: '八月',
-            type: 'bar',
-            data: [19325, 23438, 31000, 121594, 134141, 681807]
-        }
-    ]
+    series: data,
 };
-myChart.setOption(option);
+
+
+// function getId(t){
+//     switch(t){
+//       case 01: return '一、';
+//       case 02: return '二、';
+//       case 03: return '三、'
+//       case 04: return '四、';
+//       case 4: return '五';
+//       case 5: return '六、';
+//     }

@@ -1,5 +1,6 @@
 $(document).ready(function(){
   var a_id = getQueryString("a_id");
+  console.log(a_id);
   $.get('index.php?c=main&a=getarticlebyaid',{"a_id":a_id},res=>{
      console.log(res);
      let article = (res.body.article)[0];
@@ -79,6 +80,7 @@ showcomment()
         "c_content":$('.commentmsg').val(),
         "a_id":a_id,
      }
+     console.log(data);
      $.post('index.php?c=main&a=addcomment',data,res=>{
          console.log(res);
          $('.commentmsg').val("");

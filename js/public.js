@@ -9,7 +9,7 @@ $(document).ready(function () {
     $(".top-style1").mouseleave(function () {
         $(".nav-search").fadeOut(500);
     });
-});
+
 
 function showuserdata(){
     $.get("index.php?c=main&a=getuser",res=>{
@@ -89,7 +89,18 @@ function getQueryString(name) {
 }
 console.log($(".webfont").eq(0))
 
+/**
+ * 
+ * 添加链接
+ */
+console.log("111111")
+console.log($("#m-culture"));
+$("#m-culture a").attr("href","culture.html?t_id="+t_id+"&type=humanities");
+$("#m-food a").attr("href", "food.html?t_id="+t_id+"&type=diet");
+$("#m-building a").attr("href", "building.html?t_id="+t_id+"&type=building");
+$("#m-note a").attr("href", "notes.html?t_id="+t_id);
 
+	
 
 // 小菜单
 var changeContent = function(index) {
@@ -116,3 +127,4 @@ var changeContent = function(index) {
 	// $('.center-i span').addClass('icon-smile2');
 	$('.center-i').css('font-size','45px');
 })
+});
