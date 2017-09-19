@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?umm0u0');
-  src:  url('fonts/icomoon.eot?umm0u0#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?umm0u0') format('truetype'),
-    url('fonts/icomoon.woff?umm0u0') format('woff'),
-    url('fonts/icomoon.svg?umm0u0#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?aaxgsq');
+  src:  url('fonts/icomoon.eot?aaxgsq#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?aaxgsq') format('truetype'),
+    url('fonts/icomoon.woff?aaxgsq') format('woff'),
+    url('fonts/icomoon.svg?aaxgsq#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -12,7 +12,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  /* speak: none; */
+  /*speak: none;*/
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -29,6 +29,9 @@
 }
 .icon-office:before {
   content: "\e903";
+}
+.icon-images:before {
+  content: "\e90e";
 }
 .icon-camera:before {
   content: "\e90f";
@@ -53,6 +56,8 @@
 }
 .icon-bell:before {
   content: "\e951";
+  font-size: 30px;
+  margin-right: 10px;
 }
 .icon-bubbles3:before {
   content: "\e96f";
