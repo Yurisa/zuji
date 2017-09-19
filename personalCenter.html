@@ -119,12 +119,15 @@
                         <a href="">西江千户苗寨</a>
                         <span class="footprint-score">
                             <span class="demo">
-                                <span id="function-demo1" class="target-demo"></span>
-                                <span id="function-hint1" class="hint"></span>
+                                <span id="function-demo" class="target-demo"></span>
+                                <span id="function-hint" class="hint"></span>
                             </span>
                         </span>
+                        <div class="footprint-asses">
+                            <input class="asses" type="button" value="评价" name="">
+                        </div>
                     </li>
-                     <li>
+                    <li>
                         <img src="images/pic1.jpg">
                         <a href="">西江千户苗寨</a>
                         <span class="footprint-score">
@@ -133,8 +136,59 @@
                                 <span  class="hint"></span>
                             </span>
                         </span>
+                        <div class="footprint-asses">
+                            <input class="asses" type="button" value="评价" name="">
+                        </div>
                     </li>
                 </ul>
+                <div id="scoreList" style="display: none">                    <!--评价列表-->
+                    <button type="reset" class="layui-btn layui-btn-small close" style="background-color: #0E6EB8;">
+                    <i class="layui-icon " >&#x1006;</i>
+                    </button>
+                    <form id="asses-score" class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">价格水平</label>
+                            <div class="layui-input-block">
+                                <span class="demo" >
+                                    <span id="function-demo1"></span>
+                                    <span id="hint1"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">交通</label>
+                            <div class="layui-input-block">
+                                 <span class="demo" >
+                                    <span id="function-demo2"></span>
+                                    <span id="hint2"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">服务质量</label>
+                            <div class="layui-input-block">
+                                 <span class="demo" >
+                                    <span id="function-demo3"></span>
+                                    <span id="hint3"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">环境质量</label>
+                            <div class="layui-input-block">
+                                 <span class="demo" >
+                                    <span id="function-demo4"></span>
+                                    <span id="hint4"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block" style="margin-left: 0px">
+                                <button class="layui-btn  submit" type="button" style="background-color: #0E6EB8;">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
                 <div id="page2" class="page1"></div>
             </div>
         </div>
@@ -450,6 +504,7 @@
         });
     });
 </script>
+
 <!--<script>-->
     <!--//JavaScript代码区域-->
     <!--layui.use('element', function(){-->

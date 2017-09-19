@@ -220,7 +220,6 @@
     height: 330px;
     box-shadow: 2px 2px 5px #000000;
     float: left;
-
     margin-bottom: 20px;
 }
 
@@ -249,9 +248,27 @@
     text-align: left;
 }
 
+.footprint-asses{
+    width: 100%;
+    height: 35px;
+    float: left;
+    color: #000000;
+}
+
+.asses{
+    width: 80px;
+    min-height: 30px;
+    line-height: 30px;
+    background-color: #0E6EB8;
+    float: right;
+    border: 0px;
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+
 .footprint-score{
     width: 100%;
-    height: 65px;
+    height: 30px;
     float: left;
     color: #000000;
 }
@@ -267,6 +284,37 @@
     line-height: 24px;
 }
 
+#scoreList{
+    background-color: #FFFFFF;
+    width: 600px;
+    height: auto;
+    position: absolute;
+    left: 35%;
+    /*border: 1px solid #3366FF;*/
+    box-shadow: 2px 2px 5px #000000;
+}
+
+.close{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#asses-score{
+    width: 60%;
+    float: none;
+    color: #000000;
+    margin-top: 50px;
+    position: relative;
+    left: 20%;
+}
+
+.demo{
+    color: #000000;
+    float: left;
+}
 .note-part div:nth-child(n+2),.notePart div:nth-child(n+2){
     float: left;
     color: #3366FF;

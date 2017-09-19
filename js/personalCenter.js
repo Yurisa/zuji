@@ -122,6 +122,98 @@ $(document).ready(function () {
         $("#my-fans").show();
     });
 
+
+    //对去过的地区进行评价
+
+    $(".asses").click(function () {
+        $("#scoreList").show();
+        $(".close").click(function () {
+            // $("#asses-score")[0].reset();
+            $("#scoreList").hide();
+        });
+    });
+    $(".submit").click(function(){
+        $("#scoreList").hide();
+    });
+
+    //评分
+
+    $('#function-demo1').raty({
+        number: 5, //多少个星星设置
+        score: 4, //初始值是设置
+        targetType: 'number', //类型选择，number是数字值，hint，是设置的数组值
+        path: 'raty-master/demo/images',
+        cancelOff: 'cancel-custom-off.png',
+        cancelOn: 'cancel-custom-on.png',
+        size: 24,
+        starHalf: 'star-half.png',
+        starOff: 'star-off.png',
+        starOn: 'star-on.png',
+        target: '#hint1',
+        cancel: false,
+        targetKeep: true,
+        precision:true, //是否包含小数
+        click: function(score, evt) {
+            alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
+        }
+    });
+    $('#function-demo2').raty({
+        number: 5, //多少个星星设置
+        score: 4, //初始值是设置
+        targetType: 'number', //类型选择，number是数字值，hint，是设置的数组值
+        path: 'raty-master/demo/images',
+        cancelOff: 'cancel-custom-off.png',
+        cancelOn: 'cancel-custom-on.png',
+        size: 24,
+        starHalf: 'star-half.png',
+        starOff: 'star-off.png',
+        starOn: 'star-on.png',
+        target: '#hint2',
+        cancel: false,
+        targetKeep: true,
+        precision:true, //是否包含小数
+        click: function(score, evt) {
+            alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
+        }
+    });
+    $('#function-demo3').raty({
+        number: 5, //多少个星星设置
+        score: 4, //初始值是设置
+        targetType: 'number', //类型选择，number是数字值，hint，是设置的数组值
+        path: 'raty-master/demo/images',
+        cancelOff: 'cancel-custom-off.png',
+        cancelOn: 'cancel-custom-on.png',
+        size: 24,
+        starHalf: 'star-half.png',
+        starOff: 'star-off.png',
+        starOn: 'star-on.png',
+        target: '#hint3',
+        cancel: false,
+        targetKeep: true,
+        precision:true, //是否包含小数
+        click: function(score, evt) {
+            alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
+        }
+    });
+    $('#function-demo4').raty({
+        number: 5, //多少个星星设置
+        score: 4, //初始值是设置
+        targetType: 'number', //类型选择，number是数字值，hint，是设置的数组值
+        path: 'raty-master/demo/images',
+        cancelOff: 'cancel-custom-off.png',
+        cancelOn: 'cancel-custom-on.png',
+        size: 24,
+        starHalf: 'star-half.png',
+        starOff: 'star-off.png',
+        starOn: 'star-on.png',
+        target: '#hint4',
+        cancel: false,
+        targetKeep: true,
+        precision:true, //是否包含小数
+        click: function(score, evt) {
+            alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
+        }
+    });
     /**
      * 展示用户个人信息
      * 
