@@ -387,6 +387,19 @@ class MainController extends CommonController {
       $this->json(1,'ok');
     } 
 
+
+    /*
+     *
+     *管理员更新菜单
+     *
+     */
+
+     public function admindeletemenu(){
+       $menu_id = $_GET['menu_id'];
+       M('menu')->where('menu_id='.$menu_id)->delete();
+       $this->json(1,'ok');
+      }
+
     /*
      *
      *搜索菜单

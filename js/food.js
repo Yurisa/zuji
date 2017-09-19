@@ -41,7 +41,7 @@ $(document).ready(function () {
        let province = tour.p_name;
        let nation = tour.n_name;
        let touristarea = tour.t_name;
-       $("#yinshiimg").css("background","url("+tour.t_renwen+")");
+       $("#yinshiimg").css("background","url("+tour.t_yinshi+")");
        $("#yinshiimg").css("background-size","100% 100%");
        $("#province").html(province);
        $("#nation").html(nation);

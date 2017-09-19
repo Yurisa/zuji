@@ -152,6 +152,8 @@ createUploader(itemnum);
           $(".addarea").empty();
           itemnum = 1;
           $(".addarea").append($("<div class='oneadd' id='oneadd1'><div class='add-num'>1</div><div class='add-right'><span>标题<input type='text' class='title-add' name='title-add'></span><span>介绍<textarea class='info-add'></textarea></span><span>配图<div id='uploadposition1'><button  class='layui-btn layui-btn-big' style='width: 150px;height: 15px;margin: 0 10px 30px 50px;float:left' id='pickfiles1' href='javascript:;'>选择图片</button><button  class='layui-btn layui-btn-big' style='width: 150px;height: 15px;margin: 0 50px 30px;float:left' id='uploadfiles1' href='javascript:;'>开始上传</button></div></span><div class='preimage box box-top' style='width:100%;height:auto;margin-top:80px'></div></div></div>"));
+          console.log($('.theAddArea'));
+          $('.theAddArea').hide();
         },"json");
         }
     }

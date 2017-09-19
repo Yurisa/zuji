@@ -13,7 +13,7 @@ $(document).ready(function () {
        let province = tour.p_name;
        let nation = tour.n_name;
        let touristarea = tour.t_name;
-       $("#jianzhuimg").css("background","url("+tour.t_renwen+")");
+       $("#jianzhuimg").css("background","url("+tour.t_jianzhu+")");
        $("#jianzhuimg").css("background-size","100% 100%");
        $("#province").html(province);
        $("#nation").html(nation);

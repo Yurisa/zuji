@@ -97,7 +97,7 @@ console.log("111111")
 console.log($("#m-culture"));
 $("#m-culture a").attr("href","culture.html?t_id="+t_id+"&type=humanities");
 $("#m-food a").attr("href", "food.html?t_id="+t_id+"&type=diet");
-$("#m-building a").attr("href", "building.html?t_id="+t_id+"&type=building");
+$("#m-buiding a").attr("href", "building.html?t_id="+t_id+"&type=building");
 $("#m-note a").attr("href", "notes.html?t_id="+t_id);
 
 	
@@ -121,7 +121,7 @@ var changeContent = function(index) {
 	var int = $(this).index();
 	// changeContent(int);
 	})
-	$('.menu2').mouseout(function() {
+	$('.menu2').mouseleave(function() {
 	$('center-i span').detach();
 	// $('center-i').append('<span class="icon-smile2"></span>');
 	// $('.center-i span').addClass('icon-smile2');

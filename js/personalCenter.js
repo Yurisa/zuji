@@ -451,11 +451,18 @@ $(document).ready(function () {
             $("#mycollectnum").html(data.body.articlenum);
             for (var i = 0; i < Json1.length; i++) {
                 var obj = Json1[i];
+                var articlecontent = "";
+                let content = "<div>"+obj.a_content+"</div>";
+                // console.log($(content).find("p").eq(0));
+                for(let i = 0;i<$(content).find("p").length;i++){
+                   articlecontent = articlecontent+$(content).find("p").eq(0).text()
+                }
                 console.log(obj.timestamp)
                 let date =  getLocalTime(obj.timestamp);
                 console.log(date);
-                $("#mycollection").append($(" <li a_id="+obj.a_id+"><img src="+obj.a_cover+"><img src="+obj.u_avatar+"><a href=''>"+obj.a_title+"</a><a href=''>"+obj.u_name+"</a><p style='width: 300px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;'>"+obj.a_content+"</p><i class='layui-icon deletecollect' >&#x1006;</i></li>"));
+                $("#mycollection").append($(" <li a_id="+obj.a_id+"><img src="+obj.a_cover+"><img src="+obj.u_avatar+"><a href=''>"+obj.a_title+"</a><a href=''>"+obj.u_name+"</a><p>"+articlecontent+"</p><i class='layui-icon deletecollect' >&#x1006;</i></li>"));
             }
+            omit();
             laypage({
                 cont: 'page5', //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
                 pages: data.body.totalnum, //通过后台拿到的总页数
@@ -471,6 +478,14 @@ $(document).ready(function () {
     });
     }
 
+    /**
+     * 省略文章内容
+     */
+    function omit(){
+        $("#mycollection").find("p").attr("style","width: 300px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;");
+        // $("#mycollection").find("span").attr("style","width: 300px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;");
+    }
+    
     /**
      * 删除用户收藏
      * 

@@ -245,6 +245,18 @@ $(document).ready(function () {
      },"json");
 
      /**
+      * 删除menu
+      */
+
+      $(document).on("click",".mdel",function () {
+        console.log($(this).parent().parent().parent().attr("menu_id"));
+        $.get("../index.php?c=main&a=admindeletemenu",{"menu_id":$(this).parent().parent().parent().attr("menu_id")},res=>{
+           console.log(res);
+           $(this).parent().parent().parent().remove();
+        },"json");
+
+      });
+     /**
       * 
       * 得到所有省份 
       */
