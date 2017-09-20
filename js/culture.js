@@ -77,7 +77,7 @@ var itemnum = 1;
 $('.plus').click(function(){
     itemnum++;
     console.log(itemnum)
-    $('.addarea').append($("<div class='oneadd' id="+'oneadd'+itemnum+"><div class='add-num' id="+'add-num'+itemnum+">"+itemnum+"</div><div class='add-right'><span>标题<input type='text' class='title-add' name='title-add'></span><span>介绍<textarea class='info-add'></textarea></span><span>配图<div id="+'uploadposition'+itemnum+"><button class='layui-btn layui-btn-big' style='width: 150px;height: 15px;margin: 0 10px 30px 50px;float:left' id="+'pickfiles'+itemnum+" href='javascript:;'>选择图片</button><button class='layui-btn layui-btn-big' style='width: 150px;height: 15px;margin: 0 50px 30px;float:left' id="+'uploadfiles'+itemnum+" href='javascript:;'>开始上传</button></div></span><div class='preimage box box-top' style='width:100%;height:auto;margin-top:80px'></div></div></div>"))
+    $('.addarea').append($("<div class='oneadd' id="+'oneadd'+itemnum+"><div class='add-num'>"+itemnum+"</div><div class='add-right'><input type='text' class='title-add' name='title-add' placeholder='请输入主题'><hr/><div class='box addOut'><div class='addImgArea'><span class='addImg icon-images'><img src=''></span><div id="+'uploadposition'+itemnum+"><button  class='layui-btn layui-btn-big' style='width: 100px;height: 10px;' id="+'pickfiles'+itemnum+" href='javascript:;'>选择图片</button><button  class='layui-btn layui-btn-big' style='width: 100px;height: 10px;' id="+'uploadfiles'+itemnum+" href='javascript:;'>开始上传</button></div></div><div class='infoOut'><textarea class='info-add' placeholder='请输入文字介绍...'></textarea></div></div><div class='preimage box box-top guage'></div></div></div></div>"));
     createUploader(itemnum);
 
 })
@@ -151,7 +151,7 @@ createUploader(itemnum);
           }); 
           $(".addarea").empty();
           itemnum = 1;
-          $(".addarea").append($("<div class='oneadd' id='oneadd1'><div class='add-num'>1</div><div class='add-right'><span>标题<input type='text' class='title-add' name='title-add'></span><span>介绍<textarea class='info-add'></textarea></span><span>配图<div id='uploadposition1'><button  class='layui-btn layui-btn-big' style='width: 150px;height: 15px;margin: 0 10px 30px 50px;float:left' id='pickfiles1' href='javascript:;'>选择图片</button><button  class='layui-btn layui-btn-big' style='width: 150px;height: 15px;margin: 0 50px 30px;float:left' id='uploadfiles1' href='javascript:;'>开始上传</button></div></span><div class='preimage box box-top' style='width:100%;height:auto;margin-top:80px'></div></div></div>"));
+          $(".addarea").append($("<div class='oneadd' id='oneadd1'><div class='add-num'>1</div><div class='add-right'><input type='text' class='title-add' name='title-add' placeholder='请输入主题'><hr/><div class='box addOut'><div class='addImgArea'><span class='addImg icon-images'><img src=''></span><div id='uploadposition1'><button  class='layui-btn layui-btn-big' style='width: 100px;height: 10px;' id='pickfiles1' href='javascript:;'>选择图片</button><button  class='layui-btn layui-btn-big' style='width: 100px;height: 10px;' id='uploadfiles1' href='javascript:;'>开始上传</button></div></div><div class='infoOut'><textarea class='info-add' placeholder='请输入文字介绍...'></textarea></div></div><div class='preimage box box-top guage'></div></div></div></div>"));
           console.log($('.theAddArea'));
           $('.theAddArea').hide();
         },"json");
@@ -212,6 +212,8 @@ function createUploader(itemnum){
                 var data = strToJson(info.response);
                 console.log(data)
                 $("#oneadd"+itemnum).attr("imgpath",data.body.file);
+                $("#oneadd"+itemnum).find(".addImg").attr("class","addImg");
+                $("#oneadd"+itemnum).find("img").attr("src",data.body.file);
             },
             Error: function(up, err) {
                 document.getElementById('console').appendChild(document.createTextNode("\nError #" + err.code + ": " + err.message));
