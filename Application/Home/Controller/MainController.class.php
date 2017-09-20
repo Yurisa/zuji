@@ -1173,6 +1173,102 @@ class MainController extends CommonController {
         $res['touristarea'] = $Model->query("select touristarea.t_id,touristarea.t_name,count(*) as personnum from touristarea,historyperson where touristarea.t_id = historyperson.t_id and historyperson.starttime > {$beginThismonth} and historyperson.starttime < {$endThismonth} group by touristarea.t_id order by touristarea.t_id ") ;
         $this->json(1,'ok',$res);
        }
-
       
+
+      /*
+       *
+       *得到前一月的游客总数
+       *
+       */
+
+       public function gettouristareaandvalue(){
+        $Model = new \Think\Model();
+        $arr = $Model->query("select touristarea.t_id,touristarea.t_name as name,avg(h_go.score) as value4,avg(h_go.price) as value2,avg(h_go.service) as value5,avg(h_go.environment) as value6,avg(h_go.traffic) as value3 from touristarea,h_go where touristarea.t_id = h_go.t_id group by h_go.t_id");
+        foreach($arr as $key => &$value){
+          $value['value1'] = ($value['value2']+$value['value3']+$value['value4']+$value['value5']+$value['value6'])/5;
+       }
+       $res['touristarea'] = $arr;
+       $this->json(1,'ok',$res);
+      }  
+
+     /*
+      *
+      *随机取人文
+      *
+      */
+
+      public function randomculture(){
+        $Model = new \Think\Model();
+        $random = intval(rand(0,3));
+        // echo $random;
+        $arr[4] = array('custom','history','dress','artwork');
+        // var_dump($arr[4][1]);
+        $res['culture'] = $Model->query("select * from menu,touristarea where touristarea.t_id = menu.t_id and menu_type='{$arr[4][$random]}' order by rand() limit 1");
+        $this->json(1,'ok',$res);
+      }
+
+     /*
+      *
+      *随机取饮食
+      *
+      */
+
+      public function randomdiet(){
+        $Model = new \Think\Model();
+        // $random = intval(rand(0,3));
+        // // echo $random;
+        // $arr[4] = array('custom','history','dress','artwork');
+        // var_dump($arr[4][1]);
+        $res['diet'] = $Model->query("select * from menu,touristarea where touristarea.t_id = menu.t_id and menu_type='diet' order by rand() limit 1");
+        $this->json(1,'ok',$res);
+      }
+
+     /*
+      *
+      *随机取人文
+      *
+      */
+
+      public function randomarticle(){
+        $Model = new \Think\Model();
+        $res['article'] = $Model->query("select * from article,touristarea where touristarea.t_id = article.t_id order by rand() limit 1");
+        $this->json(1,'ok',$res);
+      }
+      
+     /*
+      *
+      *随机取景区
+      *
+      */
+
+      public function randomtouristarea(){
+        $Model = new \Think\Model();
+        $touristarea = $Model->query("select touristarea.t_id,touristarea.t_cardimg,touristarea.t_name as name,avg(h_go.score) as value4,avg(h_go.price) as value2,avg(h_go.service) as value5,avg(h_go.environment) as value6,avg(h_go.traffic) as value3 from touristarea,h_go where touristarea.t_id = h_go.t_id group by h_go.t_id order by avg(h_go.score) desc");
+        $tournum = count($touristarea);
+        $random = intval(rand(0,$tournum-1));
+        $res['touristarea'] = $touristarea[$random];
+        $res['rank'] = $random+1;
+        $this->json(1,'ok',$res);
+      }
+
+     /*
+      *
+      *获取实时景区排名
+      *
+      */
+
+      public function gettourrank(){
+        $Model = new \Think\Model();
+        $touristarea = $Model->query("select touristarea.t_id,touristarea.t_name as name,avg(h_go.score) as value4,avg(h_go.price) as value2,avg(h_go.service) as value5,avg(h_go.environment) as value6,avg(h_go.traffic) as value3 from touristarea,h_go where touristarea.t_id = h_go.t_id group by h_go.t_id order by avg(h_go.score) desc");
+        foreach($touristarea as $key => $value){
+          var_dump($value);
+          $data = array(
+             "rank" => $key+1,
+          );
+          M('touristarea')->where("t_id=".$value['t_id'])->save($data);
+        }
+        $res['touristarea'] = $touristarea;
+        $this->json(1,'ok',$res);
+      }
+
 }

@@ -19,7 +19,7 @@
 </head>
 <body>
 	<div class="box container">
-		<div class="theMainImg" style="height:800px;width: 100%;margin:0px;padding: 0px;">
+		<div class="theMainImg" style="height:840px;width: 100%;margin:0px;padding: 0px;">
 			<!-- 地图 -->
 			<div id="main" style="height:800px;width: 100%;margin:0px;padding: 0px;padding-top: 15px;"></div>
 		</div>
@@ -52,7 +52,7 @@
 
 		
 
-		<div class="theAdArea"></div>			<!-- 活动、广告区 -->
+		<!-- <div class="theAdArea"></div>			活动、广告区 -->
 		<div class="theHotArea">				<!-- 热门旅游区 -->
 			<div class="topic">热门旅游区</div>
 			<div class="area" style="height:500px;margin-bottom:10%">
@@ -66,7 +66,7 @@
 			</div>
 			<div class="theItems">
 				<ul>
-					<li>
+					<li id="tour">
 						<div class="item">
 							<a href="">
 								<div class="img">
@@ -95,7 +95,7 @@
 							</div>
 						</div>
 					</li>
-					<li>
+					<li id="culture">
 						<div class="item">
 							<a href="">
 								<div class="img">
@@ -104,7 +104,7 @@
 										<span>
 											<i class="icon-office"></i>
 										</span>
-										<span class="bt">建筑</span>
+										<span class="bt">人文</span>
 								</div>
 								</div>
 							</a>
@@ -124,7 +124,7 @@
 							</div>
 						</div>
 					</li>
-					<li>
+					<li id="diet">
 						<div class="item">
 							<a href="">
 								<div class="img">
@@ -153,7 +153,7 @@
 							</div>
 						</div>
 					</li>
-					<li>
+					<li id="note">
 						<div class="item">
 							<a href="">
 								<div class="img">
@@ -162,7 +162,7 @@
 										<span>
 											<i class="icon-book"></i>
 										</span>
-										<span class="bt">人文</span>
+										<span class="bt">游记</span>
 								</div>
 								</div>
 							</a>
@@ -170,129 +170,13 @@
 							<div class="info">
 								<div class="subtitle">
 									<a href="">
-										<p>苗族服饰</p>
+										<p>千里之行</p>
 									</a>
 								</div>
 								<div class="bottom">
 									<a href="">
 										<span class="h_position">贵州-千户苗寨</span>
 										<span class="h_renking">当前人文排名第一</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="item">
-							<a href="">
-								<div class="img">
-									<img src="images/test.jpg">
-									<div class="tag">
-										<span>
-											<i class="icon-book"></i>
-										</span>
-										<span class="bt">人文</span>
-								</div>
-								</div>
-							</a>
-							
-							<div class="info">
-								<div class="subtitle">
-									<a href="">
-										<p>千户苗寨</p>
-									</a>
-								</div>
-								<div class="bottom">
-									<a href="">
-										<span class="h_position">贵州</span>
-										<span class="h_renking">当前景点排名第一</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="item">
-							<a href="">
-								<div class="img">
-									<img src="images/test.jpg">
-									<div class="tag">
-										<span>
-											<i class="icon-book"></i>
-										</span>
-										<span class="bt">人文</span>
-								</div>
-								</div>
-							</a>
-							
-							<div class="info">
-								<div class="subtitle">
-									<a href="">
-										<p>千户苗寨</p>
-									</a>
-								</div>
-								<div class="bottom">
-									<a href="">
-										<span class="h_position">贵州</span>
-										<span class="h_renking">当前景点排名第一</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="item">
-							<a href="">
-								<div class="img">
-									<img src="images/test.jpg">
-									<div class="tag">
-										<span>
-											<i class="icon-book"></i>
-										</span>
-										<span class="bt">人文</span>
-								</div>
-								</div>
-							</a>
-							
-							<div class="info">
-								<div class="subtitle">
-									<a href="">
-										<p>千户苗寨</p>
-									</a>
-								</div>
-								<div class="bottom">
-									<a href="">
-										<span class="h_position">贵州</span>
-										<span class="h_renking">当前景点排名第一</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="item">
-							<a href="">
-								<div class="img">
-									<img src="images/test.jpg">
-									<div class="tag">
-										<span>
-											<i class="icon-book"></i>
-										</span>
-										<span class="bt">人文</span>
-								</div>
-								</div>
-							</a>
-							
-							<div class="info">
-								<div class="subtitle">
-									<a href="">
-										<p>千户苗寨</p>
-									</a>
-								</div>
-								<div class="bottom">
-									<a href="">
-										<span class="h_position">贵州</span>
-										<span class="h_renking">当前景点排名第一</span>
 									</a>
 								</div>
 							</div>
@@ -343,5 +227,6 @@
 	<script type="text/javascript" src='js/map.js'></script>
 	<script type="text/javascript" src='js/sort.js'></script>
 	<script type="text/javascript" src='js/public.js'></script>
+	<script type="text/javascript" src='js/home.js'></script>
 </body>
 </html>

@@ -125,7 +125,14 @@ $(document).ready(function () {
 
     //对去过的地区进行评价
 
-    $(".asses").click(function () {
+    // $(".asses").click(function () {
+    //     $("#scoreList").show();
+    //     $(".close").click(function () {
+    //         // $("#asses-score")[0].reset();
+    //         $("#scoreList").hide();
+    //     });
+    // });
+    $(document).on("click", ".asses", function () {
         $("#scoreList").show();
         $(".close").click(function () {
             // $("#asses-score")[0].reset();
@@ -302,7 +309,7 @@ $(document).ready(function () {
                 $("#hnum").html(data.body.tournum);
                 for (var i = 0; i < Json1.length; i++) {
                     var obj = Json1[i];
-                    $("#haveGo").append(" <li t_id="+obj.t_id+"><img src="+obj.t_cardimg+"><a href=''>" + obj.t_name + "</a><span class='footprint-score'><span class='demo'><span id=target"+obj.t_id+" class='target-demo'></span><span id=hint"+ obj.t_id +" class='hint'></span></span></span></li>");
+                    $("#haveGo").append(" <li t_id="+obj.t_id+"><img src="+obj.t_cardimg+"><a href=''>" + obj.t_name + "</a><span class='footprint-score'><span class='demo'><span id=target"+obj.t_id+" class='target-demo'></span><span id=hint"+ obj.t_id +" class='hint'></span></span></span> <div class='footprint-asses'><input class='asses' type='button' value='评价' name=''></div></li>");
                 }
                 Json1.forEach(function(obj){
                      $('#target' + obj.t_id).raty({
