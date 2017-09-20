@@ -109,7 +109,7 @@
 
 
 			<div class="addLine">
-				<span class="icon-bell">不全面？</span><span id="add">我来补充</span>
+				<span>不全面？</span><span id="add">我来补充</span>
 			</div>
 
 			<div class="theAddArea" style="display: none">				<!--补充区域-->
@@ -131,27 +131,22 @@
 					<div class="oneadd" id="oneadd1">
 					<div class="add-num">1</div>
 					<div class="add-right">
-							<input type="text" class="title-add" name="title-add" placeholder="请输入主题">
-							<hr/>
-							<div class="box addOut">
-								<div class="addImgArea">
-									<span class="addImg ">
-										<img src="images/4.jpg">
-									</span>
-									<div id="uploadposition1">
-										<button  class="layui-btn layui-btn-big" style="width: 100px;height: 10px;" id="pickfiles1" href="javascript:;">选择图片</button>
-										<button  class="layui-btn layui-btn-big" style="width: 100px;height: 10px;" id="uploadfiles1" href="javascript:;">开始上传</button>
-									</div>
+							<span>标题
+								<input type="text" class="title-add" name="title-add">
+							</span>
+							<span>介绍
+								<textarea class="info-add"></textarea>
+							</span>
+						     <span>配图
+								<div id="uploadposition1">
+									<button  class="layui-btn layui-btn-big" style="width: 150px;height: 15px;margin: 0 10px 30px 50px;float:left" id="pickfiles1" href="javascript:;">选择图片</button>
+									<button  class="layui-btn layui-btn-big" style="width: 150px;height: 15px;margin: 0 50px 30px;float:left" id="uploadfiles1" href="javascript:;">开始上传</button>
 								</div>
-								
-								<textarea class="info-add" placeholder="请输入文字介绍..."></textarea>
-							</div>
-							<div class="preimage box box-top guage"></div>
-	
+							</span>
+								<div class="preimage box box-top" style="width:100%;height:auto;margin-top:80px"></div>
 					</div>
 					</div>
 					</div>
-
 					<span class="icon-minus minus"></span>
 				</div>
 				<div class="addBottom">

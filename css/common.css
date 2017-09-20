@@ -49,7 +49,6 @@
 	text-decoration: underline;
 	cursor: pointer;
 }
-/*//*/
 .theAddArea {
 	width: 60%;
 	height: auto;
@@ -58,22 +57,16 @@
 	z-index: 1;
 	left: 20%;
 	top: 10%;
-	background-color: #f8f8f8;
-	border: 3px solid #0E6EB8;
-	border-radius: 10px;
+	background-color: #F2F2F2;
+	border: 5px solid #0E6EB8;
 }
 #close {
 	position: absolute;
 	right: 10px;
 }
-
 .addContent {
 	margin: 15px 10px;
 	flex-direction: column;
-}
-.oneadd {
-	display: flex;
-	flex-direction: row;
 }
 .add-num {
 	width: 30px;
@@ -85,15 +78,14 @@
 	border-radius: 50%;
 	color: #999999;
 	background-color: #fff;
-	border: 5px solid #4CAF50;
-	margin-top: 10px;
+	border: 5px solid #747272;
 }
 .add-right {
-	margin-left: 10px;
+	margin-left: 20px;
 	width: 85%;
 	padding: 10px 10px;
 	padding-bottom: 0;
-	/*background-color: rgba(215, 215, 215,1);*/
+	background-color: rgba(215, 215, 215,1);
 }
 .add-right span {
 	display: block;
@@ -104,67 +96,17 @@
 	padding: 5px 5px;
 	border: 1px solid rgb(169, 169, 169);
 }
-.add-right hr {
-	margin-top: 0;
-	background-color: #747474;
-}
-.addOut {
-	flex-direction: row;
-}
-.title-add {
-	padding: 5px 5px;
-	background-color: transparent;
-}
-.addImgArea {
-	position: relative;
-}
-.icon-images {
-	font-size: 200px;
-	width: 200px;
-	height: 200px;
-	color: grey;
-	position: absolute;
-	z-index: 0;
-}
-.addImg img {
-	position: absolute;
-	z-index: 0;
-	max-width: 220px;
-	min-height: 200px;
-	max-height: 200px;
-}
-#uploadposition1 {
-	position: absolute;
-	z-index: 1;
-	transform: translate(60px, 40px);
-}
-#uploadposition1 button {
+/*.add-right form span:nth-child(2) {
+	display: table-cell;
 	display: block;
-	margin: 0;
-	margin-bottom: 20px;
-	padding: 0;
-	background-color: #0E6EB8;
-	opacity: 1;
-	text-align: center; 
-	line-height: 30px;
-	font-size: 14px;
-	min-height: 30px;
-}
-.guage {
-    width: 250px;
-    transform: translate(-20px,-50px);
-    height: 50px;
-}
+	vertical-align: middle;
+}*/
 .minus {
-	/*margin-left: 5px;*/
+	
+	margin-left: 20px;
+
 	color: #fff;
-	background-color: red;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	text-align: center;
-	font-size: 20px;
-	line-height: 40px;
+	color: red;
 	
 }
 .plus {
@@ -176,12 +118,9 @@
 }
 .info-add {
 	resize: none;
-	transform: translate(230px, 0);
-	width: 65%;
-	height: 260px;
+	width: 85%;
+	height: 100px;
 	margin-left: 20px;
-	border: 1px solid #747474;
-	padding: 5px 5px;
 }
 .img-add {
 	background-color: #0E6EB8;
@@ -196,8 +135,6 @@
 	left: 45%; */
 	text-align: center;
 }
-
-/*//*/
 .empty {
 	width: 300px;
 	height: 200px;
