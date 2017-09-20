@@ -172,7 +172,7 @@
 .myResponse {
 	/* position: relative; */
 	width: 78%;
-	height: 100px;
+	/*height: 100px;*/
 	margin-bottom: 10px;
 	margin-top: 100px;
 }
@@ -181,13 +181,19 @@
 }
 .test {
 	width: 90%;
-	height: 100px;
+	height: 200px;
 	margin-left: 80px;
-	border: 1px solid black;
+	border: 1px solid #dcdcdc;
 }
 .test textarea {
 	margin: 0;
 	padding: 0;
+	height: 200px;
+	resize: none;
+}
+.myResponse button {
+	background-color: #0E6EB8;
+	margin: -1% 0 0 89%;
 }
 /*.myResponse textarea {
 	width: 90%;

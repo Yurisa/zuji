@@ -311,7 +311,7 @@ ul {
 	cursor: pointer;
 }
 .menu2 ul li a {
-			color: grey;
+	color: grey;
 }
 		
 .menu2 {
@@ -329,9 +329,14 @@ ul {
 	border: none;
 	line-height: 50px;
 	text-align: center;
-	font-size: 45px;
-	color: grey;
+	font-size: 48px;
+	color: #a5e2ff;
 	position: relative;
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+.center-i span {
+	margin-top: 2px;
+	display: inline-block;
 }
 .menu2 ul li {
 	position: absolute;
@@ -341,6 +346,7 @@ ul {
 	transform-origin: 100px 100px;
 	transition: all 0.5s 0.1s;
 	display: none;
+
 }
 .menu2 ul li a{
 	height: 45px;
@@ -348,10 +354,11 @@ ul {
 	line-height: 45px;
 	border-radius: 50%;
 	font-size: 100%;
-	background-color: #CCCCCC;
+	background-color: #ffffff;
 	border: none;
 	text-align: center;
 	position: absolute;
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
 }
 .menu2 ul li:nth-child(1) {
 	transform: rotate(35deg);
