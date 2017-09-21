@@ -138,7 +138,7 @@
 	min-height: 200px;
 	max-height: 200px;
 }
-#uploadposition1 {
+.updateposition {
 	position: absolute;
 	z-index: 1;
 	transform: translate(10%, 90%);

@@ -1,0 +1,540 @@
+[ 2017-09-21T12:53:04+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.033545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010662s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0760s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-21T12:53:04+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.033153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011029s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.1285s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+`user` WHERE ( u_id=1 ) LIMIT 1   [ RunTime:0.0667s ]
+
+[ 2017-09-21T12:53:04+08:00 ] ::1 /zuji/index.php?c=main&a=randomtouristarea
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.033296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009128s ]
+SQL: select touristarea.t_id,touristarea.t_cardimg,touristarea.t_name as name,avg(h_go.score) as value4,avg(h_go.price) as value2,avg(h_go.service) as value5,avg(h_go.environment) as value6,avg(h_go.traffic) as value3 from touristarea,h_go where touristarea.t_id = h_go.t_id group by h_go.t_id order by avg(h_go.score) desc [ RunTime:0.2970s ]
+
+[ 2017-09-21T12:53:04+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareaandvalue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034467s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010884s ]
+SQL: select touristarea.t_id,touristarea.t_name as name,avg(h_go.score) as value4,avg(h_go.price) as value2,avg(h_go.service) as value5,avg(h_go.environment) as value6,avg(h_go.traffic) as value3 from touristarea,h_go where touristarea.t_id = h_go.t_id group by h_go.t_id [ RunTime:0.2967s ]
+
+[ 2017-09-21T12:53:04+08:00 ] ::1 /zuji/index.php?c=main&a=randomarticle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+SQL: select * from article,touristarea where touristarea.t_id = article.t_id order by rand() limit 1 [ RunTime:0.1170s ]
+
+[ 2017-09-21T12:53:04+08:00 ] ::1 /zuji/index.php?c=main&a=randomculture
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+SQL: select * from menu,touristarea where touristarea.t_id = menu.t_id and menu_type='artwork' order by rand() limit 1 [ RunTime:0.1637s ]
+
+[ 2017-09-21T12:53:04+08:00 ] ::1 /zuji/index.php?c=main&a=randomdiet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+SQL: select * from menu,touristarea where touristarea.t_id = menu.t_id and menu_type='diet' order by rand() limit 1 [ RunTime:0.1620s ]
+
+[ 2017-09-21T12:53:04+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristandnation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010999s ]
+SQL: SHOW COLUMNS FROM `nation` [ RunTime:0.1370s ]
+SQL: SELECT * FROM `nation`  [ RunTime:0.1596s ]
+SQL: SHOW COLUMNS FROM `touristarea` [ RunTime:0.0261s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=1 )  [ RunTime:0.0115s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0117s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=1 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=2 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=2 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=3 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=3 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=4 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=4 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=5 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=5 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=6 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=6 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=7 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=7 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=8 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=8 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=9 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=9 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=10 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=10 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=11 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=11 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=12 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=12 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=13 )  [ RunTime:0.0004s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=13 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=14 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=14 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=15 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=15 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=16 )  [ RunTime:0.0005s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=16 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=17 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=17 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=18 )  [ RunTime:0.0002s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=18 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `touristarea` WHERE ( n_id=19 )  [ RunTime:0.0003s ]
+SQL: SELECT `score` FROM `h_go` WHERE ( t_id=19 )  [ RunTime:0.0002s ]
+
+[ 2017-09-21T12:53:07+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '4' [ RunTime:0.0857s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'custom' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'history' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'dress' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'artwork' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'building' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'diet' )  [ RunTime:0.0004s ]
+
+[ 2017-09-21T12:53:07+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0003s ]
+
+[ 2017-09-21T12:53:07+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0005s ]
+
+[ 2017-09-21T12:53:07+08:00 ] ::1 /zuji/index.php?c=main&a=getuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `user` WHERE ( u_id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-09-21T12:53:08+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000843s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '4' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'custom' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'history' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'dress' )  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'artwork' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'building' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'diet' )  [ RunTime:0.0006s ]
+
+[ 2017-09-21T12:53:16+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '4' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0192s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'custom' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'history' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'dress' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'artwork' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'building' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'diet' )  [ RunTime:0.0004s ]
+
+[ 2017-09-21T12:53:16+08:00 ] ::1 /zuji/index.php?c=main&a=gettourmenu&t_id=4&type=humanities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000965s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'custom' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'history' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'dress' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'artwork' )  [ RunTime:0.0004s ]
+
+[ 2017-09-21T12:53:16+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-21T12:53:16+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0005s ]
+
+[ 2017-09-21T12:53:16+08:00 ] ::1 /zuji/index.php?c=main&a=getuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000886s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0096s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `user` WHERE ( u_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-21T12:57:44+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000807s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '4' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0267s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'custom' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'history' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'dress' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'artwork' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'building' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'diet' )  [ RunTime:0.0006s ]
+
+[ 2017-09-21T12:57:44+08:00 ] ::1 /zuji/index.php?c=main&a=gettourmenu&t_id=4&type=humanities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001383s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'custom' )  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'history' )  [ RunTime:0.0016s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'dress' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'artwork' )  [ RunTime:0.0005s ]
+
+[ 2017-09-21T12:57:45+08:00 ] ::1 /zuji/index.php?c=main&a=getuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000992s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0257s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0145s ]
+SQL: SELECT * FROM `user` WHERE ( u_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-21T12:57:45+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000812s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002301s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0247s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-21T12:57:45+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012091s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-21T12:58:36+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000863s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '4' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0417s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'custom' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'history' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'dress' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'artwork' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'building' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'diet' )  [ RunTime:0.0004s ]
+
+[ 2017-09-21T12:58:36+08:00 ] ::1 /zuji/index.php?c=main&a=gettourmenu&t_id=4&type=humanities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'custom' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'history' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'dress' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'artwork' )  [ RunTime:0.0005s ]
+
+[ 2017-09-21T12:58:36+08:00 ] ::1 /zuji/index.php?c=main&a=getuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `user` WHERE ( u_id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-09-21T12:58:36+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000837s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000956s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-21T12:58:36+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006253s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0003s ]
+
+[ 2017-09-21T12:59:04+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '4' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'custom' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'history' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'dress' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'artwork' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'building' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'diet' )  [ RunTime:0.0004s ]
+
+[ 2017-09-21T12:59:04+08:00 ] ::1 /zuji/index.php?c=main&a=gettourmenu&t_id=4&type=humanities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'custom' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'history' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'dress' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'artwork' )  [ RunTime:0.0006s ]
+
+[ 2017-09-21T12:59:04+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000992s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0015s ]
+
+[ 2017-09-21T12:59:04+08:00 ] ::1 /zuji/index.php?c=main&a=getuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002361s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0209s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0187s ]
+SQL: SELECT * FROM `user` WHERE ( u_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-21T12:59:04+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000827s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0022s ]
+
+[ 2017-09-21T13:04:36+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001126s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '4' [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0203s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'custom' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'history' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'dress' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'artwork' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'building' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'diet' )  [ RunTime:0.0005s ]
+
+[ 2017-09-21T13:04:36+08:00 ] ::1 /zuji/index.php?c=main&a=gettourmenu&t_id=4&type=humanities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001039s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'custom' )  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'history' )  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'dress' )  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'artwork' )  [ RunTime:0.0009s ]
+
+[ 2017-09-21T13:04:36+08:00 ] ::1 /zuji/index.php?c=main&a=getuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000973s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `user` WHERE ( u_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-21T13:04:36+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0004s ]
+
+[ 2017-09-21T13:04:36+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001183s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0142s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0006s ]
+
+[ 2017-09-21T13:04:54+08:00 ] ::1 /zuji/index.php?c=main&a=gettourmenu&t_id=4&type=humanities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0142s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'custom' )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'history' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'dress' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id= 4 and menu_type = 'artwork' )  [ RunTime:0.0004s ]
+
+[ 2017-09-21T13:04:54+08:00 ] ::1 /zuji/index.php?c=main&a=gettouristareabyid&t_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000806s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+SQL: select touristarea.t_id,touristarea.t_name,touristarea.t_renwen,touristarea.t_yinshi,touristarea.t_youji,touristarea.t_jianzhu,touristarea.t_cardimg, touristarea.longitude,touristarea.latitude,nation.n_id,nation.n_name,province.p_id,province.p_name from touristarea,nation,province where touristarea.n_id = nation.n_id and province.p_id = nation.p_id and touristarea.t_id = '4' [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'custom' )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'history' )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'dress' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'artwork' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'building' )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( t_id = 4 and menu_type = 'diet' )  [ RunTime:0.0003s ]
+
+[ 2017-09-21T13:04:54+08:00 ] ::1 /zuji/index.php?c=main&a=getuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0142s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `user` WHERE ( u_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-21T13:04:54+08:00 ] ::1 /zuji/index.php?c=main&a=getw_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+SQL: SHOW COLUMNS FROM `w_go` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `w_go` WHERE ( u_id=1 )  [ RunTime:0.0006s ]
+
+[ 2017-09-21T13:04:54+08:00 ] ::1 /zuji/index.php?c=main&a=geth_gotid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001126s ]
+SQL: SHOW COLUMNS FROM `h_go` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `h_go` WHERE ( u_id=1 )  [ RunTime:0.0006s ]
+
