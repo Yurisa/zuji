@@ -22,6 +22,9 @@
 	margin-top: 20px;
 	border: 1px solid #ececec;
 }
+.theNotesItems ul li:hover {
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
 .theNotesItems ul li:nth-child(1) {
 	margin-left: 0;
 }
@@ -31,9 +34,15 @@
 }
 .note-photo {
 	width: 100%;
+	overflow: hidden;
 }
 .note-photo img {
 	width: 100%;
+	transition: all 1.2s ease;
+}
+.theNotesItems ul li:hover .note-photo img {
+	transform:scale(1.1);
+	transition: transform 1.2s;
 }
 .note-avatar {
 	border-radius: 50%;
@@ -43,8 +52,7 @@
 	background-color: #fff;
 	/*border: 5px solid #fff;*/
 	position: absolute;
-	left: 20px;
-	top: 180px;
+	transform: translate(20px,-30px);
 }
 .note-avatar img {
 	width: 100%;
@@ -53,14 +61,14 @@
 }
 .note-userName {
 	position: absolute;
-	left: 100px;
-	top: 220px;
+	transform: translate(100px,10px);
 	color: black;
 }
 .note-title {
-	width: 100%;
+	width: 80%;
+	line-height: 20px;
 	/*height: 75px;*/
-	padding: 0 20px;
+	padding-left: 20px;
 	padding-top: 45px;
 	font-weight: bold;
 }

@@ -122,6 +122,6 @@ $('.menu2 ul li').mouseover(function() {
 $('.menu2').mouseleave(function() {
 	$('.center-i span').text(' ');
 	$('.center-i span').addClass('icon-smile2');
-	$('.center-i').css('font-size','45px');
+	$('.center-i').css({'font-size':'48px','display':'inline-block', 'margin-top':'1px'});
 })
 });

@@ -137,7 +137,7 @@
 			</div>
 
 			<div class="addLine">
-				<span>不全面？</span><span id="add">我来补充</span>
+				<span class="icon-bell">不全面？</span><span id="add">我来补充</span>
 			</div>
 
 			<div class="theAddArea" style="display: none">				<!--补充区域-->
@@ -155,33 +155,38 @@
 					<span id="close">X</span>
 				</div>
 				<div class="addContent box">
+					<div class="addarea">
+					<div class="oneadd" id="oneadd1">
 					<div class="add-num">1</div>
 					<div class="add-right">
-						<form>
-							<span>标题
-								<input type="text" id="title-add" name="title-add">
-							</span>
-							<span>介绍
-								<textarea id="info-add"></textarea>
-							</span>
-							<span>配图
-								<label class="img-add" for="img-add">上传图片</label>
-								<!-- <form> -->
-								<input type="file" id="img-add" style="position:absolute;clip:rect(0 0 0 0);" accept="image/png,image/jpeg,image/gif,image/jpg">
-								<!-- </form> -->
-								<!-- <input type="file" id="img-add" name="img-add"> -->
-							</span>
-							<!-- <span>来源
-								<input type="text" id="from-add" name="from-add">
-							</span> -->
-						
+							<input type="text" class="title-add" name="title-add" placeholder="请输入主题">
+							<hr/>
+							<div class="box addOut">
+								<div class="addImgArea">
+									<span class="addImg icon-images">
+										<img src="">
+									</span>
+									<div id="uploadposition1">
+										<button  class="layui-btn layui-btn-big" style="width: 100px;height: 10px;" id="pickfiles1" href="javascript:;">选择图片</button>
+										<button  class="layui-btn layui-btn-big" style="width: 100px;height: 10px;" id="uploadfiles1" href="javascript:;">开始上传</button>
+									</div>
+								</div>
+								<div class="infoOut">
+									<textarea class="info-add" placeholder="请输入文字介绍..."></textarea>
+								</div>
+								
+							</div>
+							<div class="preimage box box-top guage"></div>
+	
 					</div>
+					</div>
+					</div>
+
 					<span class="icon-minus minus"></span>
 				</div>
 				<div class="addBottom">
 					<span class="icon-plus plus"></span>
-					<input type="submit" class="btn-primary add-btn" name="add-submit" value="确认">
-						</form>
+					<input type="button" class="btn-primary add-btn" id="addmenu" name="add-submit" value="确认">
 				</div>
 			</div>
 		</div>
@@ -234,5 +239,8 @@
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="js/public.js"></script>
 	<script type="text/javascript" src="js/food.js"></script>
+	<script type="text/javascript" src="js/plup/plupload.full.min.js"></script>
+	<script type="text/javascript" src="layui/layui.js"></script>
+	<script type="text/javascript" src="js/culture.js"></script>
 </body>
 </html>

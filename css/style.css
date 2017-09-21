@@ -70,7 +70,7 @@
 }
 .icon-spinner5-h:before {
   content: "\e97e";
-  color: red;
+  color: #FF9800;
 }
 .icon-search:before {
   content: "\e986";
@@ -80,7 +80,7 @@
 }
 .icon-gift-h:before {
   content: "\e99f";
-  color: red;
+  color: #00BCD4;
 }
 .icon-spoon-knife:before {
   content: "\e9a3";
@@ -102,7 +102,7 @@
 }
 .icon-heart-h:before {
   content: "\e9da";
-  color: red;
+  color: #e02121;
 }
 .icon-smile2:before {
   content: "\e9e2";
@@ -118,7 +118,7 @@
 }
 .icon-point-up-h:before {
   content: "\ea03";
-  color: red;
+  color: #9c27b0;
 }
 .icon-plus:before {
   content: "\ea0a";

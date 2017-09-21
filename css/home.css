@@ -57,6 +57,9 @@
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+.theItems ul li:hover {
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
 .theItems ul li:nth-child(1) {
 	margin-left: 0;
 }
@@ -70,12 +73,18 @@
 .img {
 	width: 100%;
 	position: relative;
-	height:200px;
+	overflow: hidden;
 }
 .img img {
 	max-width: 100%;
 	max-height: 200px;
 	height: auto;
+	overflow: hidden;
+	transition: all 1.2s ease;
+}
+.theItems ul li:hover img {
+	transform:scale(1.1);
+	transition: transform 1.2s;
 }
 .info {
 	width: 100%;
@@ -87,6 +96,7 @@
 	padding-left: 20px;
 	font-size: 16px;
 	font-weight: bold;
+	margin-bottom: 10px;
 }
 .tag {
 	position: absolute;
@@ -118,7 +128,7 @@
 	font-weight: bold;
 }
 .h_position {
-	width: 45%;
+	width: 100%;
 }
 .bottom .h_renking {	
     color: #cecece;
