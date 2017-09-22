@@ -48,6 +48,7 @@
     width: 100%;
     height: 560px;
     background-color: #FFFFFF;
+    position: relative;
 }
 
 .pageImage img{
@@ -59,12 +60,14 @@
     width: 200px;
     height: 30px;
     line-height: 30px;
-    position: absolute;
-    top: 350px;
-    left: 1100px;
+    position:absolute;
+    /*top: 350px;*/
+    /*left: 1100px;*/
     font-weight: bold;
     font-size: 20px;
-    color: #FFFFFF;
+    transform: translate(200%,-300%);
+    /*color: #FFFFFF;*/
+    color: #000000;
 }
 
 .nav-my{
@@ -73,13 +76,14 @@
 }
 
 .my-head-picture img{
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
     float: left;
     position: absolute;
-    left: 20%;
-    top: 50%;
+    left: 6%;
+    bottom: 5%;
+    /*transform: translate(20%,-30%);*/
     z-index: 100;
     border: 5px solid #FFFFFF;
 }
@@ -90,18 +94,26 @@
     line-height: 25px;
     font-weight: bold;
     text-align: left;
-    position: relative;
-    left: 21%;
-    top: 10%;
+    /*position: absolute;*/
+    /*left: 15%;*/
+    /*bottom: 5%;*/
+    /*left: 21%;*/
+    /*top: 10%;*/
+    /*transform: translate(0,-30%);*/
+    margin-left: 25%;
+    margin-top: 1%;
     font-size: 20px;
 }
 
 .my-part{
-    width: 500px;
+    width: 55%;
     height: 38px;
-    position: relative;
-    left: 20%;
-    top:20%;
+    /*position: absolute;*/
+    /*left: 20%;*/
+    /*top:20%;*/
+    /*bottom: -10%;*/
+    margin: 0px auto;
+    transform: translate(0,20%);
 }
 
 .my-part ul li{
@@ -124,13 +136,15 @@
 }
 
 .my-follow{
-    top:66%;
-    left: 70%;
+    /*top:66%;*/
+    /*left: 70%;*/
+    transform: translate(1000%,-100%);
 }
 
 .my-fans{
-    top:66%;
-    left: 75%;
+    transform: translate(1100%,-100%);
+    /*top:66%;*/
+    /*left: 75%;*/
 }
 
 .my-follow div,.my-fans div{
@@ -181,16 +195,17 @@
     box-shadow: 2px 2px 5px #000000;
     float: left;
     margin-bottom: 20px;
+    position: relative;
 }
 
-#my-wannaGo ul li:nth-child(odd){
-    margin-right: 60px;
+#my-wannaGo ul li:nth-child(odd),#my-footprint ul li:nth-child(odd){
+    margin-right: 8%;
 }
 
 #my-wannaGo ul li a{
     width: 25%;
     height: 220px;
-    line-height: 110px;
+    line-height: 70px;
     float: left;
     writing-mode: tb-rl;
     color: #333333;
@@ -206,9 +221,9 @@
 }
 
 #my-wannaGo ul li i{
-    position: relative;
-    top: -97%;
-    left: 49%;
+    position: absolute;
+    top: 1%;
+    right: 0%;
     font-size: 20px;
     color: #000000;
     font-weight: bold;
@@ -216,20 +231,20 @@
 }
 
 #my-footprint ul li{
-    width: 30%;
+    width: 46%;
     height: 330px;
     box-shadow: 2px 2px 5px #000000;
     float: left;
     margin-bottom: 20px;
 }
 
-#my-footprint ul li:nth-child(3n+1){
-    margin-right: 40px;
-}
+/*#my-footprint ul li:nth-child(3n+1){*/
+    /*margin-right: 5%;*/
+/*}*/
 
-#my-footprint ul li:nth-child(3n+2){
-    margin-right: 40px;
-}
+/*#my-footprint ul li:nth-child(3n+2){*/
+    /*margin-right: 5%;*/
+/*}*/
 
 #my-footprint ul li img{
     width: 100%;
@@ -286,10 +301,10 @@
 
 #scoreList{
     background-color: #FFFFFF;
-    width: 600px;
+    width: 50%;
     height: auto;
     position: absolute;
-    left: 35%;
+    left: 25%;
     /*border: 1px solid #3366FF;*/
     box-shadow: 2px 2px 5px #000000;
 }
@@ -332,12 +347,17 @@
     margin-right: 0px;
 }
 
+/*.my-note ul,.my-draft ul{*/
+    /**/
+/*}*/
+
 .my-note ul li,.my-draft ul li,#my-message ul li{
     width: 100%;
     height: 200px;
     margin-bottom: 20px;
     box-shadow: 2px 2px 5px #000000;
     float: left;
+    position: relative;
 }
 
 .my-note ul li img,.my-draft ul li img{
@@ -347,59 +367,69 @@
 }
 
 .my-note ul li a,.my-draft ul li a{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     color: #FFFFFF;
-    position: relative;
+    position: absolute;
     top: 20px;
-    left: -700px;
+    left: 5%;
     line-height: 40px;
     background-color: rgba(0,0,0,0.2);
 }
 
 .my-note ul li span,.my-draft ul li span{
-    position: relative;
-    top:-7%;
-    left: 72%;
+    position: absolute;
+    top:170px;
+    left: 30%;
     font-size: 16px;
-    opacity: 0.5;
+    /*opacity: 0.5;*/
     color: #FFFFFF;
     width: 250px;
     text-align: center;
-    background-color: #999999;
+    background-color:rgba(0,0,0,0.2);
     display: inline-block;
     /* float: left; */
 }
 
 .my-note ul li input,.my-draft ul li input{
-    float: left;
+    float: right;
     width: 80px;
     height: 30px;
     line-height: 30px;
     background-color: #ffffff;
     border: 0px;
-    position: relative;
-    left: 54%;
-    top: -55%;
+    position: absolute;
+    right: 4%;
+    top:80px;
     color: #3366FF;
+    font-weight: bold;
+}
+
+.my-draft ul li input:nth-of-type(1){
+    top:70px;
+}
+
+.my-draft ul li input:nth-of-type(2){
+    top:100px;
 }
 
 
 .my-collection ul li{
-    width: 80%;
-    height: 400px;
+    width: 100%;
+    height: 300px;
     box-shadow: 2px 2px 5px #000000;
     float: left;
     margin-bottom: 20px;
+    position: relative;
 }
 
-.my-collection ul li:nth-child(odd){
-    margin-right: 60px;
-}
+/*.my-collection ul li:nth-child(odd){*/
+    /*margin-right: 8%;*/
+/*}*/
 
 .my-collection ul li img:nth-of-type(1){
     width:100%;
-    height: 280px;
+    height: 180px;
 }
 
 .my-collection ul li img:nth-of-type(2){
@@ -407,9 +437,9 @@
     height: 80px;
     border-radius: 100%;
     float: left;
-    position:relative;
+    position:absolute;
     left: 20px;
-    top: -30px;
+    top: 150px;
     z-index: 100;
     border: 5px solid #FFFFFF;
 }
@@ -418,9 +448,9 @@
     height: 30px;
     line-height: 30px;
     color: #000000;
-    position:relative;
-    left: 50px;
-    font-size: 20px;
+    position:absolute;
+    left: 150px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -429,9 +459,10 @@
     line-height: 30px;
     color: #000000;
     position:relative;
-    left: 10px;
-    top:25px;
     font-size: 16px;
+    float: right;
+    right: 50px;
+    top:30px;
 }
 
 .my-collection ul li p{
@@ -439,13 +470,15 @@
     line-height: 30px;
     color: #000000;
     position:relative;
-    top: 20px;
+    bottom: -60px;
+    left: 15%;
+    width: 85%;
 }
 
 .my-collection ul li i{
-    position: relative;
-    top: -266px;
-    left: 17%;
+    position: absolute;
+    top: 2%;
+    right: 0%;
     font-size: 25px;
     color: #000000;
     font-weight: bold;
@@ -517,7 +550,7 @@
 }
 
 #my-data .layui-textarea{
-    width: 600px;
+    width: 100%;
 }
 
 #my-head img{
@@ -525,34 +558,35 @@
     height: 150px;
     border-radius: 100%;
     position: relative;
-    left: 40%;
+    left: 30%;
     margin-bottom: 20px;
 }
 
 #my-head button{
     position: relative;
-    left: 45%;
+    left: 40%;
 }
 
 #my-follow ul li,#my-fans ul li{
-    width: 22%;
+    width: 30%;
     height: 250px;
     box-shadow: 2px 2px 5px #000000;
     float: left;
     margin-bottom: 20px;
+    position: relative;
 }
 
-#my-follow ul li:nth-child(4n+1),#my-fans ul li:nth-child(4n+1){
-    margin-right: 40px;
+#my-follow ul li:nth-child(3n+1),#my-fans ul li:nth-child(3n+1){
+    margin-right: 5%;
 }
 
-#my-follow ul li:nth-child(4n+2),#my-fans ul li:nth-child(4n+2){
-    margin-right: 40px;
+#my-follow ul li:nth-child(3n+2),#my-fans ul li:nth-child(3n+2){
+    margin-right: 5%;
 }
 
-#my-follow ul li:nth-child(4n+3),#my-fans ul li:nth-child(4n+3){
-    margin-right: 40px;
-}
+/*#my-follow ul li:nth-child(4n+3),#my-fans ul li:nth-child(4n+3){*/
+    /*margin-right: 40px;*/
+/*}*/
 
 
 
@@ -562,12 +596,12 @@
 }
 
 #my-follow ul li img:nth-of-type(2),#my-fans ul li img:nth-of-type(2){
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     float: left;
     position:relative;
-    left: 20px;
+    left: 30%;
     top: -25px;
     z-index: 100;
     border: 6px solid #FFFFFF;
@@ -577,10 +611,15 @@
     height: 30px;
     line-height: 30px;
     color: #000000;
-    position:relative;
-    left: 20%;
-    font-size: 20px;
+    position:absolute;
+    /*left: 32%;*/
+    bottom: 10px;
+    left: 0%;
+    font-size: 16px;
     font-weight: bold;
+    width: 100%;
+    text-align: center;
+    float: left;
 }
 
 .number{

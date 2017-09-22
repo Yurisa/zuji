@@ -2,6 +2,21 @@
     width:100%;
 }
 
+.Img p{
+    position: absolute;
+    color: #ffffff;
+    font-family: fantasy;
+    font-size:xx-large;
+    left:51%;
+    top: 11%;
+}
+
+.logo-b{
+    position: absolute;
+    left:41%;
+    top: 10%;
+    height: 100px;
+}
 
 .registeform{
     background-color:#F7EDFF;
@@ -13,9 +28,9 @@
     /*margin-top:2%;
     margin-right:18%;*/
     position: absolute;
-    left: 50%;
-    margin-left:-155px;
-    margin-top: 180px;
+    left: 35%;
+    /*margin-left:-155px;*/
+    margin-top: 50px;
     /*text-align:center;
     margin:auto;*/
 }
@@ -50,3 +65,35 @@
 .inputbox{margin-top:20px;}
 
 input::-webkit-input-placeholder{text-align: center;}
+
+.form-control {
+    border-radius:6px;
+    width:220px;
+    height:25px;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+    display: block;
+    /*width: 100%;*/
+    /*height: 34px;*/
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    /*border-radius: 4px;*/
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.verification{
+    float: right;
+    height: 40px;
+    width: 70px;
+    margin-top: -60px;
+    margin-right: 30px;
+}
