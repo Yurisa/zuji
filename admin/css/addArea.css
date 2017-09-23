@@ -10,7 +10,7 @@
 #sign div:nth-child(1){
     border-top: 5px solid #3366FF;
     height: 50px;
-    width: 250px;
+    width: 20%;
     line-height: 50px;
     text-align: center;
     font-size: 1.5em;
@@ -21,13 +21,13 @@
 #sign div:nth-child(n+2){
     border-top: 5px solid #3366FF;
     height: 50px;
-    width: 100px;
+    width: 15%;
     line-height: 50px;
     text-align: center;
     font-size: 1.2em;
     font-weight: bold;
     float: left;
-    margin-left: 50px;
+    margin-left: 5%;
 }
 
 #sign div:nth-child(n+3){
@@ -84,11 +84,11 @@
     float: left;
 }
 
-.layui-colla-item button{
+.madd{
     float: left;
     position: relative;
     top: -36px;
-    left: 95%;
+    left: 94%;
 }
 
 .layui-colla-item .layui-btn-group button{
@@ -129,3 +129,18 @@
     /*margin-bottom: 5px;*/
     /*margin-left: 0px;*/
 /*}*/
+
+.buts .layui-btn{
+    width: 30%;
+    padding: 0px;
+}
+
+td .layui-btn-group{
+    width: 100%;
+}
+
+td .layui-btn-group .layui-btn{
+    width: 50%;
+    padding: 0px;
+    margin: 0px;
+}

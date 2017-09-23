@@ -6,7 +6,7 @@
 }
 
 .search{
-    width: 60%;
+    width: 50%;
     margin: 0px auto;
     height: 200px;
 }
@@ -55,22 +55,24 @@
     border:2px solid #dddddd;
     height: 38px;
     line-height: 38px;
-    width:400px;
+    width:80%;
     font-size: large;
     /*border-radius:6px;*/
     margin-top: 100px;
-    margin-left: 80px;
+    /*margin-left: 80px;*/
+    float: left;
 }
 
 .searchButton{
     height:40px;
     line-height: 40px;
-    width:99px;
+    width:15%;
     background-color:#3366FF;
     /*border-radius:6px;*/
     color:#fee;
     font-size:20px;
-    margin-left: 50px;
+    margin-left: 3%;
+    float: left;
     margin-top: 100px;
 }
 
@@ -96,11 +98,11 @@
 }
 
 #area ul li:nth-child(3n+1){
-    margin-right: 40px;
+    margin-right: 5%;
 }
 
 #area ul li:nth-child(3n+2){
-    margin-right: 40px;
+    margin-right: 5%;
 }
 
 #area ul li img{
@@ -135,7 +137,7 @@
 }
 
 #humanity ul li a,#diet ul li a,#building ul li a{
-    width: 60%;
+    width: 50%;
     height: 100px;
     line-height: 100px;
     float: left;
@@ -143,16 +145,22 @@
     font-size: 18px;
     font-weight: bold;
     text-align: left;
+    margin-left: 5%;
 }
 
 #humanity ul li span,#diet ul li span,#building ul li span{
-    width: 60%;
+    width: 50%;
     height: 150px;
     line-height: 150px;
     float: left;
     color: #333333;
     font-size: 16px;
     text-align: left;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-break:keep-all;
+    margin-left: 5%;
 }
 
 #travels ul li a:nth-of-type(1){
@@ -173,23 +181,28 @@
     line-height: 100px;
     float: left;
     color: #333333;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
+    /*font-weight: bold;*/
     text-align: left;
 }
 
 #travels .partial-content{
-    width: 60%;
+    width: 50%;
     height: 100px;
     line-height: 100px;
     float: left;
     color: #333333;
     font-size: 16px;
     text-align: left;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-break:keep-all;
+    margin-left: 5%;
 }
 
 .note-bottom{
-    width: 20%;
+    width: 30%;
     height: 50px;
     line-height: 50px;
     float: right;
@@ -199,6 +212,7 @@
 }
 
 #travels ul li .note-bottom .icon-s{
-    float: left;
-    width: 100px;
+    /*float: left;*/
+    width: 45%;
+    margin-right: 5%;
 }

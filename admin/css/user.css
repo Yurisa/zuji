@@ -12,3 +12,13 @@
 .list div:nth-child(2){
     cursor: pointer;
 }
+
+.list .layui-btn-group{
+    width: 28%;
+}
+
+.list .layui-btn-group .layui-btn{
+    width: 30%;
+    padding: 0px;
+    text-align: center;
+}

@@ -6,7 +6,7 @@
 #sign div{
     border-top: 5px solid #3366FF;
     height: 50px;
-    width: 250px;
+    width: 20%;
     line-height: 50px;
     text-align: center;
     font-size: 1.5em;
@@ -18,7 +18,7 @@
 #sign input{
     border: 2px solid #000000;
     height: 50px;
-    width: 400px;
+    width: 30%;
     line-height: 50px;
     text-align: center;
     float: left;
@@ -40,6 +40,7 @@
     width: 100%;
     min-height: 492px;
     background-color: #666666;
+    position: relative;
 }
 
 #mark{
@@ -67,8 +68,9 @@
     float: right;
     position: absolute;
     color: #FFFFFF;
-    top: 14%;
+    top: 0px;
     right: 1%;
+    /*bottom: 1%;*/
 }
 
 .layui-form-item{

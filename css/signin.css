@@ -21,16 +21,18 @@
 .registeform{
     background-color:#F7EDFF;
     border-radius:10px;
-    float:right;
+    /*float:right;*/
     width:310px;
     height:auto;
-    top:50px;
+    /*top:50px;*/
+    /*margin: 0px auto;*/
     /*margin-top:2%;
     margin-right:18%;*/
     position: absolute;
     left: 35%;
     /*margin-left:-155px;*/
-    margin-top: 50px;
+    top: 100px;
+    /*transform: translate(0%,-500px);*/
     /*text-align:center;
     margin:auto;*/
 }

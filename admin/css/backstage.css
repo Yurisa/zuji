@@ -29,7 +29,7 @@ body{
     /*border: 2px solid #999999;*/
     float: left;
     margin-top: 50px;
-    margin-left: 80px;
+    margin-left: 6%;
     box-shadow:  5px 5px 5px #999999;
     font-size: 1.2em;
     font-weight: bold;
@@ -67,9 +67,17 @@ body{
     /*margin-left: 80px;*/
 /*}*/
 
-#hotTopic div:nth-child(1){
+
+#hotTopic{
+    width: 80%;
+    min-height: 300px;
+    margin: 0px auto;
+}
+
+#hotDetail{
     font-weight: bold;
     font-size: 1.5em;
+    text-align: center;
 }
 
 /*#weekView,#monthView,#yearView{*/
@@ -82,12 +90,6 @@ body{
     /*margin-top: 10px;*/
     /*color: #FFFFFF;*/
 /*}*/
-
-#hotTopic{
-    width: 80%;
-    min-height: 300px;
-    margin: 0px auto;
-}
 
 /*#hotArea,#hotTravelNote{*/
     /*width: 100%;*/

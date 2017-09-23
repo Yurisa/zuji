@@ -40,9 +40,10 @@
 
 .layui-progress{
     width: 250px;
+    float: right;
     position: relative;
     top:15px;
-    left: 30%;
+    right: 20%;
 }
 
 .title{
@@ -54,27 +55,35 @@
 }
 
 .layui-input-block{
-    width: 200px;
+    width: 60%;
 }
 
 .select{
     width: 30%;
 }
 
+/*.search-input{*/
+    /*width: 100px;*/
+/*}*/
+
 .s-nation{
     position: absolute;
     top: 62px;
-    left: 320px;
+    left: 33%;
     float: left;
 }
 
 .s-area{
     position: absolute;
     top: 62px;
-    left: 640px;
+    left: 66%;
     float: left;
 }
 
 select{
     z-index: 19999;
 }
+
+/*.area-input{*/
+    /*width: 150px;*/
+/*}*/

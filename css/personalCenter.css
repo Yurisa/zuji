@@ -130,21 +130,24 @@
     width: 55px;
     height: 60px;
     position: absolute;
-    float: left;
+    float: right;
     text-align: center;
     margin-left: 20px;
 }
 
 .my-follow{
     /*top:66%;*/
-    /*left: 70%;*/
-    transform: translate(1000%,-100%);
+    right: 100px;
+    bottom: 20px;
+    /*transform: translate(1000%,-100%);*/
 }
 
 .my-fans{
-    transform: translate(1100%,-100%);
+    /*transform: translate(1100%,-100%);*/
     /*top:66%;*/
     /*left: 75%;*/
+    right: 50px;
+    bottom: 20px;
 }
 
 .my-follow div,.my-fans div{
@@ -529,10 +532,10 @@
 #my-message ul li input{
     background-color: #FFFFFF;
     color: #3366FF;
-    float: left;
+    float: right;
     position: relative;
     top: 150px;
-    left: 400px;
+    right:20px;
     margin-left: 10px;
 }
 
@@ -601,7 +604,7 @@
     border-radius: 100%;
     float: left;
     position:relative;
-    left: 30%;
+    left: 10%;
     top: -25px;
     z-index: 100;
     border: 6px solid #FFFFFF;
