@@ -128,6 +128,26 @@
 	position: absolute;
 	z-index: 0;
 }
+@media screen and (max-width: 1445px) {
+   .icon-images {
+		font-size: 180px;
+	}
+}
+@media screen and (max-width: 1280px) {
+   .icon-images {
+		font-size: 160px;
+	}
+}
+@media screen and (max-width: 1120px) {
+   .icon-images {
+		font-size: 140px;
+	}
+}
+@media screen and (max-width: 990px) {
+   .icon-images {
+		font-size: 120px;
+	}
+}
 .addImg {
 	width: 100%;
 }
