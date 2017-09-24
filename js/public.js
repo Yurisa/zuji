@@ -125,3 +125,44 @@ $('.menu2').mouseleave(function() {
 	$('.center-i').css({'font-size':'48px','display':'inline-block', 'margin-top':'1px'});
 })
 });
+// 登录注册框
+// $('.top-name').click(function() {
+// 	$('.SignIn').toggle();
+// });
+$('.goSignUp').click(function() {
+	$('.SignIn').hide();
+	$('.SignUp').show();
+});
+$('.goSignIn').click(function() {
+	$('.SignIn').show();
+	$('.SignUp').hide();
+});
+
+$(function() {   
+    $('.top-name').click(function(e) {
+    	if($('.SignIn').is(':hidden')) {
+          	$('.SignIn').fadeIn();
+            e ? e.stopPropagation() : event.cancelBubble = true;
+        }
+    });
+    $('.SignIn').click(function(e) {
+         e ? e.stopPropagation() : event.cancelBubble = true;
+    });
+    $(document).click(function() {
+        $('.SignIn').fadeOut();
+    });
+})
+$(function() {   
+    $('.top-name').click(function(e) {
+    	if($('.SignUp').is(':hidden')) {
+          	$('.SignUp').fadeIn();
+            e ? e.stopPropagation() : event.cancelBubble = true;
+        }
+    });
+    $('.SignUp').click(function(e) {
+         e ? e.stopPropagation() : event.cancelBubble = true;
+    });
+    $(document).click(function() {
+        $('.SignUp').fadeOut();
+    });
+})
