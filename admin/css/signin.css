@@ -1,0 +1,82 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    display: -webkit-flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.system-name{
+    position: absolute;
+    /*left: 50%;*/
+    top: 15%;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.registeform{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color:#F7EDFF;
+    border-radius:4px;
+    width: 360px;
+    height:auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -180px;
+    top: 22%;
+}
+/*@media screen and (max-width: 1015px) {*/
+    /*.registeform {*/
+        /*top: 20%;*/
+    /*}*/
+/*}*/
+
+.signUpButton{
+    height:40px;
+    width:320px;
+    background-color:#1182D4;
+    border:0;
+    border-radius:4px;
+    color:#fee;
+    font-size:16px;
+    margin-bottom:20px;
+    margin-left: 20px;
+}
+
+.inputbox{margin-top:20px;}
+
+input::-webkit-input-placeholder{text-align: center;}
+
+.form-control {
+    border-radius:4px;
+    width:300px;
+    height:25px;
+    margin:auto;
+    margin-top:10px;
+    margin-bottom:10px;
+    display: block;
+    /*width: 100%;*/
+    /*height: 34px;*/
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    /*border-radius: 4px;*/
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
