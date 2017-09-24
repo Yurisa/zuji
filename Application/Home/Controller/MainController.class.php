@@ -1271,4 +1271,25 @@ class MainController extends CommonController {
         $this->json(1,'ok',$res);
       }
 
+      public function getallnation(){
+        $nation = M('nation')->select();
+        $curr = $_GET['page'];
+        $pagesize = 4;
+        $currnum = ($curr-1)*$pagesize;
+        $nationnum = count($nation);
+        $arr = array();
+        $nation = array_slice($nation,$currnum,$pagesize);
+        foreach ($nation as $key => $value) {
+          $data['nation_id'] = $value['n_id'];
+          $data['nation_name'] = $value['n_name'];
+          $data['color'] = $value['color'];
+          $data['touristarealist'] = M('touristarea')->where('n_id='.$value['n_id'])->select();
+          array_push($arr,$data); 
+        }
+        $res['nationlist'] = $arr;
+        $res['totalnum'] = intval(($nationnum+$pagesize-1)/$pagesize);
+        // print_r($res);
+        $this->json(1,'ok',$res);
+      }
+
 }

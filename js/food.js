@@ -63,8 +63,8 @@ $(document).ready(function () {
         for(var i=0;i<$(".right-name").children().length;i++){
             var left = Math.ceil(Math.random() * 9);//产生随机数0-9之间的整数
             var right = Math.ceil(Math.random() * 5);//产生随机数0-5之间的整数
-            $(".right-name").children().eq(i).css("margin-left", "50" * left);
-            $(".right-name").children().eq(i).css("margin-right", "50" * right);
+            $(".right-name").children().eq(i).css("margin-left", "30" * left);
+            // $(".right-name").children().eq(i).css("margin-right", "50" * right);
         }
         var data = menu.concat(menu);//c=[1,2,3,4,5,6]
         console.log(data);

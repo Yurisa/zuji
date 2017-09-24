@@ -169,7 +169,7 @@ function createUploader(itemnum){
         runtimes : 'html5,flash,silverlight,html4',
         browse_button : 'pickfiles'+itemnum, // you can pass an id...
         // container: document.getElementById('uploadposition'+itemnum), // ... or DOM Element itself
-        url : 'index.php?c=index&a=uploadImg&width=800',
+        url : 'index.php?c=index&a=uploadImglittlewater&width=800',
         flash_swf_url : 'js/plup/Moxie.swf',
         silverlight_xap_url : 'js/plup/Moxie.xap',
     

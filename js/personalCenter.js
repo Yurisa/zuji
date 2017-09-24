@@ -156,7 +156,7 @@ $(document).ready(function () {
         starHalf: 'star-half.png',
         starOff: 'star-off.png',
         starOn: 'star-on.png',
-        target: '#hint1',
+        target: '.hint1',
         cancel: false,
         targetKeep: true,
         precision:true, //是否包含小数
@@ -175,7 +175,7 @@ $(document).ready(function () {
         starHalf: 'star-half.png',
         starOff: 'star-off.png',
         starOn: 'star-on.png',
-        target: '#hint2',
+        target: '.hint2',
         cancel: false,
         targetKeep: true,
         precision:true, //是否包含小数
@@ -194,7 +194,7 @@ $(document).ready(function () {
         starHalf: 'star-half.png',
         starOff: 'star-off.png',
         starOn: 'star-on.png',
-        target: '#hint3',
+        target: '.hint3',
         cancel: false,
         targetKeep: true,
         precision:true, //是否包含小数
@@ -213,7 +213,7 @@ $(document).ready(function () {
         starHalf: 'star-half.png',
         starOff: 'star-off.png',
         starOn: 'star-on.png',
-        target: '#hint4',
+        target: '.hint4',
         cancel: false,
         targetKeep: true,
         precision:true, //是否包含小数
