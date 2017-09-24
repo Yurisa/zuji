@@ -3,7 +3,10 @@ a {
 	color: black;
 }
 .container {
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 .nav-items ul li:nth-child(1) {
 	color: black;
@@ -14,6 +17,7 @@ a {
 .slider {
 	width: 100%;
 	position: relative;
+	overflow: hidden;
 }
 .theMenuArea {
 	width: 12000px;
@@ -25,12 +29,18 @@ a {
 	left: 0;
 	top: 0;
 	overflow: hidden;
+	-webkit-transition: left 2s;
 	transition: left 2s;
 }
 .theMenuArea ul li {	
 	float: left;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
 }
 
 .left_pic {
