@@ -60,16 +60,16 @@
     float: left;
     color: #FFFFFF;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #content form{
-    width: 150px;
+    width: 122px;
     float: right;
     position: absolute;
     color: #FFFFFF;
     top: 0px;
-    right: 1%;
+    right: 0%;
     /*bottom: 1%;*/
 }
 
@@ -79,6 +79,14 @@
 
 .layui-form-item input{
     float: left;
+}
+/*.layui-form-radio{*/
+    /*margin: 0px;*/
+/*}*/
+
+.layui-form-radio span {
+    font-size: 12px;
+    padding: 0px;
 }
 
 #items{
@@ -102,6 +110,9 @@
     text-align: center;
     float: left;
     font-size: 0.9em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .new{
