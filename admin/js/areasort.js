@@ -6,7 +6,7 @@ var data = [];
 var thismonthsum = 0;
 var lastmonthsum = 0;
 var lastmothpersonnum = [];
-$.get("../index.php?c=main&a=getthismonthpersonnum",res=>{
+$.get("../index.php?c=Main&a=getthismonthpersonnum",res=>{
     month.push(res.body.thismonth+"月");
     let tour = res.body.touristarea;
     var personnum = [];
@@ -29,7 +29,7 @@ $.get("../index.php?c=main&a=getthismonthpersonnum",res=>{
     data.push(tmp);
     
 },"json").then(()=>{
-   $.get("../index.php?c=main&a=getlastmonthpersonnum",res=>{
+   $.get("../index.php?c=Main&a=getlastmonthpersonnum",res=>{
         month.push(res.body.thismonth+"月");
         let tour = res.body.touristarea;
         for(let t of tour){

@@ -1,6 +1,6 @@
 $(document).ready(function (curr) {
     function shownation(curr){
-       $.get("../index.php?c=main&a=getallnation",{"page":curr||1},res=>{
+       $.get("../index.php?c=Main&a=getallnation",{"page":curr||1},res=>{
          console.log(res);
          $("#items").html("");
          let nation = res.body.nationlist;

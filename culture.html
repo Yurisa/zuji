@@ -247,76 +247,6 @@
 				</ul>
 			<!-- </div> -->
 		</div>
-		<!-- 登陆 -->
-		<div class="registeform SignIn" style="display: none;">
-				<form>
-					<input id="userName" class="form-control"
-						   data-val="true"
-						   data-val-required="请输入账号"
-						   name="userName"
-						   placeholder="输入用户名">
-					<input id="password" class="form-control"
-						   data-val="true"
-						   data-val-required="缺少密码"
-						   name="password"
-						   type="password"
-						   placeholder="输入密码">
-					<input id="identifyCode" class="form-control"
-						   name="identifyCode"
-						   placeholder="输入验证码"
-						   style="width: 200px;margin-left: 17px">
-					<img src="index.php?c=reg&a=Verify" onClick="src='index.php?c=reg&a=Verify&s='+Math.random();" class="verification">
-					<div>
-						<div style="width: 100%; height: 30px;" >
-							<input type="checkbox" id="check1" name="check1">
-							<label for="check1">同意会员条款和免责条例</label>
-						</div>
-						<input class="signUpButton"  type="button" value="登陆">
-						<p id="para2">
-							还没有族迹账号？
-							<a href="#" class="goSignUp" style="color: #0094ff;">
-								点击注册
-							</a>
-						</p>
-					</div>
-				</form>
-			</div>
-	
-			<!-- 注册 -->
-			<div class="registeform SignUp" style="display: none;">
-				<form>
-					<input class="form-control"
-						   name="userName"
-						   placeholder="输入用户名"
-						   style="">
-					<input class="form-control"
-						   name="password"
-						   placeholder="输入8-16位密码"
-						   type="password">
-					<input class="form-control"
-						   name="password"
-						   placeholder="请确认密码"
-						   type="password">
-					<input class="form-control"
-						   name="identifyCode"
-						   placeholder="输入验证码"
-						   style="width: 200px;margin-left: 17px">
-					<img src="images/identify.jpg" class="verification">
-					<div>
-						<div style="width: 100%; height: 30px;" >
-								<input type="checkbox" id="check1" name="check1">
-								<label for="check1">同意会员条款和免责条例</label>
-						</div>
-						<input class="signUpButton" type="submit" value="注册" onclick="checkSignUp()">
-						<p id="para2">
-							已有族迹账号？
-							<a href="#" class="goSignIn" style="color: #0094ff">
-								点击登录
-							</a>
-						</p>
-					</div>
-				</form>
-			</div>
 			<!-- 登陆 -->
 		<div class="registeform SignIn" style="display: none;">
 				<form>
@@ -335,7 +265,7 @@
 						   name="identifyCode"
 						   placeholder="输入验证码"
 						   style="width: 200px;margin-left: 17px">
-					<img src="index.php?c=reg&a=Verify" onClick="src='index.php?c=reg&a=Verify&s='+Math.random();" class="verification">
+					<img src="index.php?c=Reg&a=Verify" onClick="src='index.php?c=Reg&a=Verify&s='+Math.random();" class="verification">
 					<div>
 						<div style="width: 100%; height: 30px;" >
 							<input type="checkbox" id="check1" name="check1">

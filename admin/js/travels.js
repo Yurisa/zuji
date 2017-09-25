@@ -1,6 +1,6 @@
 $(document).ready(function(){
     function getarticlelist(curr){
-        $.get('../index.php?c=main&a=getarticlebylist',{"page":curr},res=>{
+        $.get('../index.php?c=Main&a=getarticlebylist',{"page":curr},res=>{
           let articlelist = res.body.article;
           $("#items").html("");
           for(let a of articlelist){

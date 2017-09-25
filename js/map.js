@@ -2,7 +2,7 @@ $(function(){
     var message = [];
     var nationnamelist = [];
     // var onearea = {};
-    $.get('index.php?c=main&a=gettouristandnation',res=>{
+    $.get('index.php?c=Main&a=gettouristandnation',res=>{
        console.log(res);
        let area = res.body;
        for(let item of area){

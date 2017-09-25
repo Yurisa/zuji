@@ -51,7 +51,7 @@ $(document).ready(function () {
      });
     }
     function getarea(nationname,curr){
-        $.get('index.php?c=main&a=searchtouristarea',{"nationname":nationname,"page":curr||1},res=>{
+        $.get('index.php?c=Main&a=searchtouristarea',{"nationname":nationname,"page":curr||1},res=>{
             let tour = res.body.touristarea;
             $("#area ul").html("");
             for(let t of tour){
@@ -73,7 +73,7 @@ $(document).ready(function () {
 
 
     function getmenu(type,keyword,curr){
-        $.get('index.php?c=main&a=searchmenu',{"type":type,"keyword":keyword,"page":curr||1},res=>{
+        $.get('index.php?c=Main&a=searchmenu',{"type":type,"keyword":keyword,"page":curr||1},res=>{
             let menu = res.body.menu;
             if(type == 'humanities'){
                 $("#humanity ul").html("");
@@ -129,7 +129,7 @@ $(document).ready(function () {
     }
 
     function getarticle(keyword,curr){
-        $.get('index.php?c=main&a=searcharticle',{"keyword":keyword,"page":curr||1},res=>{
+        $.get('index.php?c=Main&a=searcharticle',{"keyword":keyword,"page":curr||1},res=>{
             let article = res.body.article;
             $("#travels ul").html("");
             for(let a of article){

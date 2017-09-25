@@ -115,5 +115,5 @@ option = {
  // myChart.on("click", eConsole);  
  myChart.on("click", function (param){ 
 alert(param.dataIndex+':'+option.series[0].data[param.dataIndex].name);
-window.location.href="https://localhost/zuji/index.php?c=main&a=showtouristarea&t_id="+option.series[0].data[param.dataIndex].value[2];
+window.location.href="https://localhost/zuji/index.php?c=Main&a=showtouristarea&t_id="+option.series[0].data[param.dataIndex].value[2];
 });

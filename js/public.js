@@ -13,7 +13,7 @@ $(document).ready(function () {
 
 
 function showuserdata(){
-    $.get("index.php?c=main&a=getuser",res=>{
+    $.get("index.php?c=Main&a=getuser",res=>{
 		console.log(res)
 		if(res.code==1){
 			var user = res.body.user;
@@ -40,11 +40,11 @@ $(".webfont").eq(0).click(function(){
 		// console.log($(this).attr("class"))
 		if($(this).attr("class") === "webfont icon-gift-h"){
 			// console.log("111")
-			$.get("index.php?c=main&a=addw_go",{"t_id":t_id},res=>{
+			$.get("index.php?c=Main&a=addw_go",{"t_id":t_id},res=>{
 			  console.log(res)
 			});
 		}else{
-			$.get("index.php?c=main&a=removew_gotourist",{"t_id":t_id},res=>{
+			$.get("index.php?c=Main&a=removew_gotourist",{"t_id":t_id},res=>{
 				console.log(res);
 			})
 		}
@@ -63,11 +63,11 @@ $(".webfont").eq(1).click(function(){
 		$(this).toggleClass('icon-spinner5');
 		$(this).toggleClass('icon-spinner5-h');
 		if($(this).attr("class") === "webfont icon-spinner5-h"){
-			$.get("index.php?c=main&a=addh_go",{"t_id":t_id},res=>{
+			$.get("index.php?c=Main&a=addh_go",{"t_id":t_id},res=>{
 			  console.log(res)
 			});
 		}else{
-			$.get("index.php?c=main&a=removeh_gotourist",{"t_id":t_id},res=>{
+			$.get("index.php?c=Main&a=removeh_gotourist",{"t_id":t_id},res=>{
 				console.log(res);
 			})
 		}
@@ -185,7 +185,7 @@ function checkSignIn(){
 		"password":$("#password").val(),
 		"identifyCode":$("#identifyCode").val()
 	}
-	$.post('index.php?c=reg&a=loginUser',data,res=>{
+	$.post('index.php?c=Reg&a=loginUser',data,res=>{
 	 console.log(res);
 	 if(res.code == 0){
 		layui.use('layer', function(){
@@ -207,6 +207,12 @@ function checkSignIn(){
 	 
 	},"json");
 }
+});
+
+$(".loginout a").click(function(){
+    $.get("index.php?c=Reg&a=loginOut",res=>{
+		history.go(0); 
+	});
 });
 
 

@@ -14,7 +14,7 @@ $(document).ready(function () {
      * 分页展示所有景区 
      */
     function gettouristarea(curr){
-       $.get("../index.php?c=main&a=getalltouristarea",{"page":curr||1},res=>{
+       $.get("../index.php?c=Main&a=getalltouristarea",{"page":curr||1},res=>{
            console.log(res)
             let tourlist = res.body.touristarea;
             $("#items").html("");
@@ -45,7 +45,7 @@ $(document).ready(function () {
             }
           });  });
     function gettouristareabyarticlenum(curr){
-        $.get("../index.php?c=main&a=getalltouristareabyarticlenum",{"page":curr||1},res=>{
+        $.get("../index.php?c=Main&a=getalltouristareabyarticlenum",{"page":curr||1},res=>{
             console.log(res)
              let tourlist = res.body.touristarea;
              $("#items").html("");

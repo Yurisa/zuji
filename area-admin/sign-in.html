@@ -20,19 +20,19 @@
 
 	<div class="registeform">
 		<form>
-			<input class="form-control"
+			<input id="adminName" class="form-control"
 				   data-val="true"
 				   data-val-required="请输入账号"
-				   name="userName"
+				   name="adminName"
 				   placeholder="输入账号">
-			<input class="form-control"
+			<input id="password" class="form-control"
 				   data-val="true"
 				   data-val-required="缺少密码"
 				   name="password"
 				   type="password"
 				   placeholder="输入密码">
 			<div>
-				<input class="signUpButton"  type="submit" value="登陆">
+				<input class="signUpButton"  type="button" value="登陆">
 				<!--<p id="para2">-->
 				<!--还没有族迹账号？-->
 				<!--<a href="sign-up.html" style="color: #0094ff;">-->
@@ -44,7 +44,9 @@
 	</div>
 
 </div>
-<!--<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>-->
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="layui/layui.all.js"></script>
+<script type="text/javascript" src="js/sign-in.js"></script>
 <!--<script type="text/javascript" src="js/public.js"></script>-->
 </body>
 </html>

@@ -5,7 +5,7 @@ var currentitemindex = 0;
 //$(".one-add1").append($("<span class='filename' style='margin-left:44px;margin-right:30px;'>"+file.name+"</span><div class='layui-progress layui-progress-big' lay-showPercent='yes' style='display:inline-block;width:30%;margin-top:-18px'><div class='layui-progress-bar layui-bg-green progressbar' lay-percent='0%'></div></div><script>layui.use('element', function(){var element = layui.element;});</script>"));
 // console.log(t_id)
 // console.log(type);
-$.get('index.php?c=main&a=gettouristareabyid',{"t_id":t_id},res=>{
+$.get('index.php?c=Main&a=gettouristareabyid',{"t_id":t_id},res=>{
      console.log(res)
     let tour = res.body.touristarea;
     console.log(tour);
@@ -22,7 +22,7 @@ $.get('index.php?c=main&a=gettouristareabyid',{"t_id":t_id},res=>{
     $("#positon-add").html(touristarea);
     $("#menu-add").html("人文");
 },"json");
-$.get('index.php?c=main&a=gettourmenu',{"t_id":t_id,"type":type},res=>{
+$.get('index.php?c=Main&a=gettourmenu',{"t_id":t_id,"type":type},res=>{
    menu = res.body.menu;
    $(".content .secondLayer").html("");
    for(item of menu){
@@ -137,7 +137,7 @@ createUploader(itemnum);
                };
            data.menulist.push(menu);   
            console.log(data);
-        $.post("index.php?c=main&a=useraddmenu",data,res=>{
+        $.post("index.php?c=Main&a=useraddmenu",data,res=>{
           console.log(res);
         //   alert("添加成功");
         layui.use('layer', function(){

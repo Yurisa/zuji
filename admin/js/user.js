@@ -1,6 +1,6 @@
 $(document).ready(function(){
   function getuserlist(curr){
-      $.get('../index.php?c=main&a=getuserlist',{"page":curr},res=>{
+      $.get('../index.php?c=Main&a=getuserlist',{"page":curr},res=>{
         let userlist = res.body.user;
         $("#items").html("");
         for(let u of userlist){

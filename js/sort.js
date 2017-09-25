@@ -1,7 +1,7 @@
 
 var myChart = echarts.init(document.getElementById("sortpic"));
 var data = [];
-$.get("index.php?c=main&a=gettouristareaandvalue",res=>{
+$.get("index.php?c=Main&a=gettouristareaandvalue",res=>{
    console.log(res);
    data = res.body.touristarea;
 },"json").then(()=>{

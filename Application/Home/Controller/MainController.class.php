@@ -1282,6 +1282,12 @@ class MainController extends CommonController {
         $res['touristarea'] = $touristarea;
         $this->json(1,'ok',$res);
       }
+      
+     /*
+      *
+      *获取所有民族
+      *
+      */
 
       public function getallnation(){
         $nation = M('nation')->select();
@@ -1303,5 +1309,74 @@ class MainController extends CommonController {
         // print_r($res);
         $this->json(1,'ok',$res);
       }
+     
 
+     /*
+      *
+      *获取用户评价
+      *
+      */
+
+      public function userevaluate(){
+        $u_id = session("user.id");
+        $t_id = I('post.t_id');
+        $data =  array(
+           "price" =>  I('post.price'),
+           "service" => I('post.service'),
+           "traffic" => I('post.traffic'),
+           "environment" => I('post.environment'),
+        );
+        M('h_go')->where("u_id = %d and t_id = %d",array($u_id,$t_id))->save($data);
+        $this->json(1,'ok');
+      }
+
+     /*
+      *
+      *获取所有景区的各项数据的平均水平
+      *
+      */
+
+      public function getalltouravgscore(){
+        $Model = new \Think\Model();
+        $data = $Model->query("select avg(score) as score,avg(price) as price,avg(service) as service, avg(environment) as environment,avg(traffic) as traffic from h_go");
+        //  print_r($data);
+          $data[0]['popularity'] = (string)(($data[0]['score']+$data[0]['price']+$data[0]['service']+$data[0]['environment']+$data[0]['traffic'])/5);
+           $this->json(1,'ok',$data[0]);
+      }
+
+     /*
+      *
+      *获取根据景区ID的各项数据的平均水平
+      *
+      */
+
+      public function gettourscorebytid(){
+        $t_id = $_GET['t_id'];
+        $Model = new \Think\Model();
+        $data = $Model->query("select avg(score) as score,avg(price) as price,avg(service) as service, avg(environment) as environment,avg(traffic) as traffic from h_go group by t_id having t_id = '{$t_id}'");
+        $data[0]['popularity'] =(string)( ($data[0]['score']+$data[0]['price']+$data[0]['service']+$data[0]['environment']+$data[0]['traffic'])/5);
+        $this->json(1,'ok',$data[0]);
+      }
+
+     /*
+      *
+      *获取根据景区ID的每月人数
+      *
+      */
+     
+    public function geteverymonthpersonnum(){
+       $Model = new \Think\Model();
+       $t_id = $_GET['t_id'];
+       $data = array();
+       $thismonth = date('m');
+       for($i = $thismonth ; $i>=1; $i--){
+        $beginThismonth=mktime(0,0,0,$i,1,date('Y'));
+        $endThismonth=mktime(23,59,59,$i,date('t'),date('Y'));
+        $month = "month"+$i;
+        $arr = $Model->query("select count(*) as personnum from historyperson where starttime > {$beginThismonth} and starttime < {$endThismonth} group by t_id having t_id = '{$t_id}'");
+        $arr[0]['month'] = intval($i);
+        array_push($data,$arr[0]); 
+      }
+       $this->json(1,'ok',$data);
+    }
 }

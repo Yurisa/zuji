@@ -134,16 +134,46 @@ $(document).ready(function () {
     // });
     $(document).on("click", ".asses", function () {
         $("#scoreList").show();
+        price = 4.0;
+        traffic = 4.0;
+        service = 4.0;
+        environment = 4.0;
+        $("#scoreList").attr("t_id",$(this).parent().parent().attr("t_id"));
         $(".close").click(function () {
             // $("#asses-score")[0].reset();
             $("#scoreList").hide();
+            $("#scoreList").removeAttr("t_id");
         });
     });
     $(".submit").click(function(){
-        $("#scoreList").hide();
+        console.log($(this).parent().parent().parent().parent())
+        let data = {
+            "t_id":$(this).parent().parent().parent().parent().attr("t_id"),
+            "price":price,
+            "service":service,
+            "traffic":traffic,
+            "environment":environment
+        }
+        $.post("index.php?c=Main&a=userevaluate",data,res=>{
+            layui.use('layer', function(){
+                var layer = layui.layer;
+                
+                layer.open({
+                    title: '提示'
+                    ,content: '评价成功'
+                  });     
+                    
+              }); 
+            $("#scoreList").hide();
+        });
+        
     });
-
+    
     //评分
+    var price = 4.0;
+    var traffic = 4.0;
+    var service = 4.0;
+    var environment = 4.0;
 
     $('#function-demo1').raty({
         number: 5, //多少个星星设置
@@ -161,6 +191,7 @@ $(document).ready(function () {
         targetKeep: true,
         precision:true, //是否包含小数
         click: function(score, evt) {
+            price = score;
             // alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
         }
     });
@@ -180,6 +211,7 @@ $(document).ready(function () {
         targetKeep: true,
         precision:true, //是否包含小数
         click: function(score, evt) {
+            traffic = score;
             // alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
         }
     });
@@ -199,6 +231,7 @@ $(document).ready(function () {
         targetKeep: true,
         precision:true, //是否包含小数
         click: function(score, evt) {
+            service = score;
             // alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
         }
     });
@@ -218,16 +251,18 @@ $(document).ready(function () {
         targetKeep: true,
         precision:true, //是否包含小数
         click: function(score, evt) {
+            environment = score;
             // alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
         }
     });
+
     /**
      * 展示用户个人信息
      * 
      */
 
     function showuserdata(){
-    $.get("index.php?c=main&a=getuser",res=>{
+    $.get("index.php?c=Main&a=getuser",res=>{
         console.log(res)
         var user = res.body.user;
         $('.my-name').html(user.u_name);
@@ -249,7 +284,7 @@ $(document).ready(function () {
         data: {
             "page": curr || 1,
         },
-        url: "index.php?c=main&a=getw_gotourist",
+        url: "index.php?c=Main&a=getw_gotourist",
         dataType: "json",
         success: function (data) {
             var Json1 = data.body.touristarea;
@@ -283,7 +318,7 @@ $(document).ready(function () {
                 // window.location.href = "product-detail.html?f_id=" + $(this).attr("f_id");
                 let t_id = $(this).parent().attr("t_id");
                 console.log(t_id)
-                $.get("index.php?c=main&a=removew_gotourist",{"t_id":t_id},res=>{
+                $.get("index.php?c=Main&a=removew_gotourist",{"t_id":t_id},res=>{
                     //  console.log(res);
                     //  showwannago();
                     $(this).parent().remove();
@@ -301,7 +336,7 @@ $(document).ready(function () {
             data: {
                 "page": curr || 1,
             },
-            url: "index.php?c=main&a=geth_gotourist",
+            url: "index.php?c=Main&a=geth_gotourist",
             dataType: "json",
             success: function (data) {
                 var Json1 = data.body.touristarea;
@@ -329,7 +364,7 @@ $(document).ready(function () {
                             precision: true, //是否包含小数
                             click: function (score, evt) {
                                 // alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
-                                $.get("index.php?c=main&a=updatescore",{"score":score,"t_id":obj.t_id},res=>{
+                                $.get("index.php?c=Main&a=updatescore",{"score":score,"t_id":obj.t_id},res=>{
                                          console.log(res);
                                 });
                             }
@@ -361,7 +396,7 @@ $(document).ready(function () {
         data: {
             "page": curr || 1,
         },
-        url: "index.php?c=main&a=getarticlebyuid",
+        url: "index.php?c=Main&a=getarticlebyuid",
         dataType: "json",
         success: function (data) {
             var Json1 = data.body.article;
@@ -398,7 +433,7 @@ $(document).ready(function () {
                 // window.location.href = "product-detail.html?f_id=" + $(this).attr("f_id");
                 let a_id = $(this).parent().attr("a_id");
                 console.log(a_id)
-                $.get("index.php?c=main&a=removearticle",{"a_id":a_id},res=>{
+                $.get("index.php?c=Main&a=removearticle",{"a_id":a_id},res=>{
                     //  console.log(res);
                     //  showarticle();
                     $(this).parent().remove();
@@ -416,7 +451,7 @@ $(document).ready(function () {
         data: {
             "page": curr || 1,
         },
-        url: "index.php?c=main&a=getdraftbyuid",
+        url: "index.php?c=Main&a=getdraftbyuid",
         dataType: "json",
         success: function (data) {
             var Json1 = data.body.draft;
@@ -461,7 +496,7 @@ $(document).ready(function () {
                 // window.location.href = "product-detail.html?f_id=" + $(this).attr("f_id");
                 let d_id = $(this).parent().attr("d_id");
                 // console.log(a_id)
-                $.get("index.php?c=main&a=deletedraft",{"d_id":d_id},res=>{
+                $.get("index.php?c=Main&a=deletedraft",{"d_id":d_id},res=>{
                     //  console.log(res);
                     //  showarticle();
                     $(this).parent().remove();
@@ -473,7 +508,7 @@ $(document).ready(function () {
      */
 
      function showmessage(curr){
-         $.get("index.php?c=main&a=getusermessage",{"page":curr||1},res=>{
+         $.get("index.php?c=Main&a=getusermessage",{"page":curr||1},res=>{
             let comment = res.body.commentlist;
             $("#my-message ul").html("");
             for(let c of comment){
@@ -494,7 +529,7 @@ $(document).ready(function () {
      }
      
      $(document).on("click", ".deletecomment", function () {
-       $.get("index.php?c=main&a=deleteusercomment",{"c_id":$(this).parent().attr("c_id")},res=>{
+       $.get("index.php?c=Main&a=deleteusercomment",{"c_id":$(this).parent().attr("c_id")},res=>{
           console.log(res);
           $(this).parent().remove();
        },"json");
@@ -507,7 +542,7 @@ $(document).ready(function () {
      */
 
      function showcontribution(curr){
-        $.get("index.php?c=main&a=getusercontribution",{"page":curr||1},res=>{
+        $.get("index.php?c=Main&a=getusercontribution",{"page":curr||1},res=>{
                 var num = 1;
                 let  mjlist = res.body.menu_judge;
                 $("#contribution").html("");
@@ -542,7 +577,7 @@ $(document).ready(function () {
         data: {
             "page": curr || 1,
         },
-        url: "index.php?c=main&a=getcollectarticle",
+        url: "index.php?c=Main&a=getcollectarticle",
         dataType: "json",
         success: function (data) {
             var Json1 = data.body.article;
@@ -595,7 +630,7 @@ $(document).ready(function () {
                 // window.location.href = "product-detail.html?f_id=" + $(this).attr("f_id");
                 let a_id = $(this).parent().attr("a_id");
                 console.log(a_id)
-                $.get("index.php?c=main&a=deletecollect",{"a_id":a_id},res=>{
+                $.get("index.php?c=Main&a=deletecollect",{"a_id":a_id},res=>{
                     //  console.log(res);
                     //  showarticle();
                     $(this).parent().remove();
@@ -631,6 +666,11 @@ $(document).ready(function () {
     showarticle();
     showdraft();
     showcollection();
-
+    
+    $("#exit a").click(function(){
+        $.get("index.php?c=Reg&a=loginOut",res=>{
+           window.location.href = "home.html";
+        });
+    })
 
 });

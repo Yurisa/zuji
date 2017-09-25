@@ -6,7 +6,7 @@ var app={};
 option = {
     title: {
         text: '景区管理',
-        subtext: '虚拟数据'
+        // subtext: '虚拟数据'
     },
     tooltip: {
         trigger: 'axis',
@@ -116,7 +116,7 @@ setInterval(function (){
      gettotalnum();
 }, 10000);
 function gettotalnum(){
-    $.get('../index.php?c=main&a=getpersonnum',{"t_id":t_id},res=>{
+    $.get('../index.php?c=Main&a=getpersonnum',{"t_id":t_id},res=>{
         console.log(res);
         let totalnum = res.body.totalnum;
         if(res.result !== 'ok'){

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>景区管理</title>
+    <title>检票队列</title>
     <link rel="stylesheet" href="layui/css/layui.css">
     <link rel="stylesheet" href="css/top.css">
     <link rel="stylesheet" href="css/dataList.css">
@@ -15,17 +15,17 @@
     <!-- 顶部区域-->
         <div><img src="image/zuji（白色）.png"></div>
         <div id="exit">退出</div>
-        <div id="administrators">管理员abc</div>
+        <div id="administrators"></div>
         <!--<i class="layui-icon">&#xe614;</i>-->
     </div>
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-            <ul class="layui-nav layui-nav-tree" lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed"><a href="backstage.html?t_id=1">景区管理</a></li>
-                <li class="layui-nav-item"><a href="checkin.html?t_id=1">检票队列</a></li>
-                <li class="layui-nav-item"><a href="addArea.html?t_id=1">地区信息</a></li>
-                <li class="layui-nav-item"><a href="newSupplement.html?t_id=1">新补充</a></li>
+            <ul id="navigation" class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed"><a href="#">景区管理</a></li>
+                <li class="layui-nav-item"><a href="#">检票队列</a></li>
+                <li class="layui-nav-item"><a href="#">地区信息</a></li>
+                <li class="layui-nav-item"><a href="#">新补充</a></li>
             </ul>
         </div>
     </div>
@@ -33,7 +33,7 @@
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div id="sign">
-            <div><a href="">景区管理</a></div>
+            <div><a href="">检票队列</a></div>
             <!--<input type="search" name="" value="用户名">-->
             <!--<i id="search" class="layui-icon">&#xe615;</i>-->
             

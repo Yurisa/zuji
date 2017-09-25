@@ -6,7 +6,7 @@ $(document).ready(function () {
      * 得到景区信息
      */
 
-    $.get('index.php?c=main&a=gettouristareabyid',{"t_id":t_id},res=>{
+    $.get('index.php?c=Main&a=gettouristareabyid',{"t_id":t_id},res=>{
         console.log(res)
        let tour = res.body.touristarea;
        console.log(tour);
@@ -21,7 +21,7 @@ $(document).ready(function () {
    },"json");
 
 
-   $.get('index.php?c=main&a=gettourmenu',{"t_id":t_id,"type":type},res=>{
+   $.get('index.php?c=Main&a=gettourmenu',{"t_id":t_id,"type":type},res=>{
         console.log(res);
         menu = res.body.menu;
         $("#building").html("");

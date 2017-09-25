@@ -53,7 +53,7 @@ $(document).ready(function () {
         createUploader("1");
         $("body").attr("id",$(this).parent().parent().parent().attr("menu_id"));
         $("#detailMes").show();
-        $.get("../index.php?c=main&a=getmenubymenuid",{"menu_id":$(this).parent().parent().parent().attr("menu_id")},res=>{
+        $.get("../index.php?c=Main&a=getmenubymenuid",{"menu_id":$(this).parent().parent().parent().attr("menu_id")},res=>{
             let menu = res.body.onemenu;
             $(".menu_title").val(menu.menu_title);
             $(".menu_content").val(menu.menu_content);
@@ -94,7 +94,7 @@ $(document).ready(function () {
                 "menu_content":$(".menu_content").val(),
                 "menu_imgurl":$(".progressbar1").attr("imgpath"),
             }
-            $.post("../index.php?c=main&a=adminupdatemenu",{"menu":data},res=>{
+            $.post("../index.php?c=Main&a=adminupdatemenu",{"menu":data},res=>{
                 // window.location.href="../admin/addArea.html?t_id="+t_id;
                 $("#revise")[0].reset();
                 $("#detailMes").hide();
@@ -108,7 +108,7 @@ $(document).ready(function () {
             "menu_imgurl":$(".progressbar1").attr("imgpath"),
             "t_id":t_id,
         }
-        $.post("../index.php?c=main&a=addmenu",{"menu":data},res=>{
+        $.post("../index.php?c=Main&a=addmenu",{"menu":data},res=>{
                window.location.href="../admin/addArea.html?t_id="+t_id;
         },"json");
         }
@@ -152,7 +152,7 @@ $(document).ready(function () {
             "t_id":t_id,
 
         }
-        $.post("../index.php?c=main&a=updatetouristarea",{"touristarea":$data},res=>{
+        $.post("../index.php?c=Main&a=updatetouristarea",{"touristarea":$data},res=>{
             console.log(res);
             if(res.code === 1){
                 //  alert('更新成功');
@@ -176,7 +176,7 @@ $(document).ready(function () {
       * 生成景区所有信息
       */
 
-     $.get("../index.php?c=main&a=gettouristareabyid",{"t_id":t_id},res=>{
+     $.get("../index.php?c=Main&a=gettouristareabyid",{"t_id":t_id},res=>{
            
               tour = res.body.touristarea;
              console.log(tour)
@@ -238,10 +238,10 @@ $(document).ready(function () {
             //    window.location.href="https://www.baidu.com/";
             // }
             // myChart.on("click", eConsole);  
-            myChart.on("click", function (param){ 
-        //    alert(param.dataIndex+':'+option.series[0].data[param.dataIndex].name);
-           window.location.href="https://localhost/zuji/index.php?c=main&a=showtouristarea&t_id="+option.series[0].data[param.dataIndex].value[2];
-           });
+        //     myChart.on("click", function (param){ 
+        // //    alert(param.dataIndex+':'+option.series[0].data[param.dataIndex].name);
+        //    window.location.href="../index.php?c=Main&a=showtouristarea&t_id="+option.series[0].data[param.dataIndex].value[2];
+        //    });
      },"json");
 
      /**
@@ -250,7 +250,7 @@ $(document).ready(function () {
 
       $(document).on("click",".mdel",function () {
         console.log($(this).parent().parent().parent().attr("menu_id"));
-        $.get("../index.php?c=main&a=admindeletemenu",{"menu_id":$(this).parent().parent().parent().attr("menu_id")},res=>{
+        $.get("../index.php?c=Main&a=admindeletemenu",{"menu_id":$(this).parent().parent().parent().attr("menu_id")},res=>{
            console.log(res);
            $(this).parent().parent().parent().remove();
         },"json");
@@ -261,7 +261,7 @@ $(document).ready(function () {
       * 得到所有省份 
       */
      function getprovince(tour){
-        $.get("../index.php?c=main&a=getprovince",res=>{
+        $.get("../index.php?c=Main&a=getprovince",res=>{
             let province = res.body.province;
              console.log(province)
             $(".city").html("");
@@ -298,7 +298,7 @@ $(document).ready(function () {
      * 得到省份下所有民族 
      */
     function getnation(p_id){
-        $.get("../index.php?c=main&a=getnationbypid",{"p_id":p_id},res=>{
+        $.get("../index.php?c=Main&a=getnationbypid",{"p_id":p_id},res=>{
             let nation = res.body.nation;
             console.log(nation)
             $(".nation").html("");

@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var t_id = getQueryString("t_id");
-    $.get('index.php?c=main&a=gettouristareabyid',{"t_id":t_id},res=>{
+    $.get('index.php?c=Main&a=gettouristareabyid',{"t_id":t_id},res=>{
         console.log(res)
        let tour = res.body.touristarea;
        console.log(tour);
@@ -37,7 +37,7 @@ $(document).ready(function(){
     }
     return null;
 }
-$.get("index.php?c=main&a=gettouristareabyid",{"t_id":t_id},res=>{
+$.get("index.php?c=Main&a=gettouristareabyid",{"t_id":t_id},res=>{
     console.log(res);
     let tour = res.body.touristarea;
     $(".culture").find("img").attr("src",tour.t_renwen);

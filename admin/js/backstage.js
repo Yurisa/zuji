@@ -17,7 +17,7 @@ $(document).ready(function () {
         window.location.href = "nation.html";
     });
      
-    $.get('../index.php?c=main&a=countnum',res=>{
+    $.get('../index.php?c=Main&a=countnum',res=>{
         let body = res.body;
         $("#user").children().eq(1).html(body.usernum);
         $("#travels").children().eq(1).html(body.articlenum);

@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var a_id = getQueryString("a_id");
   console.log(a_id);
-  $.get('index.php?c=main&a=getarticlebyaid',{"a_id":a_id},res=>{
+  $.get('index.php?c=Main&a=getarticlebyaid',{"a_id":a_id},res=>{
      console.log(res);
      let article = (res.body.article)[0];
      let date =  getLocalTime(article.timestamp);
@@ -24,7 +24,7 @@ $(document).ready(function(){
    * 增加浏览次数
    */
 
-   $.get("index.php?c=main&a=addarticlebrowsenum",{"a_id":a_id},res=>{
+   $.get("index.php?c=Main&a=addarticlebrowsenum",{"a_id":a_id},res=>{
        console.log(res.body.browse_num)
     $(".info span").eq(2).html(res.body.browse_num);
    },"json");
@@ -34,7 +34,7 @@ $(document).ready(function(){
    */
   
   function showcomment(curr){
-    $.get('index.php?c=main&a=getcommentbyaid',{"a_id":a_id,"page":curr||1},res=>{
+    $.get('index.php?c=Main&a=getcommentbyaid',{"a_id":a_id,"page":curr||1},res=>{
         // console.log(curr)
         let comment = res.body.comment;
         let pagesize = 4;
@@ -81,7 +81,7 @@ showcomment()
             "a_id":a_id,
          }
          console.log(data);
-         $.post('index.php?c=main&a=addcomment',data,res=>{
+         $.post('index.php?c=Main&a=addcomment',data,res=>{
              console.log(res);
              $('.commentmsg').val("");
              showcomment();
@@ -107,12 +107,12 @@ showcomment()
         // console.log($(this).attr("class"))
         if($(this).attr("class") === "article_collect icon-heart-h"){
             // console.log("111")
-            $.get("index.php?c=main&a=addcollect",{"a_id":a_id},res=>{
+            $.get("index.php?c=Main&a=addcollect",{"a_id":a_id},res=>{
                 $(".article_collect").html(parseInt($(".article_collect").html())+1);
                 console.log(res)
             },"json");
         }else{
-            $.get("index.php?c=main&a=deletecollect",{"a_id":a_id},res=>{
+            $.get("index.php?c=Main&a=deletecollect",{"a_id":a_id},res=>{
                 console.log(res);
                 $(".article_collect").html(parseInt($(".article_collect").html())-1);
             },"json")
@@ -132,7 +132,7 @@ showcomment()
    * 得到用户收藏id
    */
   if(u_id !== -1){
-  $.get("index.php?c=main&a=getallcollectid",res=>{
+  $.get("index.php?c=Main&a=getallcollectid",res=>{
     console.log(res)
 
         let a_idlist = res.body.a_idlist;
@@ -155,12 +155,12 @@ showcomment()
         // console.log($(this).attr("class"))
         if($(this).attr("class") === "article_zan icon-point-up-h"){
             // console.log("111")
-            $.get("index.php?c=main&a=addarticlezan",{"a_id":a_id},res=>{
+            $.get("index.php?c=Main&a=addarticlezan",{"a_id":a_id},res=>{
                 $(".article_zan").html(res.body.a_zan);
                 console.log(res)
             },"json");
         }else{
-            $.get("index.php?c=main&a=cancelarticlezan",{"a_id":a_id},res=>{
+            $.get("index.php?c=Main&a=cancelarticlezan",{"a_id":a_id},res=>{
                 console.log(res);
                 $(".article_zan").html(res.body.a_zan);
             },"json")

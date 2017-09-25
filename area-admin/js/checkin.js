@@ -3,7 +3,7 @@ t_id = getQueryString("t_id");
 $('.inputId').keydown(function(e){
     if(e.keyCode==13){
     //    $('#FormId').submit(); //处理事件  
-     $.post('../index.php?c=main&a=checkinandout',{"personid":$('.inputId').val(),"t_id":t_id},res=>{
+     $.post('../index.php?c=Main&a=checkinandout',{"personid":$('.inputId').val(),"t_id":t_id},res=>{
         $('.inputId').val("");
         showtodayperson();
         showhistoryperson();
@@ -17,7 +17,7 @@ $('.inputId').keydown(function(e){
      * 分页展示今日游客
      */
     function showtodayperson(curr){
-        $.get('../index.php?c=main&a=gettodayperson',{"t_id":t_id,"page":curr||1},res=>{
+        $.get('../index.php?c=Main&a=gettodayperson',{"t_id":t_id,"page":curr||1},res=>{
            let personlist = res.body.personlist;
            $(".personlist").html("");
            for(let p of personlist){
@@ -44,7 +44,7 @@ $('.inputId').keydown(function(e){
     */
 
     function showhistoryperson(curr){
-        $.get('../index.php?c=main&a=gethistoryperson',{"t_id":t_id,"page":curr||1},res=>{
+        $.get('../index.php?c=Main&a=gethistoryperson',{"t_id":t_id,"page":curr||1},res=>{
            let personlist = res.body.personlist;
            $(".h_personlist").html("");
            for(let p of personlist){

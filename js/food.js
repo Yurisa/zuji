@@ -34,7 +34,7 @@ $(document).ready(function () {
      * 得到景区信息
      */
 
-    $.get('index.php?c=main&a=gettouristareabyid',{"t_id":t_id},res=>{
+    $.get('index.php?c=Main&a=gettouristareabyid',{"t_id":t_id},res=>{
         console.log(res)
        let tour = res.body.touristarea;
        console.log(tour);
@@ -51,7 +51,7 @@ $(document).ready(function () {
     //图片轮播
 
     var scrollDiv=document.getElementsByClassName('scroll_div')[0];
-    $.get('index.php?c=main&a=gettourmenu',{"t_id":t_id,"type":type},res=>{
+    $.get('index.php?c=Main&a=gettourmenu',{"t_id":t_id,"type":type},res=>{
         console.log(res)
         let menu = res.body.menu;
         $(".right-name").html("");

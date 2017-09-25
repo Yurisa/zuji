@@ -6,7 +6,7 @@ $(document).ready(function(){
      */
 
     function getmenujudge(curr){
-        $.get("../index.php?c=main&a=getallmenujudge",{"page":curr||1},res=>{
+        $.get("../index.php?c=Main&a=getallmenujudge",{"page":curr||1},res=>{
             console.log(res)
              let mjlist = res.body.menu_judge;
              $(".mjbody").html("");
@@ -30,7 +30,7 @@ $(document).ready(function(){
      getmenujudge();
      $(document).on("click",".pass",function () {
        let mj_id = $(this).parent().parent().attr("mj_id");
-       $.get("../index.php?c=main&a=menupass",{"mj_id":mj_id},res=>{
+       $.get("../index.php?c=Main&a=menupass",{"mj_id":mj_id},res=>{
             $(this).parent().parent().find(".result").html("通过");
             $(this).parent().html("已操作");
        });
@@ -38,7 +38,7 @@ $(document).ready(function(){
 
     $(document).on("click",".fail",function () {
         let mj_id = $(this).parent().parent().attr("mj_id");
-        $.get("../index.php?c=main&a=menufail",{"mj_id":mj_id},res=>{
+        $.get("../index.php?c=Main&a=menufail",{"mj_id":mj_id},res=>{
              $(this).parent().parent().find(".result").html("未通过");
              $(this).parent().html("已操作");
         });

@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var t_id = getQueryString("t_id");
- $.get('index.php?c=main&a=gettouristareabyid',{"t_id":t_id},res=>{
+ $.get('index.php?c=Main&a=gettouristareabyid',{"t_id":t_id},res=>{
         console.log(res)
     let tour = res.body.touristarea;
     console.log(tour.t_renwen);
@@ -19,7 +19,7 @@ $(document).ready(function () {
  * @param {*} curr 
  */
  function gettourarticle(curr){
-   $.get('index.php?c=main&a=getarticlebytid',{"t_id":t_id,"page":curr||1},res=>{
+   $.get('index.php?c=Main&a=getarticlebytid',{"t_id":t_id,"page":curr||1},res=>{
           console.log(res)
           let articlelist = res.body.article;
           console.log(articlelist)
