@@ -1,3 +1,4 @@
+var u_id = -1
 //搜索框的淡入淡出
 $(document).ready(function () {
     $(".icon-search").mouseover(function () {
@@ -13,67 +14,75 @@ $(document).ready(function () {
 
 function showuserdata(){
     $.get("index.php?c=main&a=getuser",res=>{
-        console.log(res)
-        var user = res.body.user;
-        $('.top-name').html(user.u_name);
-        $('.login').html(user.u_name+" / 退出");
-    },"json");
+		console.log(res)
+		if(res.code==1){
+			var user = res.body.user;
+			u_id = user.u_id;
+			console.log("u_id="+u_id);
+			$('.top-name').attr("class","username")
+			$('.username').html(user.u_name);
+			$('.loginout').show();
+			$('.login').html(user.u_name+" / 退出");
+			$('.username').attr("href",'personalCenter.html');
+			$(".r-avatar img").attr("src",user.u_avatar);
+		}
+    },"json").then(()=>{
+		
+	});
     }
 showuserdata();
 var t_id = getQueryString("t_id");
-$.get("index.php?c=main&a=getw_gotid",res=>{
-	console.log(res)
-	let t_idlist = res.body.t_idlist;
-	for(let t of t_idlist){
-		if(t.t_id == t_id){
-			$(".webfont").eq(0).attr("class","webfont icon-gift-h");
-			return;
-		}
-	} 
-},"json");
-
-$.get("index.php?c=main&a=geth_gotid",res=>{
-	console.log(res)
-	let t_idlist = res.body.t_idlist;
-	for(let t of t_idlist){
-		if(t.t_id == t_id){
-			$(".webfont").eq(1).attr("class","webfont icon-spinner5-h");
-			return;
-		}
-	} 
-},"json");
 
 $(".webfont").eq(0).click(function(){
-	$(this).toggleClass('icon-gift');
-	$(this).toggleClass('icon-gift-h');
-	// console.log($(this).attr("class"))
-	if($(this).attr("class") === "webfont icon-gift-h"){
-		// console.log("111")
-		$.get("index.php?c=main&a=addw_go",{"t_id":t_id},res=>{
-          console.log(res)
-		});
+	 if(u_id !== -1){
+		$(this).toggleClass('icon-gift');
+		$(this).toggleClass('icon-gift-h');
+		// console.log($(this).attr("class"))
+		if($(this).attr("class") === "webfont icon-gift-h"){
+			// console.log("111")
+			$.get("index.php?c=main&a=addw_go",{"t_id":t_id},res=>{
+			  console.log(res)
+			});
+		}else{
+			$.get("index.php?c=main&a=removew_gotourist",{"t_id":t_id},res=>{
+				console.log(res);
+			})
+		}
 	}else{
-		$.get("index.php?c=main&a=removew_gotourist",{"t_id":t_id},res=>{
-			console.log(res);
-		})
+		layui.use('layer', function(){
+			layer.open({
+				title: '提示'
+				,content: '请先登录'
+			  });
+			});
 	}
-    
 });
 
 $(".webfont").eq(1).click(function(){
-	$(this).toggleClass('icon-spinner5');
-	$(this).toggleClass('icon-spinner5-h');
-	if($(this).attr("class") === "webfont icon-spinner5-h"){
-		$.get("index.php?c=main&a=addh_go",{"t_id":t_id},res=>{
-          console.log(res)
-		});
+	if(u_id !== -1){
+		$(this).toggleClass('icon-spinner5');
+		$(this).toggleClass('icon-spinner5-h');
+		if($(this).attr("class") === "webfont icon-spinner5-h"){
+			$.get("index.php?c=main&a=addh_go",{"t_id":t_id},res=>{
+			  console.log(res)
+			});
+		}else{
+			$.get("index.php?c=main&a=removeh_gotourist",{"t_id":t_id},res=>{
+				console.log(res);
+			})
+		}
 	}else{
-		$.get("index.php?c=main&a=removeh_gotourist",{"t_id":t_id},res=>{
-			console.log(res);
-		})
+		layui.use('layer', function(){
+			layer.open({
+				title: '提示'
+				,content: '请先登录'
+			  });
+			});
 	}
-    
+
+	
 });
+
 
 /**
  * 得到url中的参数
@@ -123,8 +132,8 @@ $('.menu2').mouseleave(function() {
 	$('.center-i span').text(' ');
 	$('.center-i span').addClass('icon-smile2');
 	$('.center-i').css({'font-size':'48px','display':'inline-block', 'margin-top':'1px'});
-})
 });
+
 // 登录注册框
 // $('.top-name').click(function() {
 // 	$('.SignIn').toggle();
@@ -166,3 +175,39 @@ $(function() {
         $('.SignUp').fadeOut();
     });
 })
+$(".signUpButton").click(function(){
+	checkSignIn();
+})
+
+function checkSignIn(){
+	var data = {
+		"userName":$("#userName").val(),
+		"password":$("#password").val(),
+		"identifyCode":$("#identifyCode").val()
+	}
+	$.post('index.php?c=reg&a=loginUser',data,res=>{
+	 console.log(res);
+	 if(res.code == 0){
+		layui.use('layer', function(){
+			var layer = layui.layer;
+			layer.msg(res.result);
+		  });  
+	 }else{
+		layui.use('layer', function(){
+		layer.open({
+			title: '提示'
+			,content: '登陆成功'
+		  });
+		});
+		console.log('u_id:'+u_id)
+		u_id = res.body.u_id;
+		showuserdata();
+	 }
+
+	 
+	},"json");
+}
+});
+
+
+

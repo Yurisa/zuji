@@ -7,7 +7,6 @@ $(document).ready(function(){
      let date =  getLocalTime(article.timestamp);
      $(".avatar").attr("u_id",article.u_id);
      $(".avatar img").attr("src",article.u_avatar);
-     $(".r-avatar img").attr("src",article.u_avatar);
      $(".title").html(article.a_title);
      $(".info span").eq(1).html(article.u_name);
      $(".info span").eq(2).html(article.browse_num);
@@ -75,17 +74,26 @@ showcomment()
    */
 
   $('.send').click(function(){
-      console.log($('.commentmsg').val())
-    var data = {
-        "c_content":$('.commentmsg').val(),
-        "a_id":a_id,
-     }
-     console.log(data);
-     $.post('index.php?c=main&a=addcomment',data,res=>{
-         console.log(res);
-         $('.commentmsg').val("");
-         showcomment();
-     },"json");
+      if(u_id !== -1){
+        console.log($('.commentmsg').val())
+        var data = {
+            "c_content":$('.commentmsg').val(),
+            "a_id":a_id,
+         }
+         console.log(data);
+         $.post('index.php?c=main&a=addcomment',data,res=>{
+             console.log(res);
+             $('.commentmsg').val("");
+             showcomment();
+         },"json");
+      }else{
+        layui.use('layer', function(){
+			layer.open({
+				title: '提示'
+				,content: '请先登录'
+			  });
+			});
+       } 
    })
 
    /**
@@ -93,39 +101,49 @@ showcomment()
     */
 
    $(".article_collect").click(function(){
-	$(this).toggleClass('icon-heart');
-	$(this).toggleClass('icon-heart-h');
-	// console.log($(this).attr("class"))
-	if($(this).attr("class") === "article_collect icon-heart-h"){
-		// console.log("111")
-		$.get("index.php?c=main&a=addcollect",{"a_id":a_id},res=>{
-            $(".article_collect").html(parseInt($(".article_collect").html())+1);
-            console.log(res)
-		},"json");
-	}else{
-		$.get("index.php?c=main&a=deletecollect",{"a_id":a_id},res=>{
-            console.log(res);
-            $(".article_collect").html(parseInt($(".article_collect").html())-1);
-		},"json")
-	}
+       if(u_id !== -1){
+        $(this).toggleClass('icon-heart');
+        $(this).toggleClass('icon-heart-h');
+        // console.log($(this).attr("class"))
+        if($(this).attr("class") === "article_collect icon-heart-h"){
+            // console.log("111")
+            $.get("index.php?c=main&a=addcollect",{"a_id":a_id},res=>{
+                $(".article_collect").html(parseInt($(".article_collect").html())+1);
+                console.log(res)
+            },"json");
+        }else{
+            $.get("index.php?c=main&a=deletecollect",{"a_id":a_id},res=>{
+                console.log(res);
+                $(".article_collect").html(parseInt($(".article_collect").html())-1);
+            },"json")
+        }
+       }else{
+        layui.use('layer', function(){
+			layer.open({
+				title: '提示'
+				,content: '请先登录'
+			  });
+			});
+       }
     
 });
 
   /**
    * 得到用户收藏id
    */
-
+  if(u_id !== -1){
   $.get("index.php?c=main&a=getallcollectid",res=>{
-	console.log(res)
-	let a_idlist = res.body.a_idlist;
-	for(let a of a_idlist){
-		if(a.a_id == a_id){
-			$(".article_collect").attr("class","article_collect icon-heart-h");
-			return;
-		}
-	} 
-   },"json");
+    console.log(res)
 
+        let a_idlist = res.body.a_idlist;
+        for(let a of a_idlist){
+            if(a.a_id == a_id){
+                $(".article_collect").attr("class","article_collect icon-heart-h");
+                return;
+            }
+        } 
+   },"json");
+  }
    /**
     * 点赞
     * 

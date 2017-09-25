@@ -24,14 +24,14 @@ $(document).ready(function () {
    $.get('index.php?c=main&a=gettourmenu',{"t_id":t_id,"type":type},res=>{
         console.log(res);
         menu = res.body.menu;
-        $(".content").html("");
+        $("#building").html("");
         for(item of menu){
-         $(".content").append($("<div class='box secondLayer' menu_id="+item.menu_id+" ><div class='left-img'><a href=''><img src="+item.menu_imgurl+"></a></div><div class='right-info'><span>"+item.menu_title+"</span><p>"+item.menu_content+"</p></div>"))
+         $("#building").append("<div class='box secondLayer' menu_id="+item.menu_id+" ><div class='left-img'><a href=''><img src="+item.menu_imgurl+"></a></div><div class='right-info'><span>"+item.menu_title+"</span><p>"+item.menu_content+"</p></div>");
         }
-        if($(".content").find(".secondLayer").length === 0){
-            $(".content").find(".empty").show();
+        if($("#building").find(".secondLayer").length === 0){
+            $("#building").find(".empty").show();
         }else{
-            $(".content").find(".empty").hide();
+            $("#building").find(".empty").hide();
         }
  },"json");
  

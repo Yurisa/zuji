@@ -24,7 +24,7 @@
 				</a>
 			</div>									
 			<div class="nav-search">			<!-- 搜索栏-->
-				<form action="" method="get">
+				<form action="search.html" method="get">
 					<input type="text" class="search-content" name="searchContent">
 					<input type="submit" class="search-btn" name="searchBtn" value="搜索">
 				</form>
@@ -32,13 +32,13 @@
 			<div class="nav-items">				<!-- 登陆注册-->
 				<ul>
 					<li>
-						<span class="icon-search"></span>
+						<img class="search-icon" src="images/search-icon.png">
 					</li>
 					<li>
-						<a href="personalCenter.html" class="top-name">Hannah</a>
+						<a href="#" class="top-name">登录</a>
 					</li>
-					<li>
-						<a href="">退出</a>
+					<li class="loginout" style="display:none">
+						<a href="#">退出</a>
 					</li>
 				</ul>
 			</div>
@@ -58,18 +58,17 @@
 		</div>
 
 		<div class="bottomLayer">
-			<div class="content" id="custom">
+			<div class="content" id="building">
 				<div class="empty">
 					<span class="icon-baffled empty-icon"></span>
 					<span>哎呀，还没有资料</span>
 					<div class="btn-primary empty-btn">我来补充</div>
 				</div>
-            </div>
+			</div>
 			<div class="addLine">
 				<span class="icon-bell">不全面？</span><span id="add">我来补充</span>
 			</div>
-
-			<div class="theAddArea" style="display: none">				<!--补充区域-->
+			<div class="theAddArea" style="display: none">				
 				<div>	
 					<span>当前：</span>
 					<span id="province-add">d</span>
@@ -171,6 +170,6 @@
 	<script type="text/javascript" src="js/plup/plupload.full.min.js"></script>
 	<script type="text/javascript" src="layui/layui.js"></script>
 	<script type="text/javascript" src="js/public.js"></script>
-	<script type="text/javascript" src="js/culture.js"></script>
+	<!-- <script type="text/javascript" src="js/culture.js"></script> -->
 </body>
 </html>

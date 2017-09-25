@@ -42,10 +42,10 @@
 						<img class="search-icon" src="images/search-icon.png">
 					</li>
 					<li>
-						<a href="#" class="top-name">Hannah</a>
+						<a href="#" class="top-name">登录</a>
 					</li>
-					<li>
-						<a href="">退出</a>
+					<li class="loginout" style="display:none">
+						<a href="#">退出</a>
 					</li>
 				</ul>
 			</div>
@@ -190,28 +190,28 @@
 				<!-- 登陆 -->
 		<div class="registeform SignIn" style="display: none;">
 			<form>
-				<input class="form-control"
+				<input id="userName" class="form-control"
 					   data-val="true"
 					   data-val-required="请输入账号"
 					   name="userName"
 					   placeholder="输入用户名">
-				<input class="form-control"
+				<input id="password" class="form-control"
 					   data-val="true"
 					   data-val-required="缺少密码"
 					   name="password"
 					   type="password"
 					   placeholder="输入密码">
-				<input class="form-control"
+				<input id="identifyCode" class="form-control"
 					   name="identifyCode"
 					   placeholder="输入验证码"
 					   style="width: 200px;margin-left: 17px">
-				<img src="images/identify.jpg" class="verification">
+				<img src="index.php?c=reg&a=Verify" onClick="src='index.php?c=reg&a=Verify&s='+Math.random();" class="verification">
 				<div>
 					<div style="width: 100%; height: 30px;" >
-						<input type="checkbox" id="check1" name="check1"">
+						<input type="checkbox" id="check1" name="check1">
 						<label for="check1">同意会员条款和免责条例</label>
 					</div>
-					<input class="signUpButton"  type="submit" value="登陆" onclick="checkSignIn()">
+					<input class="signUpButton"  type="button" value="登陆">
 					<p id="para2">
 						还没有族迹账号？
 						<a href="#" class="goSignUp" style="color: #0094ff;">
@@ -298,5 +298,6 @@
 	<script type="text/javascript" src='js/sort.js'></script>
 	<script type="text/javascript" src='js/public.js'></script>
 	<script type="text/javascript" src='js/home.js'></script>
+	<script type="text/javascript" src='layui/layui.all.js'></script>
 </body>
 </html>

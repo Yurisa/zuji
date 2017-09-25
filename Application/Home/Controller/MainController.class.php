@@ -50,9 +50,13 @@ class MainController extends CommonController {
      */
     
      public function getuser(){
-       $u_id = 1;
-       $user['user'] = D('user')->getuserdatabyuid($u_id);
-       $this->json(1,'ok',$user);
+       $u_id = session('user.id');
+       if(!empty($u_id)){
+        $user['user'] = D('user')->getuserdatabyuid($u_id);
+        $this->json(1,'ok',$user);
+       }else{
+         $this->json(0,'未登录');
+       }
      }
 
     /*
@@ -501,7 +505,7 @@ class MainController extends CommonController {
      */
     
     public function getarticlebyuid(){
-      $u_id = 1;
+      $u_id = session('user.id');
       $curr = intval($_GET['page']);
       $pagesize = 4;
       $currnum = ($curr-1)*$pagesize;
@@ -595,7 +599,7 @@ class MainController extends CommonController {
      */
 
      public function getdraftbyuid(){
-       $u_id = 1;
+       $u_id = session('user.id');
        $curr = intval($_GET['page']);
        $pagesize = 4;
        $currnum = ($curr-1)*$pagesize;
@@ -679,7 +683,7 @@ class MainController extends CommonController {
      */
 
      public function getcollectarticle(){
-       $u_id = 1;
+       $u_id = session('user.id');
        $curr = intval($_GET['page']);
        $pagesize = 2;
        $currnum = ($curr-1)*$pagesize;
@@ -698,7 +702,7 @@ class MainController extends CommonController {
      */
 
      public function getallcollectid(){
-       $u_id = 1;
+       $u_id = session('user.id');
        $res['a_idlist'] = M('collect')->where('u_id='.$u_id)->field('a_id')->select();
        $this->json(1,'ok',$res);
      }
@@ -711,7 +715,7 @@ class MainController extends CommonController {
 
      public function addcollect(){
       $a_id = $_GET['a_id'];
-      $u_id = 1;
+      $u_id = session('user.id');
       M('collect')->add(array('u_id'=>$u_id,'a_id'=>$a_id));
       $this->json(1,'ok');
      }
@@ -723,7 +727,7 @@ class MainController extends CommonController {
      */
 
      public function deletecollect(){
-       $u_id = 1;
+       $u_id = session('user.id');
        $a_id = $_GET['a_id'];
        M('collect')->where('a_id='.$a_id.' and u_id='.$u_id)->delete();
        $this->json(1,'ok');
@@ -776,7 +780,7 @@ class MainController extends CommonController {
     
     public function getw_gotourist(){
       $curr = intval($_GET['page']);
-      $u_id = 1;
+      $u_id = session('user.id');
       $pagesize = 4;
       $currnum = ($curr-1)*$pagesize;
       $arr = D('user')->getw_gotouristByuid($u_id);
@@ -794,7 +798,7 @@ class MainController extends CommonController {
      */
     
     public function removew_gotourist(){
-      $u_id = 1;
+      $u_id = session('user.id');
       $t_id = $_GET['t_id'];
       M('w_go')->where('t_id='.$t_id.' and u_id = '.$u_id)->delete();
       $this->json(1,'ok');
@@ -808,7 +812,7 @@ class MainController extends CommonController {
     
     public function geth_gotourist(){
       $curr = intval($_GET['page']);
-      $u_id = 1;
+      $u_id = session('user.id');
       $pagesize = 6;
       $currnum = ($curr-1)*$pagesize;
       $arr = D('user')->geth_gotouristByuid($u_id);
@@ -826,7 +830,7 @@ class MainController extends CommonController {
      */
     
     public function removeh_gotourist(){
-      $u_id = 1;
+      $u_id = session('user.id');
       $t_id = $_GET['t_id'];
       M('h_go')->where('t_id='.$t_id.' and u_id='.$u_id)->delete();
       $this->json(1,'ok');
@@ -839,7 +843,7 @@ class MainController extends CommonController {
      */
 
      public function updatescore(){
-       $u_id = 1;
+       $u_id = session('user.id');
        $t_id = $_GET['t_id'];
        $score = $_GET['score'];  
        $data = array(
@@ -951,9 +955,13 @@ class MainController extends CommonController {
 
        public function addw_go(){
          $t_id = $_GET['t_id'];
-         $u_id = 1;
-         M('w_go')->add(array('u_id'=>$u_id,'t_id'=>$t_id));
-         $this->json(1,'ok');
+         $u_id = session('user.id');
+         if(!empty($u_id)){
+          M('w_go')->add(array('u_id'=>$u_id,'t_id'=>$t_id));
+          $this->json(1,'ok');
+         }else{
+           $this->json(0,'请先登录');
+         }
        }
        
       /*
@@ -964,9 +972,13 @@ class MainController extends CommonController {
 
        public function addh_go(){
         $t_id = $_GET['t_id'];
-        $u_id = 1;
-        M('h_go')->add(array('u_id'=>$u_id,'t_id'=>$t_id));
-        $this->json(1,'ok');
+        $u_id = session('user.id');
+        if(!empty($u_id)){
+          M('h_go')->add(array('u_id'=>$u_id,'t_id'=>$t_id));
+          $this->json(1,'ok');
+        }else{
+          $this->json(0,'请先登录');
+        }
       }
 
       /*
@@ -976,7 +988,7 @@ class MainController extends CommonController {
        */
 
        public function getw_gotid(){
-         $u_id = 1;
+         $u_id = session('user.id');
          $res['t_idlist'] = M('w_go')->where('u_id='.$u_id)->select();
          $this->json(1,'ok',$res);
        }
@@ -989,7 +1001,7 @@ class MainController extends CommonController {
        */
 
        public function geth_gotid(){
-        $u_id = 1;
+        $u_id = session('user.id');
         $res['t_idlist'] = M('h_go')->where('u_id='.$u_id)->select();
         $this->json(1,'ok',$res);
       }
@@ -1001,7 +1013,7 @@ class MainController extends CommonController {
        */
 
        public function getusercontribution(){
-         $u_id = 1;
+         $u_id = session('user.id');
          $curr = intval($_GET['page']);
          $pagesize = 4;
          $currnum = ($curr-1)*$pagesize;
@@ -1019,7 +1031,7 @@ class MainController extends CommonController {
        */
 
        public function getusermessage(){
-         $u_id = 1;
+         $u_id = session('user.id');
          $curr = intval($_GET['page']);
          $pagesize = 4;
          $currnum = ($curr-1)*$pagesize;
