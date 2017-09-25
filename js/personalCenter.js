@@ -161,7 +161,7 @@ $(document).ready(function () {
         targetKeep: true,
         precision:true, //是否包含小数
         click: function(score, evt) {
-            alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
+            // alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
         }
     });
     $('#function-demo2').raty({
@@ -180,7 +180,7 @@ $(document).ready(function () {
         targetKeep: true,
         precision:true, //是否包含小数
         click: function(score, evt) {
-            alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
+            // alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
         }
     });
     $('#function-demo3').raty({
@@ -199,7 +199,7 @@ $(document).ready(function () {
         targetKeep: true,
         precision:true, //是否包含小数
         click: function(score, evt) {
-            alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
+            // alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
         }
     });
     $('#function-demo4').raty({
@@ -218,7 +218,7 @@ $(document).ready(function () {
         targetKeep: true,
         precision:true, //是否包含小数
         click: function(score, evt) {
-            alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
+            // alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
         }
     });
     /**

@@ -78,7 +78,7 @@ $(document).ready(function () {
             if(type == 'humanities'){
                 $("#humanity ul").html("");
                 for( let m of menu){
-                    $("#humanity ul").append($("<li><img src="+m.menu_imgurl+"><a href="+'culture.html?t_id='+m.t_id+'&type=humanities'+" style='width: 56%; height: 100px;line-height: 100px;float: right;color: #333333;font-size: 18px;font-weight: bold;text-align: left;'>"+m.menu_title+"</a></a><span style='width: 45%; float: left;color: #333333;font-size: 16px;text-align: left;margin-left: 50px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;'>"+m.menu_content+"</span></li>"));
+                    $("#humanity ul").append($("<li><img src="+m.menu_imgurl+"><a href="+'culture.html?t_id='+m.t_id+'&type=humanities'+" >"+m.menu_title+"</a></a><span style='width: 45%; float: left;color: #333333;font-size: 16px;text-align: left;margin-left: 50px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;'>"+m.menu_content+"</span></li>"));
                 }
                 laypage({
                     cont: 'page2', //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
@@ -94,7 +94,7 @@ $(document).ready(function () {
             }else if(type == "diet"){
                 $("#diet ul").html("");
                 for(let m of menu){
-                    $("#diet ul").append($("<li><img src="+m.menu_imgurl+"><a href="+'food.html?t_id='+m.t_id+'&type=diet'+" style='width: 56%;height: 100px;line-height: 100px;float: right;color: #333333;font-size: 18px;font-weight: bold;text-align: left;'>"+m.menu_title+"</a></a><span style='width: 45%; float: left;color: #333333;font-size: 16px;text-align: left;margin-left: 50px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;'>"+m.menu_content+"</span></li>"));
+                    $("#diet ul").append($("<li><img src="+m.menu_imgurl+"><a href="+'food.html?t_id='+m.t_id+'&type=diet'+" >"+m.menu_title+"</a></a><span style='width: 45%; float: left;color: #333333;font-size: 16px;text-align: left;margin-left: 50px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;'>"+m.menu_content+"</span></li>"));
                     laypage({
                         cont: 'page3', //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
                         pages: res.body.totalnum, //通过后台拿到的总页数
@@ -110,7 +110,7 @@ $(document).ready(function () {
             }else if(type == "building"){
                 $("#building ul").html("");
                 for(let m of menu){
-                    $("#building ul").append($("<li><img src="+m.menu_imgurl+"><a href="+'building.html?t_id='+m.t_id+'&type=building'+" style='width: 56%;height: 100px;line-height: 100px;float: right;color: #333333;font-size: 18px;font-weight: bold;text-align: left;'>"+m.menu_title+"</a></a><span style='width: 45%; float: left;color: #333333;font-size: 16px;text-align: left;margin-left: 50px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;'>"+m.menu_content+"</span></li>"));
+                    $("#building ul").append($("<li><img src="+m.menu_imgurl+"><a href="+'building.html?t_id='+m.t_id+'&type=building'+" >"+m.menu_title+"</a></a><span style='width: 45%; float: left;color: #333333;font-size: 16px;text-align: left;margin-left: 50px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;'>"+m.menu_content+"</span></li>"));
                     laypage({
                         cont: 'page4', //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
                         pages: res.body.totalnum, //通过后台拿到的总页数

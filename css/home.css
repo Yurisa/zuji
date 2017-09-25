@@ -68,7 +68,7 @@
 	margin-left: 0;
 }
 .item {
-	max-height: 300px;
+	height: 250px;
 	border: 1px solid #ececec;
 }
 .img {
