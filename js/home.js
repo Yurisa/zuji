@@ -35,5 +35,15 @@ $(document).ready(function () {
     $(".loop").click(function(){
         fetch();
     })
-    
+    async function test(){
+          try {
+              let res = await  $.get("index.php?c=Main&a=randomtouristarea");
+              return JSON.parse(res);
+          } catch (error) {
+            console.log(`ERROR: ${error.stack}`);
+          }
+    }
+    test().then(res => {console.log("这是测试的")
+      console.log(res)
+ })
 });
