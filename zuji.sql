@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2017-09-26 08:35:23
+Date: 2017-11-02 12:07:57
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -635,24 +635,24 @@ CREATE TABLE `touristarea` (
 -- Records of touristarea
 -- ----------------------------
 INSERT INTO `touristarea` VALUES ('1', '隆安县', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000107.8655910000', '23.0087570000', '1', '1505122111', '2');
-INSERT INTO `touristarea` VALUES ('2', '玉岗村', '', '', '', '', 'images/longan.jpg', '000000106.8927460000', '26.7826710000', '2', '1504099236', '4');
-INSERT INTO `touristarea` VALUES ('3', '高定村', './Uploads/img/201709/24/298ad0e5e102b49a5a9132ff0bfb07ad.jpg', '', '', null, 'images/longan.jpg', '000000109.4811490000', '25.9850500000', '3', '1506233999', '3');
+INSERT INTO `touristarea` VALUES ('2', '玉岗村', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000106.8927460000', '26.7826710000', '2', '1504099236', '4');
+INSERT INTO `touristarea` VALUES ('3', '高定村', './Uploads/img/201709/24/298ad0e5e102b49a5a9132ff0bfb07ad.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000109.4811490000', '25.9850500000', '3', '1506233999', '3');
 INSERT INTO `touristarea` VALUES ('4', '西江千户苗寨', './Uploads/img/201709/24/b1acf4dd5bf8fcca64a9e7b014c78080.jpg', 'images/xijiang-yinshi.jpg', 'images/xijiang-jianzhu.jpeg', 'images/xijiang-youji.jpeg', 'images/xijiang.jpeg', '000000108.1745400000', '26.4933920000', '4', '1506257004', '1');
-INSERT INTO `touristarea` VALUES ('5', '古敢水族乡', '', '', '', null, 'images/longan.jpg', '000000104.8014560000', '25.2184610000', '5', '1503047159', '7');
-INSERT INTO `touristarea` VALUES ('6', '什运乡', '', '', '', null, 'images/longan.jpg', '000000109.6079590000', '18.9920170000', '6', '1503047159', '9');
-INSERT INTO `touristarea` VALUES ('7', '永顺县双凤村', '', '', '', null, 'images/longan.jpg', '000000109.7520000000', '28.9718000000', '7', '1503047159', '10');
-INSERT INTO `touristarea` VALUES ('8', '金达莱民俗村', '', '', '', null, 'images/longan.jpg', '000000129.0808390000', '42.6885460000', '8', '1503047159', '8');
-INSERT INTO `touristarea` VALUES ('9', '赫图阿拉村', '', '', '', null, 'images/longan.jpg', '000000124.8613910000', '41.7054300000', '9', '1503047159', '5');
-INSERT INTO `touristarea` VALUES ('10', '西乌素图村', '', '', '', null, 'images/longan.jpg', '000000111.5662810000', '40.8333550000', '10', '1503047159', '6');
-INSERT INTO `touristarea` VALUES ('11', '塔桥村', '', '', '', null, 'images/longan.jpg', '000000106.3039580000', '38.4228730000', '11', '1503047159', '0');
-INSERT INTO `touristarea` VALUES ('12', '松坑村', '', '', '', null, 'images/longan.jpg', '000000117.6905780000', '25.0351080000', '12', '1503047159', '0');
-INSERT INTO `touristarea` VALUES ('13', '达东村', '', '', '', null, 'images/longan.jpg', '000000091.0326010000', '29.5143470000', '13', '1503047159', '0');
-INSERT INTO `touristarea` VALUES ('14', '麻扎村', '', '', '', null, 'images/longan.jpg', '000000089.6928800000', '42.8566270000', '14', '1503047159', '0');
-INSERT INTO `touristarea` VALUES ('15', '红柳湾村', '', '', '', null, 'images/longan.jpg', '000000094.3400100000', '39.6356000000', '15', '1503047159', '0');
-INSERT INTO `touristarea` VALUES ('16', '木寨村', '', '', '', null, 'images/longan.jpg', '000000105.6355340000', '27.3506140000', '16', '1503047159', '0');
-INSERT INTO `touristarea` VALUES ('17', '曼滩村', '', '', '', null, 'images/longan.jpg', '000000101.5571200000', '22.4275630000', '17', '1503047159', '0');
-INSERT INTO `touristarea` VALUES ('18', '阿撒村', '', '', '', null, 'images/longan.jpg', '000000102.3932820000', '23.2243180000', '18', '1503047159', '0');
-INSERT INTO `touristarea` VALUES ('19', '红万村', '', '', '', null, null, '000000103.2695800000', '24.3896300000', '19', '1503047159', '0');
+INSERT INTO `touristarea` VALUES ('5', '古敢水族乡', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000104.8014560000', '25.2184610000', '5', '1503047159', '7');
+INSERT INTO `touristarea` VALUES ('6', '什运乡', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000109.6079590000', '18.9920170000', '6', '1503047159', '9');
+INSERT INTO `touristarea` VALUES ('7', '永顺县双凤村', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000109.7520000000', '28.9718000000', '7', '1503047159', '10');
+INSERT INTO `touristarea` VALUES ('8', '金达莱民俗村', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000129.0808390000', '42.6885460000', '8', '1503047159', '8');
+INSERT INTO `touristarea` VALUES ('9', '赫图阿拉村', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000124.8613910000', '41.7054300000', '9', '1503047159', '5');
+INSERT INTO `touristarea` VALUES ('10', '西乌素图村', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000111.5662810000', '40.8333550000', '10', '1503047159', '6');
+INSERT INTO `touristarea` VALUES ('11', '塔桥村', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000106.3039580000', '38.4228730000', '11', '1503047159', '0');
+INSERT INTO `touristarea` VALUES ('12', '松坑村', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000117.6905780000', '25.0351080000', '12', '1503047159', '0');
+INSERT INTO `touristarea` VALUES ('13', '达东村', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000091.0326010000', '29.5143470000', '13', '1503047159', '0');
+INSERT INTO `touristarea` VALUES ('14', '麻扎村', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000089.6928800000', '42.8566270000', '14', '1503047159', '0');
+INSERT INTO `touristarea` VALUES ('15', '红柳湾村', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000094.3400100000', '39.6356000000', '15', '1503047159', '0');
+INSERT INTO `touristarea` VALUES ('16', '木寨村', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000105.6355340000', '27.3506140000', '16', '1503047159', '0');
+INSERT INTO `touristarea` VALUES ('17', '曼滩村', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000101.5571200000', '22.4275630000', '17', '1503047159', '0');
+INSERT INTO `touristarea` VALUES ('18', '阿撒村', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000102.3932820000', '23.2243180000', '18', '1503047159', '0');
+INSERT INTO `touristarea` VALUES ('19', '红万村', 'images/longan-renwen.jpg', 'images/longan-yinshi.jpg', 'images/longan-jianzhu.jpg', 'images/longan-youji.jpg', 'images/longan.jpg', '000000103.2695800000', '24.3896300000', '19', '1503047159', '0');
 
 -- ----------------------------
 -- Table structure for user
